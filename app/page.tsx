@@ -1,6 +1,7 @@
 import BlogCarousel from "@/app/components/BlogCarousel";
 import BigButton from "@/app/components/bigButton";
 import CompanySlider from "@/app/components/CompanySlider";
+import ProjectSlide from "@/app/components/ProyectsSlider";
 import Image from "next/image";
 import * as React from "react";
 
@@ -29,6 +30,34 @@ export default function Home() {
             image: "/fotovoltaic.jpg",
             buttonMinWidth: "180px",
             buttonMaxWidth: "220px",
+        },
+    ]
+
+    const projects = [
+        {
+            title: "Secreteria de la Marina",
+            country: "Mexico",
+            backgroundImageUrl: "/Secretaria.jpg",
+            description: "Proyecto: Construcción y equipamiento del Hospital Naval en PTO. Vallarta, Jalisco."
+        },
+        {
+            title: "Pedido 8833 ABEN3T",
+            country: "Mexico",
+            backgroundImageUrl: "/pedido8833Aben3t.jpg",
+            description: "LT 230 KV A3T-SE: Limpieza de vía E aisladores. Revisión FO y herrajes. Anti aves. Termografía en empalmes.\n" +
+                "OS: Martpat-31000-LT-CFV-GSC-41"
+        },
+        {
+            title: "Lineas de transmision electrica",
+            country: "Mexico",
+            backgroundImageUrl: "/LineasDeTransmisionElectrica.jpg",
+            description: "Montaje: estructura metálica galvanizada para torres auto soportadas (400 KV) en LT Puerto Peñasco - Golfo de Santa Clara. "
+        },
+        {
+            title: "Rehabilitación de subestación electrica",
+            country: "Peru",
+            backgroundImageUrl: "/RehabilatacionSubestacionesPeru.jpg",
+            description: "Modernización SE Lima y Cusco: Diseño y obras electro-mecánicas/civiles para luz del sur (subcontrato electro Sur Este). "
         },
     ]
 
@@ -148,7 +177,7 @@ export default function Home() {
                 </div>
             </div>
             <div>
-                <div className={"flex px-64 py-40 justify-center items-center"}>
+                <div className={"flex px-64 pt-40 justify-center items-center"}>
                     <div className={"flex flex-col w-1/2"}>
                         <h2 className={"text-h1 text-start text-black"}>
                             Nosotros<br />Construimos Historia
@@ -167,6 +196,9 @@ export default function Home() {
                             horizonte.
                         </p>
                     </div>
+                </div>
+                <div className={"pb-20 flex justify-end pt-40"}>
+                    <ProjectSlide projects={projects} />
                 </div>
             </div>
         </div>
