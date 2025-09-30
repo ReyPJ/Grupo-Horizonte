@@ -86,7 +86,7 @@ export default function BlogCarousel() {
                         </h3>
                         <div className="flex justify-between mt-3 space-x-2 items-center">
                             <BsArrowUpRightCircleFill
-                                className="w-10 h-10 cursor-pointer hover:bg-thirdGreen hover:scale-110 hover:text-secundaryYellow transition-all duration-200 rounded-4xl text-primaryBlue bg-secundaryYellow" />
+                                className="w-10 h-10 cursor-pointer hover:bg-thirdGreen hover:scale-101 hover:text-secundaryYellow transition-all duration-200 rounded-full text-primaryBlue bg-secundaryYellow" />
                             <div className="flex justify-center space-x-2 items-center">
                                 {MockSlides.map((_, index) => (
                                     <div

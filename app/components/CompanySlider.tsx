@@ -40,41 +40,43 @@ export default function CompanySlider({companies}: { companies: Company[] }) {
 
     return (
         <div className=" w-full">
-            <div className={`flex gap-28 items-center transition-opacity duration-300 ${isFading ? "opacity-0" : "opacity-100"} min-h-[640px]`}>
+            <div className={`flex flex-col lg:flex-row gap-10 lg:gap-28 items-center transition-opacity duration-300 ${isFading ? "opacity-0" : "opacity-100"} min-h-[480px] lg:min-h-[640px]`}>
                 <div className={"flex-1 min-w-0"}>
                     <div className={"flex flex-col"}>
-                        <div className={"flex items-center justify-center gap-12"}>
+                        <div className={"flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12"}>
                             <Image
                                 src={companies[current].logoUrl}
                                 alt={companies[current].company}
                                 width={800}
                                 height={800}
-                                className={"w-1/2 max-w-[380px] h-[160px] md:h-[200px] lg:h-[280px] object-contain"}
+                                className={"w-full md:w-1/2 max-w-[380px] h-[120px] sm:h-[160px] md:h-[200px] lg:h-[280px] object-contain"}
                             />
-                            <div className={"flex w-1/2 flex-col gap-3 min-w-0"}>
-                                <h2 className={"text-primaryBlue text-h1"}>
+                            <div className={"flex w-full md:w-1/2 flex-col gap-3 min-w-0"}>
+                                <h2 className={"text-primaryBlue text-h1 text-center md:text-left"}>
                                     {companies[current].company}
                                 </h2>
-                                <p className={"text-black text-p leading-relaxed"}>
+                                <p className={"text-black text-p leading-relaxed text-center md:text-left"}>
                                     {companies[current].smallHistoryText}
                                 </p>
-                                <p className={"text-black text-p leading-relaxed"}>
+                                <p className={"text-black text-p leading-relaxed text-center md:text-left"}>
                                     {companies[current].smallHistoryText2}
                                 </p>
-                                <BigButton textBefore={companies[current].buttonText}
-                                           textAfter={companies[current].buttonText}
-                                           minWidth={companies[current].buttonMinWidth}
-                                           maxWidth={companies[current].buttonMaxWidth} />
+                                <div className="flex justify-center md:justify-start">
+                                    <BigButton textBefore={companies[current].buttonText}
+                                               textAfter={companies[current].buttonText}
+                                               minWidth={companies[current].buttonMinWidth}
+                                               maxWidth={companies[current].buttonMaxWidth} />
+                                </div>
                             </div>
                         </div>
                         <div className={"flex flex-col items-center"}>
-                            <div className={"w-1/2 bg-secundaryYellow h-1 mt-2 mb-2"}></div>
+                            <div className={"w-2/3 md:w-1/2 bg-secundaryYellow h-1 mt-2 mb-2"}></div>
                             <p className={"mt-2 text-center text-h2"}>Servicios Clave</p>
                         </div>
                         <div className={"flex my-10 flex-col items-center"}>
-                            <ul className={"grid grid-cols-2 text-left gap-10 list-none"}>
+                            <ul className={"grid grid-cols-1 sm:grid-cols-2 text-left gap-6 sm:gap-10 list-none"}>
                                 {companies[current].keyServices.map((service, index) => (
-                                    <li key={index} className={"text-p flex gap-4"}>{service}<GoArrowUpRight
+                                    <li key={index} className={"text-p flex gap-4 items-center"}>{service}<GoArrowUpRight
                                         className={"text-secundaryYellow bg-primaryBlue rounded-full text-2xl hover:bg-thirdGreen cursor-pointer hover:scale-110"} />
                                     </li>
                                 ))}
@@ -83,9 +85,9 @@ export default function CompanySlider({companies}: { companies: Company[] }) {
                         </div>
                     </div>
                 </div>
-                <div className={"flex-shrink-0"}>
+                <div className={"flex-shrink-0 w-full lg:w-auto flex justify-center"}>
                     <Image src={companies[current].image} alt={companies[current].company} width={1200} height={1200}
-                           className={"rounded-4xl w-[520px] h-[700px] object-cover"} />
+                           className={"rounded-4xl w-full max-w-[520px] h-[420px] sm:h-[560px] lg:h-[700px] object-cover"} />
                 </div>
             </div>
             <div className={"flex justify-center my-6 space-x-2 items-center"}>

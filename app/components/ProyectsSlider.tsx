@@ -67,14 +67,14 @@ export default function ProjectSlide({projects}: { projects: Project[] }) {
 
           .project-slide {
             flex: 0 0 auto;
-            width: 520px;
+            width: 280px;
             transform: translateX(100%);
             transition: transform 0.8s ease-out;
           }
 
           /* Slide fantasma para crear espacio al final sin afectar el resto */
           .project-slide--ghost {
-            width: 300px; /* igual al ancho de un slide real para mantener el cálculo/flujo original */
+            width: 280px; /* igual al ancho de un slide real para mantener el cálculo/flujo original */
             opacity: 0; /* invisible */
             pointer-events: none; /* ignora eventos */
           }
@@ -89,8 +89,8 @@ export default function ProjectSlide({projects}: { projects: Project[] }) {
 
           .project-slide-item {
             position: relative;
-            width: 520px;
-            height: 800px;
+            width: 280px;
+            height: 420px;
             overflow: hidden;
             border-radius: 1rem;
           }
@@ -172,6 +172,23 @@ export default function ProjectSlide({projects}: { projects: Project[] }) {
             overflow-wrap: anywhere;
             word-break: break-word;
             margin-top: 0.5rem;
+          }
+
+          /* Responsive sizes */
+          @media (min-width: 640px) { /* sm */
+            .project-slide,
+            .project-slide--ghost { width: 340px; }
+            .project-slide-item { width: 340px; height: 500px; }
+          }
+          @media (min-width: 768px) { /* md */
+            .project-slide,
+            .project-slide--ghost { width: 400px; }
+            .project-slide-item { width: 400px; height: 600px; }
+          }
+          @media (min-width: 1024px) { /* lg */
+            .project-slide,
+            .project-slide--ghost { width: 520px; }
+            .project-slide-item { width: 520px; height: 800px; }
           }
         `}
             </style>
