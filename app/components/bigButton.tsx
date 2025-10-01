@@ -12,13 +12,11 @@ interface ButtonProps {
 export default function BigButton({textBefore, textAfter, textColor = "black", minWidth = "250px", maxWidth = "280px"}: ButtonProps) {
     return (
         <button className="custom-button">
-            {/* Contenedor inicial (before) */}
             <span className="before-content">
                 <FaArrowRightLong className="before-arrow"  />
                 <span className="before-text">{textBefore}</span>
             </span>
 
-            {/* Contenedor del after (aparece en hover) */}
             <span className="after-content">
                 <span className="after-text">{textAfter}</span>
                 <FaArrowRightLong className="after-arrow" />

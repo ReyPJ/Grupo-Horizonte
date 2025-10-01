@@ -1,14 +1,47 @@
+"use client";
 import BlogCarousel from "@/app/components/BlogCarousel";
 import BigButton from "@/app/components/bigButton";
 import CompanySlider from "@/app/components/CompanySlider";
 import ProjectSlide from "@/app/components/ProyectsSlider";
 import HeaderNav from "@/app/components/HeaderNav";
 import Footer from "@/app/components/footer"
+import ProjectsMegaMenu from "@/app/components/ProjectsMegaMenu";
 import Image from "next/image";
 import * as React from "react";
 
 
 export default function Home() {
+
+    const [projectsOpen, setProjectsOpen] = React.useState(false);
+    const [isClosing, setIsClosing] = React.useState(false);
+    const closeTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+
+    const setProjectsOpenWithAnimation = React.useCallback((open: boolean) => {
+        if (open) {
+            if (closeTimer.current) {
+                clearTimeout(closeTimer.current);
+                closeTimer.current = null;
+            }
+            setIsClosing(false);
+            setProjectsOpen(true);
+        } else {
+            if (projectsOpen) {
+                setIsClosing(true);
+                if (closeTimer.current) clearTimeout(closeTimer.current);
+                closeTimer.current = setTimeout(() => {
+                    setIsClosing(false);
+                    closeTimer.current = null;
+                }, 420);
+            }
+            setProjectsOpen(false);
+        }
+    }, [projectsOpen]);
+
+    React.useEffect(() => {
+        return () => {
+            if (closeTimer.current) clearTimeout(closeTimer.current);
+        };
+    }, []);
 
     const companies = [
         {
@@ -65,7 +98,15 @@ export default function Home() {
 
     return (
         <div className={"w-full min-h-dvh"}>
-            <HeaderNav />
+            <div className="relative z-50" onMouseLeave={() => setProjectsOpenWithAnimation(false)}>
+                <HeaderNav setProjectsOpen={setProjectsOpenWithAnimation} projectsOpen={projectsOpen} />
+                <div
+                    className={`hidden md:block absolute left-0 right-0 top-full bg-white border-t border-gray-200 shadow-2xl transition-[opacity,transform] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-[transform,opacity] origin-top z-[60] ${projectsOpen ? 'animate-megaSlideDown opacity-100 translate-y-0 visible pointer-events-auto' : (isClosing ? 'animate-megaSlideUp visible pointer-events-none' : 'opacity-0 -translate-y-4 invisible pointer-events-none')}`}
+                    onMouseEnter={() => setProjectsOpenWithAnimation(true)}
+                >
+                    <ProjectsMegaMenu />
+                </div>
+            </div>
             <div className="bg-no-repeat bg-cover min-h-dvh" style={{backgroundImage: "url(/panelesfondo2.jpg)"}}>
                 <div className={"flex flex-col lg:flex-row items-center justify-center p-6 sm:p-10 lg:p-24 w-full min-h-dvh gap-8 lg:gap-0"}>
                     <div className={"flex flex-col items-center justify-center w-full lg:w-1/2 min-h-[40vh] lg:min-h-dvh"}>
