@@ -92,7 +92,9 @@ export default function HeaderNav({
                         </a>
                     </button>
                     <p className="text-h4 cursor-pointer transition delay-100 hover:bg-primaryBlue hover:text-white py-2 px-4 rounded-3xl">
-                        Contacto
+                        <a href="/contacto">
+                            Contacto
+                        </a>
                     </p>
                 </div>
 
