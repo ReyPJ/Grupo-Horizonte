@@ -4,45 +4,10 @@ import BigButton from "@/app/components/bigButton";
 import CompanySlider from "@/app/components/CompanySlider";
 import ProjectSlide from "@/app/components/ProyectsSlider";
 import HeaderNav from "@/app/components/HeaderNav";
-import Footer from "@/app/components/footer"
-import ProjectsMegaMenu from "@/app/components/ProjectsMegaMenu";
+import Footer from "@/app/components/footer";
 import Image from "next/image";
-import * as React from "react";
-
 
 export default function Home() {
-
-    const [projectsOpen, setProjectsOpen] = React.useState(false);
-    const [isClosing, setIsClosing] = React.useState(false);
-    const closeTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
-
-    const setProjectsOpenWithAnimation = React.useCallback((open: boolean) => {
-        if (open) {
-            if (closeTimer.current) {
-                clearTimeout(closeTimer.current);
-                closeTimer.current = null;
-            }
-            setIsClosing(false);
-            setProjectsOpen(true);
-        } else {
-            if (projectsOpen) {
-                setIsClosing(true);
-                if (closeTimer.current) clearTimeout(closeTimer.current);
-                closeTimer.current = setTimeout(() => {
-                    setIsClosing(false);
-                    closeTimer.current = null;
-                }, 420);
-            }
-            setProjectsOpen(false);
-        }
-    }, [projectsOpen]);
-
-    React.useEffect(() => {
-        return () => {
-            if (closeTimer.current) clearTimeout(closeTimer.current);
-        };
-    }, []);
-
     const companies = [
         {
             company: "Constructora 4C",
@@ -98,15 +63,10 @@ export default function Home() {
 
     return (
         <div className={"w-full min-h-dvh"}>
-            <div className="relative z-50" onMouseLeave={() => setProjectsOpenWithAnimation(false)}>
-                <HeaderNav setProjectsOpen={setProjectsOpenWithAnimation} projectsOpen={projectsOpen} />
-                <div
-                    className={`hidden md:block absolute left-0 right-0 top-full bg-white border-t border-gray-200 shadow-2xl transition-[opacity,transform] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-[transform,opacity] origin-top z-[60] ${projectsOpen ? 'animate-megaSlideDown opacity-100 translate-y-0 visible pointer-events-auto' : (isClosing ? 'animate-megaSlideUp visible pointer-events-none' : 'opacity-0 -translate-y-4 invisible pointer-events-none')}`}
-                    onMouseEnter={() => setProjectsOpenWithAnimation(true)}
-                >
-                    <ProjectsMegaMenu />
-                </div>
-            </div>
+            {/* Header con mega menú integrado */}
+            <HeaderNav />
+
+            {/* Hero Section */}
             <div className="bg-no-repeat bg-cover min-h-dvh" style={{backgroundImage: "url(/panelesfondo2.jpg)"}}>
                 <div className={"flex flex-col lg:flex-row items-center justify-center p-6 sm:p-10 lg:p-24 w-full min-h-dvh gap-8 lg:gap-0"}>
                     <div className={"flex flex-col items-center justify-center w-full lg:w-1/2 min-h-[40vh] lg:min-h-dvh"}>
@@ -115,7 +75,8 @@ export default function Home() {
                             Para lo que viene<br className="hidden sm:block" /> en el horizonte.
                         </h1>
                         <h3 className={"text-h3 text-white text-center mt-4"}>
-                            Nuestro compromiso es abrir camino<br className="hidden sm:block" />{" "} hacia un futuro mejor, para que<br className="hidden sm:block" />{" "} estamos listo
+                            Nuestro compromiso es abrir camino<br className="hidden sm:block" />{" "} hacia un futuro
+                            mejor, para que<br className="hidden sm:block" />{" "} estamos listo
                             para el futuro que cada vez<br className="hidden sm:block" />{" "} esta mas cerca.
                         </h3>
                     </div>
@@ -124,6 +85,8 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+
+            {/* Section: Equipos extraordinarios */}
             <div className={"flex flex-col lg:flex-row px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64 py-12 lg:py-20 gap-8 lg:gap-16 justify-center items-center"}>
                 <div className={"flex flex-col w-full lg:w-1/2 gap-4"}>
                     <h3 className={"text-h3 sm:text-h2 leading-tight"}>
@@ -163,6 +126,8 @@ export default function Home() {
                     />
                 </div>
             </div>
+
+            {/* Section: Calidad del equipo */}
             <div className="bg-no-repeat bg-cover min-h-dvh relative" style={{backgroundImage: "url(/obras1.jpg)"}}>
                 <div className={"absolute inset-0 bg-black opacity-40 z-0"}></div>
                 <div className={"flex flex-col lg:flex-row items-center justify-center p-6 sm:p-10 lg:p-24 w-full min-h-dvh gap-8 lg:gap-0"}>
@@ -186,15 +151,21 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+
+            {/* Section: Nuestras Empresas Header */}
             <div className={"flex flex-col px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64 py-12 lg:py-20 justify-center items-center"}>
                 <div className={"w-2/3 md:w-1/2 lg:w-1/3 bg-secundaryYellow h-1 mt-2 mb-2"}></div>
                 <h3 className={"text-primaryBlue text-h1 text-center"}>
                     Nuestras Empresas
                 </h3>
             </div>
+
+            {/* Company Slider */}
             <div className={"flex px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64 py-4 justify-center items-center"}>
                 <CompanySlider companies={companies} />
             </div>
+
+            {/* Section: Nuestro Equipo */}
             <div className="bg-no-repeat bg-cover min-h-dvh relative" style={{backgroundImage: "url(/eolico2.jpg)"}}>
                 <div className={"absolute inset-0 bg-black opacity-50 z-0"}></div>
                 <div className={"flex flex-col lg:flex-row items-center justify-center p-6 sm:p-10 lg:p-24 w-full min-h-dvh gap-8 lg:gap-0"}>
@@ -208,7 +179,7 @@ export default function Home() {
                     </div>
                     <div className={"w-full lg:w-1/2 flex justify-center z-20"}>
                         <p className={"text-p text-white text-center lg:text-left"}>
-                            La integridad, innovación y una mentalidad de “nunca<br className="hidden sm:block" />{" "}conformarse” están en el centro de
+                            La integridad, innovación y una mentalidad de "nunca<br className="hidden sm:block" />{" "}conformarse" están en el centro de
                             todo
                             lo que hacemos.<br className="hidden sm:block" />{" "}
                             Nuestro equipo esta lleno de pensadores audaces y<br className="hidden sm:block" />{" "}hábiles solucionadores de problemas
@@ -218,6 +189,8 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+
+            {/* Section: Construimos Historia */}
             <div>
                 <div className={"flex flex-col lg:flex-row px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64 pt-16 md:pt-24 lg:pt-40 justify-center items-center gap-8"}>
                     <div className={"flex flex-col w-full lg:w-1/2 items-center lg:items-start text-center lg:text-left"}>
@@ -239,6 +212,8 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
+
+                {/* Projects Section */}
                 <div className={"pb-20 flex flex-col gap-12 pt-16 md:pt-24 lg:pt-40"}>
                     <div className={"flex flex-col w-full px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64"}>
                         <h2 className={"text-h1"}>Proyectos Destacados</h2>
@@ -249,6 +224,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+
             <Footer />
         </div>
     );
