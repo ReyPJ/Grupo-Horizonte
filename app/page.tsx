@@ -41,7 +41,6 @@ export default function Home() {
         }
     }, [projectsOpen, enfoqueOpen]);
 
-    // ✅ Callback para Enfoque
     const setEnfoqueOpenWithAnimation = React.useCallback((open: boolean) => {
         if (open) {
             if (closeTimerEnfoque.current) {
@@ -130,18 +129,18 @@ export default function Home() {
                 .hero-gradient {
                     background: linear-gradient(
                             135deg,
-                            rgba(0, 12, 71, 0.7) 0%,
-                            rgba(0, 12, 71, 0.5) 50%,
-                            rgba(0, 12, 71, 0.7) 100%
+                            rgba(0, 12, 71, 0.75) 0%,
+                            rgba(0, 12, 71, 0.55) 50%,
+                            rgba(0, 12, 71, 0.75) 100%
                     );
                 }
 
                 .section-overlay {
                     background: linear-gradient(
                             to bottom,
-                            rgba(0, 0, 0, 0.5) 0%,
-                            rgba(0, 0, 0, 0.3) 50%,
-                            rgba(0, 0, 0, 0.5) 100%
+                            rgba(0, 0, 0, 0.6) 0%,
+                            rgba(0, 0, 0, 0.4) 50%,
+                            rgba(0, 0, 0, 0.6) 100%
                     );
                 }
 
@@ -174,9 +173,12 @@ export default function Home() {
                 }
 
                 .content-card {
-                    backdrop-filter: blur(4px);
-                    background: rgba(255, 255, 255, 0.98);
-                    box-shadow: 0 8px 32px rgba(0, 12, 71, 0.08);
+                    backdrop-filter: blur(8px);
+                    background: rgba(255, 255, 255, 0.97);
+                    box-shadow: 
+                        0 8px 32px rgba(0, 12, 71, 0.1),
+                        0 2px 8px rgba(0, 0, 0, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.3);
                 }
 
                 @keyframes fadeInUp {
@@ -192,6 +194,34 @@ export default function Home() {
 
                 .animate-fade-in-up {
                     animation: fadeInUp 0.8s ease-out forwards;
+                }
+
+                /* Mejora de legibilidad en textos */
+                .text-shadow-strong {
+                    text-shadow: 
+                        0 2px 20px rgba(0, 0, 0, 0.6),
+                        0 4px 40px rgba(0, 0, 0, 0.4),
+                        0 1px 3px rgba(0, 0, 0, 0.8);
+                }
+
+                .text-shadow-soft {
+                    text-shadow: 
+                        0 2px 15px rgba(0, 0, 0, 0.3),
+                        0 1px 3px rgba(0, 0, 0, 0.5);
+                }
+
+                /* Scroll indicator bounce */
+                @keyframes bounce {
+                    0%, 100% {
+                        transform: translateY(0);
+                    }
+                    50% {
+                        transform: translateY(10px);
+                    }
+                }
+
+                .animate-bounce-slow {
+                    animation: bounce 2s ease-in-out infinite;
                 }
             `}</style>
 
@@ -223,108 +253,114 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* Hero Section */}
+            {/* Hero Section - MEJORADO */}
             <section className="relative bg-no-repeat bg-cover bg-center min-h-dvh"
                      style={{backgroundImage: "url(/panelesfondo2.jpg)"}}>
                 <div className="hero-gradient absolute inset-0 z-0"></div>
-                <div
-                    className="relative z-10 flex flex-col lg:flex-row items-center justify-center p-6 sm:p-10 lg:p-24 w-full min-h-dvh gap-12 lg:gap-16">
-                    <div
-                        className="flex flex-col items-center justify-center w-full lg:w-1/2 min-h-[40vh] lg:min-h-dvh space-y-6">
-                        <h1 className="text-h1 text-center text-white drop-shadow-2xl animate-fade-in-up">
-                            Impulsando el futuro.<br className="hidden sm:block" />
-                            Para lo que viene<br className="hidden sm:block" /> en el horizonte.
+                <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 lg:px-24 w-full min-h-dvh gap-8 lg:gap-16 py-20 lg:py-0">
+
+                    {/* Texto principal */}
+                    <div className="flex flex-col items-center justify-center w-full lg:w-1/2 space-y-6 lg:space-y-8">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center text-white text-shadow-strong animate-fade-in-up font-bold leading-tight max-w-4xl">
+                            Impulsando el futuro.{' '}
+                            <span className="block mt-2 lg:mt-1">
+                                Para lo que viene en el horizonte.
+                            </span>
                         </h1>
-                        <h3 className="text-h3 text-white text-center mt-4 drop-shadow-lg max-w-2xl animate-fade-in-up"
+
+                        <h3 className="text-lg sm:text-xl lg:text-2xl text-white text-center text-shadow-soft max-w-2xl animate-fade-in-up leading-relaxed px-2"
                             style={{animationDelay: '0.2s'}}>
-                            Nuestro compromiso es abrir camino<br className="hidden sm:block" /> hacia un futuro
-                            mejor, para que<br className="hidden sm:block" /> estemos listos
-                            para el futuro que cada vez<br className="hidden sm:block" /> está más cerca.
+                            Nuestro compromiso es abrir camino hacia un futuro mejor, para que estemos listos para el futuro que cada vez está más cerca.
                         </h3>
                     </div>
-                    <div className="w-full lg:w-1/2 flex justify-center animate-fade-in-up"
+
+                    {/* Carousel - SOLO en desktop */}
+                    <div className="hidden lg:flex w-full lg:w-1/2 justify-center animate-fade-in-up"
                          style={{animationDelay: '0.4s'}}>
-                        <BlogCarousel />
+                        <div className="w-full max-w-2xl">
+                            <BlogCarousel />
+                        </div>
+                    </div>
+                </div>
+
+                {/* Scroll indicator - solo desktop */}
+                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden lg:block animate-bounce-slow">
+                    <div className="w-6 h-10 border-2 border-white/80 rounded-full flex items-start justify-center p-2">
+                        <div className="w-1 h-3 bg-white rounded-full"></div>
                     </div>
                 </div>
             </section>
 
-            {/* Section: Equipos extraordinarios */}
+            {/* Section: Equipos extraordinarios - MEJORADO */}
             <section className="bg-gradient-to-b from-white via-gray-50 to-white">
-                <div
-                    className="flex flex-col lg:flex-row px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64 py-16 lg:py-24 gap-10 lg:gap-20 justify-center items-center">
+                <div className="flex flex-col lg:flex-row px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64 py-16 lg:py-24 gap-10 lg:gap-20 justify-center items-center">
                     <div className="flex flex-col w-full lg:w-1/2 gap-6">
-                        <h3 className="text-h3 sm:text-h2 leading-tight text-primaryBlue font-bold">
-                            Equipos extraordinarios<br className="hidden sm:block" />
-                            Construyendo proyectos<br className="hidden sm:block" />
-                            Que impulsan hacia el futuro
+                        <h3 className="text-3xl sm:text-4xl lg:text-5xl leading-tight text-primaryBlue font-bold">
+                            <span className="block">Equipos extraordinarios</span>
+                            <span className="block">Construyendo proyectos</span>
+                            <span className="block">Que impulsan hacia el futuro</span>
                         </h3>
-                        <p className="text-p text-gray-700 leading-relaxed">
-                            Ofrecemos proyectos únicos que mejoran la calidad de vida,<br className="hidden sm:block" />
-                            fomentamos la innovación y el desarrollo con<br className="hidden sm:block" />
-                            soluciones integrales, con empresas con más de<br className="hidden sm:block" />
-                            20 años de experiencia impulsando al mundo<br className="hidden sm:block" />
-                            hacia el futuro, comprometidos con la calidad y la<br className="hidden sm:block" />
-                            sostenibilidad de cada proyecto.
+
+                        <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                            Ofrecemos proyectos únicos que mejoran la calidad de vida, fomentamos la innovación y el desarrollo con soluciones integrales, con empresas con más de 20 años de experiencia impulsando al mundo hacia el futuro, comprometidos con la calidad y la sostenibilidad de cada proyecto.
                         </p>
-                        <p className="text-p text-gray-700 leading-relaxed">
-                            Desde el sector de la construcción, ingeniería<br className="hidden sm:block" />
-                            mecánica, civil, fotovoltaica, eléctrica, así como el<br className="hidden sm:block" />
-                            desarrollo de proyectos eólicos, plantas solares,<br className="hidden sm:block" />
-                            sistemas de autoconsumo para uso industrial<br className="hidden sm:block" />
-                            comercial y residencial.
+
+                        <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                            Desde el sector de la construcción, ingeniería mecánica, civil, fotovoltaica, eléctrica, así como el desarrollo de proyectos eólicos, plantas solares, sistemas de autoconsumo para uso industrial comercial y residencial.
                         </p>
-                        <p className="text-p text-gray-700 leading-relaxed">
-                            Desarrollamos infraestructura y energía de alta<br className="hidden sm:block" />
-                            calidad, con gran compromiso con la<br className="hidden sm:block" />
-                            eficiencia, innovación y seguridad.
+
+                        <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                            Desarrollamos infraestructura y energía de alta calidad, con gran compromiso con la eficiencia, innovación y seguridad.
                         </p>
-                        <div className="mt-2">
-                            <BigButton textAfter="Misión, Visión y Valores" textBefore="Misión, Visión y Valores"
-                                       textColor="black"
-                                       minWidth="200px"
-                                       maxWidth="280px" />
+
+                        <div className="mt-4">
+                            <BigButton
+                                textAfter="Misión, Visión y Valores"
+                                textBefore="Misión, Visión y Valores"
+                                textColor="black"
+                                minWidth="200px"
+                                maxWidth="280px"
+                            />
                         </div>
                     </div>
+
                     <div className="flex flex-col w-full lg:w-1/2 items-center">
-                        <div className="relative group">
-                            <Image src="/turbinas_4c_nucleologo.jpg" width={1200} height={1200}
-                                   alt="Turbina eolica con logos de 4c y Nucleo Energy"
-                                   className="w-full max-w-[540px] h-[420px] sm:h-[560px] lg:h-[700px] object-cover rounded-4xl shadow-2xl ring-1 ring-black/5 transition-transform duration-500 group-hover:scale-[1.02]"
+                        <div className="relative group w-full max-w-[540px]">
+                            <Image
+                                src="/turbinas_4c_nucleologo.jpg"
+                                width={1200}
+                                height={1200}
+                                alt="Turbina eolica con logos de 4c y Nucleo Energy"
+                                className="w-full h-[350px] sm:h-[460px] lg:h-[700px] object-cover rounded-3xl shadow-2xl ring-1 ring-black/5 transition-transform duration-500 group-hover:scale-[1.02]"
                             />
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Section: Calidad del equipo */}
+            {/* Section: Calidad del equipo - MEJORADO */}
             <section className="relative bg-no-repeat bg-cover bg-center min-h-dvh"
                      style={{backgroundImage: "url(/obras1.jpg)"}}>
                 <div className="section-overlay absolute inset-0 z-0"></div>
-                <div
-                    className="relative z-10 flex flex-col lg:flex-row items-center justify-center p-6 sm:p-10 lg:p-24 w-full min-h-dvh gap-12 lg:gap-16">
-                    <div
-                        className="flex flex-col items-center justify-center w-full lg:w-1/2 min-h-[40vh] lg:min-h-dvh space-y-8">
-                        <h2 className="text-h1 text-center text-white drop-shadow-2xl">
-                            Definidos por la calidad<br className="hidden sm:block" />
-                            de nuestro gran equipo.
+                <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 lg:px-24 w-full min-h-dvh gap-10 lg:gap-16 py-20 lg:py-0">
+
+                    <div className="flex flex-col items-center justify-center w-full lg:w-1/2 space-y-8">
+                        <h2 className="text-4xl sm:text-5xl lg:text-6xl text-center text-white text-shadow-strong font-bold leading-tight max-w-3xl">
+                            Definidos por la calidad de nuestro gran equipo.
                         </h2>
-                        <BigButton textAfter="Nuestras empresas" textBefore="Nuestras empresas"
-                                   textColor="white" minWidth="230px" maxWidth="260px" />
+                        <BigButton
+                            textAfter="Nuestras empresas"
+                            textBefore="Nuestras empresas"
+                            textColor="white"
+                            minWidth="230px"
+                            maxWidth="260px"
+                        />
                     </div>
-                    <div className="w-full lg:w-1/2 flex justify-center">
-                        <div className="content-card rounded-3xl p-8 max-w-xl">
-                            <p className="text-p text-gray-800 text-center lg:text-left leading-relaxed">
-                                Nuestro equipo aporta su excelencia técnica, ingenio,<br className="hidden sm:block" />
-                                empuje, creatividad y experiencia para ayudar a nuestros<br
-                                className="hidden sm:block" />
-                                clientes a lograr sus visiones audaces. Tenemos éxito a<br
-                                className="hidden sm:block" />
-                                través de la asociación y el deseo compartido de marcar<br
-                                className="hidden sm:block" />
-                                la diferencia. Motivados por los desafíos en el horizonte<br
-                                className="hidden sm:block" />
-                                superamos todos los límites posibles.
+
+                    <div className="w-full lg:w-1/2 flex justify-center px-2">
+                        <div className="content-card rounded-3xl p-6 sm:p-8 max-w-xl">
+                            <p className="text-base sm:text-lg text-gray-800 text-center lg:text-left leading-relaxed">
+                                Nuestro equipo aporta su excelencia técnica, ingenio, empuje, creatividad y experiencia para ayudar a nuestros clientes a lograr sus visiones audaces. Tenemos éxito a través de la asociación y el deseo compartido de marcar la diferencia. Motivados por los desafíos en el horizonte superamos todos los límites posibles.
                             </p>
                         </div>
                     </div>
@@ -335,7 +371,7 @@ export default function Home() {
             <section className="bg-gradient-to-b from-white to-gray-50 py-16 lg:py-20">
                 <div className="flex flex-col px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64 justify-center items-center">
                     <div className="decorative-line w-2/3 md:w-1/2 lg:w-1/3 h-1 mt-2 mb-6 rounded-full"></div>
-                    <h3 className="section-title text-primaryBlue text-h1 text-center font-bold pb-4">
+                    <h3 className="section-title text-primaryBlue text-4xl sm:text-5xl lg:text-6xl text-center font-bold pb-4">
                         Nuestras Empresas
                     </h3>
                 </div>
@@ -348,72 +384,71 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Section: Nuestro Equipo */}
+            {/* Section: Nuestro Equipo - MEJORADO */}
             <section className="relative bg-no-repeat bg-cover bg-center min-h-dvh"
                      style={{backgroundImage: "url(/eolico2.jpg)"}}>
                 <div className="section-overlay absolute inset-0 z-0"></div>
-                <div
-                    className="relative z-10 flex flex-col lg:flex-row items-center justify-center p-6 sm:p-10 lg:p-24 w-full min-h-dvh gap-12 lg:gap-16">
-                    <div
-                        className="flex flex-col items-center justify-center w-full lg:w-1/2 min-h-[40vh] lg:min-h-dvh space-y-8">
-                        <h2 className="text-h1 text-center text-white drop-shadow-2xl">
-                            Definidos por la calidad<br className="hidden sm:block" />
-                            de nuestro gran equipo.
+                <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 lg:px-24 w-full min-h-dvh gap-10 lg:gap-16 py-20 lg:py-0">
+
+                    <div className="flex flex-col items-center justify-center w-full lg:w-1/2 space-y-8">
+                        <h2 className="text-4xl sm:text-5xl lg:text-6xl text-center text-white text-shadow-strong font-bold leading-tight max-w-3xl">
+                            Definidos por la calidad de nuestro gran equipo.
                         </h2>
-                        <BigButton textAfter="Nuestro equipo" textBefore="Nuestro equipo"
-                                   textColor="white" minWidth="200px" maxWidth="240px" />
+                        <BigButton
+                            textAfter="Nuestro equipo"
+                            textBefore="Nuestro equipo"
+                            textColor="white"
+                            minWidth="200px"
+                            maxWidth="240px"
+                        />
                     </div>
-                    <div className="w-full lg:w-1/2 flex justify-center">
-                        <div className="content-card rounded-3xl p-8 max-w-xl">
-                            <p className="text-p text-gray-800 text-center lg:text-left leading-relaxed">
-                                La integridad, innovación y una mentalidad de "nunca<br
-                                className="hidden sm:block" /> conformarse" están en el centro de
-                                todo lo que hacemos.<br className="hidden sm:block" />
-                                Nuestro equipo está lleno de pensadores audaces y<br
-                                className="hidden sm:block" /> hábiles solucionadores de problemas
-                                que convierten los<br className="hidden sm:block" /> desafíos en oportunidades para
-                                lograr lo extraordinario.
+
+                    <div className="w-full lg:w-1/2 flex justify-center px-2">
+                        <div className="content-card rounded-3xl p-6 sm:p-8 max-w-xl">
+                            <p className="text-base sm:text-lg text-gray-800 text-center lg:text-left leading-relaxed">
+                                La integridad, innovación y una mentalidad de "nunca conformarse" están en el centro de todo lo que hacemos. Nuestro equipo está lleno de pensadores audaces y hábiles solucionadores de problemas que convierten los desafíos en oportunidades para lograr lo extraordinario.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Section: Construimos Historia */}
+            {/* Section: Construimos Historia - MEJORADO */}
             <section className="bg-white">
-                <div
-                    className="flex flex-col lg:flex-row px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64 pt-20 md:pt-28 lg:pt-40 justify-center items-center gap-10 lg:gap-16">
-                    <div
-                        className="flex flex-col w-full lg:w-1/2 items-center lg:items-start text-center lg:text-left space-y-6">
-                        <h2 className="text-h1 text-primaryBlue font-bold">
-                            Nosotros<br className="hidden sm:block" /> Construimos Historia
+                <div className="flex flex-col lg:flex-row px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64 pt-16 md:pt-24 lg:pt-32 justify-center items-center gap-10 lg:gap-16">
+
+                    <div className="flex flex-col w-full lg:w-1/2 items-center lg:items-start text-center lg:text-left space-y-6">
+                        <h2 className="text-4xl sm:text-5xl lg:text-6xl text-primaryBlue font-bold leading-tight">
+                            Nosotros Construimos Historia
                         </h2>
-                        <BigButton textAfter="Todos los Proyectos" textBefore="Todos los Proyectos"
-                                   textColor="black" minWidth="200px" maxWidth="240px" />
+                        <BigButton
+                            textAfter="Todos los Proyectos"
+                            textBefore="Todos los Proyectos"
+                            textColor="black"
+                            minWidth="200px"
+                            maxWidth="240px"
+                        />
                     </div>
+
                     <div className="w-full lg:w-1/2 flex justify-center">
-                        <p className="text-p text-gray-700 text-center lg:text-left leading-relaxed max-w-2xl">
-                            La historia desde inicios del siglo y para los siguientes siglos estará determinada por la
-                            capacidad del mundo para trabajar rápido y en gran escala para satisfacer necesidades en una
-                            pronta evolución de infraestructura, energía, manufactura avanzada, recursos críticos,
-                            protección ambiental y seguridad nacional.<br /><br />Durante muchos años hemos estado
-                            siempre a la
-                            altura de las circunstancias. Tenemos la experiencia y los conocimientos, y estamos
-                            diseñados específicamente para afrontar todos estos desafíos que se asoman desde el
-                            horizonte.
+                        <p className="text-base sm:text-lg text-gray-700 text-center lg:text-left leading-relaxed max-w-2xl">
+                            La historia desde inicios del siglo y para los siguientes siglos estará determinada por la capacidad del mundo para trabajar rápido y en gran escala para satisfacer necesidades en una pronta evolución de infraestructura, energía, manufactura avanzada, recursos críticos, protección ambiental y seguridad nacional.
+                            <br /><br />
+                            Durante muchos años hemos estado siempre a la altura de las circunstancias. Tenemos la experiencia y los conocimientos, y estamos diseñados específicamente para afrontar todos estos desafíos que se asoman desde el horizonte.
                         </p>
                     </div>
                 </div>
 
                 {/* Projects Section */}
-                <div className="pb-24 flex flex-col gap-16 pt-20 md:pt-28 lg:pt-40">
+                <div className="pb-24 flex flex-col gap-16 pt-16 md:pt-24 lg:pt-32">
                     <div className="flex flex-col w-full px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64">
-                        <h2 className="text-h1 font-bold text-primaryBlue">Proyectos Destacados</h2>
+                        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primaryBlue">
+                            Proyectos Destacados
+                        </h2>
                     </div>
                     <ProjectSlide projects={projects} />
                     <div className="flex justify-center">
-                        <div
-                            className="w-3/4 max-w-4xl bg-gradient-to-r from-transparent via-thirdGreen to-transparent h-[5px] rounded-xl shadow-lg"></div>
+                        <div className="w-3/4 max-w-4xl bg-gradient-to-r from-transparent via-thirdGreen to-transparent h-[5px] rounded-xl shadow-lg"></div>
                     </div>
                 </div>
             </section>

@@ -135,7 +135,9 @@ export default function HeaderNav({
             >
                 <div className="px-4 pb-3 space-y-1">
                     <button className="block w-full text-left text-h4 py-2 px-3 rounded-2xl hover:bg-gray-100" onClick={() => setMobileOpen(false)}>
-                        Inicio
+                        <a href={"/"}>
+                            Inicio
+                        </a>
                     </button>
                     <button
                         className={`block w-full text-left text-h4 py-2 px-3 rounded-2xl ${projectsOpen ? 'bg-primaryBlue text-white' : 'hover:bg-gray-100'}`}
@@ -143,7 +145,9 @@ export default function HeaderNav({
                         aria-haspopup="true"
                         aria-expanded={projectsOpen ?? false}
                     >
-                        Proyectos
+                        <a href={"/proyectos"}>
+                            Proyectos
+                        </a>
                     </button>
                     <button className="block w-full text-left text-h4 py-2 px-3 rounded-2xl hover:bg-gray-100" onClick={() => setMobileOpen(false)}>
                         Empresas
@@ -154,10 +158,14 @@ export default function HeaderNav({
                         aria-haspopup="true"
                         aria-expanded={enfoqueOpen ?? false}
                     >
-                        Enfoque
+                        <a href={"/enfoque"}>
+                            Enfoque
+                        </a>
                     </button>
                     <button className="block w-full text-left text-h4 py-2 px-3 rounded-2xl hover:bg-gray-100" onClick={() => setMobileOpen(false)}>
-                        Contacto
+                        <a href={"/contacto"}>
+                            Contacto
+                        </a>
                     </button>
                 </div>
             </div>

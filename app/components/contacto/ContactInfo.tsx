@@ -1,135 +1,183 @@
-import {FaPhone, FaWhatsapp} from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaClock, FaGlobe } from "react-icons/fa";
 
-export default function ContactHero() {
+export default function ContactInfo() {
     return (
         <>
             <style jsx>{`
-                .hero-overlay {
-                    background: linear-gradient(135deg,
-                    rgba(0, 12, 71, 0.95) 0%,
-                    rgba(0, 12, 71, 0.85) 50%,
-                    rgba(10, 135, 0, 0.75) 100%
-                    );
-                }
-
-                .cta-button {
-                    position: relative;
-                    overflow: hidden;
+                .info-card {
                     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                    border: 2px solid transparent;
                 }
 
-                .cta-button::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: -100%;
-                    width: 100%;
-                    height: 100%;
-                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-                    transition: left 0.6s ease;
+                .info-card:hover {
+                    transform: translateY(-8px) scale(1.02);
+                    border-color: #CED300;
+                    box-shadow: 0 20px 40px rgba(0, 12, 71, 0.15);
                 }
 
-                .cta-button:hover::before {
-                    left: 100%;
+                .icon-wrapper {
+                    position: relative;
+                    transition: all 0.4s ease;
                 }
 
-                .cta-button:hover {
-                    transform: translateY(-2px);
-                    box-shadow: 0 12px 24px rgba(206, 211, 0, 0.3);
+                .info-card:hover .icon-wrapper {
+                    transform: rotate(5deg) scale(1.1);
                 }
 
-                .hero-badge {
-                    animation: float 3s ease-in-out infinite;
-                }
-
-                @keyframes float {
-                    0%, 100% {
-                        transform: translateY(0px);
-                    }
-                    50% {
-                        transform: translateY(-10px);
-                    }
-                }
-
-                .stats-badge {
-                    backdrop-filter: blur(10px);
-                    background: rgba(255, 255, 255, 0.1);
-                    border: 1px solid rgba(255, 255, 255, 0.2);
+                .info-link {
                     transition: all 0.3s ease;
+                    display: inline-block;
                 }
 
-                .stats-badge:hover {
-                    background: rgba(255, 255, 255, 0.15);
-                    transform: scale(1.05);
+                .info-link:hover {
+                    color: #CED300;
+                    transform: translateX(4px);
+                }
+
+                .section-badge {
+                    background: linear-gradient(135deg, #000C47 0%, #0A8700 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                }
+
+                .decorative-line {
+                    height: 4px;
+                    background: linear-gradient(90deg, #CED300 0%, #0A8700 100%);
+                    border-radius: 2px;
+                    animation: expandLine 1.5s ease-out;
+                }
+
+                @keyframes expandLine {
+                    from { width: 0; opacity: 0; }
+                    to { width: 100%; opacity: 1; }
                 }
             `}</style>
 
-            <div className="relative bg-cover bg-center min-h-[85vh] flex items-center"
-                 style={{backgroundImage: "url(/obras1.jpg)"}}>
-                <div className="hero-overlay absolute inset-0 z-0"></div>
-
-                <div className="relative z-10 w-full px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64 py-20">
+            <div className="bg-gradient-to-b from-white to-gray-50 py-20">
+                <div className="px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64">
                     <div className="max-w-7xl mx-auto">
-                        <div className="grid lg:grid-cols-2 gap-12 items-center">
-                            {/* Left Content */}
-                            <div className="text-white space-y-8">
-                                <div className="hero-badge inline-block">
-                                    <span
-                                        className="bg-secundaryYellow text-primaryBlue px-6 py-2 rounded-full font-bold text-sm uppercase tracking-wider">
-                                        Contacto
-                                    </span>
+                        {/* Header */}
+                        <div className="text-center mb-16">
+                            <h2 className="text-h2 text-primaryBlue mb-4">
+                                Múltiples Formas de Conectar
+                            </h2>
+                            <div className="decorative-line w-24 mx-auto mb-6"></div>
+                            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                                Estamos disponibles para atenderte por el medio que prefieras.
+                                Tu proyecto es nuestra prioridad.
+                            </p>
+                        </div>
+
+                        {/* Info Cards */}
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {/* Teléfonos */}
+                            <div className="info-card bg-white rounded-3xl p-8 shadow-lg">
+                                <div className="icon-wrapper w-16 h-16 bg-gradient-to-br from-secundaryYellow to-thirdGreen rounded-2xl flex items-center justify-center mb-6">
+                                    <FaPhone className="text-primaryBlue text-2xl" />
                                 </div>
-
-                                <h1 className="text-h1 md:text-[58px] lg:text-[68px] font-bold leading-tight">
-                                    Transformemos<br />
-                                    Tus Ideas en<br />
-                                    <span className="text-secundaryYellow">Realidad</span>
-                                </h1>
-
-                                <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl">
-                                    Con más de 20 años de experiencia, Grupo Horizonte está listo
-                                    para llevar tu proyecto al siguiente nivel. Contáctanos y
-                                    descubre cómo podemos ayudarte.
-                                </p>
-
-                                <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                    <a
-                                        href="tel:+525515572791"
-                                        className="cta-button bg-secundaryYellow text-primaryBlue px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-3 shadow-xl"
-                                    >
-                                        <FaPhone className="text-2xl" />
-                                        Llámanos Ahora
+                                <h3 className="text-2xl font-bold text-primaryBlue mb-4">
+                                    Teléfonos
+                                </h3>
+                                <div className="space-y-3">
+                                    <a href="tel:+525515572791" className="info-link text-lg text-gray-700 block font-semibold">
+                                        55 1557 2791
                                     </a>
-                                    <a
-                                        href="https://wa.me/5215610421156"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="cta-button bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-3 border-2 border-white/30 hover:bg-white hover:text-primaryBlue"
-                                    >
-                                        <FaWhatsapp className="text-2xl" />
-                                        WhatsApp
+                                    <a href="tel:+525610421156" className="info-link text-lg text-gray-700 block font-semibold">
+                                        56 1042 1156
                                     </a>
                                 </div>
                             </div>
 
-                            {/* Right Stats */}
-                            <div className="grid grid-cols-2 gap-6">
-                                <div className="stats-badge rounded-2xl p-6 text-center">
-                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">20+</div>
-                                    <div className="text-white text-lg">Años de Experiencia</div>
+                            {/* WhatsApp */}
+                            <div className="info-card bg-white rounded-3xl p-8 shadow-lg">
+                                <div className="icon-wrapper w-16 h-16 bg-gradient-to-br from-secundaryYellow to-thirdGreen rounded-2xl flex items-center justify-center mb-6">
+                                    <FaWhatsapp className="text-primaryBlue text-2xl" />
                                 </div>
-                                <div className="stats-badge rounded-2xl p-6 text-center">
-                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">500+</div>
-                                    <div className="text-white text-lg">Proyectos Completados</div>
+                                <h3 className="text-2xl font-bold text-primaryBlue mb-4">
+                                    WhatsApp
+                                </h3>
+                                <div className="space-y-3">
+                                    <a href="https://wa.me/5215610421156" target="_blank" rel="noopener noreferrer" className="info-link text-lg text-gray-700 block font-semibold">
+                                        56 1042 1156
+                                    </a>
+                                    <p className="text-sm text-gray-500">
+                                        Respuesta inmediata
+                                    </p>
                                 </div>
-                                <div className="stats-badge rounded-2xl p-6 text-center">
-                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">15+</div>
-                                    <div className="text-white text-lg">Estados Atendidos</div>
+                            </div>
+
+                            {/* Email */}
+                            <div className="info-card bg-white rounded-3xl p-8 shadow-lg">
+                                <div className="icon-wrapper w-16 h-16 bg-gradient-to-br from-secundaryYellow to-thirdGreen rounded-2xl flex items-center justify-center mb-6">
+                                    <FaEnvelope className="text-primaryBlue text-2xl" />
                                 </div>
-                                <div className="stats-badge rounded-2xl p-6 text-center">
-                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">100%</div>
-                                    <div className="text-white text-lg">Compromiso</div>
+                                <h3 className="text-2xl font-bold text-primaryBlue mb-4">
+                                    Correos
+                                </h3>
+                                <div className="space-y-3">
+                                    <a href="mailto:ghorizonte@hh.com" className="info-link text-lg text-gray-700 block font-semibold break-words">
+                                        ghorizonte@hh.com
+                                    </a>
+                                    <a href="mailto:ccc@4ccc.com.mx" className="info-link text-lg text-gray-700 block font-semibold break-words">
+                                        ccc@4ccc.com.mx
+                                    </a>
                                 </div>
+                            </div>
+
+                            {/* Dirección */}
+                            <div className="info-card bg-white rounded-3xl p-8 shadow-lg">
+                                <div className="icon-wrapper w-16 h-16 bg-gradient-to-br from-secundaryYellow to-thirdGreen rounded-2xl flex items-center justify-center mb-6">
+                                    <FaMapMarkerAlt className="text-primaryBlue text-2xl" />
+                                </div>
+                                <h3 className="text-2xl font-bold text-primaryBlue mb-4">
+                                    Dirección
+                                </h3>
+                                <p className="text-lg text-gray-700 leading-relaxed">
+                                    RET 1 Cecilio Robelo No. 66,<br />
+                                    Jardín Balbuena,<br />
+                                    Venustiano Carranza,<br />
+                                    CDMX, CP 15900
+                                </p>
+                            </div>
+
+                            {/* Horario */}
+                            <div className="info-card bg-white rounded-3xl p-8 shadow-lg">
+                                <div className="icon-wrapper w-16 h-16 bg-gradient-to-br from-secundaryYellow to-thirdGreen rounded-2xl flex items-center justify-center mb-6">
+                                    <FaClock className="text-primaryBlue text-2xl" />
+                                </div>
+                                <h3 className="text-2xl font-bold text-primaryBlue mb-4">
+                                    Horario
+                                </h3>
+                                <div className="space-y-2 text-lg text-gray-700">
+                                    <div className="flex justify-between">
+                                        <span>Lun - Vie</span>
+                                        <span className="font-bold text-secundaryYellow">9:00 - 18:00</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                        <span>Sábado</span>
+                                        <span className="font-bold text-secundaryYellow">9:00 - 14:00</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                        <span>Domingo</span>
+                                        <span className="text-gray-400">Cerrado</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Cobertura */}
+                            <div className="info-card bg-white rounded-3xl p-8 shadow-lg">
+                                <div className="icon-wrapper w-16 h-16 bg-gradient-to-br from-secundaryYellow to-thirdGreen rounded-2xl flex items-center justify-center mb-6">
+                                    <FaGlobe className="text-primaryBlue text-2xl" />
+                                </div>
+                                <h3 className="text-2xl font-bold text-primaryBlue mb-4">
+                                    Cobertura
+                                </h3>
+                                <p className="text-lg text-gray-700 leading-relaxed">
+                                    Atendemos proyectos en<br />
+                                    todo México y<br />
+                                    Latinoamérica
+                                </p>
                             </div>
                         </div>
                     </div>
