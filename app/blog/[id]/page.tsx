@@ -2,10 +2,10 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { MdArrowForwardIos } from "react-icons/md";
-import { GoClock } from "react-icons/go";
-import { LiaShareSquareSolid } from "react-icons/lia";
-import { FaFacebook, FaLinkedin, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import {MdArrowForwardIos} from "react-icons/md";
+import {GoClock} from "react-icons/go";
+import {LiaShareSquareSolid} from "react-icons/lia";
+import {FaFacebook, FaLinkedin, FaWhatsapp, FaInstagram} from "react-icons/fa";
 import HeaderNav from "@/app/components/HeaderNav";
 import Footer from "@/app/components/footer";
 
@@ -48,7 +48,7 @@ Integer est nisl, elementum sed sem vel, facilisis mattis nulla. Class aptent ta
 Morbi vulputate semper urna id gravida. Nam semper interdum est nec facilisis. Nullam tristique dolor lectus, vitae faucibus mauris vulputate a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.`
 }
 
-export default function BlogPage({ params }: { params: { id: string } }) {
+export default function BlogPage({params}: { params: { id: string } }) {
     const [article] = React.useState<BlogArticle>(mockData);
 
     // Función para compartir en redes sociales
@@ -73,11 +73,13 @@ export default function BlogPage({ params }: { params: { id: string } }) {
             <HeaderNav />
 
             {/* Hero Section */}
-            <div className="relative bg-no-repeat bg-cover bg-center" style={{ backgroundImage: `url(${article.heroImage})` }}>
+            <div className="relative bg-no-repeat bg-cover bg-center"
+                 style={{backgroundImage: `url(${article.heroImage})`}}>
                 {/* Overlay para mejor legibilidad */}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
 
-                <div className="relative z-10 flex items-center justify-center min-h-[60vh] lg:min-h-[70vh] px-4 sm:px-6 lg:px-12">
+                <div
+                    className="relative z-10 flex items-center justify-center min-h-[60vh] lg:min-h-[70vh] px-4 sm:px-6 lg:px-12">
                     <div className="max-w-4xl w-full text-center space-y-6 py-16">
                         <p className="text-secundaryYellow text-sm sm:text-base uppercase tracking-widest font-semibold">
                             {article.date}
@@ -143,7 +145,8 @@ export default function BlogPage({ params }: { params: { id: string } }) {
                 </div>
 
                 {/* Meta Info & Share */}
-                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 py-6 border-y border-gray-200 mb-12">
+                <div
+                    className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 py-6 border-y border-gray-200 mb-12">
                     <div className="flex items-center gap-3">
                         <GoClock className="w-5 h-5 text-gray-400" />
                         <p className="text-sm sm:text-base text-gray-600">
@@ -202,7 +205,8 @@ export default function BlogPage({ params }: { params: { id: string } }) {
 
                 {/* Author Card al final */}
                 <div className="mt-20 pt-12 border-t-2 border-gray-200">
-                    <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 sm:p-10 shadow-sm border border-gray-100">
+                    <div
+                        className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 sm:p-10 shadow-sm border border-gray-100">
                         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
                             <Image
                                 src={article.author.image}

@@ -37,32 +37,33 @@ export default function ProjectSlide({projects}: { projects: Project[] }) {
             width: 100%;
             display: flex;
             justify-content: flex-end;
-            overflow-x: hidden; /* Contenedor padre sin scroll */
+            overflow-x: hidden;
           }
 
           .project-slide-wrapper {
             display: flex;
             gap: 8px;
-            overflow-x: auto; /* Scroll solo en el wrapper */
+            overflow-x: auto;
             white-space: nowrap;
-            padding-bottom: 20px; /* Espacio para el scroll */
-            padding-right: 16px; /* Espacio al final para que el último slide no pegue al borde */
-            scrollbar-width: thin; /* Scroll visible en Firefox */
+            padding-bottom: 20px;
+            padding-right: 16px;
+            scrollbar-width: thin;
           }
-          /* Scrollbar visible en navegadores WebKit */
+          
           .project-slide-wrapper::-webkit-scrollbar {
-            height: 8px;
+            height: 10px;
           }
           .project-slide-wrapper::-webkit-scrollbar-track {
             background: rgb(0, 12, 71);
+            border-radius: 10px;
           }
           .project-slide-wrapper::-webkit-scrollbar-thumb {
-            background-color: #CED300;
+            background: linear-gradient(90deg, #CED300 0%, #0A8700 100%);
             border-radius: 10px;
             border: 2px solid rgb(0, 12, 71);
           }
           .project-slide-wrapper::-webkit-scrollbar-thumb:hover {
-            background-color: #0A8700;
+            background: linear-gradient(90deg, #0A8700 0%, #CED300 100%);
           }
 
           .project-slide {
@@ -72,15 +73,14 @@ export default function ProjectSlide({projects}: { projects: Project[] }) {
             transition: transform 0.8s ease-out;
           }
 
-          /* Slide fantasma para crear espacio al final sin afectar el resto */
           .project-slide--ghost {
-            width: 280px; /* igual al ancho de un slide real para mantener el cálculo/flujo original */
-            opacity: 0; /* invisible */
-            pointer-events: none; /* ignora eventos */
+            width: 280px;
+            opacity: 0;
+            pointer-events: none;
           }
           .project-slide--ghost .project-slide-item {
             width: 0;
-            height: 0; /* no aporta altura extra */
+            height: 0;
           }
 
           .project-slide.in-view .project-slide-item {
@@ -92,26 +92,43 @@ export default function ProjectSlide({projects}: { projects: Project[] }) {
             width: 280px;
             height: 420px;
             overflow: hidden;
-            border-radius: 1rem;
+            border-radius: 1.5rem;
+            box-shadow: 
+              0 20px 40px -10px rgba(0, 12, 71, 0.25),
+              0 0 0 1px rgba(0, 12, 71, 0.05);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+          }
+          
+          .project-slide-item:hover {
+            box-shadow: 
+              0 30px 60px -15px rgba(0, 12, 71, 0.35),
+              0 0 0 1px rgba(206, 211, 0, 0.3);
+            transform: translateY(-8px);
           }
 
           .project-slide-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease-out;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
           }
 
           .project-slide-item:hover img {
-            transform: scale(1.03);
+            transform: scale(1.08);
           }
 
           .overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), transparent);
+            background: linear-gradient(
+              to top, 
+              rgba(0, 12, 71, 0.95) 0%, 
+              rgba(0, 12, 71, 0.7) 40%,
+              rgba(0, 12, 71, 0.3) 70%,
+              transparent 100%
+            );
             opacity: 0;
-            transition: opacity 0.5s ease-out;
+            transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             pointer-events: none;
           }
 
@@ -124,14 +141,48 @@ export default function ProjectSlide({projects}: { projects: Project[] }) {
             inset: 0;
             display: flex;
             align-items: flex-end;
-            padding: 1.25rem;
+            padding: 1.5rem;
             padding-top: 0;
-            white-space: normal; /* Asegura que el texto pueda envolver dentro de cada tarjeta */
+            white-space: normal;
           }
 
           .text-inner {
             max-width: 90%;
-            white-space: normal; /* Evita que el texto se corte por heredar nowrap del wrapper */
+            white-space: normal;
+          }
+
+          .country-badge {
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--color-secundaryYellow);
+            text-transform: uppercase;
+            padding: 4px 12px;
+            background: rgba(206, 211, 0, 0.15);
+            backdrop-filter: blur(8px);
+            border-radius: 20px;
+            border: 1px solid rgba(206, 211, 0, 0.3);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+          }
+          
+          .project-slide-item:hover .country-badge {
+            background: rgba(206, 211, 0, 0.25);
+            border-color: rgba(206, 211, 0, 0.5);
+            transform: translateY(-2px);
+          }
+
+          .project-title {
+            margin-bottom: 0.75rem;
+            font-size: 20px;
+            font-weight: 800;
+            color: white;
+            text-shadow: 
+              0 2px 8px rgba(0, 0, 0, 0.6),
+              0 1px 3px rgba(0, 0, 0, 0.8);
+            line-height: 1.3;
           }
 
           .desc {
@@ -143,52 +194,58 @@ export default function ProjectSlide({projects}: { projects: Project[] }) {
           }
 
           .project-slide-item:hover .desc {
-            max-height: 220px; /* suficiente para 3-4 líneas */
+            max-height: 220px;
             opacity: 1;
             transform: translateY(0);
           }
 
-          .text-inner div:first-child {
-            margin-bottom: 0.25rem;
-            font-size: 22px;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            color: var(--color-secundaryYellow);
-          }
-
-          .text-inner h3 {
-            margin-bottom: 0.5rem;
-            font-size: 18px;
-            font-weight: 700;
-            color: white;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-          }
-
-          .text-inner p {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.9);
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-            white-space: normal; /* evita corte de texto heredado */
+          .desc p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 
+              0 2px 6px rgba(0, 0, 0, 0.7),
+              0 1px 2px rgba(0, 0, 0, 0.9);
+            white-space: normal;
             overflow-wrap: anywhere;
             word-break: break-word;
             margin-top: 0.5rem;
+            font-weight: 400;
+          }
+          
+          .desc::before {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, #CED300 0%, transparent 100%);
+            margin-bottom: 0.75rem;
+            border-radius: 2px;
           }
 
           /* Responsive sizes */
-          @media (min-width: 640px) { /* sm */
+          @media (min-width: 640px) {
             .project-slide,
             .project-slide--ghost { width: 340px; }
             .project-slide-item { width: 340px; height: 500px; }
+            .project-title { font-size: 22px; }
+            .desc p { font-size: 15px; }
           }
-          @media (min-width: 768px) { /* md */
+          @media (min-width: 768px) {
             .project-slide,
             .project-slide--ghost { width: 400px; }
             .project-slide-item { width: 400px; height: 600px; }
+            .country-badge { font-size: 15px; }
+            .project-title { font-size: 24px; }
           }
-          @media (min-width: 1024px) { /* lg */
+          @media (min-width: 1024px) {
             .project-slide,
             .project-slide--ghost { width: 520px; }
             .project-slide-item { width: 520px; height: 800px; }
+            .text-content { padding: 2rem; }
+            .country-badge { font-size: 16px; padding: 6px 16px; }
+            .project-title { font-size: 28px; }
+            .desc p { font-size: 16px; }
           }
         `}
             </style>
@@ -211,15 +268,16 @@ export default function ProjectSlide({projects}: { projects: Project[] }) {
                                 <div className="overlay" />
                                 <div className="text-content">
                                     <div className="text-inner">
-                                        <div>{project.country}</div>
-                                        <h3>{project.title}</h3>
-                                        <div className="desc"><p>{project.description}</p></div>
+                                        <span className="country-badge">{project.country}</span>
+                                        <h3 className="project-title">{project.title}</h3>
+                                        <div className="desc">
+                                            <p>{project.description}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     ))}
-                    {/* Slide fantasma invisible para dar espacio al final sin tocar el resto del código */}
                     <div
                         className={`project-slide project-slide--ghost ${inView ? "in-view" : ""}`}
                         aria-hidden="true"
