@@ -10,7 +10,7 @@ export default function EnfoqueIntro() {
                         <div className="relative">
                             <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
                                 <Image
-                                    src="/obras1.jpg"
+                                    src="/img290.jpg"
                                     alt="Equipo trabajando"
                                     width={1200}
                                     height={1400}

@@ -14,6 +14,7 @@ interface Company {
     image: string;
     buttonMinWidth: string;
     buttonMaxWidth: string;
+    bigButtonLinkTo: string;
 }
 
 export default function CompanySlider({ companies }: { companies: Company[] }) {
@@ -147,12 +148,14 @@ export default function CompanySlider({ companies }: { companies: Company[] }) {
                                     {companies[current].smallHistoryText2}
                                 </p>
                                 <div className="flex justify-center md:justify-start mt-2">
-                                    <BigButton
-                                        textBefore={companies[current].buttonText}
-                                        textAfter={companies[current].buttonText}
-                                        minWidth={companies[current].buttonMinWidth}
-                                        maxWidth={companies[current].buttonMaxWidth}
-                                    />
+                                    <a href={companies[current].bigButtonLinkTo}>
+                                        <BigButton
+                                            textBefore={companies[current].buttonText}
+                                            textAfter={companies[current].buttonText}
+                                            minWidth={companies[current].buttonMinWidth}
+                                            maxWidth={companies[current].buttonMaxWidth}
+                                        />
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -176,7 +179,7 @@ export default function CompanySlider({ companies }: { companies: Company[] }) {
                                         <span className="text-gray-800 font-medium flex-1">
                                             {service}
                                         </span>
-                                        <GoArrowUpRight className="service-icon text-secundaryYellow bg-primaryBlue rounded-full text-3xl p-1.5 flex-shrink-0 cursor-pointer" />
+                                        <a href={companies[current].bigButtonLinkTo}><GoArrowUpRight className="service-icon text-secundaryYellow bg-primaryBlue rounded-full text-3xl p-1.5 flex-shrink-0 cursor-pointer" /></a>
                                     </li>
                                 ))}
                             </ul>

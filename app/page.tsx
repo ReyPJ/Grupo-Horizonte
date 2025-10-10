@@ -81,10 +81,11 @@ export default function Home() {
             image: "/Grua1.jpg",
             buttonMinWidth: "150px",
             buttonMaxWidth: "180px",
+            bigButtonLinkTo: "/empresas/4C"
         },
         {
             company: "IMBAR",
-            logoUrl: "/imbar-logo.png",
+            logoUrl: "/imbarlogo.jpeg",
             smallHistoryText: "20 años construyendo infraestructura eléctrica para CFE e industria privada.",
             smallHistoryText2: "Especialistas en subestaciones, líneas de transmisión y fabricación de estructuras metálicas hasta 400 KV.",
             buttonText: "Conoce a IMBAR",
@@ -92,6 +93,7 @@ export default function Home() {
             image: "/LineasDeTransmisionElectrica.jpg",
             buttonMinWidth: "180px",
             buttonMaxWidth: "220px",
+            bigButtonLinkTo: "/empresas/imbar"
         },
         {
             company: "Nucleo Energy",
@@ -100,20 +102,22 @@ export default function Home() {
             smallHistoryText2: "Impulsando proyectos eólicos, solares y de almacenamiento, fabrica y suministra equipos para el sector y desarrolla infraestructura eléctrica",
             buttonText: "Conoce a Nucleo",
             keyServices: ["Energía Eólica y Fotovoltaica", 'Sistemas de Almacenamiento De Energía', "Manufactura y Suministro", "Infraestructura de Transmisión y Distribución"],
-            image: "/fotovoltaic.jpg",
+            image: "/2.jpg",
             buttonMinWidth: "180px",
             buttonMaxWidth: "220px",
+            bigButtonLinkTo: "/empresas/nucleo-energy"
         },
         {
             company: "RECCMAQ2",
-            logoUrl: "/reccmaq2-logo.png", // 👈 Necesitas subir este logo
+            logoUrl: "/reccmalogoxD.png", // 👈 Necesitas subir este logo
             smallHistoryText: "Reconstructora de maquinaria con presencia nacional en el sector industrial.",
             smallHistoryText2: "Servicio especializado de reconstrucción, mantenimiento y reparación de maquinaria pesada para industrias clave.",
             buttonText: "Conoce a RECCMAQ2",
             keyServices: ["Reconstrucción de Maquinaria", "Mantenimiento Industrial", "Reparación de Equipos", "Servicio a Nivel Nacional"],
-            image: "/maquinaria-reccmaq.jpg", // 👈 La imagen de la excavadora SANY que vi en el PDF
+            image: "/img143.jpg", // 👈 La imagen de la excavadora SANY que vi en el PDF
             buttonMinWidth: "200px",
             buttonMaxWidth: "240px",
+            bigButtonLinkTo: "/empresas/reccmaq2"
         }
     ]
 
@@ -282,7 +286,7 @@ export default function Home() {
                 <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 lg:px-24 w-full min-h-dvh gap-8 lg:gap-16 py-20 lg:py-0">
 
                     {/* Texto principal */}
-                    <div className="flex flex-col items-center justify-center w-full lg:w-1/2 space-y-6 lg:space-y-8">
+                    <div className="flex flex-col items-center justify-center w-full space-y-6 lg:space-y-8">
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center text-white text-shadow-strong animate-fade-in-up font-bold leading-tight max-w-4xl">
                             Impulsando el futuro.{' '}
                             <span className="block mt-2 lg:mt-1">
@@ -296,13 +300,13 @@ export default function Home() {
                         </h3>
                     </div>
 
-                    {/* Carousel - SOLO en desktop */}
-                    <div className="hidden lg:flex w-full lg:w-1/2 justify-center animate-fade-in-up"
-                         style={{animationDelay: '0.4s'}}>
-                        <div className="w-full max-w-2xl">
-                            <BlogCarousel />
-                        </div>
-                    </div>
+                    {/*/!* Carousel - SOLO en desktop *!/*/}
+                    {/*<div className="hidden lg:flex w-full lg:w-1/2 justify-center animate-fade-in-up"*/}
+                    {/*     style={{animationDelay: '0.4s'}}>*/}
+                    {/*    <div className="w-full max-w-2xl">*/}
+                    {/*        <BlogCarousel />*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                 </div>
 
                 {/* Scroll indicator - solo desktop */}
@@ -342,13 +346,15 @@ export default function Home() {
                         </p>
 
                         <div className="mt-4">
-                            <BigButton
-                                textAfter="Misión, Visión y Valores"
-                                textBefore="Misión, Visión y Valores"
-                                textColor="black"
-                                minWidth="200px"
-                                maxWidth="280px"
-                            />
+                            <a href={"/enfoque#ADN"}>
+                                <BigButton
+                                    textAfter="Misión, Visión y Valores"
+                                    textBefore="Misión, Visión y Valores"
+                                    textColor="black"
+                                    minWidth="200px"
+                                    maxWidth="280px"
+                                />
+                            </a>
                         </div>
                     </div>
 
@@ -376,13 +382,15 @@ export default function Home() {
                         <h2 className="text-4xl sm:text-5xl lg:text-6xl text-center text-white text-shadow-strong font-bold leading-tight max-w-3xl">
                             Definidos por la calidad de nuestro gran equipo.
                         </h2>
-                        <BigButton
-                            textAfter="Nuestras empresas"
-                            textBefore="Nuestras empresas"
-                            textColor="white"
-                            minWidth="230px"
-                            maxWidth="260px"
-                        />
+                        <a href={"#EMPRESAS"}>
+                            <BigButton
+                                textAfter="Nuestras empresas"
+                                textBefore="Nuestras empresas"
+                                textColor="white"
+                                minWidth="230px"
+                                maxWidth="260px"
+                            />
+                        </a>
                     </div>
 
                     <div className="w-full lg:w-1/2 flex justify-center px-2">
@@ -399,7 +407,7 @@ export default function Home() {
             <section className="bg-gradient-to-b from-white to-gray-50 py-16 lg:py-20">
                 <div className="flex flex-col px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64 justify-center items-center">
                     <div className="decorative-line w-2/3 md:w-1/2 lg:w-1/3 h-1 mt-2 mb-6 rounded-full"></div>
-                    <h3 className="section-title text-primaryBlue text-4xl sm:text-5xl lg:text-6xl text-center font-bold pb-4">
+                    <h3 id={"EMPRESAS"} className="section-title text-primaryBlue text-4xl sm:text-5xl lg:text-6xl text-center font-bold pb-4">
                         Nuestras Empresas
                     </h3>
                 </div>
@@ -422,13 +430,6 @@ export default function Home() {
                         <h2 className="text-4xl sm:text-5xl lg:text-6xl text-center text-white text-shadow-strong font-bold leading-tight max-w-3xl">
                             Definidos por la calidad de nuestro gran equipo.
                         </h2>
-                        <BigButton
-                            textAfter="Nuestro equipo"
-                            textBefore="Nuestro equipo"
-                            textColor="white"
-                            minWidth="200px"
-                            maxWidth="240px"
-                        />
                     </div>
 
                     <div className="w-full lg:w-1/2 flex justify-center px-2">
@@ -449,13 +450,15 @@ export default function Home() {
                         <h2 className="text-4xl sm:text-5xl lg:text-6xl text-primaryBlue font-bold leading-tight">
                             Nosotros Construimos Historia
                         </h2>
-                        <BigButton
-                            textAfter="Todos los Proyectos"
-                            textBefore="Todos los Proyectos"
-                            textColor="black"
-                            minWidth="200px"
-                            maxWidth="240px"
-                        />
+                        <a href={"/proyectos"}>
+                            <BigButton
+                                textAfter="Todos los Proyectos"
+                                textBefore="Todos los Proyectos"
+                                textColor="black"
+                                minWidth="200px"
+                                maxWidth="240px"
+                            />
+                        </a>
                     </div>
 
                     <div className="w-full lg:w-1/2 flex justify-center">

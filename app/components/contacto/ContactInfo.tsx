@@ -79,12 +79,9 @@ export default function ContactInfo() {
                                 <h3 className="text-2xl font-bold text-primaryBlue mb-4">
                                     Teléfonos
                                 </h3>
-                                <div className="space-y-3">
-                                    <a href="tel:+525515572791" className="info-link text-lg text-gray-700 block font-semibold">
-                                        55 1557 2791
-                                    </a>
-                                    <a href="tel:+525610421156" className="info-link text-lg text-gray-700 block font-semibold">
-                                        56 1042 1156
+                                <div className="flex flex-col space-y-3">
+                                    <a href="tel:+525530238337" className="info-link text-lg text-gray-700 block font-semibold">
+                                        55 3023 8337
                                     </a>
                                 </div>
                             </div>
@@ -98,8 +95,8 @@ export default function ContactInfo() {
                                     WhatsApp
                                 </h3>
                                 <div className="space-y-3">
-                                    <a href="https://wa.me/5215610421156" target="_blank" rel="noopener noreferrer" className="info-link text-lg text-gray-700 block font-semibold">
-                                        56 1042 1156
+                                    <a href="https://wa.me/525530238337" target="_blank" rel="noopener noreferrer" className="info-link text-lg text-gray-700 block font-semibold">
+                                        55 3023 8337
                                     </a>
                                     <p className="text-sm text-gray-500">
                                         Respuesta inmediata
@@ -115,10 +112,7 @@ export default function ContactInfo() {
                                 <h3 className="text-2xl font-bold text-primaryBlue mb-4">
                                     Correos
                                 </h3>
-                                <div className="space-y-3">
-                                    <a href="mailto:ghorizonte@hh.com" className="info-link text-lg text-gray-700 block font-semibold break-words">
-                                        ghorizonte@hh.com
-                                    </a>
+                                <div className="flex flex-col space-y-3">
                                     <a href="mailto:ccc@4ccc.com.mx" className="info-link text-lg text-gray-700 block font-semibold break-words">
                                         ccc@4ccc.com.mx
                                     </a>

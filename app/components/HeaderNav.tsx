@@ -15,6 +15,14 @@ export default function HeaderNav({
                                       enfoqueOpen
                                   }: HeaderNavProps) {
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    const [empresasDropdownOpen, setEmpresasDropdownOpen] = React.useState(false);
+
+    const empresas = [
+        {name: "Constructora 4C", href: "/empresas/4C"},
+        {name: "Núcleo Energy", href: "/empresas/nucleo-energy"},
+        {name: "IMBAR", href: "/empresas/imbar"},
+        {name: "RECCMAQ2", href: "/empresas/reccmaq2"}
+    ];
 
     const toggleProjects = () => {
         if (setProjectsOpen) {
@@ -23,6 +31,7 @@ export default function HeaderNav({
         if (setEnfoqueOpen && enfoqueOpen) {
             setEnfoqueOpen(false);
         }
+        setEmpresasDropdownOpen(false);
     };
 
     const toggleEnfoque = () => {
@@ -32,6 +41,7 @@ export default function HeaderNav({
         if (setProjectsOpen && projectsOpen) {
             setProjectsOpen(false);
         }
+        setEmpresasDropdownOpen(false);
     };
 
     const openProjectsFromMobile = () => {
@@ -46,19 +56,21 @@ export default function HeaderNav({
         <div className="w-full h-fit bg-white border-b border-gray-100">
             <div className="flex items-center justify-between px-4 sm:px-6 md:px-10 py-3">
                 <div className="flex items-center">
-                    <Image
-                        src="/LogoCompleto@4x.png"
-                        width={400}
-                        height={400}
-                        alt="Logo Grupo Horizonte"
-                        className="w-28 sm:w-32 h-auto object-contain"
-                    />
+                    <a href="/">
+                        <Image
+                            src="/LogoCompleto@4x.png"
+                            width={400}
+                            height={400}
+                            alt="Logo Grupo Horizonte"
+                            className="w-28 sm:w-32 h-auto object-contain cursor-pointer"
+                        />
+                    </a>
                 </div>
 
                 {/* Desktop nav */}
                 <div className="hidden md:flex px-4 gap-4 items-center">
                     <p className="text-h4 cursor-pointer transition delay-100 hover:bg-primaryBlue hover:text-white py-2 px-4 rounded-3xl">
-                        <a href={"/"}>
+                        <a href="/">
                             Inicio
                         </a>
                     </p>
@@ -75,9 +87,36 @@ export default function HeaderNav({
                             Proyectos
                         </a>
                     </button>
-                    <p className="text-h4 cursor-pointer transition delay-100 hover:bg-primaryBlue hover:text-white py-2 px-4 rounded-3xl">
-                        Empresas
-                    </p>
+
+                    {/* Dropdown de Empresas */}
+                    <div
+                        className="relative"
+                        onMouseEnter={() => setEmpresasDropdownOpen(true)}
+                        onMouseLeave={() => setEmpresasDropdownOpen(false)}
+                    >
+                        <button
+                            type="button"
+                            className={`text-h4 cursor-pointer transition delay-100 py-2 px-4 rounded-3xl ${empresasDropdownOpen ? 'bg-primaryBlue text-white' : 'hover:bg-primaryBlue hover:text-white'}`}
+                        >
+                            Empresas
+                        </button>
+
+                        {/* Dropdown Menu */}
+                        <div
+                            className={`absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-gray-200 py-2 transition-all duration-200 ${empresasDropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
+                        >
+                            {empresas.map((empresa, idx) => (
+                                <a
+                                    key={idx}
+                                    href={empresa.href}
+                                    className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primaryBlue transition-colors text-base font-medium"
+                                >
+                                    {empresa.name}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+
                     <button
                         type="button"
                         className={`text-h4 cursor-pointer transition delay-100 py-2 px-4 rounded-3xl ${enfoqueOpen ? 'bg-primaryBlue text-white' : 'hover:bg-primaryBlue hover:text-white'}`}
@@ -114,7 +153,8 @@ export default function HeaderNav({
                         strokeWidth={1.5}
                         stroke="currentColor"
                     >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+                        <path strokeLinecap="round" strokeLinejoin="round"
+                              d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
                     </svg>
                     <svg
                         className={`h-6 w-6 ${mobileOpen ? 'block' : 'hidden'}`}
@@ -134,8 +174,9 @@ export default function HeaderNav({
                 className={`md:hidden overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${mobileOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
             >
                 <div className="px-4 pb-3 space-y-1">
-                    <button className="block w-full text-left text-h4 py-2 px-3 rounded-2xl hover:bg-gray-100" onClick={() => setMobileOpen(false)}>
-                        <a href={"/"}>
+                    <button className="block w-full text-left text-h4 py-2 px-3 rounded-2xl hover:bg-gray-100"
+                            onClick={() => setMobileOpen(false)}>
+                        <a href="/">
                             Inicio
                         </a>
                     </button>
@@ -145,25 +186,39 @@ export default function HeaderNav({
                         aria-haspopup="true"
                         aria-expanded={projectsOpen ?? false}
                     >
-                        <a href={"/proyectos"}>
+                        <a href="/proyectos">
                             Proyectos
                         </a>
                     </button>
-                    <button className="block w-full text-left text-h4 py-2 px-3 rounded-2xl hover:bg-gray-100" onClick={() => setMobileOpen(false)}>
-                        Empresas
-                    </button>
+
+                    {/* Mobile empresas */}
+                    <div className="pl-3">
+                        <p className="text-base font-semibold text-gray-600 py-2">Empresas</p>
+                        {empresas.map((empresa, idx) => (
+                            <a
+                                key={idx}
+                                href={empresa.href}
+                                className="block py-2 px-3 text-gray-700 hover:bg-gray-100 rounded-xl text-sm"
+                                onClick={() => setMobileOpen(false)}
+                            >
+                                {empresa.name}
+                            </a>
+                        ))}
+                    </div>
+
                     <button
                         className={`block w-full text-left text-h4 py-2 px-3 rounded-2xl ${enfoqueOpen ? 'bg-primaryBlue text-white' : 'hover:bg-gray-100'}`}
                         onClick={openEnfoqueFromMobile}
                         aria-haspopup="true"
                         aria-expanded={enfoqueOpen ?? false}
                     >
-                        <a href={"/enfoque"}>
+                        <a href="/enfoque">
                             Enfoque
                         </a>
                     </button>
-                    <button className="block w-full text-left text-h4 py-2 px-3 rounded-2xl hover:bg-gray-100" onClick={() => setMobileOpen(false)}>
-                        <a href={"/contacto"}>
+                    <button className="block w-full text-left text-h4 py-2 px-3 rounded-2xl hover:bg-gray-100"
+                            onClick={() => setMobileOpen(false)}>
+                        <a href="/contacto">
                             Contacto
                         </a>
                     </button>

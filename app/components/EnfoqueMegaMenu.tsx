@@ -28,16 +28,18 @@ export default function EnfoqueMegaMenu() {
                     <div className="flex flex-col gap-6 lg:gap-10">
                         <h3 className="text-h3 text-primaryBlue">Nuestro Enfoque</h3>
                         <p className="text-p text-gray-700 leading-relaxed">
-                            Más de 20 años construyendo el futuro con innovación, calidad
+                            Más de 40 años construyendo el futuro con innovación, calidad
                             y compromiso inquebrantable. Descubre los valores y principios
                             que guían cada uno de nuestros proyectos.
                         </p>
-                        <BigButton
-                            textBefore="Conoce Más"
-                            textAfter="Conoce Más"
-                            minWidth="200px"
-                            maxWidth="240px"
-                        />
+                        <a href={"/enfoque"}>
+                            <BigButton
+                                textBefore="Conoce Más"
+                                textAfter="Conoce Más"
+                                minWidth="200px"
+                                maxWidth="240px"
+                            />
+                        </a>
                     </div>
 
                     {/* Mission & Vision Cards */}

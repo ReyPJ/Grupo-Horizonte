@@ -1,9 +1,27 @@
+"use client";
+
 import { useState } from "react";
-import { GoArrowUpRight } from "react-icons/go";
 import { FaPaperPlane, FaCheckCircle, FaShieldAlt, FaClock } from "react-icons/fa";
 
+interface FormData {
+    name: string;
+    email: string;
+    phone: string;
+    company: string;
+    service: string;
+    message: string;
+}
+
+interface FormErrors {
+    name?: string;
+    email?: string;
+    phone?: string;
+    service?: string;
+    message?: string;
+}
+
 export default function ContactForm() {
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<FormData>({
         name: "",
         email: "",
         phone: "",
@@ -12,16 +30,98 @@ export default function ContactForm() {
         message: ""
     });
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
+    const [errors, setErrors] = useState<FormErrors>({});
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+    const validateForm = (): boolean => {
+        const newErrors: FormErrors = {};
+
+        if (!formData.name.trim()) {
+            newErrors.name = "El nombre es requerido";
+        }
+
+        if (!formData.email.trim()) {
+            newErrors.email = "El email es requerido";
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+            newErrors.email = "Email inválido";
+        }
+
+        if (!formData.phone.trim()) {
+            newErrors.phone = "El teléfono es requerido";
+        }
+
+        if (!formData.service) {
+            newErrors.service = "Selecciona un servicio";
+        }
+
+        if (!formData.message.trim()) {
+            newErrors.message = "El mensaje es requerido";
+        } else if (formData.message.trim().length < 20) {
+            newErrors.message = "El mensaje debe tener al menos 20 caracteres";
+        }
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
     };
 
-    const handleSubmit = () => {
-        console.log("Form submitted:", formData);
-        alert("¡Gracias por contactarnos! Te responderemos pronto.");
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+
+        if (errors[name as keyof FormErrors]) {
+            setErrors(prev => ({
+                ...prev,
+                [name]: undefined
+            }));
+        }
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+
+        if (!validateForm()) {
+            return;
+        }
+
+        setIsSubmitting(true);
+        setSubmitStatus('idle');
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setSubmitStatus('success');
+                setFormData({
+                    name: "",
+                    email: "",
+                    phone: "",
+                    company: "",
+                    service: "",
+                    message: ""
+                });
+
+                setTimeout(() => {
+                    setSubmitStatus('idle');
+                }, 5000);
+            } else {
+                setSubmitStatus('error');
+            }
+        } catch (error) {
+            console.error('Error al enviar formulario:', error);
+            setSubmitStatus('error');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -40,6 +140,14 @@ export default function ContactForm() {
 
                 .form-input:hover {
                     border-color: #cbd5e0;
+                }
+
+                .form-input.error {
+                    border-color: #ef4444;
+                }
+
+                .form-input.error:focus {
+                    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
                 }
 
                 .submit-button {
@@ -66,9 +174,14 @@ export default function ContactForm() {
                     height: 300px;
                 }
 
-                .submit-button:hover {
+                .submit-button:hover:not(:disabled) {
                     transform: translateY(-2px);
                     box-shadow: 0 12px 24px rgba(206, 211, 0, 0.4);
+                }
+
+                .submit-button:disabled {
+                    opacity: 0.6;
+                    cursor: not-allowed;
                 }
 
                 .form-section {
@@ -93,6 +206,21 @@ export default function ContactForm() {
                 .feature-badge:hover {
                     transform: translateX(4px);
                 }
+
+                .success-message {
+                    animation: slideIn 0.5s ease-out;
+                }
+
+                @keyframes slideIn {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
             `}</style>
 
             <div className="bg-white py-20">
@@ -111,8 +239,39 @@ export default function ContactForm() {
                                     </p>
                                 </div>
 
-                                <div className="space-y-6">
-                                    {/* Nombre */}
+                                {submitStatus === 'success' && (
+                                    <div className="success-message bg-green-50 border-2 border-green-500 rounded-xl p-6 mb-8">
+                                        <div className="flex items-center gap-3">
+                                            <FaCheckCircle className="text-green-500 text-3xl flex-shrink-0" />
+                                            <div>
+                                                <h3 className="text-xl font-bold text-green-800 mb-1">
+                                                    Mensaje Enviado
+                                                </h3>
+                                                <p className="text-green-700">
+                                                    Gracias por contactarnos. Te responderemos pronto.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+
+                                {submitStatus === 'error' && (
+                                    <div className="bg-red-50 border-2 border-red-500 rounded-xl p-6 mb-8">
+                                        <div className="flex items-center gap-3">
+                                            <span className="text-red-500 text-3xl flex-shrink-0">⚠</span>
+                                            <div>
+                                                <h3 className="text-xl font-bold text-red-800 mb-1">
+                                                    Error al Enviar
+                                                </h3>
+                                                <p className="text-red-700">
+                                                    Intenta de nuevo o contáctanos directamente.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+
+                                <form onSubmit={handleSubmit} className="space-y-6">
                                     <div>
                                         <label htmlFor="name" className="block text-lg font-semibold text-primaryBlue mb-2">
                                             Nombre Completo *
@@ -123,12 +282,14 @@ export default function ContactForm() {
                                             name="name"
                                             value={formData.name}
                                             onChange={handleChange}
-                                            className="form-input w-full px-5 py-4 rounded-xl text-lg"
+                                            className={`form-input w-full px-5 py-4 rounded-xl text-lg ${errors.name ? 'error' : ''}`}
                                             placeholder="Juan Pérez"
                                         />
+                                        {errors.name && (
+                                            <p className="text-red-500 text-sm mt-2">{errors.name}</p>
+                                        )}
                                     </div>
 
-                                    {/* Email y Teléfono */}
                                     <div className="grid sm:grid-cols-2 gap-6">
                                         <div>
                                             <label htmlFor="email" className="block text-lg font-semibold text-primaryBlue mb-2">
@@ -140,9 +301,12 @@ export default function ContactForm() {
                                                 name="email"
                                                 value={formData.email}
                                                 onChange={handleChange}
-                                                className="form-input w-full px-5 py-4 rounded-xl text-lg"
+                                                className={`form-input w-full px-5 py-4 rounded-xl text-lg ${errors.email ? 'error' : ''}`}
                                                 placeholder="tu@email.com"
                                             />
+                                            {errors.email && (
+                                                <p className="text-red-500 text-sm mt-2">{errors.email}</p>
+                                            )}
                                         </div>
                                         <div>
                                             <label htmlFor="phone" className="block text-lg font-semibold text-primaryBlue mb-2">
@@ -154,13 +318,15 @@ export default function ContactForm() {
                                                 name="phone"
                                                 value={formData.phone}
                                                 onChange={handleChange}
-                                                className="form-input w-full px-5 py-4 rounded-xl text-lg"
+                                                className={`form-input w-full px-5 py-4 rounded-xl text-lg ${errors.phone ? 'error' : ''}`}
                                                 placeholder="+52 55 1234 5678"
                                             />
+                                            {errors.phone && (
+                                                <p className="text-red-500 text-sm mt-2">{errors.phone}</p>
+                                            )}
                                         </div>
                                     </div>
 
-                                    {/* Empresa */}
                                     <div>
                                         <label htmlFor="company" className="block text-lg font-semibold text-primaryBlue mb-2">
                                             Empresa / Organización
@@ -176,7 +342,6 @@ export default function ContactForm() {
                                         />
                                     </div>
 
-                                    {/* Servicio */}
                                     <div>
                                         <label htmlFor="service" className="block text-lg font-semibold text-primaryBlue mb-2">
                                             Servicio de Interés *
@@ -186,7 +351,7 @@ export default function ContactForm() {
                                             name="service"
                                             value={formData.service}
                                             onChange={handleChange}
-                                            className="form-input w-full px-5 py-4 rounded-xl text-lg bg-white"
+                                            className={`form-input w-full px-5 py-4 rounded-xl text-lg bg-white ${errors.service ? 'error' : ''}`}
                                         >
                                             <option value="">Selecciona un servicio</option>
                                             <option value="obras-civiles">Obras Civiles</option>
@@ -200,9 +365,11 @@ export default function ContactForm() {
                                             <option value="manufactura">Manufactura y Suministro</option>
                                             <option value="otro">Otro</option>
                                         </select>
+                                        {errors.service && (
+                                            <p className="text-red-500 text-sm mt-2">{errors.service}</p>
+                                        )}
                                     </div>
 
-                                    {/* Mensaje */}
                                     <div>
                                         <label htmlFor="message" className="block text-lg font-semibold text-primaryBlue mb-2">
                                             Mensaje *
@@ -213,20 +380,25 @@ export default function ContactForm() {
                                             rows={6}
                                             value={formData.message}
                                             onChange={handleChange}
-                                            className="form-input w-full px-5 py-4 rounded-xl text-lg resize-none"
+                                            className={`form-input w-full px-5 py-4 rounded-xl text-lg resize-none ${errors.message ? 'error' : ''}`}
                                             placeholder="Cuéntanos sobre tu proyecto, necesidades, presupuesto estimado, timeline..."
                                         />
+                                        {errors.message && (
+                                            <p className="text-red-500 text-sm mt-2">{errors.message}</p>
+                                        )}
                                     </div>
 
-                                    {/* Submit Button */}
                                     <button
-                                        onClick={handleSubmit}
+                                        type="submit"
+                                        disabled={isSubmitting}
                                         className="submit-button w-full bg-primaryBlue text-white py-5 rounded-full font-bold text-xl flex items-center justify-center gap-3 shadow-xl relative z-10"
                                     >
-                                        <span className="relative z-10">Enviar Mensaje</span>
+                                        <span className="relative z-10">
+                                            {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
+                                        </span>
                                         <FaPaperPlane className="text-2xl relative z-10" />
                                     </button>
-                                </div>
+                                </form>
                             </div>
 
                             {/* Right: Why Choose Us */}
@@ -236,7 +408,7 @@ export default function ContactForm() {
                                         ¿Por qué trabajar con nosotros?
                                     </h3>
                                     <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                                        Con más de 20 años de experiencia en infraestructura y energía,
+                                        Con más de 40 años de experiencia en infraestructura y energía,
                                         somos tu socio estratégico para proyectos de cualquier escala.
                                     </p>
                                 </div>
@@ -288,7 +460,6 @@ export default function ContactForm() {
                                     </div>
                                 </div>
 
-                                {/* Quote */}
                                 <div className="bg-primaryBlue rounded-3xl p-8 text-white mt-8">
                                     <p className="text-2xl italic mb-4">
                                         "Nuestro compromiso es abrir camino hacia un futuro mejor,

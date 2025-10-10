@@ -40,7 +40,7 @@ const capabilities = [
     {
         icon: FaCogs,
         title: "Servicios Especializados",
-        stat: "20+ Años",
+        stat: "40+ Años",
         description: "Evaluación, supervisión y mantenimiento de proyectos eléctricos y electromecánicos.",
         services: [
             "Inspección termográfica",

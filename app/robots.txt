@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /api/
+Disallow: /_next/static
+
+Sitemap: https://ghenergy.com.mx/sitemap.xml

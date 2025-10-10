@@ -22,24 +22,19 @@ export default function ProjectsCTA() {
                             Construyamos el Futuro Juntos
                         </h2>
                         <p className="text-h3 md:text-[1.5rem] text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto">
-                            Con más de 20 años de experiencia y proyectos exitosos en México,
+                            Con más de 40 años de experiencia y proyectos exitosos en México,
                             Perú y Argentina, estamos listos para tu próximo desafío
                         </p>
                         <div className="flex flex-col sm:flex-row justify-center gap-6 mb-16">
-                            <BigButton
-                                textBefore="Solicitar Cotización"
-                                textAfter="Solicitar Cotización"
-                                textColor="white"
-                                minWidth="240px"
-                                maxWidth="280px"
-                            />
-                            <BigButton
-                                textBefore="Ver Más Proyectos"
-                                textAfter="Ver Más Proyectos"
-                                textColor="white"
-                                minWidth="240px"
-                                maxWidth="280px"
-                            />
+                            <a href={"/contacto"}>
+                                <BigButton
+                                    textBefore="Solicitar Cotización"
+                                    textAfter="Solicitar Cotización"
+                                    textColor="white"
+                                    minWidth="240px"
+                                    maxWidth="280px"
+                                />
+                            </a>
                         </div>
                     </div>
 
@@ -49,7 +44,7 @@ export default function ProjectsCTA() {
                             { number: "+900 MW", label: "Capacidad Instalada" },
                             { number: "26+", label: "Proyectos Exitosos" },
                             { number: "3", label: "Países" },
-                            { number: "20+", label: "Años de Experiencia" }
+                            { number: "40+", label: "Años de Experiencia" }
                         ].map((stat, idx) => (
                             <div key={idx} className="stats-final text-white p-6 rounded-2xl text-center">
                                 <div className="text-4xl font-bold mb-2 text-secundaryYellow">{stat.number}</div>

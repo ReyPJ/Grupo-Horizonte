@@ -94,14 +94,14 @@ export default function ContactCTA() {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a
-                                    href="#"
+                                    href="/proyectos"
                                     className="cta-button bg-secundaryYellow text-primaryBlue px-10 py-5 rounded-full font-bold text-xl inline-flex items-center justify-center gap-3 shadow-2xl"
                                 >
                                     Ver Proyectos
                                     <GoArrowUpRight className="text-3xl" />
                                 </a>
                                 <a
-                                    href="#"
+                                    href="/#EMPRESAS"
                                     className="cta-button bg-white/10 backdrop-blur-sm text-white px-10 py-5 rounded-full font-bold text-xl inline-flex items-center justify-center gap-3 border-2 border-white/30 hover:bg-white hover:text-primaryBlue"
                                 >
                                     Nuestras Empresas
@@ -111,31 +111,22 @@ export default function ContactCTA() {
                         </div>
 
                         {/* Quick Contact Cards */}
-                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
                             <div className="info-card-cta rounded-2xl p-6 text-center">
                                 <FaPhone className="text-secundaryYellow text-4xl mx-auto mb-3" />
                                 <div className="text-white font-bold text-lg mb-2">Teléfono</div>
-                                <a href="tel:+525515572791" className="text-white/90 hover:text-secundaryYellow transition-colors">
-                                    55 1557 2791
+                                <a href="tel:+525530238337" className="text-white/90 hover:text-secundaryYellow transition-colors">
+                                    55 3023 8337
                                 </a>
                             </div>
 
                             <div className="info-card-cta rounded-2xl p-6 text-center">
                                 <FaWhatsapp className="text-secundaryYellow text-4xl mx-auto mb-3" />
                                 <div className="text-white font-bold text-lg mb-2">WhatsApp</div>
-                                <a href="https://wa.me/5215610421156" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-secundaryYellow transition-colors">
-                                    56 1042 1156
+                                <a href="https://wa.me/525530238337" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-secundaryYellow transition-colors">
+                                    55 3023 8337
                                 </a>
                             </div>
-
-                            <div className="info-card-cta rounded-2xl p-6 text-center">
-                                <FaEnvelope className="text-secundaryYellow text-4xl mx-auto mb-3" />
-                                <div className="text-white font-bold text-lg mb-2">Email</div>
-                                <a href="mailto:ghorizonte@hh.com" className="text-white/90 hover:text-secundaryYellow transition-colors break-words">
-                                    ghorizonte@hh.com
-                                </a>
-                            </div>
-
                             <div className="info-card-cta rounded-2xl p-6 text-center">
                                 <FaMapMarkerAlt className="text-secundaryYellow text-4xl mx-auto mb-3" />
                                 <div className="text-white font-bold text-lg mb-2">Ubicación</div>

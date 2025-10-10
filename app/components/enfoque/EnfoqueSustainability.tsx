@@ -34,7 +34,7 @@ export default function EnfoqueSustainability() {
                         <div className="relative">
                             <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
                                 <Image
-                                    src="/eolico2.jpg"
+                                    src="/turbinas4.jpg"
                                     alt="Sostenibilidad"
                                     width={1200}
                                     height={800}

@@ -24,26 +24,30 @@ export default function EnfoqueCTA() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row justify-center gap-6 mb-16">
-                    <BigButton
-                        textBefore="Conoce Nuestros Proyectos"
-                        textAfter="Conoce Nuestros Proyectos"
-                        textColor="white"
-                        minWidth="260px"
-                        maxWidth="300px"
-                    />
-                    <BigButton
-                        textBefore="Contacta con Nosotros"
-                        textAfter="Contacta con Nosotros"
-                        textColor="white"
-                        minWidth="260px"
-                        maxWidth="300px"
-                    />
+                    <a href={"/proyectos"}>
+                        <BigButton
+                            textBefore="Conoce Nuestros Proyectos"
+                            textAfter="Conoce Nuestros Proyectos"
+                            textColor="white"
+                            minWidth="260px"
+                            maxWidth="300px"
+                        />
+                    </a>
+                    <a href={"/contacto"}>
+                        <BigButton
+                            textBefore="Contacta con Nosotros"
+                            textAfter="Contacta con Nosotros"
+                            textColor="white"
+                            minWidth="260px"
+                            maxWidth="300px"
+                        />
+                    </a>
                 </div>
 
                 {/* Quick Stats */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                     {[
-                        { number: "20+", label: "Años" },
+                        { number: "40+", label: "Años" },
                         { number: "26+", label: "Proyectos" },
                         { number: "3", label: "Países" },
                         { number: "+900 MW", label: "Instalados" }

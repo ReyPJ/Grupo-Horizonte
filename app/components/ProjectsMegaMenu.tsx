@@ -58,26 +58,6 @@ export default function ProjectsMegaMenu() {
             img: '/turbinas_4c_nucleologo.jpg',
             empresa: '4C'
         },
-        {
-            key: 'reconstruccion',
-            title: 'Reconstrucción de Maquinaria',
-            img: '/maquinaria-reccmaq.jpg',
-            empresa: 'RECCMAQ2',
-            badge: 'Nacional'
-        },
-        {
-            key: 'almacenamiento',
-            title: 'Sistemas de Almacenamiento',
-            img: '/baterias-energia.jpg', // 👈 Necesitas una imagen de baterías/SAE
-            empresa: 'Nucleo Energy',
-            badge: 'SAE'
-        },
-        {
-            key: 'oem',
-            title: 'Manufactura y Suministro (OEM)',
-            img: '/manufactura-oem.jpg', // 👈 Imagen de manufactura
-            empresa: 'Nucleo Energy'
-        },
     ];
 
     const regiones = [
@@ -130,50 +110,53 @@ export default function ProjectsMegaMenu() {
                             className="hidden sm:block" />{" "}
                             infraestructura eléctrica de alta tensión y mucho más.
                         </p>
-                        <BigButton textBefore={'Todos los proyectos'} textAfter={'Todos los proyectos'}
-                                   minWidth={"230px"}
-                                   maxWidth={"280px"} />
-                    </div>
-                    <div className={"flex flex-col gap-3 mt-8"}>
-                        <p className={"text-p uppercase pt-4 text-center lg:text-left"}>
-                            Conoce más en nuestro blog
-                        </p>
-                        <div className={"w-full bg-gray-300 h-[2px] rounded-xl my-2"}></div>
-                        <div className={"flex gap-3 w-full items-center"}>
-                            <Image
-                                src={"/eolico2.jpg"}
-                                width={800}
-                                height={800}
-                                alt={"Parque eólico en las montañas en México"}
-                                className={"hidden sm:block w-28 sm:w-36 h-20 sm:h-24 object-cover rounded-2xl flex-shrink-0"}
+                        <a href={"/proyectos"}>
+                            <BigButton textBefore={'Todos los proyectos'} textAfter={'Todos los proyectos'}
+                                       minWidth={"230px"}
+                                       maxWidth={"280px"}
                             />
-                            <div className={"space-y-0.5 flex-1 min-w-0"}>
-                                <p className={"text-primaryBlue leading-tight break-words text-[16px] sm:text-[18px]"}>
-                                    El avance en la energía eólica
-                                </p>
-                                <p className={"text-gray-900 leading-snug break-words text-[13px] sm:text-[14px]"}>
-                                    Desde la planeación hasta la ejecución del proyecto
-                                </p>
-                            </div>
-                        </div>
-                        <div className={"flex gap-3 w-full items-center"}>
-                            <Image
-                                src={"/paneles.jpg"}
-                                width={800}
-                                height={800}
-                                alt={"Paneles solares a cielo abierto"}
-                                className={"hidden sm:block w-28 sm:w-36 h-20 sm:h-24 object-cover rounded-2xl flex-shrink-0"}
-                            />
-                            <div className={"space-y-0.5 flex-1 min-w-0"}>
-                                <p className={"text-primaryBlue leading-tight break-words text-[16px] sm:text-[18px]"}>
-                                    Energía Fotovoltaica
-                                </p>
-                                <p className={"text-gray-900 leading-snug break-words text-[13px] sm:text-[14px]"}>
-                                    La importancia de migrar a este tipo de energía
-                                </p>
-                            </div>
-                        </div>
+                        </a>
                     </div>
+                    {/*<div className={"flex flex-col gap-3 mt-8"}>*/}
+                    {/*    <p className={"text-p uppercase pt-4 text-center lg:text-left"}>*/}
+                    {/*        Conoce más en nuestro blog*/}
+                    {/*    </p>*/}
+                    {/*    <div className={"w-full bg-gray-300 h-[2px] rounded-xl my-2"}></div>*/}
+                    {/*    <div className={"flex gap-3 w-full items-center"}>*/}
+                    {/*        <Image*/}
+                    {/*            src={"/eolico2.jpg"}*/}
+                    {/*            width={800}*/}
+                    {/*            height={800}*/}
+                    {/*            alt={"Parque eólico en las montañas en México"}*/}
+                    {/*            className={"hidden sm:block w-28 sm:w-36 h-20 sm:h-24 object-cover rounded-2xl flex-shrink-0"}*/}
+                    {/*        />*/}
+                    {/*        <div className={"space-y-0.5 flex-1 min-w-0"}>*/}
+                    {/*            <p className={"text-primaryBlue leading-tight break-words text-[16px] sm:text-[18px]"}>*/}
+                    {/*                El avance en la energía eólica*/}
+                    {/*            </p>*/}
+                    {/*            <p className={"text-gray-900 leading-snug break-words text-[13px] sm:text-[14px]"}>*/}
+                    {/*                Desde la planeación hasta la ejecución del proyecto*/}
+                    {/*            </p>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*    <div className={"flex gap-3 w-full items-center"}>*/}
+                    {/*        <Image*/}
+                    {/*            src={"/paneles.jpg"}*/}
+                    {/*            width={800}*/}
+                    {/*            height={800}*/}
+                    {/*            alt={"Paneles solares a cielo abierto"}*/}
+                    {/*            className={"hidden sm:block w-28 sm:w-36 h-20 sm:h-24 object-cover rounded-2xl flex-shrink-0"}*/}
+                    {/*        />*/}
+                    {/*        <div className={"space-y-0.5 flex-1 min-w-0"}>*/}
+                    {/*            <p className={"text-primaryBlue leading-tight break-words text-[16px] sm:text-[18px]"}>*/}
+                    {/*                Energía Fotovoltaica*/}
+                    {/*            </p>*/}
+                    {/*            <p className={"text-gray-900 leading-snug break-words text-[13px] sm:text-[14px]"}>*/}
+                    {/*                La importancia de migrar a este tipo de energía*/}
+                    {/*            </p>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
 
                 </div>
 

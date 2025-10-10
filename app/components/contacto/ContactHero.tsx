@@ -85,31 +85,12 @@ export default function ContactHero() {
                                     para llevar tu proyecto al siguiente nivel. Contáctanos y
                                     descubre cómo podemos ayudarte.
                                 </p>
-
-                                <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                    <a
-                                        href="tel:+525515572791"
-                                        className="cta-button bg-secundaryYellow text-primaryBlue px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-3 shadow-xl"
-                                    >
-                                        <FaPhone className="text-2xl" />
-                                        Llámanos Ahora
-                                    </a>
-                                    <a
-                                        href="https://wa.me/5215610421156"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="cta-button bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-3 border-2 border-white/30 hover:bg-white hover:text-primaryBlue"
-                                    >
-                                        <FaWhatsapp className="text-2xl" />
-                                        WhatsApp
-                                    </a>
-                                </div>
                             </div>
 
                             {/* Right Stats */}
                             <div className="grid grid-cols-2 gap-6">
                                 <div className="stats-badge rounded-2xl p-6 text-center">
-                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">20+</div>
+                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">40+</div>
                                     <div className="text-white text-lg">Años de Experiencia</div>
                                 </div>
                                 <div className="stats-badge rounded-2xl p-6 text-center">

@@ -45,7 +45,7 @@ export default function EnfoqueMVV() {
                 <div className="px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64">
                     {/* Header */}
                     <div className="text-center max-w-4xl mx-auto mb-16">
-                        <h2 className="text-h1 text-primaryBlue mb-6">
+                        <h2 id={"ADN"} className="text-h1 text-primaryBlue mb-6">
                             Nuestro ADN Corporativo
                         </h2>
                         <p className="text-p text-gray-700 leading-relaxed">

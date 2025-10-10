@@ -1,6 +1,6 @@
+"use client"
 import { FaClipboardList, FaHammer, FaCheckCircle, FaHandshake, FaCogs, FaChartLine, FaBolt, FaIndustry } from "react-icons/fa";
 import { MdEngineering } from "react-icons/md";
-import { GiElectric } from "react-icons/gi";
 
 const civilProcess = [
     { icon: FaClipboardList, title: "Planificación y Diseño", subtitle: "Gestión y Licencias" },

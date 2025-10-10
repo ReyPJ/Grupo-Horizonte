@@ -10,17 +10,19 @@ export default function ProjectsHero() {
                     Construyendo<br className="hidden sm:block" /> el Futuro
                 </h1>
                 <p className="text-h3 md:text-[1.75rem] text-white mb-8 leading-relaxed">
-                    Más de 20 años de experiencia en proyectos<br className="hidden sm:block" />
+                    Más de 40 años de experiencia en proyectos<br className="hidden sm:block" />
                     de infraestructura, energía renovable y construcción
                 </p>
                 <div className="flex justify-center gap-4 flex-wrap">
-                    <BigButton
-                        textBefore="Ver Proyectos Destacados"
-                        textAfter="Ver Proyectos Destacados"
-                        textColor="white"
-                        minWidth="280px"
-                        maxWidth="320px"
-                    />
+                    <a href={"#DESTACADOS"}>
+                        <BigButton
+                            textBefore="Ver Proyectos Destacados"
+                            textAfter="Ver Proyectos Destacados"
+                            textColor="white"
+                            minWidth="280px"
+                            maxWidth="320px"
+                        />
+                    </a>
                 </div>
             </div>
         </div>

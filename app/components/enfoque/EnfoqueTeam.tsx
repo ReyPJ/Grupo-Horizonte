@@ -23,7 +23,7 @@ export default function EnfoqueTeam() {
                         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
                             <div className="order-2 lg:order-1 relative">
                                 <Image
-                                    src="/obras1.jpg"
+                                    src="/dandomano.jpg"
                                     alt="Nuestro equipo"
                                     width={1200}
                                     height={800}

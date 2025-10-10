@@ -62,7 +62,7 @@ const featuredProjects = [
         location: "Lagos de Moreno, Jalisco",
         category: "Energía Fotovoltaica",
         scope: "296 MW DC",
-        image: "/paneles.jpg",
+        image: "/muchospaneles.jpg",
         description: "Uno de los proyectos fotovoltaicos más grandes de México. Instalación completa de sistema con capacidad de 296 MW DC, contribuyendo significativamente a la matriz energética nacional.",
         highlights: [
             "296 MW DC de capacidad instalada",
@@ -95,7 +95,7 @@ const featuredProjects = [
         client: "Enel Green Power",
         category: "Energía Fotovoltaica",
         scope: "300 MW",
-        image: "/paneles.jpg",
+        image: "/img218.jpg",
         description: "Construcción de infraestructura solar en uno de los proyectos más ambiciosos de Sudamérica. Instalación de paneles, inversores y puesta en marcha completa.",
         highlights: [
             "300 MW de capacidad",
@@ -112,7 +112,7 @@ const featuredProjects = [
         client: "CFE (Comisión Federal de Electricidad)",
         category: "Infraestructura Eléctrica",
         scope: "Obra Civil + Electromecánica",
-        image: "/subestacion-villa-garcia.jpg", // ⚠️ NECESITAS ESTA IMAGEN
+        image: "/subestacionelectrica.jpg", // ⚠️ NECESITAS ESTA IMAGEN
         description: "Desarrollo integral de subestación eléctrica para CFE incluyendo ingeniería, obra civil, suministro, fabricación, armado, montaje de equipos, interconexión y puesta en operación.",
         highlights: [
             "Obra civil mayores y menores",
@@ -130,7 +130,7 @@ const featuredProjects = [
         client: "ABB México S.A. de C.V.",
         category: "Infraestructura Eléctrica",
         scope: "600 Toneladas",
-        image: "/subestacion-abb.jpg", // ⚠️ NECESITAS ESTA IMAGEN
+        image: "/subestacion.jpg", // ⚠️ NECESITAS ESTA IMAGEN
         description: "Obra civil para estructuras mayores y menores en subestación industrial. Proyecto ejecutado para ABB México con 600 toneladas de estructuras metálicas.",
         highlights: [
             "Obra civil mayores y menores",
@@ -147,7 +147,7 @@ const featuredProjects = [
         location: "México",
         client: "Ford/ABB México",
         category: "Fabricación + Montaje",
-        image: "/ford-abb-subestacion.jpg", // ⚠️ NECESITAS ESTA IMAGEN
+        image: "/consite.jpg", // ⚠️ NECESITAS ESTA IMAGEN
         description: "Suministro, fabricación, galvanizado por inmersión en caliente, liberación LAPEM, transporte a obra, armado y montaje de estructuras mayores y menores para subestación industrial.",
         highlights: [
             "Fabricación en planta propia",
@@ -183,7 +183,7 @@ export default function ProjectsShowcase() {
                 {/* Section Header */}
                 <div className="px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64 mb-16">
                     <div className="text-center max-w-4xl mx-auto">
-                        <h2 className="text-h1 text-primaryBlue mb-6">
+                        <h2 id={"DESTACADOS"} className="text-h1 text-primaryBlue mb-6">
                             Proyectos que Definen el Futuro
                         </h2>
                         <p className="text-p text-gray-700 leading-relaxed">
