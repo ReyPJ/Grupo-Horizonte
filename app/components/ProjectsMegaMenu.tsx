@@ -58,6 +58,26 @@ export default function ProjectsMegaMenu() {
             img: '/turbinas_4c_nucleologo.jpg',
             empresa: '4C'
         },
+        {
+            key: 'reconstruccion',
+            title: 'Reconstrucción de Maquinaria',
+            img: '/maquinaria-reccmaq.jpg',
+            empresa: 'RECCMAQ2',
+            badge: 'Nacional'
+        },
+        {
+            key: 'almacenamiento',
+            title: 'Sistemas de Almacenamiento',
+            img: '/baterias-energia.jpg', // 👈 Necesitas una imagen de baterías/SAE
+            empresa: 'Nucleo Energy',
+            badge: 'SAE'
+        },
+        {
+            key: 'oem',
+            title: 'Manufactura y Suministro (OEM)',
+            img: '/manufactura-oem.jpg', // 👈 Imagen de manufactura
+            empresa: 'Nucleo Energy'
+        },
     ];
 
     const regiones = [

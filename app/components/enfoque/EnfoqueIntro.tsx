@@ -41,8 +41,9 @@ export default function EnfoqueIntro() {
                             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                                 Constructora 4C, con más de 20 años de experiencia en construcción
                                 civil, mecánica, eléctrica y fotovoltaica. IMBAR, con 20 años especializándose en
-                                infraestructura eléctrica para CFE y la industria privada. Núcleo Energy, impulsando
-                                el futuro con energías renovables.
+                                infraestructura eléctrica para CFE y la industria privada. Nucleo Energy, impulsando
+                                el futuro con energías renovables. RECCMAQ2, reconstruyendo maquinaria industrial
+                                con alcance nacional para los sectores más exigentes.
                             </p>
                             <p className="text-lg text-gray-700 leading-relaxed">
                                 Nuestro compromiso con la eficiencia, la innovación y la sostenibilidad nos ha
@@ -72,6 +73,16 @@ export default function EnfoqueIntro() {
                                         Excelencia en cada entrega
                                     </p>
                                     <div className="absolute bottom-0 left-0 w-1 h-0 bg-gradient-to-t from-secundaryYellow to-transparent group-hover:h-full transition-all duration-300 rounded-bl-2xl"></div>
+                                </div>
+                                <div className="group relative bg-gradient-to-br from-bgMain to-white p-6 rounded-2xl border border-gray-100 hover:border-green-400/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-green-400/5 to-transparent rounded-tr-2xl"></div>
+                                    <div className="text-3xl font-bold text-primaryBlue mb-2 relative z-10">
+                                        Sostenibilidad
+                                    </div>
+                                    <p className="text-sm text-gray-600 leading-relaxed relative z-10">
+                                        Energías renovables para el futuro
+                                    </p>
+                                    <div className="absolute bottom-0 left-0 w-1 h-0 bg-gradient-to-t from-green-400 to-transparent group-hover:h-full transition-all duration-300 rounded-bl-2xl"></div>
                                 </div>
                             </div>
                         </div>

@@ -104,6 +104,17 @@ export default function Home() {
             buttonMinWidth: "180px",
             buttonMaxWidth: "220px",
         },
+        {
+            company: "RECCMAQ2",
+            logoUrl: "/reccmaq2-logo.png", // 👈 Necesitas subir este logo
+            smallHistoryText: "Reconstructora de maquinaria con presencia nacional en el sector industrial.",
+            smallHistoryText2: "Servicio especializado de reconstrucción, mantenimiento y reparación de maquinaria pesada para industrias clave.",
+            buttonText: "Conoce a RECCMAQ2",
+            keyServices: ["Reconstrucción de Maquinaria", "Mantenimiento Industrial", "Reparación de Equipos", "Servicio a Nivel Nacional"],
+            image: "/maquinaria-reccmaq.jpg", // 👈 La imagen de la excavadora SANY que vi en el PDF
+            buttonMinWidth: "200px",
+            buttonMaxWidth: "240px",
+        }
     ]
 
     const projects = [
