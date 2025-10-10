@@ -1,4 +1,4 @@
-import { FaSolarPanel, FaBolt, FaBuilding, FaCogs, FaGlobeAmericas, FaAward } from "react-icons/fa";
+import {FaSolarPanel, FaBolt, FaBuilding, FaCogs, FaGlobeAmericas, FaAward, FaIndustry} from "react-icons/fa";
 
 const capabilities = [
     {
@@ -47,6 +47,19 @@ const capabilities = [
             "Pruebas eléctricas especializadas",
             "Supervisión de obra",
             "Análisis y estudios técnicos"
+        ]
+    },
+    {
+        icon: FaIndustry,
+        title: "Fabricación de Estructuras",
+        stat: "700 Ton/mes",
+        description: "Planta especializada de 7,000 m² con maquinaria CNC para fabricación de estructuras metálicas galvanizadas para subestaciones y líneas de transmisión.",
+        services: [
+            "Torres de transmisión hasta 400 KV",
+            "Estructuras para subestaciones",
+            "Torres de telecomunicaciones",
+            "Galvanizado por inmersión en caliente",
+            "Control de calidad LAPEM"
         ]
     }
 ];

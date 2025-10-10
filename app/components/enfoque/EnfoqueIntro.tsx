@@ -34,20 +34,20 @@ export default function EnfoqueIntro() {
                                 Quiénes Somos
                             </h2>
                             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                                Somos una empresa comprometida en ofrecer soluciones especializadas
-                                en ingeniería, construcción y energía fotovoltaica, garantizando la
-                                calidad, la innovación y el respeto al medio ambiente.
+                                Somos un grupo empresarial comprometido en ofrecer soluciones especializadas
+                                en ingeniería, construcción, infraestructura eléctrica de alta tensión y energía
+                                renovable, garantizando la calidad, la innovación y el respeto al medio ambiente.
                             </p>
                             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                                Constructora Cuatro Caminos, empresa con más de 20 años de experiencia
-                                en el sector de la construcción, con especial foco en la ingeniería
-                                mecánica, civil, eléctrica y fotovoltaica. Nos dedicamos a desarrollar
-                                proyectos de infraestructura y energía de alta calidad.
+                                Constructora 4C, con más de 20 años de experiencia en construcción
+                                civil, mecánica, eléctrica y fotovoltaica. IMBAR, con 20 años especializándose en
+                                infraestructura eléctrica para CFE y la industria privada. Núcleo Energy, impulsando
+                                el futuro con energías renovables.
                             </p>
                             <p className="text-lg text-gray-700 leading-relaxed">
-                                Nuestro compromiso con la eficiencia, la innovación y la sostenibilidad
-                                nos ha posicionado como líderes en la transformación del sector energético
-                                e infraestructura en Latinoamérica.
+                                Nuestro compromiso con la eficiencia, la innovación y la sostenibilidad nos ha
+                                posicionado como líderes en la transformación del sector energético e infraestructura
+                                en Latinoamérica.
                             </p>
 
                             {/* Feature Cards */}

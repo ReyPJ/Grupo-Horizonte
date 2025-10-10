@@ -72,7 +72,24 @@ const projects = [
         description: "Construcción Parque Solar Cauchari (300 MW).",
         image: "/paneles.jpg",
         capacity: "300 MW"
-    }
+    },
+    {
+        id: "imbar-lt-1",
+        title: "LT 230 KV Cuetzalan CFE",
+        location: "Cuetzalan, México",
+        category: "Líneas de Transmisión",
+        description: "Construcción, instalación y puesta en servicio de línea de transmisión de 115KV doble circuito con longitud de 20.308 km.",
+        image: "/linea-transmision-cfeshtml.jpg",
+        capacity: "115 KV - 20km"
+    },
+    {
+        id: "imbar-jasso",
+        title: "S.E. Jasso Hidalgo",
+        location: "Hidalgo, México",
+        category: "Transmisión Eléctrica",
+        description: "Obra civil y electromecánica para subestación eléctrica CFE.",
+        image: "/subestacion-jasso.jpg"
+    },
 ];
 
 const categories = ["Todos", "Energía Fotovoltaica", "Transmisión Eléctrica", "Obra Civil"];

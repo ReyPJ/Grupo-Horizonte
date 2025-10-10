@@ -83,6 +83,17 @@ export default function Home() {
             buttonMaxWidth: "180px",
         },
         {
+            company: "IMBAR",
+            logoUrl: "/imbar-logo.png",
+            smallHistoryText: "20 años construyendo infraestructura eléctrica para CFE e industria privada.",
+            smallHistoryText2: "Especialistas en subestaciones, líneas de transmisión y fabricación de estructuras metálicas hasta 400 KV.",
+            buttonText: "Conoce a IMBAR",
+            keyServices: ["Subestaciones Eléctricas", "Líneas de Transmisión", "Obra Civil Eléctrica", "Fabricación de Estructuras"],
+            image: "/LineasDeTransmisionElectrica.jpg",
+            buttonMinWidth: "180px",
+            buttonMaxWidth: "220px",
+        },
+        {
             company: "Nucleo Energy",
             logoUrl: "/LogoHorizontal@4x.png",
             smallHistoryText: "Núcleo Energy es una empresa joven dedicada a energias renovables.",
@@ -302,11 +313,17 @@ export default function Home() {
                         </h3>
 
                         <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                            Ofrecemos proyectos únicos que mejoran la calidad de vida, fomentamos la innovación y el desarrollo con soluciones integrales, con empresas con más de 20 años de experiencia impulsando al mundo hacia el futuro, comprometidos con la calidad y la sostenibilidad de cada proyecto.
+                            Ofrecemos proyectos únicos que mejoran la calidad de vida, fomentamos la innovación
+                            y el desarrollo con soluciones integrales. Con empresas especializadas que suman más
+                            de 40 años de experiencia combinada: desde la construcción civil e industrial (4C),
+                            pasando por infraestructura eléctrica de alta tensión (IMBAR), hasta energías
+                            renovables (Núcleo Energy).
                         </p>
 
                         <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                            Desde el sector de la construcción, ingeniería mecánica, civil, fotovoltaica, eléctrica, así como el desarrollo de proyectos eólicos, plantas solares, sistemas de autoconsumo para uso industrial comercial y residencial.
+                            Desde obras civiles, ingeniería mecánica y fotovoltaica, hasta el desarrollo de
+                            subestaciones eléctricas, líneas de transmisión de 400 KV, proyectos eólicos,
+                            plantas solares y sistemas de autoconsumo para uso industrial, comercial y residencial.
                         </p>
 
                         <p className="text-base sm:text-lg text-gray-700 leading-relaxed">

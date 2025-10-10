@@ -1,7 +1,7 @@
 export default function ProjectsStats() {
     const stats = [
         { number: "26+", label: "Proyectos Completados" },
-        { number: "20+", label: "Años de Experiencia" },
+        { number: "40+", label: "Años de Experiencia" },
         { number: "900+", label: "MW Instalados" },
         { number: "3", label: "Países" }
     ];

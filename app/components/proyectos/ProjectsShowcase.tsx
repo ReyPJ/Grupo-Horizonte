@@ -103,7 +103,60 @@ const featuredProjects = [
             "Condiciones climáticas extremas"
         ],
         icon: FaIndustry
-    }
+    },
+    {
+        id: "imbar-1",
+        title: "S.E. Villa de García",
+        subtitle: "Subestación Eléctrica CFE - Obra Completa",
+        location: "Villa de García, México",
+        client: "CFE (Comisión Federal de Electricidad)",
+        category: "Infraestructura Eléctrica",
+        scope: "Obra Civil + Electromecánica",
+        image: "/subestacion-villa-garcia.jpg", // ⚠️ NECESITAS ESTA IMAGEN
+        description: "Desarrollo integral de subestación eléctrica para CFE incluyendo ingeniería, obra civil, suministro, fabricación, armado, montaje de equipos, interconexión y puesta en operación.",
+        highlights: [
+            "Obra civil mayores y menores",
+            "Montaje electromecánico completo",
+            "Puesta en servicio certificada",
+            "Cumplimiento normas CFE"
+        ],
+        icon: FaBolt
+    },
+    {
+        id: "imbar-2",
+        title: "S.E. Guerreño ABB México",
+        subtitle: "Subestación Industrial Privada",
+        location: "Reynosa, Tamaulipas",
+        client: "ABB México S.A. de C.V.",
+        category: "Infraestructura Eléctrica",
+        scope: "600 Toneladas",
+        image: "/subestacion-abb.jpg", // ⚠️ NECESITAS ESTA IMAGEN
+        description: "Obra civil para estructuras mayores y menores en subestación industrial. Proyecto ejecutado para ABB México con 600 toneladas de estructuras metálicas.",
+        highlights: [
+            "Obra civil mayores y menores",
+            "600 toneladas de estructuras",
+            "Cliente industrial privado",
+            "Trabajo especializado con ABB"
+        ],
+        icon: FaIndustry
+    },
+    {
+        id: "imbar-3",
+        title: "S.E. Ford/ABB México",
+        subtitle: "Fabricación y Montaje de Estructuras",
+        location: "México",
+        client: "Ford/ABB México",
+        category: "Fabricación + Montaje",
+        image: "/ford-abb-subestacion.jpg", // ⚠️ NECESITAS ESTA IMAGEN
+        description: "Suministro, fabricación, galvanizado por inmersión en caliente, liberación LAPEM, transporte a obra, armado y montaje de estructuras mayores y menores para subestación industrial.",
+        highlights: [
+            "Fabricación en planta propia",
+            "Galvanizado por inmersión",
+            "Certificación LAPEM",
+            "Montaje en sitio"
+        ],
+        icon: MdEngineering
+    },
 ];
 
 export default function ProjectsShowcase() {
