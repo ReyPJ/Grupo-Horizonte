@@ -150,7 +150,7 @@ export default function EnfoqueMegaMenu() {
                                 {/* Stats Section */}
                                 <div className="mt-10 grid grid-cols-4 gap-4">
                                     {[
-                                        { number: '20+', label: 'Años' },
+                                        { number: '40+', label: 'Años' },
                                         { number: '500+', label: 'Profesionales' },
                                         { number: '3', label: 'Países' },
                                         { number: '100%', label: 'Compromiso' }

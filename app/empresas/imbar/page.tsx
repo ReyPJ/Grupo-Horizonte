@@ -273,7 +273,7 @@ export default function EmpresaIMBARPage() {
                                         { year: "2004", label: "Fundación" },
                                         { year: "100+", label: "Proyectos CFE" },
                                         { year: "400 KV", label: "Especialización" },
-                                        { year: "2024", label: "Presente" }
+                                        { year: "2025", label: "Presente" }
                                     ].map((item, idx) => (
                                         <div key={idx} className="relative">
                                             <div className="text-3xl font-bold text-[#1E40AF] mb-2">

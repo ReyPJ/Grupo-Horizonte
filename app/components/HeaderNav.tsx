@@ -59,10 +59,10 @@ export default function HeaderNav({
                     <a href="/">
                         <Image
                             src="/LogoCompleto@4x.png"
-                            width={400}
-                            height={400}
+                            width={600}
+                            height={600}
                             alt="Logo Grupo Horizonte"
-                            className="w-28 sm:w-32 h-auto object-contain cursor-pointer"
+                            className="w-36 sm:w-36 h-auto object-contain cursor-pointer"
                         />
                     </a>
                 </div>
