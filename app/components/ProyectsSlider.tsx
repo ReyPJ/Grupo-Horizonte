@@ -11,6 +11,8 @@ interface Project {
 
 export default function ProjectSlide({projects}: { projects: Project[] }) {
     const [inView, setInView] = React.useState(false);
+    const [activeIndex, setActiveIndex] = React.useState(0);
+    const scrollRef = React.useRef<HTMLDivElement>(null);
 
     React.useEffect(() => {
         const observer = new IntersectionObserver(
@@ -29,10 +31,32 @@ export default function ProjectSlide({projects}: { projects: Project[] }) {
         return () => observer.disconnect();
     }, []);
 
+    // Track scroll position for active card indicator - SOLO MOBILE
+    React.useEffect(() => {
+        const handleScroll = () => {
+            if (window.innerWidth >= 768) return; // Solo mobile
+            if (!scrollRef.current) return;
+            const scrollLeft = scrollRef.current.scrollLeft;
+            const cardWidth = scrollRef.current.scrollWidth / projects.length;
+            const index = Math.round(scrollLeft / cardWidth);
+            setActiveIndex(Math.min(index, projects.length - 1));
+        };
+
+        const scrollElement = scrollRef.current;
+        if (scrollElement) {
+            scrollElement.addEventListener('scroll', handleScroll);
+            return () => scrollElement.removeEventListener('scroll', handleScroll);
+        }
+    }, [projects.length]);
+
     return (
         <>
             <style>
                 {`
+          /* ============================================ */
+          /* CÓDIGO BASE - DESKTOP (NO TOCAR)            */
+          /* ============================================ */
+          
           .project-slide-container {
             width: 100%;
             display: flex;
@@ -223,7 +247,15 @@ export default function ProjectSlide({projects}: { projects: Project[] }) {
             border-radius: 2px;
           }
 
-          /* Responsive sizes */
+          /* Progress indicators - ocultos por defecto */
+          .progress-indicators {
+            display: none;
+          }
+
+          /* ============================================ */
+          /* RESPONSIVE SIZES ORIGINALES                  */
+          /* ============================================ */
+          
           @media (min-width: 640px) {
             .project-slide,
             .project-slide--ghost { width: 340px; }
@@ -231,6 +263,7 @@ export default function ProjectSlide({projects}: { projects: Project[] }) {
             .project-title { font-size: 22px; }
             .desc p { font-size: 15px; }
           }
+          
           @media (min-width: 768px) {
             .project-slide,
             .project-slide--ghost { width: 400px; }
@@ -238,6 +271,7 @@ export default function ProjectSlide({projects}: { projects: Project[] }) {
             .country-badge { font-size: 15px; }
             .project-title { font-size: 24px; }
           }
+          
           @media (min-width: 1024px) {
             .project-slide,
             .project-slide--ghost { width: 520px; }
@@ -247,10 +281,118 @@ export default function ProjectSlide({projects}: { projects: Project[] }) {
             .project-title { font-size: 28px; }
             .desc p { font-size: 16px; }
           }
+
+          /* ============================================ */
+          /* MEJORAS SOLO PARA MOBILE                     */
+          /* ============================================ */
+          
+          @media (max-width: 639px) {
+            .project-slide-container {
+              position: relative;
+            }
+
+            .project-slide-wrapper {
+              gap: 16px;
+              padding: 0 20px 48px 20px;
+              scroll-snap-type: x mandatory;
+              scroll-behavior: smooth;
+              scrollbar-width: none;
+              -webkit-overflow-scrolling: touch;
+            }
+            
+            .project-slide-wrapper::-webkit-scrollbar {
+              display: none;
+            }
+
+            .project-slide {
+              width: calc(100vw - 80px);
+              max-width: 400px;
+              scroll-snap-align: center;
+            }
+
+            .project-slide--ghost {
+              display: none;
+            }
+
+            .project-slide-item {
+              width: 100%;
+              height: 520px;
+              border-radius: 24px;
+            }
+
+            .text-content {
+              padding: 24px;
+            }
+
+            .country-badge {
+              margin-bottom: 12px;
+              font-size: 13px;
+              padding: 6px 14px;
+              background: rgba(206, 211, 0, 0.2);
+              border: 1px solid rgba(206, 211, 0, 0.4);
+            }
+
+            .project-title {
+              font-size: 22px;
+              margin-bottom: 12px;
+            }
+
+            .overlay {
+              opacity: 1;
+              background: linear-gradient(
+                to top, 
+                rgba(0, 12, 71, 0.95) 0%, 
+                rgba(0, 12, 71, 0.75) 35%,
+                rgba(0, 12, 71, 0.35) 65%,
+                transparent 100%
+              );
+            }
+
+            .desc::before {
+              width: 48px;
+              margin-bottom: 12px;
+            }
+
+            .desc p {
+              margin-top: 8px;
+              line-height: 1.65;
+            }
+
+            /* Progress indicators */
+            .progress-indicators {
+              display: flex;
+              justify-content: center;
+              gap: 8px;
+              padding: 16px 0;
+              position: absolute;
+              bottom: 8px;
+              left: 50%;
+              transform: translateX(-50%);
+              z-index: 10;
+            }
+
+            .progress-dot {
+              width: 8px;
+              height: 8px;
+              border-radius: 50%;
+              background: rgba(206, 211, 0, 0.3);
+              transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+              cursor: pointer;
+              border: none;
+              padding: 0;
+            }
+
+            .progress-dot.active {
+              width: 32px;
+              border-radius: 4px;
+              background: linear-gradient(90deg, #CED300 0%, #0A8700 100%);
+              box-shadow: 0 2px 8px rgba(206, 211, 0, 0.4);
+            }
+          }
         `}
             </style>
             <div className="project-slide-container">
-                <div className="project-slide-wrapper">
+                <div className="project-slide-wrapper" ref={scrollRef}>
                     {projects.map((project, index) => (
                         <div
                             key={index}
@@ -284,6 +426,26 @@ export default function ProjectSlide({projects}: { projects: Project[] }) {
                     >
                         <div className="project-slide-item" />
                     </div>
+                </div>
+
+                {/* Progress indicators - solo visible en mobile */}
+                <div className="progress-indicators">
+                    {projects.map((_, index) => (
+                        <button
+                            key={index}
+                            className={`progress-dot ${index === activeIndex ? 'active' : ''}`}
+                            onClick={() => {
+                                if (scrollRef.current) {
+                                    const cardWidth = scrollRef.current.scrollWidth / projects.length;
+                                    scrollRef.current.scrollTo({
+                                        left: cardWidth * index,
+                                        behavior: 'smooth'
+                                    });
+                                }
+                            }}
+                            aria-label={`Ir al proyecto ${index + 1}`}
+                        />
+                    ))}
                 </div>
             </div>
         </>
