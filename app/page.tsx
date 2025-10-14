@@ -8,6 +8,7 @@ import Footer from "@/app/components/footer";
 import Image from "next/image";
 import EnfoqueMegaMenu from "@/app/components/EnfoqueMegaMenu";
 import ProjectsMegaMenu from "@/app/components/ProjectsMegaMenu";
+import PartnerLogosSection from "@/app/components/PartnerLogoSection";
 import * as React from "react";
 
 export default function Home() {
@@ -410,6 +411,8 @@ export default function Home() {
                 </div>
             </section>
 
+            <PartnerLogosSection />
+
             {/* Hero IMBAR - Infraestructura Eléctrica de Alto Voltaje */}
             <section className="relative bg-no-repeat bg-cover bg-center min-h-dvh"
                      style={{backgroundImage: "url(/LineasDeTransmisionElectrica.jpg)"}}>
@@ -632,7 +635,7 @@ export default function Home() {
                     <div className="flex flex-col w-full lg:w-1/2 items-center">
                         <div className="relative group w-full max-w-[540px]">
                             <Image
-                                src="/turbinas_4c_nucleologo.jpg"
+                                src="/Heroafter.jpeg"
                                 width={1200}
                                 height={1200}
                                 alt="Turbina eolica con logos de 4c y Nucleo Energy"
