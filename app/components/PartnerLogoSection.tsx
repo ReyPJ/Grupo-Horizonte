@@ -1,6 +1,9 @@
+"use client";
 import Image from "next/image";
+import {useTranslations} from 'next-intl';
 
 export default function PartnerLogosSection() {
+    const t = useTranslations();
     const empresas = [
         {
             name: "Constructora 4C",
@@ -62,7 +65,7 @@ export default function PartnerLogosSection() {
                     {/* Título */}
                     <div className="text-center mb-6 sm:mb-8 lg:mb-12">
                         <p className="text-xs sm:text-sm lg:text-base font-medium text-gray-500 uppercase tracking-wider mb-2">
-                            Nuestras empresas
+                            {t('PartnerLogos.title')}
                         </p>
                         <div className="w-12 sm:w-16 h-0.5 sm:h-1 bg-gradient-to-r from-primaryBlue to-thirdGreen mx-auto rounded-full"></div>
                     </div>
@@ -74,7 +77,7 @@ export default function PartnerLogosSection() {
                                 key={empresa.name}
                                 href={empresa.href}
                                 className="logo-link flex items-center justify-center p-3 sm:p-4 lg:p-6 rounded-xl lg:rounded-none bg-gray-50 lg:bg-transparent transition-all duration-300"
-                                aria-label={`Ir a ${empresa.name}`}
+                                aria-label={t('PartnerLogos.goTo', {company: empresa.name})}
                             >
                                 <div className="logo-wrapper relative w-full h-16 sm:h-20 lg:h-24">
                                     <Image

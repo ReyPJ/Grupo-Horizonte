@@ -15,6 +15,7 @@ import {
     MdPower
 } from "react-icons/md";
 import {IconType} from "react-icons";
+import { useTranslations } from 'next-intl';
 
 interface Service {
     title: string;
@@ -51,8 +52,11 @@ const getServiceIcon = (title: string): IconType => {
 export default function CompanyServicesSection({
                                                    services,
                                                    primaryColor = "#000C47",
-                                                   title = "Nuestros Servicios"
+                                                   title
                                                }: CompanyServicesSectionProps) {
+    const t = useTranslations('Components.companyServices');
+    const displayTitle = title || t('title');
+
     return (
         <section className="py-24 bg-white">
             <div className="container mx-auto px-6">
@@ -70,10 +74,10 @@ export default function CompanyServicesSection({
                                 letterSpacing: '-0.02em'
                             }}
                         >
-                            {title}
+                            {displayTitle}
                         </h2>
                         <p className="text-gray-500 text-lg font-light">
-                            Soluciones integrales con los más altos estándares de calidad
+                            {t('description')}
                         </p>
                     </div>
 
@@ -152,7 +156,7 @@ export default function CompanyServicesSection({
                                         {/* Hover indicator */}
                                         <div
                                             className="mt-4 flex items-center gap-2 text-gray-400 group-hover:text-gray-600 transition-colors">
-                                            <span className="text-sm font-medium">Conocer más</span>
+                                            <span className="text-sm font-medium">{t('learnMore')}</span>
                                             <svg
                                                 className="w-4 h-4 group-hover:translate-x-1 transition-transform"
                                                 fill="none"

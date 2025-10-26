@@ -1,9 +1,12 @@
+import { useTranslations } from 'next-intl';
+
 export default function ProjectsStats() {
+    const t = useTranslations('Projects');
     const stats = [
-        { number: "26+", label: "Proyectos Completados" },
-        { number: "40+", label: "Años de Experiencia" },
-        { number: "900+", label: "MW Instalados" },
-        { number: "3", label: "Países" }
+        { number: "26+", label: t('stats.completed') },
+        { number: "40+", label: t('stats.experience') },
+        { number: "900+", label: t('stats.mw') },
+        { number: "3", label: t('stats.countries') }
     ];
 
     return (

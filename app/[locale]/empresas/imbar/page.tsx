@@ -10,9 +10,11 @@ import ProjectsMegaMenu from "@/app/components/ProjectsMegaMenu";
 import EnfoqueMegaMenu from "@/app/components/EnfoqueMegaMenu";
 import Link from "next/link";
 import { MdPower, MdFactory, MdVerifiedUser } from "react-icons/md";
+import { useTranslations } from 'next-intl';
 import React from "react";
 
 export default function EmpresaIMBARPage() {
+    const t = useTranslations();
     const [projectsOpen, setProjectsOpen] = React.useState(false);
     const [enfoqueOpen, setEnfoqueOpen] = React.useState(false);
     const [isClosingProjects, setIsClosingProjects] = React.useState(false);
@@ -59,104 +61,43 @@ export default function EmpresaIMBARPage() {
     }, []);
 
     const mvvData = {
-        mision: "Desarrollar e implementar tecnología de obras de infraestructura eléctrica implementando nuevos métodos en los procesos de obras para la CFE y la industria privada. Cumplir con las necesidades del cliente y anticiparnos a sus exigencias.",
-        vision: "Ser una empresa mexicana líder en el manejo integral de obras de infraestructura eléctrica. Alcanzar un nivel óptimo en recursos humanos y materiales bajo un esquema de calidad, satisfaciendo siempre a nuestros clientes en obras civiles, electromecánicas, pruebas preoperativas, estructuras para subestaciones y líneas de transmisión.",
-        valores: ["Calidad", "Innovación Tecnológica", "Compromiso", "Seguridad"]
+        mision: t('CompanyData.imbar.mision'),
+        vision: t('CompanyData.imbar.vision'),
+        valores: t.raw('CompanyData.imbar.valores')
     };
 
     const services = [
         {
-            title: "Ingeniería Eléctrica",
-            description: "Diseño y desarrollo de proyectos de infraestructura eléctrica con los más altos estándares técnicos y normativos para CFE e industria privada.",
+            title: t('CompanyData.imbar.services.engineering'),
+            description: t('CompanyData.imbar.services.engineeringDesc'),
             image: "/LineasDeTransmisionElectrica.jpg"
         },
         {
-            title: "Obra Civil",
-            description: "Construcción de cimentaciones, plataformas y estructuras civiles para subestaciones y líneas de transmisión. Obras mayores y menores con certificación LAPEM.",
+            title: t('CompanyData.imbar.services.civilWorks'),
+            description: t('CompanyData.imbar.services.civilWorksDesc'),
             image: "/obras1.jpg"
         },
         {
-            title: "Obra Electromecánica",
-            description: "Montaje de equipos, interconexión de sistemas, instalación de tableros y puesta en operación de subestaciones eléctricas completas.",
+            title: t('CompanyData.imbar.services.mechanical'),
+            description: t('CompanyData.imbar.services.mechanicalDesc'),
             image: "/RehabilatacionSubestacionesPeru.jpg"
         },
         {
-            title: "Fabricación de Estructuras",
-            description: "Producción de hasta 700 toneladas mensuales de estructuras metálicas galvanizadas para torres y subestaciones hasta 400 KV con liberación LAPEM.",
+            title: t('CompanyData.imbar.services.manufacturing'),
+            description: t('CompanyData.imbar.services.manufacturingDesc'),
             image: "/obras1.jpg"
         },
         {
-            title: "Pruebas Preoperativas",
-            description: "Realización de pruebas técnicas y certificaciones previas a la puesta en servicio de instalaciones eléctricas."
+            title: t('CompanyData.imbar.services.preoperative'),
+            description: t('CompanyData.imbar.services.preoperativeDesc')
         },
         {
-            title: "Puesta en Servicio",
-            description: "Proceso completo de energización y arranque de sistemas eléctricos con supervisión técnica especializada."
+            title: t('CompanyData.imbar.services.commissioning'),
+            description: t('CompanyData.imbar.services.commissioningDesc')
         }
     ];
 
-    const clients = [
-        {
-            name: "CFE - Comisión Federal de Electricidad",
-            location: "Nacional",
-            period: "2004-Actualidad",
-            description: "Múltiples proyectos de subestaciones y líneas de transmisión"
-        },
-        {
-            name: "CFE - S.E. Villa de García",
-            location: "Nuevo León",
-            period: "2018-2019",
-            description: "Obra civil y electromecánica completa"
-        },
-        {
-            name: "CFE - S.E. Codefront",
-            location: "Coahuila",
-            period: "2017-2018",
-            description: "Obra civil y electromecánica"
-        },
-        {
-            name: "CFE - S.E. Jasso",
-            location: "Hidalgo",
-            period: "2019-2020",
-            description: "Obra civil y electromecánica"
-        },
-        {
-            name: "CFE - LT Querétaro 400 KV",
-            location: "Querétaro",
-            period: "2016-2017",
-            description: "Línea de transmisión de alta tensión"
-        },
-        {
-            name: "CFE - S.E. Ticul 400 KV",
-            location: "Yucatán",
-            period: "2015-2016",
-            description: "Subestación eléctrica de potencia"
-        },
-        {
-            name: "CFE - LT y SE Cuetzalan",
-            location: "Puebla",
-            period: "2020-2021",
-            description: "LT 115KV doble circuito - 20.3 km"
-        },
-        {
-            name: "ABB México S.A. de C.V.",
-            location: "Reynosa, Tamaulipas",
-            period: "2018-2019",
-            description: "S.E. Guerreño - Obra civil 600 toneladas"
-        },
-        {
-            name: "ABB México - Ford",
-            location: "Irapuato, Guanajuato",
-            period: "2019-2020",
-            description: "Suministro, fabricación y montaje de estructuras"
-        },
-        {
-            name: "ABB México - S.E. Agroindustrial",
-            location: "Irapuato, Guanajuato",
-            period: "2017-2018",
-            description: "Obra civil y electromecánica"
-        }
-    ];
+    const clients = t.raw('CompanyData.imbar.clients');
 
     return (
         <div className="w-full min-h-dvh bg-bgMain">
@@ -189,10 +130,10 @@ export default function EmpresaIMBARPage() {
 
             <main>
                 <CompanyHeroSection
-                    company="IMBAR"
+                    company={t('CompanyData.imbar.name')}
                     logoUrl="/imbarlogo.jpeg"
-                    tagline="Líderes en Infraestructura Eléctrica"
-                    description="20 años de experiencia especializada en obras de infraestructura eléctrica para CFE e industria privada. Expertos en subestaciones, líneas de transmisión hasta 400 KV y fabricación de estructuras metálicas."
+                    tagline={t('CompanyData.imbar.tagline')}
+                    description={t('CompanyData.imbar.heroDescription')}
                     backgroundImage="/LineasDeTransmisionElectrica.jpg"
                     primaryColor="#1E40AF"
                 />
@@ -210,10 +151,10 @@ export default function EmpresaIMBARPage() {
                             <div className="text-center mb-16">
                                 <div className="inline-block h-0.5 w-16 rounded-full mb-6 bg-[#3B82F6]" />
                                 <h2 className="text-5xl font-bold text-[#1E40AF] mb-4">
-                                    Capacidades Técnicas
+                                    {t('CompanyData.imbar.sections.technicalCapabilities')}
                                 </h2>
                                 <p className="text-gray-500 text-lg font-light">
-                                    Infraestructura de clase mundial
+                                    {t('CompanyData.imbar.sections.worldClass')}
                                 </p>
                             </div>
 
@@ -222,20 +163,20 @@ export default function EmpresaIMBARPage() {
                                     {
                                         icon: MdPower,
                                         value: "400 KV",
-                                        label: "Capacidad Máxima",
-                                        desc: "Líneas de transmisión de alta tensión"
+                                        label: t('CompanyData.imbar.capabilities.capacidadMaxima'),
+                                        desc: t('CompanyData.imbar.capabilities.capacidadDesc')
                                     },
                                     {
                                         icon: MdFactory,
                                         value: "700 Ton",
-                                        label: "Producción Mensual",
-                                        desc: "Estructuras metálicas galvanizadas"
+                                        label: t('CompanyData.imbar.capabilities.produccionMensual'),
+                                        desc: t('CompanyData.imbar.capabilities.produccionDesc')
                                     },
                                     {
                                         icon: MdVerifiedUser,
                                         value: "LAPEM",
-                                        label: "Certificación",
-                                        desc: "Liberación oficial CFE"
+                                        label: t('CompanyData.imbar.capabilities.certificacion'),
+                                        desc: t('CompanyData.imbar.capabilities.certificacionDesc')
                                     }
                                 ].map((cap, idx) => (
                                     <div
@@ -262,18 +203,18 @@ export default function EmpresaIMBARPage() {
                             <div className="mt-20 bg-gradient-to-r from-blue-50 via-white to-blue-50 rounded-2xl p-10 border border-blue-100">
                                 <div className="text-center mb-10">
                                     <h3 className="text-3xl font-bold text-[#1E40AF] mb-2">
-                                        20 Años de Experiencia
+                                        {t('CompanyData.imbar.sections.yearsExperience')}
                                     </h3>
                                     <p className="text-gray-600 font-light">
-                                        Trayectoria comprobada en proyectos de infraestructura eléctrica
+                                        {t('CompanyData.imbar.sections.trajectory')}
                                     </p>
                                 </div>
                                 <div className="grid sm:grid-cols-4 gap-6 text-center">
                                     {[
-                                        { year: "2004", label: "Fundación" },
-                                        { year: "100+", label: "Proyectos CFE" },
-                                        { year: "400 KV", label: "Especialización" },
-                                        { year: "2025", label: "Presente" }
+                                        { year: "2004", label: t('CompanyData.imbar.timeline.fundacion') },
+                                        { year: "100+", label: t('CompanyData.imbar.timeline.proyectos') },
+                                        { year: "400 KV", label: t('CompanyData.imbar.timeline.especializacion') },
+                                        { year: "2025", label: t('CompanyData.imbar.timeline.presente') }
                                     ].map((item, idx) => (
                                         <div key={idx} className="relative">
                                             <div className="text-3xl font-bold text-[#1E40AF] mb-2">
@@ -296,13 +237,13 @@ export default function EmpresaIMBARPage() {
                 <CompanyServicesSection
                     services={services}
                     primaryColor="#1E40AF"
-                    title="Servicios Especializados"
+                    title={t('CompanyData.imbar.sections.specializedServices')}
                 />
 
                 <CompanyClientsSection
                     clients={clients}
                     primaryColor="#1E40AF"
-                    title="Proyectos Destacados"
+                    title={t('CompanyData.imbar.sections.highlightedProjects')}
                 />
 
                 {/* CTA Section */}
@@ -318,11 +259,11 @@ export default function EmpresaIMBARPage() {
                             <div className="h-0.5 w-16 mx-auto rounded-full mb-8 bg-[#3B82F6]" />
 
                             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                                Infraestructura Eléctrica de Calidad
+                                {t('CompanyData.imbar.sections.ctaTitle')}
                             </h2>
 
                             <p className="text-xl text-blue-50 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
-                                Llevamos 20 años desarrollando proyectos de infraestructura eléctrica con los más altos estándares de calidad
+                                {t('CompanyData.imbar.sections.ctaSubtitle')}
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -330,13 +271,13 @@ export default function EmpresaIMBARPage() {
                                     href="/contacto"
                                     className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-[#3B82F6] text-white font-bold text-lg hover:bg-[#60A5FA] transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1"
                                 >
-                                    Solicitar Cotización
+                                    {t('CompanyData.imbar.sections.requestQuote')}
                                 </Link>
                                 <Link
                                     href="/proyectos"
                                     className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white/10 backdrop-blur-sm text-white font-bold text-lg hover:bg-white/20 transition-all duration-300 border border-white/30"
                                 >
-                                    Ver Proyectos
+                                    {t('CompanyData.imbar.sections.viewProjects')}
                                 </Link>
                             </div>
                         </div>

@@ -1,34 +1,30 @@
 "use client"
 import { FaClipboardList, FaHammer, FaCheckCircle, FaHandshake, FaCogs, FaChartLine, FaBolt, FaIndustry } from "react-icons/fa";
 import { MdEngineering } from "react-icons/md";
+import { useTranslations } from 'next-intl';
 
-const civilProcess = [
-    { icon: FaClipboardList, title: "Planificación y Diseño", subtitle: "Gestión y Licencias" },
-    { icon: FaHammer, title: "Preparación del Campo", subtitle: "Obras Tempranas" },
-    { icon: MdEngineering, title: "Estructuración", subtitle: "Integración" },
-    { icon: FaCogs, title: "Acabado / Puesta en Servicio", subtitle: "Inspección y Funcionalidad" },
-    { icon: FaHandshake, title: "Finalización y Entrega", subtitle: "Post-construcción" }
-];
-
-const electroProcess = [
-    { icon: FaClipboardList, title: "Planificación y Diseño", subtitle: "Análisis técnico inicial" },
-    { icon: FaHammer, title: "Ejecución de Campo", subtitle: "Instalación de equipos" },
-    { icon: FaChartLine, title: "Supervisión y Control", subtitle: "Monitoreo de calidad" },
-    { icon: FaCheckCircle, title: "Entrega y Mantenimiento", subtitle: "Puesta en marcha" }
-];
-
-// ⚡ NUEVO - Proceso específico de IMBAR para infraestructura eléctrica
-const imbarProcess = [
-    { icon: FaClipboardList, title: "Ingeniería", subtitle: "Diseño y planeación eléctrica" },
-    { icon: FaIndustry, title: "Fabricación", subtitle: "Estructuras metálicas en planta" },
-    { icon: FaCheckCircle, title: "Galvanizado y LAPEM", subtitle: "Certificación de calidad" },
-    { icon: FaHammer, title: "Obra Civil", subtitle: "Cimentaciones y estructuras" },
-    { icon: FaBolt, title: "Obra Electromecánica", subtitle: "Montaje de equipos" },
-    { icon: FaChartLine, title: "Pruebas Preoperativas", subtitle: "Verificación técnica" },
-    { icon: FaCogs, title: "Puesta en Servicio", subtitle: "Energización y entrega" }
-];
+const iconsCivil = [FaClipboardList, FaHammer, MdEngineering, FaCogs, FaHandshake];
+const iconsElectro = [FaClipboardList, FaHammer, FaChartLine, FaCheckCircle];
+const iconsImbar = [FaClipboardList, FaIndustry, FaCheckCircle, FaHammer, FaBolt, FaChartLine, FaCogs];
 
 export default function EnfoqueProcess() {
+    const t = useTranslations('Enfoque');
+
+    const civilProcess = (t.raw('process.civilProcess') as Array<{title: string, subtitle: string}>).map((item, i) => ({
+        ...item,
+        icon: iconsCivil[i]
+    }));
+
+    const electroProcess = (t.raw('process.electroProcess') as Array<{title: string, subtitle: string}>).map((item, i) => ({
+        ...item,
+        icon: iconsElectro[i]
+    }));
+
+    const imbarProcess = (t.raw('process.imbarProcess') as Array<{title: string, subtitle: string}>).map((item, i) => ({
+        ...item,
+        icon: iconsImbar[i]
+    }));
+
     return (
         <>
             <style jsx>{`
@@ -64,11 +60,10 @@ export default function EnfoqueProcess() {
                         {/* Header */}
                         <div className="text-center mb-16">
                             <h2 className="text-h1 text-primaryBlue mb-6">
-                                Cómo Trabajamos
+                                {t('process.title')}
                             </h2>
                             <p className="text-p text-gray-700 leading-relaxed max-w-3xl mx-auto">
-                                Procesos especializados y probados que garantizan resultados excepcionales
-                                en cada tipo de proyecto que ejecutamos
+                                {t('process.description')}
                             </p>
                         </div>
 
@@ -80,10 +75,10 @@ export default function EnfoqueProcess() {
                                 </div>
                                 <div>
                                     <h3 className="text-h2 text-primaryBlue font-bold">
-                                        Proyectos de Obras Civiles
+                                        {t('process.civilWorks.title')}
                                     </h3>
                                     <p className="text-gray-600">
-                                        Infraestructura residencial, comercial e industrial - 4C
+                                        {t('process.civilWorks.subtitle')}
                                     </p>
                                 </div>
                             </div>
@@ -121,10 +116,10 @@ export default function EnfoqueProcess() {
                                 </div>
                                 <div>
                                     <h3 className="text-h2 text-primaryBlue font-bold">
-                                        Proyectos Electromecánicos
+                                        {t('process.mechanicalElectrical.title')}
                                     </h3>
                                     <p className="text-gray-600">
-                                        Energía fotovoltaica y transmisión eléctrica - 4C
+                                        {t('process.mechanicalElectrical.description')}
                                     </p>
                                 </div>
                             </div>
@@ -163,36 +158,26 @@ export default function EnfoqueProcess() {
                                 <div className="flex-1">
                                     <div className="flex items-center gap-3 mb-2">
                                         <h3 className="text-h2 text-primaryBlue font-bold">
-                                            Infraestructura Eléctrica de Alta Tensión
+                                            {t('process.highVoltageInfra.title')}
                                         </h3>
                                         <span className="imbar-badge text-white text-xs font-bold px-3 py-1 rounded-full">
-                                            IMBAR
+                                            {t('process.highVoltageInfra.badge')}
                                         </span>
                                     </div>
                                     <p className="text-gray-600">
-                                        Subestaciones, líneas de transmisión y fabricación de estructuras hasta 400 KV
+                                        {t('process.highVoltageInfra.description')}
                                     </p>
                                 </div>
                             </div>
 
                             {/* Stats rápidos de IMBAR */}
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-                                <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-4 text-center border border-orange-200">
-                                    <p className="text-3xl font-bold text-orange-600 mb-1">20+</p>
-                                    <p className="text-xs text-gray-600">Años con CFE</p>
-                                </div>
-                                <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-4 text-center border border-orange-200">
-                                    <p className="text-3xl font-bold text-orange-600 mb-1">160+</p>
-                                    <p className="text-xs text-gray-600">Plantas construidas</p>
-                                </div>
-                                <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-4 text-center border border-orange-200">
-                                    <p className="text-3xl font-bold text-orange-600 mb-1">700</p>
-                                    <p className="text-xs text-gray-600">Tons/mes capacidad</p>
-                                </div>
-                                <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-4 text-center border border-orange-200">
-                                    <p className="text-3xl font-bold text-orange-600 mb-1">7,000</p>
-                                    <p className="text-xs text-gray-600">m² de planta</p>
-                                </div>
+                                {(t.raw('process.highVoltageInfra.stats') as string[]).map((stat: string, index: number) => (
+                                    <div key={index} className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-4 text-center border border-orange-200">
+                                        <p className="text-3xl font-bold text-orange-600 mb-1">{index === 0 ? '20+' : index === 1 ? '160+' : index === 2 ? '700' : '7,000'}</p>
+                                        <p className="text-xs text-gray-600">{stat}</p>
+                                    </div>
+                                ))}
                             </div>
 
                             <div className="grid md:grid-cols-7 gap-4">
@@ -232,25 +217,17 @@ export default function EnfoqueProcess() {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-primaryBlue mb-2 text-lg">
-                                            Capacidad de Manufactura Propia
+                                            {t('process.manufacturing.title')}
                                         </h4>
                                         <p className="text-sm text-gray-700 leading-relaxed mb-3">
-                                            IMBAR cuenta con planta de fabricación de 7,000 m² con maquinaria de control numérico,
-                                            grúas viajeras y equipos especializados para producción de estructuras metálicas.
+                                            {t('process.manufacturing.description')}
                                         </p>
                                         <div className="flex flex-wrap gap-2">
-                                            <span className="text-xs bg-white px-3 py-1 rounded-full text-gray-700 border border-orange-200">
-                                                Torres de transmisión
-                                            </span>
-                                            <span className="text-xs bg-white px-3 py-1 rounded-full text-gray-700 border border-orange-200">
-                                                Estructuras para subestaciones
-                                            </span>
-                                            <span className="text-xs bg-white px-3 py-1 rounded-full text-gray-700 border border-orange-200">
-                                                Galvanizado por inmersión
-                                            </span>
-                                            <span className="text-xs bg-white px-3 py-1 rounded-full text-gray-700 border border-orange-200">
-                                                Certificación LAPEM
-                                            </span>
+                                            {(t.raw('process.services') as string[]).map((service: string, index: number) => (
+                                                <span key={index} className="text-xs bg-white px-3 py-1 rounded-full text-gray-700 border border-orange-200">
+                                                    {service}
+                                                </span>
+                                            ))}
                                         </div>
                                     </div>
                                 </div>

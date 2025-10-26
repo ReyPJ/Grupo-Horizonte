@@ -9,9 +9,11 @@ import Footer from "@/app/components/footer";
 import ProjectsMegaMenu from "@/app/components/ProjectsMegaMenu";
 import EnfoqueMegaMenu from "@/app/components/EnfoqueMegaMenu";
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
 import React from "react";
 
 export default function Empresa4CPage() {
+    const t = useTranslations();
     const [projectsOpen, setProjectsOpen] = React.useState(false);
     const [enfoqueOpen, setEnfoqueOpen] = React.useState(false);
     const [isClosingProjects, setIsClosingProjects] = React.useState(false);
@@ -58,72 +60,35 @@ export default function Empresa4CPage() {
     }, []);
 
     const mvvData = {
-        mision: "Ser líderes en la industria implementando soluciones sustentables e innovadoras en infraestructura y energía.",
-        vision: "Ser el referente líder en infraestructuras, energías renovables y servicios especializados a nivel nacional e internacional.",
-        valores: ["Innovación", "Sostenibilidad", "Calidad", "Responsabilidad Social"]
+        mision: t('CompanyData.fourC.mision'),
+        vision: t('CompanyData.fourC.vision'),
+        valores: t.raw('CompanyData.fourC.valores')
     };
 
     const services = [
         {
-            title: "Obras Civiles",
-            description: "Diseñamos, construimos y gestionamos proyectos de infraestructura civil, incluyendo edificaciones, hospitales, proyectos residenciales, comerciales e industriales, renovaciones y obras de desarrollo urbano.",
+            title: t('CompanyData.fourC.services.civilWorks'),
+            description: t('CompanyData.fourC.services.civilWorksDesc'),
             image: "/Grua1.jpg"
         },
         {
-            title: "Obras Eléctricas",
-            description: "Diseño, construcción y mantenimiento de redes eléctricas en alta, media y baja tensión. Instalación y supervisión de líneas de transmisión, subestaciones eléctricas y sistemas de distribución.",
+            title: t('CompanyData.fourC.services.electricalWorks'),
+            description: t('CompanyData.fourC.services.electricalWorksDesc'),
             image: "/LineasDeTransmisionElectrica.jpg"
         },
         {
-            title: "Proyectos Fotovoltaicos",
-            description: "Instalación de paneles solares, seguidores, montaje y conexionado. Puesta en marcha con pruebas OMICRON. Soluciones completas para generación de energía limpia.",
+            title: t('CompanyData.fourC.services.photovoltaic'),
+            description: t('CompanyData.fourC.services.photovoltaicDesc'),
             image: "/paneles.jpg"
         },
         {
-            title: "Servicios Especializados",
-            description: "Evaluación y ejecución de proyectos, análisis técnico, elaboración de catálogos de obra. Instalación y supervisión de subestaciones eléctricas y montaje de torres.",
+            title: t('CompanyData.fourC.services.specializedServices'),
+            description: t('CompanyData.fourC.services.specializedDesc'),
             image: "/turbinas_4c_nucleologo.jpg"
         }
     ];
 
-    const clients = [
-        {
-            name: "Secretaría de la Marina",
-            location: "Puerto Vallarta, Jalisco",
-            period: "2020-2021",
-            description: "Construcción y equipamiento del Hospital Naval"
-        },
-        {
-            name: "ASELEC S.A. de C.V.",
-            location: "Mexicali, B.C.",
-            period: "2019-2020",
-            description: "Cimentaciones plataforma 400 KV en SE Cucapah"
-        },
-        {
-            name: "Enel Green Power",
-            location: "Jujuy, Argentina",
-            period: "2018-2019",
-            description: "Parque Solar Cauchari - 300 MW"
-        },
-        {
-            name: "CFE",
-            location: "Múltiples estados",
-            period: "2010-Actualidad",
-            description: "Diversos proyectos de infraestructura eléctrica"
-        },
-        {
-            name: "Luz del Sur",
-            location: "Lima y Cusco, Perú",
-            period: "2017-2018",
-            description: "Modernización de subestaciones eléctricas"
-        },
-        {
-            name: "ENERRAY",
-            location: "Guanajuato, México",
-            period: "2020-2021",
-            description: "Proyecto Solar 296 MW DC"
-        }
-    ];
+    const clients = t.raw('CompanyData.fourC.clients');
 
     return (
         <div className="w-full min-h-dvh bg-bgMain">
@@ -156,10 +121,10 @@ export default function Empresa4CPage() {
 
             <main>
                 <CompanyHeroSection
-                    company="Constructora 4C"
+                    company={t('CompanyData.fourC.name')}
                     logoUrl="/4cSInfondoLogo.png"
-                    tagline="Construyendo el Futuro con Excelencia"
-                    description="Más de 20 años de experiencia en construcción civil, mecánica, eléctrica y fotovoltaica. Desarrollamos infraestructura y energía de alta calidad con compromiso hacia la eficiencia, innovación y seguridad."
+                    tagline={t('CompanyData.fourC.tagline')}
+                    description={t('CompanyData.fourC.heroDescription')}
                     backgroundImage="/Grua1.jpg"
                     primaryColor="#000C47"
                 />
@@ -178,16 +143,16 @@ export default function Empresa4CPage() {
                                 <div>
                                     <div className="h-0.5 w-16 rounded-full mb-6 bg-green-600" />
                                     <h2 className="text-4xl md:text-5xl font-bold text-[#000C47] mb-6 leading-tight">
-                                        Compromiso con el Medio Ambiente
+                                        {t('CompanyData.fourC.sections.environmentalCommitment')}
                                     </h2>
                                     <p className="text-gray-600 leading-relaxed mb-6 text-lg font-light">
-                                        En 4C integramos prácticas sostenibles en cada proyecto, minimizando nuestro impacto ambiental y maximizando la eficiencia energética.
+                                        {t('CompanyData.fourC.sections.sustainablePractices')}
                                     </p>
                                     <div className="space-y-4">
                                         {[
-                                            "Implementación de sistemas de energía renovable",
-                                            "Optimización de recursos para minimizar el impacto ambiental",
-                                            "Gestión adecuada de residuos en todas nuestras operaciones"
+                                            t('CompanyData.fourC.sections.renewableEnergy'),
+                                            t('CompanyData.fourC.sections.resourceOptimization'),
+                                            t('CompanyData.fourC.sections.wasteManagement')
                                         ].map((item, idx) => (
                                             <div key={idx} className="flex items-start gap-3">
                                                 <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -219,10 +184,7 @@ export default function Empresa4CPage() {
                         {/* Texto principal */}
                         <div className="flex flex-col items-center justify-center w-full space-y-6 lg:space-y-8">
                             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center text-white text-shadow-strong animate-fade-in-up font-bold leading-tight max-w-4xl">
-                                Impulsando el futuro.{' '}
-                                <span className="block mt-2 lg:mt-1">
-                                Para lograr lo imposible.
-                            </span>
+                                {t('CompanyData.fourC.sections.heroTitle')}
                             </h1>
                         </div>
 
@@ -246,13 +208,13 @@ export default function Empresa4CPage() {
                 <CompanyServicesSection
                     services={services}
                     primaryColor="#000C47"
-                    title="Nuestros Servicios"
+                    title={t('CompanyData.fourC.sections.servicesTitle')}
                 />
 
                 <CompanyClientsSection
                     clients={clients}
                     primaryColor="#000C47"
-                    title="Clientes que Confían en Nosotros"
+                    title={t('CompanyData.fourC.sections.clientsTitle')}
                 />
 
                 {/* CTA Section */}
@@ -268,11 +230,11 @@ export default function Empresa4CPage() {
                             <div className="h-0.5 w-16 mx-auto rounded-full mb-8 bg-[#FFC107]" />
 
                             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                                ¿Listo para tu Próximo Proyecto?
+                                {t('CompanyData.fourC.sections.ctaTitle')}
                             </h2>
 
                             <p className="text-xl text-gray-200 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
-                                Transformemos juntos tu visión en realidad con la experiencia y calidad que caracteriza a 4C
+                                {t('CompanyData.fourC.sections.ctaSubtitle')}
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -280,13 +242,13 @@ export default function Empresa4CPage() {
                                     href="/contacto"
                                     className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-[#FFC107] text-[#000C47] font-bold text-lg hover:bg-[#FFD54F] transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1"
                                 >
-                                    Contáctanos
+                                    {t('CompanyData.fourC.sections.contactUs')}
                                 </Link>
                                 <Link
                                     href="/proyectos"
                                     className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white/10 backdrop-blur-sm text-white font-bold text-lg hover:bg-white/20 transition-all duration-300 border border-white/30"
                                 >
-                                    Ver Proyectos
+                                    {t('CompanyData.fourC.sections.viewProjects')}
                                 </Link>
                             </div>
                         </div>

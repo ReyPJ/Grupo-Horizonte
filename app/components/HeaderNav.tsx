@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import * as React from "react";
+import {useTranslations} from 'next-intl';
 
 type HeaderNavProps = {
     setProjectsOpen?: (open: boolean) => void;
@@ -14,14 +16,15 @@ export default function HeaderNav({
                                       setEnfoqueOpen,
                                       enfoqueOpen
                                   }: HeaderNavProps) {
+    const t = useTranslations();
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [empresasDropdownOpen, setEmpresasDropdownOpen] = React.useState(false);
 
     const empresas = [
-        {name: "Constructora 4C", href: "/empresas/4C"},
-        {name: "Núcleo Energy", href: "/empresas/nucleo-energy"},
-        {name: "IMBAR", href: "/empresas/imbar"},
-        {name: "RECCMAQ2", href: "/empresas/reccmaq2"}
+        {name: t('CompanyData.fourC.name'), href: "/empresas/4C"},
+        {name: t('CompanyData.nucleoEnergy.name'), href: "/empresas/nucleo-energy"},
+        {name: t('CompanyData.imbar.name'), href: "/empresas/imbar"},
+        {name: t('CompanyData.reccmaq2.name'), href: "/empresas/reccmaq2"}
     ];
 
     const toggleProjects = () => {
@@ -78,7 +81,7 @@ export default function HeaderNav({
                     <button
                         type="button"
                         className="relative z-[60] inline-flex items-center justify-center w-10 h-10 rounded-full text-gray-700 hover:bg-gray-100 transition-colors"
-                        aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
+                        aria-label={mobileOpen ? t('Navigation.closeMenu') : t('Navigation.openMenu')}
                         aria-expanded={mobileOpen}
                         onClick={() => setMobileOpen((v) => !v)}
                     >
@@ -117,7 +120,7 @@ export default function HeaderNav({
                                 className="block py-3 px-4 text-base font-medium text-gray-700 hover:bg-primaryBlue hover:text-white rounded-xl transition-colors"
                                 onClick={() => setMobileOpen(false)}
                             >
-                                Inicio
+                                {t('Navigation.home')}
                             </a>
 
                             {/* Proyectos */}
@@ -126,12 +129,12 @@ export default function HeaderNav({
                                 className="block py-3 px-4 text-base font-medium text-gray-700 hover:bg-primaryBlue hover:text-white rounded-xl transition-colors"
                                 onClick={() => setMobileOpen(false)}
                             >
-                                Proyectos
+                                {t('Navigation.projects')}
                             </a>
 
                             {/* Empresas - Expandible */}
                             <div className="bg-gray-50 rounded-xl p-3">
-                                <p className="text-sm font-bold text-primaryBlue mb-2 px-2">Nuestras Empresas</p>
+                                <p className="text-sm font-bold text-primaryBlue mb-2 px-2">{t('Navigation.ourCompanies')}</p>
                                 <div className="space-y-1">
                                     {empresas.map((empresa, idx) => (
                                         <a
@@ -152,7 +155,7 @@ export default function HeaderNav({
                                 className="block py-3 px-4 text-base font-medium text-gray-700 hover:bg-primaryBlue hover:text-white rounded-xl transition-colors"
                                 onClick={() => setMobileOpen(false)}
                             >
-                                Enfoque
+                                {t('Navigation.focus')}
                             </a>
 
                             {/* Contacto */}
@@ -161,18 +164,18 @@ export default function HeaderNav({
                                 className="block py-3 px-4 text-base font-medium text-white bg-primaryBlue hover:bg-opacity-90 rounded-xl transition-colors"
                                 onClick={() => setMobileOpen(false)}
                             >
-                                Contacto
+                                {t('Navigation.contact')}
                             </a>
                         </nav>
 
                         {/* Footer del menu */}
                         <div className="mt-6 pt-4 border-t border-gray-200">
                             <div className="flex flex-col items-center gap-2 text-sm text-gray-600">
-                                <a href="tel:+525515572791" className="hover:text-primaryBlue">
-                                    +52 55 1557 2791
+                                <a href={`tel:${t('Navigation.phone').replace(/\s/g, '')}`} className="hover:text-primaryBlue">
+                                    {t('Navigation.phone')}
                                 </a>
-                                <a href="mailto:ghorizonte@hh.com" className="hover:text-primaryBlue">
-                                    ghorizonte@hh.com
+                                <a href={`mailto:${t('Navigation.email')}`} className="hover:text-primaryBlue">
+                                    {t('Navigation.email')}
                                 </a>
                             </div>
                         </div>
@@ -198,7 +201,7 @@ export default function HeaderNav({
                     <div className="flex px-4 gap-4 items-center">
                         <p className="text-h4 cursor-pointer transition delay-100 hover:bg-primaryBlue hover:text-white py-2 px-4 rounded-3xl">
                             <a href="/">
-                                Inicio
+                                {t('Navigation.home')}
                             </a>
                         </p>
                         <button
@@ -211,7 +214,7 @@ export default function HeaderNav({
                             aria-expanded={projectsOpen ?? false}
                         >
                             <a href="/proyectos">
-                                Proyectos
+                                {t('Navigation.projects')}
                             </a>
                         </button>
 
@@ -224,7 +227,7 @@ export default function HeaderNav({
                                 type="button"
                                 className={`text-h4 cursor-pointer transition delay-100 py-2 px-4 rounded-3xl ${empresasDropdownOpen ? 'bg-primaryBlue text-white' : 'hover:bg-primaryBlue hover:text-white'}`}
                             >
-                                Empresas
+                                {t('Navigation.companies')}
                             </button>
 
                             <div
@@ -252,12 +255,12 @@ export default function HeaderNav({
                             aria-expanded={enfoqueOpen ?? false}
                         >
                             <a href="/enfoque">
-                                Enfoque
+                                {t('Navigation.focus')}
                             </a>
                         </button>
                         <p className="text-h4 cursor-pointer transition delay-100 hover:bg-primaryBlue hover:text-white py-2 px-4 rounded-3xl">
                             <a href="/contacto">
-                                Contacto
+                                {t('Navigation.contact')}
                             </a>
                         </p>
                     </div>

@@ -1,6 +1,11 @@
+'use client';
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
 
 export default function EnfoqueIntro() {
+    const t = useTranslations('Enfoque');
+    const values = t.raw('intro.values');
+
     return (
         <div className="bg-white py-20 overflow-hidden">
             <div className="px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64">
@@ -31,59 +36,32 @@ export default function EnfoqueIntro() {
                         {/* Content Side */}
                         <div>
                             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primaryBlue mb-6 leading-tight">
-                                Quiénes Somos
+                                {t('intro.title')}
                             </h2>
                             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                                Somos un grupo empresarial comprometido en ofrecer soluciones especializadas
-                                en ingeniería, construcción, infraestructura eléctrica de alta tensión y energía
-                                renovable, garantizando la calidad, la innovación y el respeto al medio ambiente.
+                                {t('intro.description1')}
                             </p>
                             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                                Constructora 4C, con más de 20 años de experiencia en construcción
-                                civil, mecánica, eléctrica y fotovoltaica. IMBAR, con 20 años especializándose en
-                                infraestructura eléctrica para CFE y la industria privada. Nucleo Energy, impulsando
-                                el futuro con energías renovables. RECCMAQ2, reconstruyendo maquinaria industrial
-                                con alcance nacional para los sectores más exigentes.
+                                {t('intro.description2')}
                             </p>
                             <p className="text-lg text-gray-700 leading-relaxed">
-                                Nuestro compromiso con la eficiencia, la innovación y la sostenibilidad nos ha
-                                posicionado como líderes en la transformación del sector energético e infraestructura
-                                en Latinoamérica.
+                                {t('intro.description3')}
                             </p>
 
                             {/* Feature Cards */}
                             <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div className="group relative bg-gradient-to-br from-bgMain to-white p-6 rounded-2xl border border-gray-100 hover:border-primaryBlue/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-primaryBlue/5 to-transparent rounded-tr-2xl"></div>
-                                    <div className="text-3xl font-bold text-primaryBlue mb-2 relative z-10">
-                                        Innovación
+                                {values.map((value: { title: string; description: string }, index: number) => (
+                                    <div key={index} className="group relative bg-gradient-to-br from-bgMain to-white p-6 rounded-2xl border border-gray-100 hover:border-primaryBlue/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                        <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-primaryBlue/5 to-transparent rounded-tr-2xl"></div>
+                                        <div className="text-3xl font-bold text-primaryBlue mb-2 relative z-10">
+                                            {value.title}
+                                        </div>
+                                        <p className="text-sm text-gray-600 leading-relaxed relative z-10">
+                                            {value.description}
+                                        </p>
+                                        <div className="absolute bottom-0 left-0 w-1 h-0 bg-gradient-to-t from-primaryBlue to-transparent group-hover:h-full transition-all duration-300 rounded-bl-2xl"></div>
                                     </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed relative z-10">
-                                        Tecnología de punta en cada proyecto
-                                    </p>
-                                    <div className="absolute bottom-0 left-0 w-1 h-0 bg-gradient-to-t from-primaryBlue to-transparent group-hover:h-full transition-all duration-300 rounded-bl-2xl"></div>
-                                </div>
-
-                                <div className="group relative bg-gradient-to-br from-bgMain to-white p-6 rounded-2xl border border-gray-100 hover:border-secundaryYellow/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-secundaryYellow/5 to-transparent rounded-tr-2xl"></div>
-                                    <div className="text-3xl font-bold text-primaryBlue mb-2 relative z-10">
-                                        Calidad
-                                    </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed relative z-10">
-                                        Excelencia en cada entrega
-                                    </p>
-                                    <div className="absolute bottom-0 left-0 w-1 h-0 bg-gradient-to-t from-secundaryYellow to-transparent group-hover:h-full transition-all duration-300 rounded-bl-2xl"></div>
-                                </div>
-                                <div className="group relative bg-gradient-to-br from-bgMain to-white p-6 rounded-2xl border border-gray-100 hover:border-green-400/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-green-400/5 to-transparent rounded-tr-2xl"></div>
-                                    <div className="text-3xl font-bold text-primaryBlue mb-2 relative z-10">
-                                        Sostenibilidad
-                                    </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed relative z-10">
-                                        Energías renovables para el futuro
-                                    </p>
-                                    <div className="absolute bottom-0 left-0 w-1 h-0 bg-gradient-to-t from-green-400 to-transparent group-hover:h-full transition-all duration-300 rounded-bl-2xl"></div>
-                                </div>
+                                ))}
                             </div>
                         </div>
                     </div>

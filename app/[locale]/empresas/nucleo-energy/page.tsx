@@ -9,9 +9,11 @@ import ProjectsMegaMenu from "@/app/components/ProjectsMegaMenu";
 import EnfoqueMegaMenu from "@/app/components/EnfoqueMegaMenu";
 import Link from "next/link";
 import { MdWindPower, MdSolarPower, MdBattery80, MdPrecisionManufacturing } from "react-icons/md";
+import { useTranslations } from 'next-intl';
 import React from "react";
 
 export default function EmpresaNucleoPage() {
+    const t = useTranslations();
     const [projectsOpen, setProjectsOpen] = React.useState(false);
     const [enfoqueOpen, setEnfoqueOpen] = React.useState(false);
     const [isClosingProjects, setIsClosingProjects] = React.useState(false);
@@ -58,40 +60,40 @@ export default function EmpresaNucleoPage() {
     }, []);
 
     const mvvData = {
-        mision: "Impulsar la transición energética mediante el desarrollo de proyectos innovadores de energía renovable que generen impacto positivo en el medio ambiente y la sociedad.",
-        vision: "Ser líderes en América Latina en soluciones integrales de energía renovable, almacenamiento y manufactura especializada para el sector energético.",
-        valores: ["Sostenibilidad", "Innovación", "Eficiencia Energética", "Compromiso Ambiental"]
+        mision: t('CompanyData.nucleoEnergy.mision'),
+        vision: t('CompanyData.nucleoEnergy.vision'),
+        valores: t.raw('CompanyData.nucleoEnergy.valores')
     };
 
     const services = [
         {
-            title: "Energía Eólica",
-            description: "Conceptualización, ingeniería, desarrollo y ejecución de proyectos de generación de energía eléctrica a partir de fuentes eólicas. Instalación, operación y mantenimiento de parques eólicos.",
+            title: t('CompanyData.nucleoEnergy.services.wind'),
+            description: t('CompanyData.nucleoEnergy.services.windDesc'),
             image: "/eolico2.jpg"
         },
         {
-            title: "Energía Fotovoltaica",
-            description: "Desarrollo de plantas solares y sistemas de autoconsumo para uso industrial, comercial y residencial. Compra, venta e instalación de paneles solares, inversores y componentes.",
+            title: t('CompanyData.nucleoEnergy.services.photovoltaic'),
+            description: t('CompanyData.nucleoEnergy.services.photovoltaicDesc'),
             image: "/fotovoltaic.jpg"
         },
         {
-            title: "Sistemas de Almacenamiento (SAE)",
-            description: "Investigación, desarrollo, diseño e implementación de sistemas de almacenamiento de energía con baterías de ion-litio y tecnologías emergentes para aplicaciones conectadas a red o aisladas.",
+            title: t('CompanyData.nucleoEnergy.services.storage'),
+            description: t('CompanyData.nucleoEnergy.services.storageDesc'),
             image: "/paneles.jpg"
         },
         {
-            title: "Manufactura y Suministro (OEM)",
-            description: "Fabricación, ensamblaje, integración y comercialización de equipos originales y componentes para el sector energético. Servicios de ingeniería y consultoría técnica.",
+            title: t('CompanyData.nucleoEnergy.services.manufacturing'),
+            description: t('CompanyData.nucleoEnergy.services.manufacturingDesc'),
             image: "/turbinas_4c_nucleologo.jpg"
         },
         {
-            title: "Infraestructura de Transmisión",
-            description: "Diseño, ingeniería, procura y construcción de subestaciones eléctricas, líneas de transmisión y redes de distribución de media y alta tensión.",
+            title: t('CompanyData.nucleoEnergy.services.infrastructure'),
+            description: t('CompanyData.nucleoEnergy.services.infrastructureDesc'),
             image: "/LineasDeTransmisionElectrica.jpg"
         },
         {
-            title: "Mantenimiento Especializado",
-            description: "Servicios de mantenimiento preventivo y correctivo, así como operación de subestaciones, parques eólicos y plantas solares."
+            title: t('CompanyData.nucleoEnergy.services.maintenance'),
+            description: t('CompanyData.nucleoEnergy.services.maintenanceDesc')
         }
     ];
 
@@ -128,10 +130,10 @@ export default function EmpresaNucleoPage() {
 
             <main>
                 <CompanyHeroSection
-                    company="Núcleo Energy"
+                    company={t('CompanyData.nucleoEnergy.name')}
                     logoUrl="/LogoHorizontal@4x.png"
-                    tagline="Energías Renovables para el Futuro"
-                    description="Empresa joven y dinámica dedicada al desarrollo de proyectos de energía renovable. Especializados en energía eólica, fotovoltaica, sistemas de almacenamiento y manufactura OEM para impulsar la transición energética."
+                    tagline={t('CompanyData.nucleoEnergy.tagline')}
+                    description={t('CompanyData.nucleoEnergy.heroDescription')}
                     backgroundImage="/fotovoltaic.jpg"
                     primaryColor="#10B981"
                 />
@@ -149,10 +151,10 @@ export default function EmpresaNucleoPage() {
                             <div className="text-center mb-16">
                                 <div className="inline-block h-0.5 w-16 rounded-full mb-6 bg-[#34D399]" />
                                 <h2 className="text-5xl md:text-6xl font-bold text-[#10B981] mb-4">
-                                    Tecnologías de Vanguardia
+                                    {t('CompanyData.nucleoEnergy.sections.advancedTechnologies')}
                                 </h2>
                                 <p className="text-gray-500 text-lg font-light">
-                                    Soluciones innovadoras para un futuro sostenible
+                                    {t('CompanyData.nucleoEnergy.sections.sustainableFuture')}
                                 </p>
                             </div>
 
@@ -160,23 +162,23 @@ export default function EmpresaNucleoPage() {
                                 {[
                                     {
                                         icon: MdWindPower,
-                                        title: "Energía Eólica",
-                                        items: ["Parques eólicos de gran escala", "Turbinas de última generación", "Sistemas de monitoreo inteligente"]
+                                        title: t('CompanyData.nucleoEnergy.sections.windEnergy'),
+                                        items: t.raw('CompanyData.nucleoEnergy.sections.windItems')
                                     },
                                     {
                                         icon: MdSolarPower,
-                                        title: "Energía Solar",
-                                        items: ["Plantas solares industriales", "Autoconsumo comercial", "Sistemas residenciales"]
+                                        title: t('CompanyData.nucleoEnergy.sections.solarEnergy'),
+                                        items: t.raw('CompanyData.nucleoEnergy.sections.solarItems')
                                     },
                                     {
                                         icon: MdBattery80,
-                                        title: "Almacenamiento",
-                                        items: ["Baterías ion-litio avanzadas", "Sistemas conectados a red", "Soluciones aisladas"]
+                                        title: t('CompanyData.nucleoEnergy.sections.storage'),
+                                        items: t.raw('CompanyData.nucleoEnergy.sections.storageItems')
                                     },
                                     {
                                         icon: MdPrecisionManufacturing,
-                                        title: "Manufactura OEM",
-                                        items: ["Equipos originales certificados", "Componentes especializados", "Consultoría técnica integral"]
+                                        title: t('CompanyData.nucleoEnergy.sections.oem'),
+                                        items: t.raw('CompanyData.nucleoEnergy.sections.oemItems')
                                     }
                                 ].map((tech, idx) => (
                                     <div
@@ -190,7 +192,7 @@ export default function EmpresaNucleoPage() {
                                             {tech.title}
                                         </h3>
                                         <ul className="space-y-2">
-                                            {tech.items.map((item, i) => (
+                                            {tech.items.map((item: string, i: number) => (
                                                 <li key={i} className="flex items-start gap-2 text-sm text-gray-600 font-light">
                                                     <div className="w-1.5 h-1.5 rounded-full bg-[#34D399] mt-1.5 flex-shrink-0" />
                                                     <span>{item}</span>
@@ -207,7 +209,7 @@ export default function EmpresaNucleoPage() {
                 <CompanyServicesSection
                     services={services}
                     primaryColor="#10B981"
-                    title="Soluciones Integrales"
+                    title={t('CompanyData.nucleoEnergy.sections.servicesTitle')}
                 />
 
                 {/* Impact Section */}
@@ -217,18 +219,18 @@ export default function EmpresaNucleoPage() {
                             <div className="text-center mb-16">
                                 <div className="inline-block h-0.5 w-16 rounded-full mb-6 bg-[#34D399]" />
                                 <h2 className="text-5xl font-bold text-[#10B981] mb-4">
-                                    Impacto Ambiental Positivo
+                                    {t('CompanyData.nucleoEnergy.sections.environmentalImpact')}
                                 </h2>
                                 <p className="text-gray-500 text-lg font-light">
-                                    Cada proyecto contribuye a un futuro más sostenible
+                                    {t('CompanyData.nucleoEnergy.sections.sustainableFutureDesc')}
                                 </p>
                             </div>
 
                             <div className="grid sm:grid-cols-3 gap-8">
                                 {[
-                                    { value: "500+", label: "MW", desc: "Capacidad instalada" },
-                                    { value: "100K+", label: "Ton CO₂", desc: "Reducidas anualmente" },
-                                    { value: "50+", label: "Proyectos", desc: "Completados exitosamente" }
+                                    { value: "500+", label: t('CompanyData.nucleoEnergy.sections.capacityInstalled'), desc: t('CompanyData.nucleoEnergy.sections.capacityLabel') },
+                                    { value: "100K+", label: t('CompanyData.nucleoEnergy.sections.co2Reduced'), desc: t('CompanyData.nucleoEnergy.sections.co2Label') },
+                                    { value: "50+", label: t('CompanyData.nucleoEnergy.sections.projectsCompleted'), desc: t('CompanyData.nucleoEnergy.sections.projectsLabel') }
                                 ].map((stat, idx) => (
                                     <div
                                         key={idx}
@@ -263,11 +265,11 @@ export default function EmpresaNucleoPage() {
                             <div className="h-0.5 w-16 mx-auto rounded-full mb-8 bg-[#34D399]" />
 
                             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                                Impulsemos Juntos la Transición Energética
+                                {t('CompanyData.nucleoEnergy.sections.ctaTitle')}
                             </h2>
 
                             <p className="text-xl text-green-50 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
-                                Desarrolla tu proyecto de energía renovable con la experiencia y tecnología de Núcleo Energy
+                                {t('CompanyData.nucleoEnergy.sections.ctaSubtitle')}
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -275,13 +277,13 @@ export default function EmpresaNucleoPage() {
                                     href="/contacto"
                                     className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white text-[#10B981] font-bold text-lg hover:bg-green-50 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1"
                                 >
-                                    Contáctanos
+                                    {t('CompanyData.nucleoEnergy.sections.contactUs')}
                                 </Link>
                                 <Link
                                     href="/proyectos"
                                     className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white/10 backdrop-blur-sm text-white font-bold text-lg hover:bg-white/20 transition-all duration-300 border border-white/30"
                                 >
-                                    Ver Proyectos
+                                    {t('CompanyData.nucleoEnergy.sections.viewProjects')}
                                 </Link>
                             </div>
                         </div>

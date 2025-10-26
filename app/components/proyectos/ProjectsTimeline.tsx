@@ -1,83 +1,31 @@
 "use client";
 import * as React from "react";
 import { FaSolarPanel, FaBolt, FaHospital, FaIndustry } from "react-icons/fa";
+import { useTranslations } from 'next-intl';
 
-const timelineProjects = [
-    {
-        year: "2024-2025",
-        category: "Energía Fotovoltaica",
-        projects: [
-            {
-                name: "Parque Fotovoltaico Cuervos Solar",
-                location: "Lagos de Moreno, México",
-                capacity: "200 MW",
-                icon: FaSolarPanel
-            },
-            {
-                name: "PFV Calera",
-                location: "Sonora, México",
-                capacity: "90 MW",
-                icon: FaSolarPanel
-            }
-        ]
-    },
-    {
-        year: "2023-2024",
-        category: "Transmisión y Construcción",
-        projects: [
-            {
-                name: "Construcción de Cimentaciones Mayores",
-                location: "Mexicali, B.C.",
-                capacity: "400 kV",
-                icon: FaBolt
-            },
-            {
-                name: "Construcción de Edificaciones Eléctricas",
-                location: "Sonora, México",
-                capacity: "400 kV + MVAR",
-                icon: FaIndustry
-            }
-        ]
-    },
-    {
-        year: "2020-2023",
-        category: "Obras Civiles y Salud",
-        projects: [
-            {
-                name: "Secretaría de Marina",
-                location: "Puerto Vallarta, Jalisco",
-                capacity: "Hospital Naval",
-                icon: FaHospital
-            },
-            {
-                name: "Hospital Oaxaqueño de la Mujer",
-                location: "Reyes Mantecón, Oaxaca",
-                capacity: "3ª Etapa",
-                icon: FaHospital
-            }
-        ]
-    },
-    {
-        year: "2018-2020",
-        category: "Proyectos Fotovoltaicos Comerciales",
-        projects: [
-            {
-                name: "Sistema Fotovoltaico Culiacán",
-                location: "Culiacán, Sinaloa",
-                capacity: "498.96 kW",
-                icon: FaSolarPanel
-            },
-            {
-                name: "Proyecto Guamuchil",
-                location: "Sinaloa, México",
-                capacity: "150.12 kW",
-                icon: FaSolarPanel
-            }
-        ]
-    }
-];
+interface TimelineProject {
+    name: string;
+    location: string;
+    capacity: string;
+}
+
+interface TimePeriod {
+    year: string;
+    category: string;
+    projects: TimelineProject[];
+}
+
+const getIconForCategory = (category: string) => {
+    if (category.includes("Fotovoltaico") || category.includes("Fotovoltaica")) return FaSolarPanel;
+    if (category.includes("Transmisión") || category.includes("Construcción")) return FaBolt;
+    if (category.includes("Salud") || category.includes("Hospital")) return FaHospital;
+    if (category.includes("Edificaciones")) return FaIndustry;
+    return FaSolarPanel;
+};
 
 export default function ProjectsTimeline() {
+    const t = useTranslations('ProjectsTimeline');
+    const periods = t.raw('periods') as TimePeriod[];
     return (
         <>
             <style jsx>{`
@@ -130,11 +78,10 @@ export default function ProjectsTimeline() {
                     {/* Header */}
                     <div className="text-center max-w-4xl mx-auto mb-20">
                         <h2 className="text-h1 text-primaryBlue mb-6">
-                            Nuestra Trayectoria
+                            {t('pageTitle')}
                         </h2>
                         <p className="text-p text-gray-700 leading-relaxed">
-                            Dos décadas construyendo el futuro energético de Latinoamérica.
-                            Cada año representa un paso más hacia la sostenibilidad y la innovación.
+                            {t('pageDescription')}
                         </p>
                     </div>
 
@@ -142,7 +89,7 @@ export default function ProjectsTimeline() {
                     <div className="relative max-w-6xl mx-auto">
                         <div className="timeline-line hidden lg:block"></div>
 
-                        {timelineProjects.map((period, periodIndex) => (
+                        {periods.map((period, periodIndex) => (
                             <div key={periodIndex} className="relative mb-20 last:mb-0">
                                 <div className="timeline-dot top-8"></div>
 
@@ -176,7 +123,7 @@ export default function ProjectsTimeline() {
                                             >
                                                 <div className="flex items-start gap-4">
                                                     <div className="w-12 h-12 bg-gradient-to-br from-primaryBlue to-thirdGreen rounded-full flex items-center justify-center flex-shrink-0">
-                                                        <project.icon className="w-6 h-6 text-white" />
+                                                        {React.createElement(getIconForCategory(period.category), { className: "w-6 h-6 text-white" })}
                                                     </div>
                                                     <div className="flex-1">
                                                         <h4 className="text-lg font-bold text-primaryBlue mb-2">

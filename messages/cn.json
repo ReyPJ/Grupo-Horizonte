@@ -1,0 +1,1419 @@
+{
+  "Navigation": {
+    "home": "首页",
+    "projects": "项目",
+    "companies": "公司",
+    "focus": "重点",
+    "contact": "联系",
+    "ourCompanies": "我们的公司",
+    "closeMenu": "关闭菜单",
+    "openMenu": "打开菜单",
+    "previousCompany": "上一家公司",
+    "nextCompany": "下一家公司",
+    "viewCompany": "查看公司 {company}",
+    "phone": "+52 55 1557 2791",
+    "email": "ghorizonte@hh.com"
+  },
+  "Hero": {
+    "mainTitle": "推动未来，迎接地平线上的到来",
+    "mainTitleDesktop1": "推动未来。",
+    "mainTitleDesktop2": "迎接地平线上的到来。",
+    "subtitle": "我们的承诺是开辟通往更美好未来的道路，为越来越近的未来做好准备。",
+    "cta": "了解我们的公司"
+  },
+  "PartnerLogos": {
+    "title": "我们的公司",
+    "goTo": "前往 {company}"
+  },
+  "IMBAR": {
+    "title": "高压电力基础设施",
+    "subtitle": "40年建设推动墨西哥的电网经验",
+    "stat1Label": "输电线路",
+    "stat1Value": "400KV",
+    "stat1Description": "认证最大容量",
+    "stat2Label": "认证供应商",
+    "stat2Value": "CFE",
+    "stat2Description": "联邦电力委员会",
+    "stat3Label": "经验年限",
+    "stat3LabelDesktop": "经验年限",
+    "stat3Value": "40+",
+    "stat3Description": "引领电力行业",
+    "service1Title": "变电站",
+    "service1Description": "高压变电站的设计、建设和现代化，提供综合解决方案。",
+    "service1DescriptionDesktop": "高压变电站的设计、建设和现代化。从工程到调试的综合解决方案。",
+    "service2Title": "专业制造",
+    "service2Description": "具有国际认证的自支撑塔镀锌金属结构。",
+    "service2DescriptionDesktop": "自支撑塔镀锌金属结构。具有国际认证的高精度制造。",
+    "cta": "了解 IMBAR"
+  },
+  "FourC": {
+    "title": "民用和工业建筑",
+    "subtitle": "40多年建设未来，工程卓越",
+    "stat1Label": "发展历程",
+    "stat1LabelDesktop": "发展历程",
+    "stat1Value": "40+",
+    "stat1Description": "建设基础设施",
+    "stat2Label": "项目",
+    "stat2LabelDesktop": "已完成项目",
+    "stat2Value": "100+",
+    "stat2Description": "民用和电气工程",
+    "stat3Label": "光伏能源",
+    "stat3Value": "太阳能",
+    "stat3Description": "可持续项目",
+    "service1Title": "民用工程",
+    "service1Description": "具有最高质量标准的住宅、商业和工业建筑。",
+    "service1DescriptionDesktop": "住宅、商业和工业建筑的建设。具有最高质量和安全标准的城市基础设施。",
+    "service2Title": "电气工程",
+    "service2Description": "工业和商业用光伏系统的电气安装和集成。",
+    "service2DescriptionDesktop": "低压和中压电气安装。工业和商业自用光伏系统集成。",
+    "cta": "了解 4C"
+  },
+  "ExtraordinaryTeams": {
+    "title": "非凡的团队建设推动未来的项目",
+    "titleDesktop1": "非凡的团队",
+    "titleDesktop2": "建设项目",
+    "titleDesktop3": "推动未来",
+    "paragraph1": "我们提供改善生活质量的独特项目和综合解决方案。在电力基础设施、民用和工业建筑以及可再生能源方面拥有超过40年的综合经验。",
+    "paragraph1Desktop": "我们提供改善生活质量的独特项目，通过综合解决方案促进创新和发展。拥有超过40年综合经验的专业公司：从IMBAR的高压电力基础设施，4C的民用和工业建筑，到Núcleo Energy的可再生能源。",
+    "paragraph2": "我们开发变电站、400 KV输电线路、民用工程、风力项目、太阳能电站和自用系统。",
+    "paragraph2Desktop": "我们开发变电站、400 KV输电线路、民用工程、机械和光伏工程、风力项目、太阳能电站以及工业、商业和住宅用自用系统。",
+    "paragraph3Desktop": "我们开发高质量的基础设施和能源，高度致力于效率、创新和安全。",
+    "cta": "使命、愿景和价值观"
+  },
+  "TeamQuality": {
+    "title": "以优秀团队的质量为特色",
+    "description": "我们的团队贡献技术卓越、才智、动力、创造力和经验，帮助客户实现他们的大胆愿景。我们通过合作和共同改变世界的愿望取得成功。受地平线上挑战的激励，我们超越所有可能的界限。",
+    "descriptionMobile": "诚信、创新和永不满足的心态是我们所做一切的核心。我们的团队将挑战转化为实现非凡成就的机会。",
+    "descriptionDesktop": "诚信、创新和永不满足的心态是我们所做一切的核心。我们的团队充满大胆的思想家和熟练的问题解决者，他们将挑战转化为实现非凡成就的机会。",
+    "cta": "我们的公司"
+  },
+  "Companies": {
+    "sectionTitle": "我们的公司",
+    "keyServices": "关键服务"
+  },
+  "History": {
+    "title": "我们创造历史",
+    "paragraph1": "本世纪的历史将由世界在基础设施、能源、先进制造和环境保护方面快速工作的能力决定。",
+    "paragraph1Desktop": "从本世纪初到未来几个世纪的历史将由世界快速大规模工作的能力决定，以满足基础设施、能源、先进制造、关键资源、环境保护和国家安全等快速发展中的需求。",
+    "paragraph2": "多年来，我们一直迎接挑战，拥有应对这些挑战的经验和知识。",
+    "paragraph2Desktop": "多年来，我们一直迎接挑战。我们拥有经验和知识，并且专门设计来应对所有这些从地平线浮现的挑战。",
+    "featuredProjects": "精选项目",
+    "cta": "查看我们的项目"
+  },
+  "Footer": {
+    "companyName": "Grupo Horizonte",
+    "tagline": "建设基础设施和可再生能源的未来",
+    "quickLinks": "快速链接",
+    "home": "首页",
+    "projects": "项目",
+    "companies": "公司",
+    "focus": "重点",
+    "contact": "联系",
+    "ourCompanies": "我们的公司",
+    "imbar": "IMBAR",
+    "fourC": "Constructora 4C",
+    "nucleoEnergy": "Núcleo Energy",
+    "reccmaq2": "RECCMAQ2",
+    "contactInfo": "联系信息",
+    "rightsReserved": "© {year} Grupo Horizonte. 保留所有权利。",
+    "projectsTitle": "项目",
+    "allProjects": "所有项目",
+    "aboutTitle": "关于我们",
+    "visionMissionValues": "愿景、使命、价值观",
+    "ourTeam": "我们的团队",
+    "sustainability": "可持续性",
+    "companiesTitle": "公司",
+    "focusTitle": "重点",
+    "safety": "安全",
+    "innovation": "创新",
+    "privacyPolicy": "隐私政策",
+    "privacy": "隐私",
+    "termsOfUse": "使用条款",
+    "terms": "条款",
+    "copyright": "© 2025 Grupo Horizonte"
+  },
+  "Contact": {
+    "phone": "+52 55 1557 2791",
+    "email": "ghorizonte@hh.com",
+    "formTitle": "告诉我们您的项目",
+    "formSubtitle": "填写表格，我们将在24小时内与您联系。",
+    "nameLabel": "全名 *",
+    "namePlaceholder": "张三",
+    "emailLabel": "电子邮件 *",
+    "emailPlaceholder": "your@email.com",
+    "phoneLabel": "电话 *",
+    "phonePlaceholder": "+52 55 1234 5678",
+    "companyLabel": "公司/组织",
+    "companyPlaceholder": "您的公司",
+    "serviceLabel": "感兴趣的服务 *",
+    "serviceDefaultOption": "选择一项服务",
+    "messageLabelFormField": "消息 *",
+    "messagePlaceholder": "告诉我们您的项目、需求、预算和时间表...",
+    "sendButton": "发送消息",
+    "sendingButton": "发送中...",
+    "validationNameRequired": "姓名必填",
+    "validationEmailRequired": "电子邮件必填",
+    "validationEmailInvalid": "电子邮件无效",
+    "validationPhoneRequired": "电话必填",
+    "validationServiceRequired": "请选择一项服务",
+    "validationMessageRequired": "消息必填",
+    "validationMessageMinLength": "消息至少需要20个字符",
+    "successTitle": "消息已发送",
+    "successMessage": "感谢您联系我们。我们将尽快回复。",
+    "errorTitle": "发送错误",
+    "errorMessage": "请重试或直接与我们联系。",
+    "whyChooseUs": "为什么与我们合作？",
+    "whyChooseDescription": "凭借超过40年的基础设施和能源经验，我们是您任何规模项目的战略合作伙伴。",
+    "provenExperienceTitle": "经验丰富",
+    "provenExperienceDesc": "在整个墨西哥和拉丁美洲成功完成500多个项目。",
+    "fastResponseTitle": "快速响应",
+    "fastResponseDesc": "我们将在24小时内与您联系，提供定制的初步建议。",
+    "totalCommitmentTitle": "全面承诺",
+    "totalCommitmentDesc": "认证质量、按时完成和每个阶段的透明度。",
+    "quote": "我们的承诺是开辟通往更美好未来的道路，质量和效率是每个建设的基础。",
+    "quoteAuthor": "- Grupo Horizonte Energy",
+    "multipleFormsTitle": "多种联系方式",
+    "multipleFormsSubtitle": "我们可通过您喜欢的媒介为您服务。您的项目是我们的优先事项。",
+    "phonesSection": "电话",
+    "whatsappSection": "WhatsApp",
+    "phone1": "55 3023 8337",
+    "whatsappImmediateResponse": "即时响应",
+    "emailsSection": "电子邮件",
+    "addressSection": "地址",
+    "addressLine1": "RET 1 Cecilio Robelo No. 66,",
+    "addressLine2": "Jardín Balbuena,",
+    "addressLine3": "Venustiano Carranza,",
+    "addressLine4": "CDMX, CP 15900",
+    "hoursSection": "营业时间",
+    "hoursMondayFriday": "周一至周五",
+    "hoursTime1": "9:00 - 18:00",
+    "hoursSaturday": "周六",
+    "hoursTime2": "9:00 - 14:00",
+    "hoursSunday": "周日",
+    "hoursClosed": "休息",
+    "coverageSection": "覆盖范围",
+    "coverageText": "我们为整个墨西哥和拉丁美洲的项目提供服务",
+    "projectHeroTitle": "建设未来",
+    "projectHeroSubtitle": "在基础设施、可再生能源和建筑项目方面拥有40多年的经验",
+    "projectHeroButton": "查看精选项目",
+    "breadcrumbHome": "首页",
+    "breadcrumbBlog": "博客",
+    "shareButton": "分享",
+    "shareSubtitle": "喜欢这篇文章吗？分享它",
+    "authorBio": "可再生能源和基础设施领域的远见领导者，拥有20多年推动变革性项目的经验。",
+    "contactHero": {
+      "badge": "联系",
+      "title1": "将您的想法",
+      "title2": "变为",
+      "title3": "现实",
+      "description": "我们的专家团队已准备好讨论您的项目并提出综合解决方案。今天就联系我们。",
+      "stat1Label": "经验年限",
+      "stat1Value": "40+",
+      "stat2Label": "已完成项目",
+      "stat2Value": "500+",
+      "stat3Label": "服务州数",
+      "stat3Value": "12",
+      "stat4Label": "承诺",
+      "stat4Value": "全面"
+    },
+    "contactCTA": {
+      "title": "准备开始您的项目了吗？",
+      "description": "我们想了解您的需求，并向您展示我们如何成为您的战略合作伙伴。",
+      "button1": "查看项目",
+      "button2": "我们的公司",
+      "phone": "电话",
+      "whatsapp": "WhatsApp",
+      "location": "位置",
+      "stat1Label": "经验年限",
+      "stat1Value": "40+",
+      "stat2Label": "成功项目",
+      "stat2Value": "500+",
+      "stat3Label": "覆盖州数",
+      "stat3Value": "12",
+      "stat4Label": "满意度",
+      "stat4Value": "100%"
+    },
+    "contactMap": {
+      "title": "我们的办公室",
+      "address": "RET 1 Cecilio Robelo No. 66, Jardín Balbuena, Venustiano Carranza, CDMX, CP 15900",
+      "button": "在地图中打开"
+    }
+  },
+  "Components": {
+    "partnerLogos": {
+      "companies": [
+        "Constructora 4C",
+        "IMBAR",
+        "Núcleo Energy",
+        "RECCMAQ2"
+      ]
+    },
+    "companyServices": {
+      "title": "我们的服务",
+      "description": "具有最高质量标准的综合解决方案",
+      "learnMore": "了解更多"
+    },
+    "companyMVV": {
+      "title": "我们的本质",
+      "subtitle": "定义我们工作方式的支柱",
+      "mission": "使命",
+      "vision": "愿景",
+      "values": "基本价值观"
+    },
+    "companyClients": {
+      "defaultTitle": "我们的客户",
+      "subtitle": "大型企业的信任支持着我们的发展历程"
+    },
+    "blog": {
+      "previousArticle": "上一篇文章",
+      "readMore": "阅读更多",
+      "nextArticle": "下一篇文章"
+    }
+  },
+  "CompanyData": {
+    "imbar": {
+      "name": "IMBAR",
+      "shortHistory": "40年为CFE和私营行业建设电力基础设施。",
+      "shortHistory2": "变电站、输电线路和400 KV金属结构制造专家。",
+      "buttonText": "了解 IMBAR",
+      "tagline": "电力基础设施领导者",
+      "heroDescription": "为CFE和私营行业提供电力基础设施工程方面的20年专业经验。变电站、400 KV输电线路和金属结构制造专家。",
+      "mision": "开发和实施电力基础设施工程技术，在CFE和私营行业的工程流程中实施新方法。满足客户需求并预见他们的要求。",
+      "vision": "成为墨西哥电力基础设施综合管理的领先企业。在质量框架下，在人力和物力资源方面达到最佳水平，始终满足客户在民用工程、机电、预运行测试、变电站结构和输电线路方面的需求。",
+      "valores": ["质量", "技术创新", "承诺", "安全"],
+      "services": {
+        "substations": "变电站",
+        "transmission": "输电线路",
+        "civilWorks": "电气民用工程",
+        "manufacturing": "结构制造",
+        "engineering": "电气工程",
+        "mechanical": "机电工程",
+        "preoperative": "预运行测试",
+        "commissioning": "投入运行",
+        "engineeringDesc": "根据CFE和私营行业的最高技术和法规标准设计和开发电力基础设施项目。",
+        "civilWorksDesc": "变电站和输电线路的基础、平台和民用结构建设。具有LAPEM认证的大型和小型工程。",
+        "mechanicalDesc": "设备安装、系统互连、面板安装和完整变电站的运行。",
+        "manufacturingDesc": "每月生产多达700吨的镀锌金属结构，用于400 KV塔和变电站，具有LAPEM认证。",
+        "preoperativeDesc": "在电气设施投入使用之前进行技术测试和认证。",
+        "commissioningDesc": "在专业技术监督下完成电气系统的通电和启动过程。"
+      },
+      "capabilities": {
+        "capacidadMaxima": "最大容量",
+        "capacidadDesc": "高压输电线路",
+        "produccionMensual": "月产量",
+        "produccionDesc": "镀锌金属结构",
+        "certificacion": "认证",
+        "certificacionDesc": "CFE官方认证"
+      },
+      "timeline": {
+        "fundacion": "成立",
+        "proyectos": "CFE项目",
+        "especializacion": "专业化",
+        "presente": "现在"
+      },
+      "clients": [
+        {
+          "name": "CFE - 联邦电力委员会",
+          "location": "全国",
+          "period": "2004-至今",
+          "description": "多个变电站和输电线路项目"
+        },
+        {
+          "name": "CFE - Villa de García变电站",
+          "location": "Nuevo León",
+          "period": "2018-2019",
+          "description": "完整的民用和机电工程"
+        },
+        {
+          "name": "CFE - Codefront变电站",
+          "location": "Coahuila",
+          "period": "2017-2018",
+          "description": "民用和机电工程"
+        },
+        {
+          "name": "CFE - Jasso变电站",
+          "location": "Hidalgo",
+          "period": "2019-2020",
+          "description": "民用和机电工程"
+        },
+        {
+          "name": "CFE - Querétaro 400 KV输电线路",
+          "location": "Querétaro",
+          "period": "2016-2017",
+          "description": "高压输电线路"
+        },
+        {
+          "name": "CFE - Ticul 400 KV变电站",
+          "location": "Yucatán",
+          "period": "2015-2016",
+          "description": "电力变电站"
+        },
+        {
+          "name": "CFE - Cuetzalan输电线路和变电站",
+          "location": "Puebla",
+          "period": "2020-2021",
+          "description": "115KV双回路输电线路 - 20.3公里"
+        },
+        {
+          "name": "ABB México S.A. de C.V.",
+          "location": "Reynosa, Tamaulipas",
+          "period": "2018-2019",
+          "description": "Guerreño变电站 - 民用工程600吨"
+        },
+        {
+          "name": "ABB México - Ford",
+          "location": "Irapuato, Guanajuato",
+          "period": "2019-2020",
+          "description": "结构的供应、制造和安装"
+        },
+        {
+          "name": "ABB México - 农业工业变电站",
+          "location": "Irapuato, Guanajuato",
+          "period": "2017-2018",
+          "description": "民用和机电工程"
+        }
+      ],
+      "sections": {
+        "technicalCapabilities": "技术能力",
+        "worldClass": "世界级基础设施",
+        "yearsExperience": "20年经验",
+        "trajectory": "在电力基础设施项目方面的经验证明",
+        "specializedServices": "专业服务",
+        "highlightedProjects": "精选项目",
+        "ctaTitle": "优质电力基础设施",
+        "ctaSubtitle": "我们已经开发了20年具有最高质量标准的电力基础设施项目",
+        "requestQuote": "索取报价",
+        "viewProjects": "查看项目"
+      }
+    },
+    "fourC": {
+      "name": "Constructora 4C",
+      "shortHistory": "一家拥有40多年经验引导客户走向未来的公司。",
+      "shortHistory2": "在民用工程、电气工程、专业服务和光伏项目方面拥有经验。",
+      "buttonText": "了解 4C",
+      "tagline": "卓越建设未来",
+      "heroDescription": "在民用、机械、电气和光伏建设方面拥有20多年的经验。我们开发高质量的基础设施和能源，致力于效率、创新和安全。",
+      "mision": "通过在基础设施和能源方面实施可持续和创新的解决方案成为行业领导者。",
+      "vision": "成为国家和国际基础设施、可再生能源和专业服务的领先参考。",
+      "valores": ["创新", "可持续性", "质量", "社会责任"],
+      "services": {
+        "civilWorks": "民用工程",
+        "electricalWorks": "电气工程",
+        "specializedServices": "专业服务",
+        "photovoltaic": "光伏项目",
+        "civilWorksDesc": "我们设计、建造和管理民用基础设施项目，包括建筑、医院、住宅、商业和工业项目、翻新和城市发展工程。",
+        "electricalWorksDesc": "高、中、低压电网的设计、建设和维护。输电线路、变电站和配电系统的安装和监督。",
+        "photovoltaicDesc": "太阳能板、跟踪器、安装和连接。使用OMICRON测试调试。清洁能源生产的完整解决方案。",
+        "specializedDesc": "项目评估和执行、技术分析、工程目录编制。变电站和塔架的安装和监督。"
+      },
+      "clients": [
+        {
+          "name": "海军部",
+          "location": "Puerto Vallarta, Jalisco",
+          "period": "2020-2021",
+          "description": "海军医院的建设和装备"
+        },
+        {
+          "name": "ASELEC S.A. de C.V.",
+          "location": "Mexicali, B.C.",
+          "period": "2019-2020",
+          "description": "Cucapah变电站400 KV平台基础"
+        },
+        {
+          "name": "Enel Green Power",
+          "location": "Jujuy, Argentina",
+          "period": "2018-2019",
+          "description": "Cauchari太阳能公园 - 300 MW"
+        },
+        {
+          "name": "CFE",
+          "location": "多个州",
+          "period": "2010-至今",
+          "description": "各种电力基础设施项目"
+        },
+        {
+          "name": "Luz del Sur",
+          "location": "Lima和Cusco, Peru",
+          "period": "2017-2018",
+          "description": "变电站现代化"
+        },
+        {
+          "name": "ENERRAY",
+          "location": "México",
+          "period": "2019-2020",
+          "description": "大规模光伏项目"
+        }
+      ],
+      "sections": {
+        "technicalCapabilities": "技术能力",
+        "worldClass": "世界级建设",
+        "yearsExperience": "40年经验",
+        "trajectory": "在基础设施和能源项目方面经验证明",
+        "specializedServices": "专业服务",
+        "highlightedProjects": "精选项目",
+        "ctaTitle": "优质建设和能源",
+        "ctaSubtitle": "40年开发具有最高质量和安全标准的项目",
+        "requestQuote": "索取报价",
+        "viewProjects": "查看项目",
+        "environmentalCommitment": "对环境的承诺",
+        "sustainablePractices": "在4C，我们在每个项目中整合可持续实践，最大限度地减少环境影响并最大限度地提高能源效率。",
+        "renewableEnergy": "可再生能源系统的实施",
+        "resourceOptimization": "优化资源以最小化环境影响",
+        "wasteManagement": "在我们所有的运营中妥善管理废物",
+        "heroTitle": "推动未来。实现不可能。",
+        "servicesTitle": "我们的服务",
+        "clientsTitle": "信赖我们的客户",
+        "ctaTitle": "准备好您的下一个项目了吗？",
+        "ctaSubtitle": "让我们一起将您的愿景转化为现实，以4C的经验和质量为特征",
+        "contactUs": "联系我们",
+        "viewProjects": "查看项目"
+      }
+    },
+    "nucleoEnergy": {
+      "name": "Núcleo Energy",
+      "shortHistory": "清洁和可持续能源解决方案的创新。",
+      "shortHistory2": "风能和太阳能项目、储能和可再生能源基础设施专家。",
+      "buttonText": "了解 Núcleo Energy",
+      "tagline": "可再生能源的未来",
+      "heroDescription": "专门从事可再生能源项目的开发和实施。我们为风能、太阳能和储能系统提供创新解决方案。",
+      "mision": "通过可再生能源项目引领墨西哥和拉丁美洲的能源转型。",
+      "vision": "成为拉丁美洲领先的可再生能源解决方案提供商。",
+      "valores": ["可持续性", "创新", "卓越", "环境承诺"],
+      "services": {
+        "windSolar": "风能和太阳能",
+        "wind": "风能",
+        "photovoltaic": "光伏能源",
+        "storage": "储能系统 (SAE)",
+        "manufacturing": "制造和供应 (OEM)",
+        "infrastructure": "输电基础设施",
+        "maintenance": "专业维护",
+        "windDesc": "从风能来源生产电能的项目的概念化、工程、开发和执行。风力发电场的安装、运行和维护。",
+        "photovoltaicDesc": "工业、商业和住宅用太阳能电站和自用系统的开发。太阳能板、逆变器和组件的采购、销售和安装。",
+        "storageDesc": "锂离子电池和新兴技术储能系统的研究、开发、设计和实施，用于并网或独立应用。",
+        "manufacturingDesc": "能源部门原始设备和组件的制造、组装、集成和商业化。工程和技术咨询服务。",
+        "infrastructureDesc": "中高压变电站、输电线路和配电网络的设计、工程、采购和建设。",
+        "maintenanceDesc": "变电站、风力发电场和太阳能电站的预防性和纠正性维护服务以及运营。"
+      },
+      "clients": [],
+      "sections": {
+        "technicalCapabilities": "技术能力",
+        "worldClass": "世界级可再生能源",
+        "yearsExperience": "专业经验",
+        "trajectory": "在可再生能源项目方面的经验证明",
+        "specializedServices": "专业服务",
+        "highlightedProjects": "精选项目",
+        "ctaTitle": "清洁和可持续能源",
+        "ctaSubtitle": "为更清洁和可持续的未来开发创新解决方案",
+        "requestQuote": "索取报价",
+        "viewProjects": "查看项目",
+        "advancedTechnologies": "先进技术",
+        "sustainableFuture": "可持续未来的创新解决方案",
+        "servicesTitle": "综合解决方案",
+        "windEnergy": "风能",
+        "windItems": ["大规模风力发电场", "最新一代涡轮机", "智能监控系统"],
+        "solarEnergy": "太阳能",
+        "solarItems": ["工业太阳能电站", "商业自用", "住宅系统"],
+        "storage": "储能",
+        "storageItems": ["先进锂离子电池", "并网系统", "独立解决方案"],
+        "oem": "OEM制造",
+        "oemItems": ["认证原始设备", "专业组件", "综合技术咨询"],
+        "environmentalImpact": "积极的环境影响",
+        "sustainableFutureDesc": "每个项目都为更可持续的未来做出贡献",
+        "capacityInstalled": "MW",
+        "capacityLabel": "已安装容量",
+        "co2Reduced": "吨 CO₂",
+        "co2Label": "每年减少",
+        "projectsCompleted": "项目",
+        "projectsLabel": "成功完成",
+        "ctaTitle": "共同推动能源转型",
+        "ctaSubtitle": "利用Núcleo Energy的经验和技术开发您的可再生能源项目",
+        "contactUs": "联系我们",
+        "viewProjects": "查看项目"
+      }
+    },
+    "reccmaq2": {
+      "name": "RECCMAQ2",
+      "shortHistory": "工业机械和设备的重建、维护和修理专家。",
+      "shortHistory2": "为墨西哥和拉丁美洲的工业提供高质量的服务。",
+      "buttonText": "了解 RECCMAQ2",
+      "tagline": "工业机械专家",
+      "heroDescription": "在工业机械和设备的重建、维护和修理方面拥有专业经验。我们为各种行业提供高质量的服务。",
+      "mision": "通过专业的重建和维护服务延长工业机械的使用寿命。",
+      "vision": "成为墨西哥和拉丁美洲工业机械服务的领先提供商。",
+      "valores": ["质量", "可靠性", "技术专业知识", "客户服务"],
+      "services": {
+        "reconstruction": "机械重建",
+        "maintenance": "预防性维护",
+        "repair": "专业修理",
+        "national": "全国覆盖",
+        "siteService": "现场服务",
+        "reconstructionDesc": "工业机械和设备的完整重建，延长其使用寿命并优化性能。",
+        "maintenanceDesc": "预防性和纠正性维护计划，确保连续运行。",
+        "repairDesc": "各种工业机械的专业诊断和修理。",
+        "siteServiceDesc": "我们将服务直接送到您的位置。全国覆盖，提供专业技术人员。"
+      },
+      "clients": [],
+      "coverage": ["阿尔塔米拉", "蒙特雷", "墨西哥城", "曼萨尼约", "梅里达", "墨西卡利", "瓦哈卡", "埃莫西约"],
+      "sections": {
+        "ourProposal": "我们的提案",
+        "expertsMachinery": "为您的工业机械赋予新生命的专家",
+        "specialization": "专业化",
+        "specializationDesc": "在重型机械重建和维护方面拥有18年以上的经验。高素质和认证的技术人员，确保最高质量的工作。",
+        "commitment": "承诺",
+        "commitmentDesc": "我们在全国范围内提供现场服务，直接为您提供解决方案。最大限度地减少停机时间并最大限度地提高您的运营生产力。",
+        "ourValues": "我们的价值观",
+        "values": ["质量", "可靠性", "专业精神", "服务"],
+        "nationalCoverage": "全国覆盖",
+        "bringingServices": "我们将服务带到您需要的地方",
+        "servicesTitle": "专业服务",
+        "clientsTitle": "信赖我们的客户",
+        "whyChooseUs": "为什么选择我们",
+        "yearsExperience": "18+ 年",
+        "yearsSubtitle": "经验",
+        "yearsDesc": "在工业领域经过验证的轨迹",
+        "coverage8Cities": "8个城市",
+        "coverageSubtitle": "全国覆盖",
+        "coverageDesc": "您需要的现场服务",
+        "clientRelationships": "20+ 客户",
+        "relationshipsSubtitle": "长期关系",
+        "relationshipsDesc": "年复一年建立的信任",
+        "ctaTitle": "通过我们的服务优化您的运营",
+        "ctaSubtitle": "专业的重建和维护，保持您的机械处于最佳状态",
+        "requestService": "请求服务",
+        "moreInfo": "更多信息"
+      }
+    }
+  },
+  "Enfoque": {
+    "hero": {
+      "badge": "我们的方法",
+      "title1": "建设",
+      "title2": "有目标",
+      "description": "在电力基础设施、民用和工业建设以及可再生能源方面拥有40多年的综合经验。我们的技术卓越与对可持续性和创新的深刻承诺相结合。",
+      "stat1Label": "经验年限",
+      "stat1Value": "40+",
+      "stat2Label": "国家",
+      "stat2Value": "5",
+      "stat3Label": "承诺",
+      "stat3Value": "全面"
+    },
+    "intro": {
+      "title": "我们是谁",
+      "description1": "我们是基础设施、能源和专业服务领域的领先企业集团。拥有40多年的综合经验，我们通过建设定义拉丁美洲未来的项目，将愿景转化为现实。",
+      "description2": "我们致力于技术卓越、环境可持续性和社会责任。我们开发的每个项目都是证明可以负责任地建设未来的机会。",
+      "description3": "我们致力于产生积极影响、创造优质就业机会并为我们社区的全面发展做出贡献。",
+      "values": [
+        {
+          "title": "创新",
+          "description": "我们在定义行业未来的解决方案中实施尖端技术。"
+        },
+        {
+          "title": "质量",
+          "description": "我们执行的每个项目都有国际认证和严格的标准。"
+        },
+        {
+          "title": "可持续性",
+          "description": "致力于在所有运营中保护环境和能源效率。"
+        }
+      ]
+    },
+    "process": {
+      "title": "我们如何工作",
+      "description": "我们的综合方法确保项目成功，从概念化到投入运营。每一步都旨在实现最高效率和质量。",
+      "civilWorks": {
+        "title": "民用工程项目",
+        "subtitle": "住宅、商业和工业基础设施 - 4C"
+      },
+      "civilProcess": [
+        { "title": "规划和设计", "subtitle": "管理和许可证" },
+        { "title": "现场准备", "subtitle": "早期工程" },
+        { "title": "结构化", "subtitle": "整合" },
+        { "title": "完工/投入使用", "subtitle": "检查和功能性" },
+        { "title": "最终完成和交付", "subtitle": "后建设" }
+      ],
+      "mechanicalElectrical": {
+        "title": "机电工程",
+        "description": "设备安装、系统互连、面板安装和完整变电站的投入运行。"
+      },
+      "electroProcess": [
+        { "title": "规划和设计", "subtitle": "初步技术分析" },
+        { "title": "现场执行", "subtitle": "设备安装" },
+        { "title": "监督和控制", "subtitle": "质量监控" },
+        { "title": "交付和维护", "subtitle": "投入运行" }
+      ],
+      "highVoltageInfra": {
+        "title": "高压电力基础设施",
+        "badge": "IMBAR",
+        "description": "专业从事400 KV系统的设计、建设和认证，符合CFE法规。",
+        "stats": [
+          "与CFE合作年限",
+          "建造的工厂",
+          "吨/月产能",
+          "工厂面积平方米"
+        ]
+      },
+      "imbarProcess": [
+        { "title": "工程", "subtitle": "电气设计和规划" },
+        { "title": "制造", "subtitle": "工厂金属结构" },
+        { "title": "镀锌和LAPEM", "subtitle": "质量认证" },
+        { "title": "民用工程", "subtitle": "基础和结构" },
+        { "title": "机电工程", "subtitle": "设备安装" },
+        { "title": "预运行测试", "subtitle": "技术验证" },
+        { "title": "投入使用", "subtitle": "通电和交付" }
+      ],
+      "manufacturing": {
+        "title": "自有制造能力",
+        "description": "IMBAR拥有12,000平方米的制造设施，月产700吨镀锌金属结构、自支撑塔和专业组件。"
+      },
+      "services": [
+        "输电塔",
+        "变电站结构",
+        "热浸镀锌",
+        "LAPEM认证"
+      ]
+    },
+    "mvv": {
+      "title": "我们的企业DNA",
+      "subtitle": "指导每个决定的原则，每一天",
+      "mission": {
+        "label": "使命",
+        "content": "成为拉丁美洲基础设施和能源领域的首选战略合作伙伴。我们开发改变社区、创造就业机会和促进环境可持续性的项目。我们对每个执行的工程的承诺是技术卓越、创新和社会责任。"
+      },
+      "vision": {
+        "label": "愿景",
+        "content": "通过基础设施、可再生能源和专业服务的综合解决方案，引领拉丁美洲的能源转型。我们希望被认可为不仅建设高质量工程，而且推动该地区和数百万人的可持续发展的企业集团。"
+      },
+      "valuesTitle": "我们的价值观",
+      "valuesDescription": "这些原则指导我们集团的每一个决定和行动：",
+      "values": [
+        {
+          "icon": "innovation",
+          "title": "创新",
+          "description": "我们不断寻求更好的做事方式，在我们的项目中应用尖端技术和先进方法。"
+        },
+        {
+          "icon": "sustainability",
+          "title": "可持续性",
+          "description": "我们致力于在每个项目中最大限度地减少环境影响并促进负责任的做法。"
+        },
+        {
+          "icon": "quality",
+          "title": "质量",
+          "description": "我们在所做的一切中保持严格的卓越标准，并得到国际认证的支持。"
+        },
+        {
+          "icon": "responsibility",
+          "title": "社会责任",
+          "description": "我们通过创造就业、发展人才和为我们社区的福祉做出贡献来创造共享价值。"
+        }
+      ]
+    },
+    "sustainability": {
+      "badge": "可持续性",
+      "title": "对环境的承诺",
+      "intro": "可持续性不是我们业务的补充，而是我们企业DNA的一部分。我们做出的每一个决定都考虑到环境影响和未来几代人的福祉。",
+      "international": "我们与联合国可持续发展目标（SDG）和国际脱碳承诺保持一致。我们在所有运营中实施循环经济和能源效率实践。",
+      "pillars": [
+        {
+          "title": "可再生能源",
+          "description": "向清洁能源过渡",
+          "number": "100+"
+        },
+        {
+          "title": "能源效率",
+          "description": "减少能源消耗",
+          "number": "40%"
+        },
+        {
+          "title": "废物管理",
+          "description": "运营中的循环经济",
+          "number": "95%"
+        },
+        {
+          "title": "生物多样性",
+          "description": "保护生态系统",
+          "number": "12"
+        }
+      ],
+      "commitmentsTitle": "我们的环境承诺",
+      "commitmentsSubtitle": "为更美好未来的具体行动",
+      "commitments": [
+        {
+          "title": "碳中和",
+          "description": "我们承诺到2030年在我们的运营中实现碳中和。"
+        },
+        {
+          "title": "影响测量",
+          "description": "我们定期透明地测量和报告我们的环境绩效。"
+        },
+        {
+          "title": "社会责任",
+          "description": "我们投资于社区并创造可持续发展机会。"
+        }
+      ]
+    },
+    "team": {
+      "badge": "我们的团队",
+      "title": "每个项目背后的力量",
+      "description1": "我们的团队由充满激情、训练有素、致力于卓越的专业人士组成。每个成员都贡献其独特的经验，为变革性项目做出贡献。",
+      "description2": "诚信、创新和'永不满足'的心态是我们所做一切的核心。我们的团队充满了大胆的思想家和熟练的问题解决者，他们将挑战转化为机遇。",
+      "stats": [
+        {
+          "label": "专业人员",
+          "value": "500+"
+        },
+        {
+          "label": "认证工程师",
+          "value": "150+"
+        },
+        {
+          "label": "经验年限",
+          "value": "2,500+"
+        },
+        {
+          "label": "承诺",
+          "value": "全面"
+        }
+      ],
+      "culture": {
+        "title": "我们的文化",
+        "values": [
+          {
+            "title": "大胆的思想家",
+            "description": "我们促进创造力和批判性思维，以找到创新的解决方案。"
+          },
+          {
+            "title": "协作",
+            "description": "我们作为一个统一的团队工作，成功是共享的。"
+          },
+          {
+            "title": "持续发展",
+            "description": "我们投资于团队的培训和专业成长。"
+          },
+          {
+            "title": "安全第一",
+            "description": "我们团队的安全是我们每次运营的最高优先事项。"
+          }
+        ]
+      },
+      "quote": "我们一起建设的不仅是项目，还有我们想要看到的未来"
+    },
+    "cta": {
+      "badge": "加入我们",
+      "title1": "让我们建设",
+      "title2": "我们想象的未来",
+      "description": "拉丁美洲基础设施和能源的未来今天正在建设。拥有40多年的经验和对卓越和可持续性的坚定承诺，我们已准备好将您的项目提升到新的水平。",
+      "cta1": "了解我们的项目",
+      "cta2": "联系我们",
+      "stats": [
+        {
+          "label": "年",
+          "value": "40+"
+        },
+        {
+          "label": "项目",
+          "value": "500+"
+        },
+        {
+          "label": "国家",
+          "value": "5"
+        },
+        {
+          "label": "已安装",
+          "value": "4,500+ MW"
+        }
+      ]
+    }
+  },
+  "ProjectsMegaMenu": {
+    "title": "我们的项目",
+    "subtitle": "探索我们的专业领域",
+    "tabMercados": "市场",
+    "tabRegiones": "地区",
+    "mercados": [
+      {
+        "key": "eolica",
+        "title": "风能",
+        "empresa": "Núcleo Energy"
+      },
+      {
+        "key": "fotovoltaica",
+        "title": "光伏能源",
+        "empresa": "4C"
+      },
+      {
+        "key": "construccion",
+        "title": "建筑",
+        "empresa": "4C"
+      },
+      {
+        "key": "subestaciones",
+        "title": "变电站",
+        "empresa": "IMBAR",
+        "badge": "400 KV"
+      },
+      {
+        "key": "transmision",
+        "title": "输电线路",
+        "empresa": "IMBAR & 4C"
+      },
+      {
+        "key": "fabricacion",
+        "title": "结构制造",
+        "empresa": "IMBAR",
+        "badge": "700 吨/月"
+      },
+      {
+        "key": "mantenimiento",
+        "title": "维护",
+        "empresa": "4C & IMBAR"
+      },
+      {
+        "key": "servicios",
+        "title": "专业服务",
+        "empresa": "4C"
+      }
+    ],
+    "regiones": [
+      {
+        "key": "mx",
+        "title": "墨西哥",
+        "proyectos": "50+"
+      },
+      {
+        "key": "pe",
+        "title": "秘鲁",
+        "proyectos": "10+"
+      },
+      {
+        "key": "latam",
+        "title": "拉丁美洲",
+        "proyectos": "60+"
+      }
+    ]
+  },
+  "EnfoqueMegaMenu": {
+    "title": "我们的重点",
+    "description": "40多年建设未来，创新、质量和坚定的承诺。发现指导我们每个项目的价值观和原则。",
+    "ctaButton": "了解更多",
+    "missionTitle": "使命",
+    "missionText": "通过实施可持续和创新的解决方案成为行业领导者",
+    "visionTitle": "愿景",
+    "visionText": "成为基础设施、可再生能源和专业服务的领先参考",
+    "tabCultura": "文化和价值观",
+    "tabCapacidades": "能力",
+    "valoresTitle": "我们的价值观",
+    "valores": [
+      {
+        "key": "innovacion",
+        "title": "创新"
+      },
+      {
+        "key": "sostenibilidad",
+        "title": "可持续性"
+      },
+      {
+        "key": "calidad",
+        "title": "质量"
+      },
+      {
+        "key": "responsabilidad",
+        "title": "社会责任"
+      }
+    ],
+    "capacidadesTitle": "我们的能力",
+    "capacidades": [
+      {
+        "key": "equipo",
+        "title": "我们的团队"
+      },
+      {
+        "key": "proceso",
+        "title": "我们如何工作"
+      },
+      {
+        "key": "sostenibilidad",
+        "title": "环境承诺"
+      },
+      {
+        "key": "alianzas",
+        "title": "战略联盟"
+      }
+    ]
+  },
+  "EmpresasMegaMenu": {
+    "title": "我们的公司",
+    "subtitle": "一个在各自领域领先的多元化企业集团",
+    "footerText": "集团的每家公司都贡献其独特的专业知识，以提供综合解决方案",
+    "ctaText": "了解更多",
+    "empresas": [
+      {
+        "key": "4c",
+        "name": "Constructora 4C",
+        "logo": "/4cSInfondoLogo.png",
+        "description": "民用、电气和光伏建筑",
+        "tagline": "20+ 年经验",
+        "href": "/empresas/4C",
+        "color": "#000C47",
+        "highlights": ["民用工程", "电气工程", "光伏项目"]
+      },
+      {
+        "key": "nucleo",
+        "name": "Núcleo Energy",
+        "logo": "/LogoHorizontal@4x.png",
+        "description": "未来的可再生能源",
+        "tagline": "年轻创新企业",
+        "href": "/empresas/nucleo-energy",
+        "color": "#10B981",
+        "highlights": ["风能", "太阳能", "储能 (SAE)"]
+      },
+      {
+        "key": "imbar",
+        "name": "IMBAR",
+        "logo": "/imbarlogo.jpeg",
+        "description": "高压电力基础设施",
+        "tagline": "20 年专业经验",
+        "href": "/empresas/imbar",
+        "color": "#1E40AF",
+        "highlights": ["400 KV变电站", "700 吨/月制造", "LAPEM认证"]
+      },
+      {
+        "key": "reccmaq",
+        "name": "RECCMAQ2",
+        "logo": "/reccmalogoxD.png",
+        "description": "工业机械重建",
+        "tagline": "18+ 年经验",
+        "href": "/empresas/reccmaq2",
+        "color": "#DC2626",
+        "highlights": ["重建", "维护", "全国覆盖"]
+      }
+    ]
+  },
+  "ProjectsTimeline": {
+    "pageTitle": "我们的历程",
+    "pageDescription": "二十年建设拉丁美洲的能源未来。每一年都代表着向可持续性和创新迈出的又一步。",
+    "periods": [
+      {
+        "year": "2024-2025",
+        "category": "光伏能源",
+        "projects": [
+          {
+            "name": "Cuervos Solar光伏公园",
+            "location": "Lagos de Moreno, México",
+            "capacity": "200 MW"
+          },
+          {
+            "name": "PFV Calera",
+            "location": "Sonora, México",
+            "capacity": "90 MW"
+          }
+        ]
+      },
+      {
+        "year": "2023-2024",
+        "category": "输电和建设",
+        "projects": [
+          {
+            "name": "主要基础建设",
+            "location": "Mexicali, B.C.",
+            "capacity": "400 kV"
+          },
+          {
+            "name": "电气建筑建设",
+            "location": "Sonora, México",
+            "capacity": "400 kV + MVAR"
+          }
+        ]
+      },
+      {
+        "year": "2020-2023",
+        "category": "民用工程和健康",
+        "projects": [
+          {
+            "name": "海军部",
+            "location": "Puerto Vallarta, Jalisco",
+            "capacity": "海军医院"
+          },
+          {
+            "name": "瓦哈卡女子医院",
+            "location": "Reyes Mantecón, Oaxaca",
+            "capacity": "第三阶段"
+          }
+        ]
+      },
+      {
+        "year": "2018-2020",
+        "category": "商业光伏项目",
+        "projects": [
+          {
+            "name": "Culiacán光伏系统",
+            "location": "Culiacán, Sinaloa",
+            "capacity": "498.96 kW"
+          },
+          {
+            "name": "Guamuchil项目",
+            "location": "Sinaloa, México",
+            "capacity": "150.12 kW"
+          }
+        ]
+      }
+    ]
+  },
+  "Projects": {
+    "hero": {
+      "title": "建设未来",
+      "subtitle": "在基础设施、可再生能源和建筑项目方面拥有40多年的经验",
+      "button": "查看精选项目"
+    },
+    "intro": {
+      "badge": "我们的经验",
+      "title": "改造拉丁美洲的基础设施",
+      "description1": "我们的投资组合包括500多个成功项目，展示了我们在基础设施方面的技术能力和经验。",
+      "description2": "从400 KV变电站到大规模太阳能电站，我们在该地区的能源转型中留下了印记。",
+      "stats": [
+        {
+          "label": "已安装太阳能容量",
+          "value": "1,200+",
+          "unit": "MW"
+        },
+        {
+          "label": "高压输电",
+          "value": "500+",
+          "unit": "公里"
+        }
+      ],
+      "innovation": {
+        "title": "每个项目的创新",
+        "subtitle": "应用于实际解决方案的尖端技术"
+      }
+    },
+    "stats": {
+      "completed": "已完成项目",
+      "experience": "经验年限",
+      "mw": "已安装MW",
+      "countries": "国家"
+    },
+    "cta": {
+      "title": "让我们共同建设未来",
+      "description": "您有需要基础设施或能源的项目吗？今天就联系我们，让我们谈谈如何实现它。",
+      "button1": "索取报价",
+      "phone": "致电我们",
+      "email": "给我们写信",
+      "visit": "访问我们"
+    },
+    "marina": {
+      "title": "海军部",
+      "country": "墨西哥",
+      "description": "项目：Puerto Vallarta, Jalisco海军医院的建设和装备。"
+    },
+    "pedido8833": {
+      "title": "订单 8833 ABEN3T",
+      "country": "墨西哥",
+      "description": "LT 230 KV A3T-SE：通道和绝缘子清洁。光纤和金具检查。防鸟装置。接头热成像。\nOS: Martpat-31000-LT-CFV-GSC-41"
+    },
+    "transmission": {
+      "title": "输电线路",
+      "country": "墨西哥",
+      "description": "安装：Puerto Peñasco - Golfo de Santa Clara输电线路自支撑塔(400 KV)的镀锌金属结构。"
+    },
+    "rehabilitation": {
+      "title": "变电站修复",
+      "country": "秘鲁",
+      "description": "Lima和Cusco变电站现代化：Luz del Sur的机电/民用工程设计和施工(Electro Sur Este分包)。"
+    }
+  },
+  "ProjectsData": {
+    "pageTitle": "精选项目",
+    "pageDescription": "发现我们一些最重要的项目",
+    "categories": ["全部", "光伏能源", "电力输电", "民用工程"],
+    "projects": [
+      {
+        "id": "1",
+        "title": "Puerto Peñasco太阳能公园",
+        "location": "Sonora, México",
+        "category": "光伏能源",
+        "description": "大规模太阳能公园的机电工程。",
+        "image": "/eolico2.jpg",
+        "capacity": "大规模"
+      },
+      {
+        "id": "2",
+        "title": "IMSS-Bienestar医院",
+        "location": "Oaxaca, México",
+        "category": "民用工程",
+        "description": "医院设施光伏系统的安装。",
+        "image": "/Secretaria.jpg"
+      },
+      {
+        "id": "3",
+        "title": "Culiacán光伏系统",
+        "location": "Culiacán, Sinaloa",
+        "category": "光伏能源",
+        "description": "容量为498.96 kW的工业安装。",
+        "image": "/fotovoltaic.jpg",
+        "capacity": "498.96 kW"
+      },
+      {
+        "id": "4",
+        "title": "400 KV输电线路",
+        "location": "México",
+        "category": "电力输电",
+        "description": "塔架镀锌金属结构的安装。",
+        "image": "/LineasDeTransmisionElectrica.jpg"
+      },
+      {
+        "id": "5",
+        "title": "Potrero光伏公园",
+        "location": "Lagos de Moreno, México",
+        "category": "光伏能源",
+        "description": "容量为296 MW DC的大规模系统。",
+        "image": "/paneles.jpg",
+        "capacity": "296 MW"
+      },
+      {
+        "id": "6",
+        "title": "秘鲁变电站修复",
+        "location": "Lima和Cusco, Perú",
+        "category": "电力输电",
+        "description": "Lima和Cusco变电站的现代化与机电工程。",
+        "image": "/RehabilatacionSubestacionesPeru.jpg"
+      },
+      {
+        "id": "7",
+        "title": "海军部",
+        "location": "Puerto Vallarta, Jalisco",
+        "category": "民用工程",
+        "description": "海军医院的建设和装备。",
+        "image": "/Secretaria.jpg"
+      },
+      {
+        "id": "8",
+        "title": "阿根廷太阳能基础设施",
+        "location": "Jujuy, Argentina",
+        "category": "光伏能源",
+        "description": "Cauchari太阳能公园建设(300 MW)。",
+        "image": "/paneles.jpg",
+        "capacity": "300 MW"
+      },
+      {
+        "id": "imbar-lt-1",
+        "title": "LT 230 KV Cuetzalan CFE",
+        "location": "Cuetzalan, México",
+        "category": "输电线路",
+        "description": "长度20.308公里的115KV双回路输电线路的建设、安装和投入使用。",
+        "image": "/linea-transmision-cfeshtml.jpg",
+        "capacity": "115 KV - 20公里"
+      },
+      {
+        "id": "imbar-jasso",
+        "title": "Jasso Hidalgo变电站",
+        "location": "Hidalgo, México",
+        "category": "电力输电",
+        "description": "CFE变电站的民用和机电工程。",
+        "image": "/subestacion-jasso.jpg"
+      }
+    ]
+  },
+  "ProjectsShowcase": {
+    "sectionTitle": "定义未来的项目",
+    "sectionDescription1": "每个项目都是创新、奉献和技术卓越的故事。",
+    "sectionDescription2": "了解我们如何一个项目一个项目地建设明天。",
+    "featured": [
+      {
+        "id": "1",
+        "title": "Puerto Peñasco太阳能公园",
+        "subtitle": "太阳能公园机电工程",
+        "location": "Sonora, México",
+        "client": "China Energy",
+        "category": "光伏能源",
+        "scope": "大规模",
+        "image": "/paneles.jpg",
+        "description": "墨西哥西北部最重要的太阳能公园之一的综合机电工程项目。实施光伏发电尖端技术。",
+        "highlights": [
+          "完整电气基础设施的安装",
+          "与国际团队协调",
+          "最新一代技术"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "IMSS-Bienestar Tuxtepec医院",
+        "subtitle": "医院设施光伏系统",
+        "location": "Oaxaca, México",
+        "client": "国防部",
+        "category": "民用工程 + 能源",
+        "image": "/Secretaria.jpg",
+        "description": "在关键医院设施安装光伏系统，确保医疗服务的可靠和可持续电力供应。",
+        "highlights": [
+          "与现有医院系统集成",
+          "持续能源支持",
+          "减少碳足迹"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "400 KV输电线路",
+        "subtitle": "高压电力基础设施",
+        "location": "Puerto Peñasco - Golfo de Santa Clara",
+        "client": "ASELEC, S.A. de C.V.",
+        "category": "电力输电",
+        "scope": "400 KV",
+        "image": "/LineasDeTransmisionElectrica.jpg",
+        "description": "关键输电线路自支撑塔镀锌金属结构的安装。连接区域能源基础设施的项目。",
+        "highlights": [
+          "400 KV自支撑塔",
+          "镀锌金属结构",
+          "符合国际标准"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Potrero Solar光伏公园",
+        "subtitle": "大规模安装",
+        "location": "Lagos de Moreno, Jalisco",
+        "category": "光伏能源",
+        "scope": "296 MW DC",
+        "image": "/muchospaneles.jpg",
+        "description": "墨西哥最大的光伏项目之一。容量为296 MW DC的系统的完整安装，为国家能源矩阵做出重大贡献。",
+        "highlights": [
+          "296 MW DC已安装容量",
+          "数千块光伏板",
+          "可衡量的积极环境影响"
+        ]
+      },
+      {
+        "id": "5",
+        "title": "秘鲁变电站修复",
+        "subtitle": "Lima和Cusco变电站现代化",
+        "location": "Lima和Cusco, Perú",
+        "client": "Luz del Sur",
+        "category": "电力输电",
+        "image": "/RehabilatacionSubestacionesPeru.jpg",
+        "description": "秘鲁关键变电站现代化的机电和民用工程设计和执行。Electro Sur Este分包项目。",
+        "highlights": [
+          "变电站完全现代化",
+          "提高系统可靠性",
+          "国际扩展"
+        ]
+      },
+      {
+        "id": "6",
+        "title": "阿根廷太阳能基础设施",
+        "subtitle": "Cauchari太阳能公园",
+        "location": "Jujuy, Argentina",
+        "client": "Enel Green Power",
+        "category": "光伏能源",
+        "scope": "300 MW",
+        "image": "/img218.jpg",
+        "description": "南美洲最雄心勃勃的项目之一的太阳能基础设施建设。太阳能板、逆变器的安装和完整调试。",
+        "highlights": [
+          "300 MW容量",
+          "国际项目",
+          "极端气候条件"
+        ]
+      }
+    ]
+  },
+  "ProjectsCapabilities": {
+    "sectionBadge": "我们的能力",
+    "sectionTitle": "基础设施综合经验",
+    "sectionDescription": "四十年的专业化使我们能够在所服务的每个部门提供完整的解决方案",
+    "internationalTitle": "国际业务",
+    "internationalDescription": "跨越国界拓展视野",
+    "certificationTitle1": "认证质量",
+    "certificationDesc1": "符合国家和国际标准",
+    "certificationTitle2": "安全第一",
+    "certificationDesc2": "每个项目执行严格的协议",
+    "certificationTitle3": "可持续性",
+    "certificationDesc3": "每个开发的环境承诺",
+    "capabilities": [
+      {
+        "title": "光伏能源",
+        "stat": "+900 MW",
+        "description": "大规模太阳能公园的安装和调试，从7 kW住宅到300 MW商业。",
+        "services": [
+          "太阳能板和跟踪器安装",
+          "电气安装和连接",
+          "OMICRON测试和调试",
+          "预防性和纠正性维护"
+        ]
+      },
+      {
+        "title": "电力输电",
+        "stat": "400 kV",
+        "description": "高、中、低压输电线路和变电站的设计和建设。",
+        "services": [
+          "115-400 kV输电线路",
+          "变电站建设",
+          "塔架和结构安装",
+          "专业维护"
+        ]
+      },
+      {
+        "title": "民用工程",
+        "stat": "26+ 项目",
+        "description": "住宅、商业、工业和医院基础设施的建设和监督。",
+        "services": [
+          "建筑和医院",
+          "工业基础设施",
+          "翻新和扩建",
+          "城市发展"
+        ]
+      },
+      {
+        "title": "专业服务",
+        "stat": "40+ 年",
+        "description": "电气和机电项目的评估、监督和维护。",
+        "services": [
+          "热成像检查",
+          "专业电气测试",
+          "工程监督",
+          "分析和技术研究"
+        ]
+      },
+      {
+        "title": "结构制造",
+        "stat": "700 吨/月",
+        "description": "7,000平方米的专业工厂，配备数控机械，用于制造变电站和输电线路的镀锌金属结构。",
+        "services": [
+          "400 KV输电塔",
+          "变电站结构",
+          "电信塔",
+          "热浸镀锌",
+          "LAPEM质量控制"
+        ]
+      }
+    ],
+    "regions": [
+      {
+        "country": "墨西哥",
+        "projects": "22+ 项目",
+        "description": "在多个州有业务，包括Sonora、Sinaloa、Jalisco、Oaxaca和CDMX"
+      },
+      {
+        "country": "秘鲁",
+        "projects": "2 项目",
+        "description": "Lima和Cusco的变电站现代化"
+      },
+      {
+        "country": "阿根廷",
+        "projects": "1+ 项目",
+        "description": "Jujuy的太阳能公园建设"
+      },
+      {
+        "country": "哥伦比亚",
+        "projects": "3+ 项目",
+        "description": "能源基础设施和太阳能项目"
+      }
+    ]
+  },
+  "Metadata": {
+    "defaultTitle": "Grupo Horizonte | 墨西哥基础设施和可再生能源",
+    "description": "Grupo Horizonte：墨西哥和拉丁美洲基础设施、民用工程、电气工程和可再生能源建设领域的领导者，拥有40多年的经验。",
+    "category": "建筑和工程"
+  },
+  "AriaLabels": {
+    "logoAlt": "Grupo Horizonte标志",
+    "turbineAlt": "带有4c和Núcleo Energy标志的风力涡轮机"
+  }
+}

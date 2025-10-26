@@ -1,7 +1,9 @@
 import BigButton from "@/app/components/bigButton";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { useTranslations } from 'next-intl';
 
 export default function ProjectsCTA() {
+    const t = useTranslations('Projects');
     return (
         <>
             <style jsx>{`
@@ -19,17 +21,16 @@ export default function ProjectsCTA() {
                 <div className="relative z-20 px-6 max-w-6xl mx-auto w-full py-20">
                     <div className="text-center mb-16">
                         <h2 className="text-h1 md:text-[3.5rem] text-white font-bold mb-6 leading-tight">
-                            Construyamos el Futuro Juntos
+                            {t('cta.title')}
                         </h2>
                         <p className="text-h3 md:text-[1.5rem] text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto">
-                            Con más de 40 años de experiencia y proyectos exitosos en México,
-                            Perú y Argentina, estamos listos para tu próximo desafío
+                            {t('cta.description')}
                         </p>
                         <div className="flex flex-col sm:flex-row justify-center gap-6 mb-16">
                             <a href={"/contacto"}>
                                 <BigButton
-                                    textBefore="Solicitar Cotización"
-                                    textAfter="Solicitar Cotización"
+                                    textBefore={t('cta.button1')}
+                                    textAfter={t('cta.button1')}
                                     textColor="white"
                                     minWidth="240px"
                                     maxWidth="280px"
@@ -41,10 +42,10 @@ export default function ProjectsCTA() {
                     {/* Stats */}
                     <div className="grid md:grid-cols-4 gap-6 mb-16">
                         {[
-                            { number: "+900 MW", label: "Capacidad Instalada" },
-                            { number: "26+", label: "Proyectos Exitosos" },
-                            { number: "3", label: "Países" },
-                            { number: "40+", label: "Años de Experiencia" }
+                            { number: "+900 MW", label: t('stats.mw') },
+                            { number: "26+", label: t('stats.completed') },
+                            { number: "3", label: t('stats.countries') },
+                            { number: "40+", label: t('stats.experience') }
                         ].map((stat, idx) => (
                             <div key={idx} className="stats-final text-white p-6 rounded-2xl text-center">
                                 <div className="text-4xl font-bold mb-2 text-secundaryYellow">{stat.number}</div>
@@ -58,21 +59,21 @@ export default function ProjectsCTA() {
                         <div className="stats-final p-6 rounded-2xl flex items-start gap-4">
                             <FaPhone className="w-6 h-6 text-secundaryYellow flex-shrink-0 mt-1" />
                             <div>
-                                <div className="font-bold mb-1">Llámanos</div>
+                                <div className="font-bold mb-1">{t('cta.phone')}</div>
                                 <div className="text-sm opacity-90">+52 55 1557 2791</div>
                             </div>
                         </div>
                         <div className="stats-final p-6 rounded-2xl flex items-start gap-4">
                             <FaEnvelope className="w-6 h-6 text-secundaryYellow flex-shrink-0 mt-1" />
                             <div>
-                                <div className="font-bold mb-1">Escríbenos</div>
+                                <div className="font-bold mb-1">{t('cta.email')}</div>
                                 <div className="text-sm opacity-90">ccc@4ccc.com.mx</div>
                             </div>
                         </div>
                         <div className="stats-final p-6 rounded-2xl flex items-start gap-4">
                             <FaMapMarkerAlt className="w-6 h-6 text-secundaryYellow flex-shrink-0 mt-1" />
                             <div>
-                                <div className="font-bold mb-1">Visítanos</div>
+                                <div className="font-bold mb-1">{t('cta.visit')}</div>
                                 <div className="text-sm opacity-90">CDMX, México</div>
                             </div>
                         </div>

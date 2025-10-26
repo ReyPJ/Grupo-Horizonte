@@ -1,0 +1,1412 @@
+{
+  "Navigation": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "companies": "Empresas",
+    "focus": "Enfoque",
+    "contact": "Contacto",
+    "ourCompanies": "Nuestras Empresas",
+    "closeMenu": "Cerrar menú",
+    "openMenu": "Abrir menú",
+    "previousCompany": "Empresa anterior",
+    "nextCompany": "Siguiente empresa",
+    "viewCompany": "Ver empresa {company}",
+    "phone": "+52 55 1557 2791",
+    "email": "ghorizonte@hh.com"
+  },
+  "Hero": {
+    "mainTitle": "Impulsando el futuro para lo que viene en el horizonte",
+    "mainTitleDesktop1": "Impulsando el futuro.",
+    "mainTitleDesktop2": "Para lo que viene en el horizonte.",
+    "subtitle": "Nuestro compromiso es abrir camino hacia un futuro mejor, para que estemos listos para el futuro que cada vez está más cerca.",
+    "cta": "Conoce Nuestras Empresas"
+  },
+  "PartnerLogos": {
+    "title": "Nuestras empresas",
+    "goTo": "Ir a {company}"
+  },
+  "IMBAR": {
+    "title": "Infraestructura Eléctrica de Alto Voltaje",
+    "subtitle": "40 años de experiencia construyendo la red eléctrica que impulsa a México",
+    "stat1Label": "Líneas de Transmisión",
+    "stat1Value": "400KV",
+    "stat1Description": "Capacidad máxima certificada",
+    "stat2Label": "Proveedor Certificado",
+    "stat2Value": "CFE",
+    "stat2Description": "Comisión Federal de Electricidad",
+    "stat3Label": "Años Experiencia",
+    "stat3LabelDesktop": "Años de Experiencia",
+    "stat3Value": "40+",
+    "stat3Description": "Liderando el sector eléctrico",
+    "service1Title": "Subestaciones Eléctricas",
+    "service1Description": "Diseño, construcción y modernización de subestaciones de alta tensión con soluciones integrales.",
+    "service1DescriptionDesktop": "Diseño, construcción y modernización de subestaciones de alta tensión. Soluciones integrales desde la ingeniería hasta la puesta en marcha.",
+    "service2Title": "Fabricación Especializada",
+    "service2Description": "Estructuras metálicas galvanizadas para torres autosoportadas con certificaciones internacionales.",
+    "service2DescriptionDesktop": "Estructuras metálicas galvanizadas para torres autosoportadas. Manufactura de alta precisión con certificaciones internacionales.",
+    "cta": "Descubre IMBAR"
+  },
+  "FourC": {
+    "title": "Construcción Civil e Industrial",
+    "subtitle": "Más de 40 años construyendo el futuro con obras de ingeniería de excelencia",
+    "stat1Label": "Años Trayectoria",
+    "stat1LabelDesktop": "Años de Trayectoria",
+    "stat1Value": "40+",
+    "stat1Description": "Construyendo infraestructura",
+    "stat2Label": "Proyectos",
+    "stat2LabelDesktop": "Proyectos Realizados",
+    "stat2Value": "100+",
+    "stat2Description": "Obras civiles y eléctricas",
+    "stat3Label": "Energía Fotovoltaica",
+    "stat3Value": "Solar",
+    "stat3Description": "Proyectos sustentables",
+    "service1Title": "Obras Civiles",
+    "service1Description": "Edificaciones residenciales, comerciales e industriales con los más altos estándares de calidad.",
+    "service1DescriptionDesktop": "Construcción de edificaciones residenciales, comerciales e industriales. Infraestructura urbana con los más altos estándares de calidad y seguridad.",
+    "service2Title": "Obras Eléctricas",
+    "service2Description": "Instalaciones eléctricas e integración de sistemas fotovoltaicos para uso industrial y comercial.",
+    "service2DescriptionDesktop": "Instalaciones eléctricas de baja y media tensión. Integración de sistemas fotovoltaicos para autoconsumo industrial y comercial.",
+    "cta": "Descubre 4C"
+  },
+  "ExtraordinaryTeams": {
+    "title": "Equipos extraordinarios construyendo proyectos que impulsan hacia el futuro",
+    "titleDesktop1": "Equipos extraordinarios",
+    "titleDesktop2": "Construyendo proyectos",
+    "titleDesktop3": "Que impulsan hacia el futuro",
+    "paragraph1": "Ofrecemos proyectos únicos que mejoran la calidad de vida con soluciones integrales. Más de 40 años de experiencia combinada en infraestructura eléctrica, construcción civil e industrial, y energías renovables.",
+    "paragraph1Desktop": "Ofrecemos proyectos únicos que mejoran la calidad de vida, fomentamos la innovación y el desarrollo con soluciones integrales. Con empresas especializadas que suman más de 40 años de experiencia combinada: desde infraestructura eléctrica de alta tensión con IMBAR, construcción civil e industrial con 4C, hasta energías renovables con Núcleo Energy.",
+    "paragraph2": "Desarrollamos subestaciones eléctricas, líneas de transmisión de 400 KV, obras civiles, proyectos eólicos, plantas solares y sistemas de autoconsumo.",
+    "paragraph2Desktop": "Desarrollamos subestaciones eléctricas, líneas de transmisión de 400 KV, obras civiles, ingeniería mecánica y fotovoltaica, proyectos eólicos, plantas solares y sistemas de autoconsumo para uso industrial, comercial y residencial.",
+    "paragraph3Desktop": "Desarrollamos infraestructura y energía de alta calidad, con gran compromiso con la eficiencia, innovación y seguridad.",
+    "cta": "Misión, Visión y Valores"
+  },
+  "TeamQuality": {
+    "title": "Definidos por la calidad de nuestro gran equipo",
+    "description": "Nuestro equipo aporta su excelencia técnica, ingenio, empuje, creatividad y experiencia para ayudar a nuestros clientes a lograr sus visiones audaces. Tenemos éxito a través de la asociación y el deseo compartido de marcar la diferencia. Motivados por los desafíos en el horizonte superamos todos los límites posibles.",
+    "descriptionMobile": "La integridad, innovación y una mentalidad de nunca conformarse están en el centro de todo lo que hacemos. Nuestro equipo convierte los desafíos en oportunidades para lograr lo extraordinario.",
+    "descriptionDesktop": "La integridad, innovación y una mentalidad de \"nunca conformarse\" están en el centro de todo lo que hacemos. Nuestro equipo está lleno de pensadores audaces y hábiles solucionadores de problemas que convierten los desafíos en oportunidades para lograr lo extraordinario.",
+    "cta": "Nuestras Empresas"
+  },
+  "Companies": {
+    "sectionTitle": "Nuestras Empresas",
+    "keyServices": "Servicios Clave"
+  },
+  "History": {
+    "title": "Nosotros Construimos Historia",
+    "paragraph1": "La historia de este siglo estará determinada por la capacidad del mundo para trabajar rápido en infraestructura, energía, manufactura avanzada y protección ambiental.",
+    "paragraph1Desktop": "La historia desde inicios del siglo y para los siguientes siglos estará determinada por la capacidad del mundo para trabajar rápido y en gran escala para satisfacer necesidades en una pronta evolución de infraestructura, energía, manufactura avanzada, recursos críticos, protección ambiental y seguridad nacional.",
+    "paragraph2": "Durante muchos años hemos estado a la altura de las circunstancias con la experiencia y conocimientos para afrontar estos desafíos.",
+    "paragraph2Desktop": "Durante muchos años hemos estado siempre a la altura de las circunstancias. Tenemos la experiencia y los conocimientos, y estamos diseñados específicamente para afrontar todos estos desafíos que se asoman desde el horizonte.",
+    "featuredProjects": "Proyectos Destacados",
+    "cta": "Todos los Proyectos"
+  },
+  "Footer": {
+    "projectsTitle": "Proyectos",
+    "allProjects": "Todos los Proyectos",
+    "aboutTitle": "Nosotros",
+    "visionMissionValues": "Visión, Misión, Valores",
+    "ourTeam": "Nuestro Equipo",
+    "sustainability": "Sostenibilidad",
+    "companiesTitle": "Empresas",
+    "focusTitle": "Enfoque",
+    "safety": "Seguridad",
+    "innovation": "Innovación",
+    "contact": "Contacto",
+    "privacyPolicy": "Política de Privacidad",
+    "privacy": "Privacidad",
+    "termsOfUse": "Términos de uso",
+    "terms": "Términos",
+    "copyright": "© 2025 Grupo Horizonte"
+  },
+  "Contact": {
+    "phone": "+52 55 1557 2791",
+    "email": "ghorizonte@hh.com",
+    "formTitle": "Cuéntanos sobre tu Proyecto",
+    "formSubtitle": "Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas.",
+    "nameLabel": "Nombre Completo *",
+    "namePlaceholder": "Juan Pérez",
+    "emailLabel": "Email *",
+    "emailPlaceholder": "tu@email.com",
+    "phoneLabel": "Teléfono *",
+    "phonePlaceholder": "+52 55 1234 5678",
+    "companyLabel": "Empresa / Organización",
+    "companyPlaceholder": "Tu empresa",
+    "serviceLabel": "Servicio de Interés *",
+    "serviceDefaultOption": "Selecciona un servicio",
+    "messageLabelFormField": "Mensaje *",
+    "messagePlaceholder": "Cuéntanos sobre tu proyecto, necesidades, presupuesto estimado, timeline...",
+    "sendButton": "Enviar Mensaje",
+    "sendingButton": "Enviando...",
+    "validationNameRequired": "El nombre es requerido",
+    "validationEmailRequired": "El email es requerido",
+    "validationEmailInvalid": "Email inválido",
+    "validationPhoneRequired": "El teléfono es requerido",
+    "validationServiceRequired": "Selecciona un servicio",
+    "validationMessageRequired": "El mensaje es requerido",
+    "validationMessageMinLength": "El mensaje debe tener al menos 20 caracteres",
+    "successTitle": "Mensaje Enviado",
+    "successMessage": "Gracias por contactarnos. Te responderemos pronto.",
+    "errorTitle": "Error al Enviar",
+    "errorMessage": "Intenta de nuevo o contáctanos directamente.",
+    "whyChooseUs": "¿Por qué trabajar con nosotros?",
+    "whyChooseDescription": "Con más de 40 años de experiencia en infraestructura y energía, somos tu socio estratégico para proyectos de cualquier escala.",
+    "provenExperienceTitle": "Experiencia Comprobada",
+    "provenExperienceDesc": "Más de 500 proyectos exitosos en toda la República Mexicana y Latinoamérica.",
+    "fastResponseTitle": "Respuesta Rápida",
+    "fastResponseDesc": "Te contactamos en menos de 24 horas con una propuesta inicial personalizada.",
+    "totalCommitmentTitle": "Compromiso Total",
+    "totalCommitmentDesc": "Calidad certificada, cumplimiento de tiempos y transparencia en cada etapa.",
+    "quote": "Nuestro compromiso es abrir camino hacia un futuro mejor, donde la calidad y la eficiencia sean la base de cada construcción.",
+    "quoteAuthor": "- Grupo Horizonte Energy",
+    "multipleFormsTitle": "Múltiples Formas de Conectar",
+    "multipleFormsSubtitle": "Estamos disponibles para atenderte por el medio que prefieras. Tu proyecto es nuestra prioridad.",
+    "phonesSection": "Teléfonos",
+    "whatsappSection": "WhatsApp",
+    "phone1": "55 3023 8337",
+    "whatsappImmediateResponse": "Respuesta inmediata",
+    "emailsSection": "Correos",
+    "addressSection": "Dirección",
+    "addressLine1": "RET 1 Cecilio Robelo No. 66,",
+    "addressLine2": "Jardín Balbuena,",
+    "addressLine3": "Venustiano Carranza,",
+    "addressLine4": "CDMX, CP 15900",
+    "hoursSection": "Horario",
+    "hoursMondayFriday": "Lun - Vie",
+    "hoursTime1": "9:00 - 18:00",
+    "hoursSaturday": "Sábado",
+    "hoursTime2": "9:00 - 14:00",
+    "hoursSunday": "Domingo",
+    "hoursClosed": "Cerrado",
+    "coverageSection": "Cobertura",
+    "coverageText": "Atendemos proyectos en todo México y Latinoamérica",
+    "projectHeroTitle": "Construyendo el Futuro",
+    "projectHeroSubtitle": "Más de 40 años de experiencia en proyectos de infraestructura, energía renovable y construcción",
+    "projectHeroButton": "Ver Proyectos Destacados",
+    "breadcrumbHome": "Inicio",
+    "breadcrumbBlog": "Blog",
+    "shareButton": "Compartir",
+    "shareSubtitle": "¿Te gustó este artículo? Compártelo",
+    "authorBio": "Líder visionario en el sector de energías renovables e infraestructura, con más de 20 años de experiencia impulsando proyectos transformadores.",
+    "contactHero": {
+      "badge": "Contacto",
+      "title1": "Transformemos",
+      "title2": "Tus Ideas en",
+      "title3": "Realidad",
+      "description": "Nuestro equipo de expertos está listo para discutir tu proyecto y proponer soluciones integrales. Contáctanos hoy mismo.",
+      "stat1Label": "Años de Experiencia",
+      "stat1Value": "40+",
+      "stat2Label": "Proyectos Completados",
+      "stat2Value": "500+",
+      "stat3Label": "Estados Atendidos",
+      "stat3Value": "12",
+      "stat4Label": "Compromiso",
+      "stat4Value": "Total"
+    },
+    "contactCTA": {
+      "title": "¿Listo para Iniciar tu Proyecto?",
+      "description": "Nos gustaría conocer sobre tus necesidades y mostrate cómo podemos ser tu socio estratégico.",
+      "button1": "Ver Proyectos",
+      "button2": "Nuestras Empresas",
+      "phone": "Teléfono",
+      "whatsapp": "WhatsApp",
+      "location": "Ubicación",
+      "stat1Label": "Años de Experiencia",
+      "stat1Value": "40+",
+      "stat2Label": "Proyectos Exitosos",
+      "stat2Value": "500+",
+      "stat3Label": "Estados Cubiertos",
+      "stat3Value": "12",
+      "stat4Label": "Satisfacción",
+      "stat4Value": "100%"
+    },
+    "contactMap": {
+      "title": "Nuestras Oficinas",
+      "address": "RET 1 Cecilio Robelo No. 66, Jardín Balbuena, Venustiano Carranza, CDMX, CP 15900",
+      "button": "Abrir en Maps"
+    }
+  },
+  "Components": {
+    "partnerLogos": {
+      "companies": [
+        "Constructora 4C",
+        "IMBAR",
+        "Núcleo Energy",
+        "RECCMAQ2"
+      ]
+    },
+    "companyServices": {
+      "title": "Nuestros Servicios",
+      "description": "Soluciones integrales con los más altos estándares de calidad",
+      "learnMore": "Conocer más"
+    },
+    "companyMVV": {
+      "title": "Nuestra Esencia",
+      "subtitle": "Los pilares que definen nuestra forma de trabajar",
+      "mission": "Misión",
+      "vision": "Visión",
+      "values": "Valores Fundamentales"
+    },
+    "companyClients": {
+      "defaultTitle": "Nuestros Clientes",
+      "subtitle": "La confianza de grandes empresas respalda nuestra trayectoria"
+    },
+    "blog": {
+      "previousArticle": "Artículo anterior",
+      "readMore": "Leer más",
+      "nextArticle": "Siguiente artículo"
+    }
+  },
+  "CompanyData": {
+    "imbar": {
+      "name": "IMBAR",
+      "shortHistory": "40 años construyendo infraestructura eléctrica para CFE e industria privada.",
+      "shortHistory2": "Especialistas en subestaciones, líneas de transmisión y fabricación de estructuras metálicas hasta 400 KV.",
+      "buttonText": "Conoce a IMBAR",
+      "tagline": "Líderes en Infraestructura Eléctrica",
+      "heroDescription": "20 años de experiencia especializada en obras de infraestructura eléctrica para CFE e industria privada. Expertos en subestaciones, líneas de transmisión hasta 400 KV y fabricación de estructuras metálicas.",
+      "mision": "Desarrollar e implementar tecnología de obras de infraestructura eléctrica implementando nuevos métodos en los procesos de obras para la CFE y la industria privada. Cumplir con las necesidades del cliente y anticiparnos a sus exigencias.",
+      "vision": "Ser una empresa mexicana líder en el manejo integral de obras de infraestructura eléctrica. Alcanzar un nivel óptimo en recursos humanos y materiales bajo un esquema de calidad, satisfaciendo siempre a nuestros clientes en obras civiles, electromecánicas, pruebas preoperativas, estructuras para subestaciones y líneas de transmisión.",
+      "valores": ["Calidad", "Innovación Tecnológica", "Compromiso", "Seguridad"],
+      "services": {
+        "substations": "Subestaciones Eléctricas",
+        "transmission": "Líneas de Transmisión",
+        "civilWorks": "Obra Civil Eléctrica",
+        "manufacturing": "Fabricación de Estructuras",
+        "engineering": "Ingeniería Eléctrica",
+        "mechanical": "Obra Electromecánica",
+        "preoperative": "Pruebas Preoperativas",
+        "commissioning": "Puesta en Servicio",
+        "engineeringDesc": "Diseño y desarrollo de proyectos de infraestructura eléctrica con los más altos estándares técnicos y normativos para CFE e industria privada.",
+        "civilWorksDesc": "Construcción de cimentaciones, plataformas y estructuras civiles para subestaciones y líneas de transmisión. Obras mayores y menores con certificación LAPEM.",
+        "mechanicalDesc": "Montaje de equipos, interconexión de sistemas, instalación de tableros y puesta en operación de subestaciones eléctricas completas.",
+        "manufacturingDesc": "Producción de hasta 700 toneladas mensuales de estructuras metálicas galvanizadas para torres y subestaciones hasta 400 KV con liberación LAPEM.",
+        "preoperativeDesc": "Realización de pruebas técnicas y certificaciones previas a la puesta en servicio de instalaciones eléctricas.",
+        "commissioningDesc": "Proceso completo de energización y arranque de sistemas eléctricos con supervisión técnica especializada."
+      },
+      "capabilities": {
+        "capacidadMaxima": "Capacidad Máxima",
+        "capacidadDesc": "Líneas de transmisión de alta tensión",
+        "produccionMensual": "Producción Mensual",
+        "produccionDesc": "Estructuras metálicas galvanizadas",
+        "certificacion": "Certificación",
+        "certificacionDesc": "Liberación oficial CFE"
+      },
+      "timeline": {
+        "fundacion": "Fundación",
+        "proyectos": "Proyectos CFE",
+        "especializacion": "Especialización",
+        "presente": "Presente"
+      },
+      "clients": [
+        {
+          "name": "CFE - Comisión Federal de Electricidad",
+          "location": "Nacional",
+          "period": "2004-Actualidad",
+          "description": "Múltiples proyectos de subestaciones y líneas de transmisión"
+        },
+        {
+          "name": "CFE - S.E. Villa de García",
+          "location": "Nuevo León",
+          "period": "2018-2019",
+          "description": "Obra civil y electromecánica completa"
+        },
+        {
+          "name": "CFE - S.E. Codefront",
+          "location": "Coahuila",
+          "period": "2017-2018",
+          "description": "Obra civil y electromecánica"
+        },
+        {
+          "name": "CFE - S.E. Jasso",
+          "location": "Hidalgo",
+          "period": "2019-2020",
+          "description": "Obra civil y electromecánica"
+        },
+        {
+          "name": "CFE - LT Querétaro 400 KV",
+          "location": "Querétaro",
+          "period": "2016-2017",
+          "description": "Línea de transmisión de alta tensión"
+        },
+        {
+          "name": "CFE - S.E. Ticul 400 KV",
+          "location": "Yucatán",
+          "period": "2015-2016",
+          "description": "Subestación eléctrica de potencia"
+        },
+        {
+          "name": "CFE - LT y SE Cuetzalan",
+          "location": "Puebla",
+          "period": "2020-2021",
+          "description": "LT 115KV doble circuito - 20.3 km"
+        },
+        {
+          "name": "ABB México S.A. de C.V.",
+          "location": "Reynosa, Tamaulipas",
+          "period": "2018-2019",
+          "description": "S.E. Guerreño - Obra civil 600 toneladas"
+        },
+        {
+          "name": "ABB México - Ford",
+          "location": "Irapuato, Guanajuato",
+          "period": "2019-2020",
+          "description": "Suministro, fabricación y montaje de estructuras"
+        },
+        {
+          "name": "ABB México - S.E. Agroindustrial",
+          "location": "Irapuato, Guanajuato",
+          "period": "2017-2018",
+          "description": "Obra civil y electromecánica"
+        }
+      ],
+      "sections": {
+        "technicalCapabilities": "Capacidades Técnicas",
+        "worldClass": "Infraestructura de clase mundial",
+        "yearsExperience": "20 Años de Experiencia",
+        "trajectory": "Trayectoria comprobada en proyectos de infraestructura eléctrica",
+        "specializedServices": "Servicios Especializados",
+        "highlightedProjects": "Proyectos Destacados",
+        "ctaTitle": "Infraestructura Eléctrica de Calidad",
+        "ctaSubtitle": "Llevamos 20 años desarrollando proyectos de infraestructura eléctrica con los más altos estándares de calidad",
+        "requestQuote": "Solicitar Cotización",
+        "viewProjects": "Ver Proyectos"
+      }
+    },
+    "fourC": {
+      "name": "Constructora 4C",
+      "shortHistory": "Una empresa con más de 40 años guiando a nuestros clientes hacia el futuro.",
+      "shortHistory2": "Con experiencia en obras civiles, obras eléctricas, servicios especializados y proyectos fotovoltaicos.",
+      "buttonText": "Conoce a 4C",
+      "tagline": "Construyendo el Futuro con Excelencia",
+      "heroDescription": "Más de 20 años de experiencia en construcción civil, mecánica, eléctrica y fotovoltaica. Desarrollamos infraestructura y energía de alta calidad con compromiso hacia la eficiencia, innovación y seguridad.",
+      "mision": "Ser líderes en la industria implementando soluciones sustentables e innovadoras en infraestructura y energía.",
+      "vision": "Ser el referente líder en infraestructuras, energías renovables y servicios especializados a nivel nacional e internacional.",
+      "valores": ["Innovación", "Sostenibilidad", "Calidad", "Responsabilidad Social"],
+      "services": {
+        "civilWorks": "Obras Civiles",
+        "electricalWorks": "Obras Eléctricas",
+        "specializedServices": "Servicios Especializados",
+        "photovoltaic": "Proyectos Fotovoltaicos",
+        "civilWorksDesc": "Diseñamos, construimos y gestionamos proyectos de infraestructura civil, incluyendo edificaciones, hospitales, proyectos residenciales, comerciales e industriales, renovaciones y obras de desarrollo urbano.",
+        "electricalWorksDesc": "Diseño, construcción y mantenimiento de redes eléctricas en alta, media y baja tensión. Instalación y supervisión de líneas de transmisión, subestaciones eléctricas y sistemas de distribución.",
+        "photovoltaicDesc": "Instalación de paneles solares, seguidores, montaje y conexionado. Puesta en marcha con pruebas OMICRON. Soluciones completas para generación de energía limpia.",
+        "specializedDesc": "Evaluación y ejecución de proyectos, análisis técnico, elaboración de catálogos de obra. Instalación y supervisión de subestaciones eléctricas y montaje de torres."
+      },
+      "clients": [
+        {
+          "name": "Secretaría de la Marina",
+          "location": "Puerto Vallarta, Jalisco",
+          "period": "2020-2021",
+          "description": "Construcción y equipamiento del Hospital Naval"
+        },
+        {
+          "name": "ASELEC S.A. de C.V.",
+          "location": "Mexicali, B.C.",
+          "period": "2019-2020",
+          "description": "Cimentaciones plataforma 400 KV en SE Cucapah"
+        },
+        {
+          "name": "Enel Green Power",
+          "location": "Jujuy, Argentina",
+          "period": "2018-2019",
+          "description": "Parque Solar Cauchari - 300 MW"
+        },
+        {
+          "name": "CFE",
+          "location": "Múltiples estados",
+          "period": "2010-Actualidad",
+          "description": "Diversos proyectos de infraestructura eléctrica"
+        },
+        {
+          "name": "Luz del Sur",
+          "location": "Lima y Cusco, Perú",
+          "period": "2017-2018",
+          "description": "Modernización de subestaciones eléctricas"
+        },
+        {
+          "name": "ENERRAY",
+          "location": "Guanajuato, México",
+          "period": "2020-2021",
+          "description": "Proyecto Solar 296 MW DC"
+        }
+      ],
+      "sections": {
+        "environmentalCommitment": "Compromiso con el Medio Ambiente",
+        "sustainablePractices": "En 4C integramos prácticas sostenibles en cada proyecto, minimizando nuestro impacto ambiental y maximizando la eficiencia energética.",
+        "renewableEnergy": "Implementación de sistemas de energía renovable",
+        "resourceOptimization": "Optimización de recursos para minimizar el impacto ambiental",
+        "wasteManagement": "Gestión adecuada de residuos en todas nuestras operaciones",
+        "heroTitle": "Impulsando el futuro. Para lograr lo imposible.",
+        "servicesTitle": "Nuestros Servicios",
+        "clientsTitle": "Clientes que Confían en Nosotros",
+        "ctaTitle": "¿Listo para tu Próximo Proyecto?",
+        "ctaSubtitle": "Transformemos juntos tu visión en realidad con la experiencia y calidad que caracteriza a 4C",
+        "contactUs": "Contáctanos",
+        "viewProjects": "Ver Proyectos"
+      }
+    },
+    "nucleoEnergy": {
+      "name": "Nucleo Energy",
+      "shortHistory": "Núcleo Energy es una empresa joven dedicada a energias renovables.",
+      "shortHistory2": "Impulsando proyectos eólicos, solares y de almacenamiento, fabrica y suministra equipos para el sector y desarrolla infraestructura eléctrica",
+      "buttonText": "Conoce a Nucleo",
+      "tagline": "Energías Renovables para el Futuro",
+      "heroDescription": "Empresa joven y dinámica dedicada al desarrollo de proyectos de energía renovable. Especializados en energía eólica, fotovoltaica, sistemas de almacenamiento y manufactura OEM para impulsar la transición energética.",
+      "mision": "Impulsar la transición energética mediante el desarrollo de proyectos innovadores de energía renovable que generen impacto positivo en el medio ambiente y la sociedad.",
+      "vision": "Ser líderes en América Latina en soluciones integrales de energía renovable, almacenamiento y manufactura especializada para el sector energético.",
+      "valores": ["Sostenibilidad", "Innovación", "Eficiencia Energética", "Compromiso Ambiental"],
+      "services": {
+        "windSolar": "Energía Eólica y Fotovoltaica",
+        "wind": "Energía Eólica",
+        "photovoltaic": "Energía Fotovoltaica",
+        "storage": "Sistemas de Almacenamiento (SAE)",
+        "manufacturing": "Manufactura y Suministro (OEM)",
+        "infrastructure": "Infraestructura de Transmisión",
+        "maintenance": "Mantenimiento Especializado",
+        "windDesc": "Conceptualización, ingeniería, desarrollo y ejecución de proyectos de generación de energía eléctrica a partir de fuentes eólicas. Instalación, operación y mantenimiento de parques eólicos.",
+        "photovoltaicDesc": "Desarrollo de plantas solares y sistemas de autoconsumo para uso industrial, comercial y residencial. Compra, venta e instalación de paneles solares, inversores y componentes.",
+        "storageDesc": "Investigación, desarrollo, diseño e implementación de sistemas de almacenamiento de energía con baterías de ion-litio y tecnologías emergentes para aplicaciones conectadas a red o aisladas.",
+        "manufacturingDesc": "Fabricación, ensamblaje, integración y comercialización de equipos originales y componentes para el sector energético. Servicios de ingeniería y consultoría técnica.",
+        "infrastructureDesc": "Diseño, ingeniería, procura y construcción de subestaciones eléctricas, líneas de transmisión y redes de distribución de media y alta tensión.",
+        "maintenanceDesc": "Servicios de mantenimiento preventivo y correctivo, así como operación de subestaciones, parques eólicos y plantas solares."
+      },
+      "sections": {
+        "advancedTechnologies": "Tecnologías de Vanguardia",
+        "sustainableFuture": "Soluciones innovadoras para un futuro sostenible",
+        "servicesTitle": "Soluciones Integrales",
+        "windEnergy": "Energía Eólica",
+        "windItems": ["Parques eólicos de gran escala", "Turbinas de última generación", "Sistemas de monitoreo inteligente"],
+        "solarEnergy": "Energía Solar",
+        "solarItems": ["Plantas solares industriales", "Autoconsumo comercial", "Sistemas residenciales"],
+        "storage": "Almacenamiento",
+        "storageItems": ["Baterías ion-litio avanzadas", "Sistemas conectados a red", "Soluciones aisladas"],
+        "oem": "Manufactura OEM",
+        "oemItems": ["Equipos originales certificados", "Componentes especializados", "Consultoría técnica integral"],
+        "environmentalImpact": "Impacto Ambiental Positivo",
+        "sustainableFutureDesc": "Cada proyecto contribuye a un futuro más sostenible",
+        "capacityInstalled": "MW",
+        "capacityLabel": "Capacidad instalada",
+        "co2Reduced": "Ton CO₂",
+        "co2Label": "Reducidas anualmente",
+        "projectsCompleted": "Proyectos",
+        "projectsLabel": "Completados exitosamente",
+        "ctaTitle": "Impulsemos Juntos la Transición Energética",
+        "ctaSubtitle": "Desarrolla tu proyecto de energía renovable con la experiencia y tecnología de Núcleo Energy",
+        "contactUs": "Contáctanos",
+        "viewProjects": "Ver Proyectos"
+      }
+    },
+    "reccmaq2": {
+      "name": "RECCMAQ2",
+      "shortHistory": "Reconstructora de maquinaria con presencia nacional en el sector industrial.",
+      "shortHistory2": "Servicio especializado de reconstrucción, mantenimiento y reparación de maquinaria pesada para industrias clave.",
+      "buttonText": "Conoce a RECCMAQ2",
+      "tagline": "Reconstruimos tu Maquinaria, Impulsamos tu Productividad",
+      "heroDescription": "Reconstructora de Maquinaria de la Torre. Especialistas en reconstrucción, mantenimiento y reparación de maquinaria pesada con presencia nacional en los sectores más exigentes de la industria.",
+      "services": {
+        "reconstruction": "Reconstrucción de Maquinaria",
+        "maintenance": "Mantenimiento Industrial",
+        "repair": "Reparación de Equipos",
+        "national": "Servicio a Nivel Nacional",
+        "siteService": "Servicio en Sitio",
+        "reconstructionDesc": "Servicio especializado en reconstrucción completa de maquinaria pesada industrial. Recuperamos equipos con altos estándares de calidad garantizando su óptimo funcionamiento.",
+        "maintenanceDesc": "Programas de mantenimiento preventivo diseñados para maximizar la vida útil de tu maquinaria y evitar paros no programados en tus operaciones.",
+        "repairDesc": "Reparación especializada de maquinaria y equipo pesado. Contamos con personal técnico certificado y refacciones de calidad.",
+        "siteServiceDesc": "Llevamos nuestro servicio directamente a tu ubicación. Cobertura nacional con técnicos especializados disponibles."
+      },
+      "clients": [
+        {
+          "name": "AFLEX",
+          "location": "Fernando Montes de Oca, Altamira, Tamaulipas",
+          "period": "Febrero 2018 - Actualidad",
+          "description": "Servicio continuo de mantenimiento y reparación"
+        },
+        {
+          "name": "McDermott",
+          "location": "Boulevard Golfo de México N. 380, Altamira, Tamaulipas",
+          "period": "Octubre 2017 - Enero 2022",
+          "description": "Reconstrucción y mantenimiento de equipos"
+        },
+        {
+          "name": "ALPASA",
+          "location": "Parque Pequeña y Mediana Industria, Altamira, Tamaulipas",
+          "period": "Enero 2007 - Actualidad",
+          "description": "Más de 18 años de servicio continuo"
+        },
+        {
+          "name": "GS Autotransportes",
+          "location": "Boulevard de los Ríos 3800, Altamira, Tamaulipas",
+          "period": "Enero 2016 - Actualidad",
+          "description": "Mantenimiento de flota vehicular"
+        },
+        {
+          "name": "Anuar Renaud Torres García",
+          "location": "Boulevard de los Ríos 3800, Altamira, Tamaulipas",
+          "period": "Marzo 2012 - Actualidad",
+          "description": "Servicios especializados continuos"
+        }
+      ],
+      "coverage": ["Altamira", "Monterrey", "Ciudad de México", "Manzanillo", "Mérida", "Mexicali", "Oaxaca", "Hermosillo"],
+      "sections": {
+        "ourProposal": "Nuestra Propuesta",
+        "expertsMachinery": "Expertos en dar nueva vida a tu maquinaria industrial",
+        "specialization": "Especialización",
+        "specializationDesc": "Más de 18 años de experiencia en reconstrucción y mantenimiento de maquinaria pesada. Personal técnico altamente calificado y certificado para garantizar trabajos de la más alta calidad.",
+        "commitment": "Compromiso",
+        "commitmentDesc": "Brindamos servicio en sitio con cobertura nacional, llevando soluciones directamente a tu ubicación. Minimizamos tiempos de paro y maximizamos la productividad de tu operación.",
+        "ourValues": "Nuestros Valores",
+        "values": ["Calidad", "Confiabilidad", "Profesionalismo", "Servicio"],
+        "nationalCoverage": "Cobertura Nacional",
+        "bringingServices": "Llevamos nuestros servicios a donde nos necesites",
+        "servicesTitle": "Servicios Especializados",
+        "clientsTitle": "Clientes que Confían en Nosotros",
+        "whyChooseUs": "Por Qué Elegirnos",
+        "yearsExperience": "18+ Años",
+        "yearsSubtitle": "De Experiencia",
+        "yearsDesc": "Trayectoria comprobada en el sector industrial",
+        "coverage8Cities": "8 Ciudades",
+        "coverageSubtitle": "Cobertura Nacional",
+        "coverageDesc": "Servicio en sitio donde lo necesites",
+        "clientRelationships": "20+ Clientes",
+        "relationshipsSubtitle": "Relaciones de Largo Plazo",
+        "relationshipsDesc": "Confianza construida año tras año",
+        "ctaTitle": "Optimiza tu Operación con Nuestro Servicio",
+        "ctaSubtitle": "Reconstrucción y mantenimiento especializado para mantener tu maquinaria en óptimas condiciones",
+        "requestService": "Solicitar Servicio",
+        "moreInfo": "Más Información"
+      }
+    }
+  },
+  "Enfoque": {
+    "hero": {
+      "badge": "Nuestro Enfoque",
+      "title1": "Construyendo",
+      "title2": "con Propósito",
+      "description": "Más de 40 años de experiencia combinada en infraestructura eléctrica, construcción civil e industrial, y energías renovables. Nuestra excelencia técnica se combina con un profundo compromiso hacia la sostenibilidad y la innovación.",
+      "stat1Label": "Años de Experiencia",
+      "stat1Value": "40+",
+      "stat2Label": "Países",
+      "stat2Value": "5",
+      "stat3Label": "Compromiso",
+      "stat3Value": "Total"
+    },
+    "intro": {
+      "title": "Quiénes Somos",
+      "description1": "Somos un grupo de empresas líderes en infraestructura, energía y servicios especializados. Con más de 40 años de experiencia combinada, transformamos visiones en realidad construyendo proyectos que definen el futuro de Latinoamérica.",
+      "description2": "Nuestro compromiso es con la excelencia técnica, la sostenibilidad ambiental y la responsabilidad social. Cada proyecto que desarrollamos es una oportunidad para demostrar que es posible construir el futuro de forma responsable.",
+      "description3": "Trabajamos para generar impacto positivo, crear empleo de calidad y contribuir al desarrollo integral de nuestras comunidades.",
+      "values": [
+        {
+          "title": "Innovación",
+          "description": "Implementamos tecnología de punta en soluciones que definen el futuro del sector."
+        },
+        {
+          "title": "Calidad",
+          "description": "Certificaciones internacionales y estándares rigurosos en cada proyecto que ejecutamos."
+        },
+        {
+          "title": "Sostenibilidad",
+          "description": "Comprometidos con el cuidado del ambiente y la eficiencia energética en todas operaciones."
+        }
+      ]
+    },
+    "process": {
+      "title": "Cómo Trabajamos",
+      "description": "Nuestro enfoque integral garantiza proyectos exitosos, desde la conceptualización hasta la puesta en operación. Cada paso está diseñado para máxima eficiencia y calidad.",
+      "civilWorks": {
+        "title": "Proyectos de Obras Civiles",
+        "subtitle": "Infraestructura residencial, comercial e industrial - 4C"
+      },
+      "civilProcess": [
+        { "title": "Planificación y Diseño", "subtitle": "Gestión y Licencias" },
+        { "title": "Preparación del Campo", "subtitle": "Obras Tempranas" },
+        { "title": "Estructuración", "subtitle": "Integración" },
+        { "title": "Acabado / Puesta en Servicio", "subtitle": "Inspección y Funcionalidad" },
+        { "title": "Finalización y Entrega", "subtitle": "Post-construcción" }
+      ],
+      "mechanicalElectrical": {
+        "title": "Obras Electromecánicas",
+        "description": "Montaje de equipos, interconexión de sistemas, instalación de tableros y puesta en operación de subestaciones eléctricas completas."
+      },
+      "electroProcess": [
+        { "title": "Planificación y Diseño", "subtitle": "Análisis técnico inicial" },
+        { "title": "Ejecución de Campo", "subtitle": "Instalación de equipos" },
+        { "title": "Supervisión y Control", "subtitle": "Monitoreo de calidad" },
+        { "title": "Entrega y Mantenimiento", "subtitle": "Puesta en marcha" }
+      ],
+      "highVoltageInfra": {
+        "title": "Infraestructura Eléctrica de Alta Tensión",
+        "badge": "IMBAR",
+        "description": "Especialidad en diseño, construcción y certificación de sistemas hasta 400 KV con cumplimiento de normativas CFE.",
+        "stats": [
+          "Años con CFE",
+          "Plantas construidas",
+          "Tons/mes capacidad",
+          "m² de planta"
+        ]
+      },
+      "imbarProcess": [
+        { "title": "Ingeniería", "subtitle": "Diseño y planeación eléctrica" },
+        { "title": "Fabricación", "subtitle": "Estructuras metálicas en planta" },
+        { "title": "Galvanizado y LAPEM", "subtitle": "Certificación de calidad" },
+        { "title": "Obra Civil", "subtitle": "Cimentaciones y estructuras" },
+        { "title": "Obra Electromecánica", "subtitle": "Montaje de equipos" },
+        { "title": "Pruebas Preoperativas", "subtitle": "Verificación técnica" },
+        { "title": "Puesta en Servicio", "subtitle": "Energización y entrega" }
+      ],
+      "manufacturing": {
+        "title": "Capacidad de Manufactura Propia",
+        "description": "IMBAR cuenta con instalaciones de manufactura de 12,000 m² para la producción de hasta 700 toneladas mensuales de estructuras metálicas galvanizadas, torres autosoportadas y componentes especializados."
+      },
+      "services": [
+        "Torres de transmisión",
+        "Estructuras para subestaciones",
+        "Galvanizado por inmersión",
+        "Certificación LAPEM"
+      ]
+    },
+    "mvv": {
+      "title": "Nuestro ADN Corporativo",
+      "subtitle": "Los principios que guían cada decisión, cada día",
+      "mission": {
+        "label": "Misión",
+        "content": "Ser el socio estratégico preferido en infraestructura y energía de Latinoamérica. Desarrollamos proyectos que transforman comunidades, generan empleo y promueven la sostenibilidad ambiental. Nuestro compromiso es con la excelencia técnica, la innovación y la responsabilidad social en cada obra que ejecutamos."
+      },
+      "vision": {
+        "label": "Visión",
+        "content": "Liderar la transformación energética de Latinoamérica a través de soluciones integr ales de infraestructura, energías renovables y servicios especializados. Queremos ser reconocidos como el grupo empresarial que no solo construye obras de calidad, sino que impulsa el desarrollo sostenible de la región y la vida de millones de personas."
+      },
+      "valuesTitle": "Nuestros Valores",
+      "valuesDescription": "Estos principios guían cada decisión y acción en nuestro grupo:",
+      "values": [
+        {
+          "icon": "innovation",
+          "title": "Innovación",
+          "description": "Buscamos constantemente nuevas formas de hacer las cosas mejor, aplicando tecnología de punta y metodologías avanzadas en nuestros proyectos."
+        },
+        {
+          "icon": "sustainability",
+          "title": "Sostenibilidad",
+          "description": "Nos comprometemos a minimizar impacto ambiental y promover prácticas responsables en cada proyecto."
+        },
+        {
+          "icon": "quality",
+          "title": "Calidad",
+          "description": "Mantenemos estándares rigurosos de excelencia en todo lo que hacemos, respaldados por certificaciones internacionales."
+        },
+        {
+          "icon": "responsibility",
+          "title": "Responsabilidad Social",
+          "description": "Creamos valor compartido generando empleo, desarrollando talento y contribuyendo al bienestar de nuestras comunidades."
+        }
+      ]
+    },
+    "sustainability": {
+      "badge": "Sostenibilidad",
+      "title": "Compromiso con el Medio Ambiente",
+      "intro": "La sostenibilidad no es un complemento a nuestro negocio, es parte de nuestro ADN corporativo. Cada decisión que tomamos considera el impacto ambiental y el bienestar de las futuras generaciones.",
+      "international": "Estamos alineados con los Objetivos de Desarrollo Sostenible (ODS) de las Naciones Unidas y con los compromisos internacionales de descarbonización. Implementamos prácticas de economía circular y eficiencia energética en todas nuestras operaciones.",
+      "pillars": [
+        {
+          "title": "Energías Renovables",
+          "description": "Transición hacia fuentes limpias",
+          "number": "100+"
+        },
+        {
+          "title": "Eficiencia Energética",
+          "description": "Reducción de consumo de energía",
+          "number": "40%"
+        },
+        {
+          "title": "Gestión de Residuos",
+          "description": "Economía circular en operaciones",
+          "number": "95%"
+        },
+        {
+          "title": "Biodiversidad",
+          "description": "Protección de ecosistemas",
+          "number": "12"
+        }
+      ],
+      "commitmentsTitle": "Nuestros Compromisos Ambientales",
+      "commitmentsSubtitle": "Acciones concretas para un futuro mejor",
+      "commitments": [
+        {
+          "title": "Carbono Neutral",
+          "description": "Nos comprometemos a alcanzar carbono neutral en nuestras operaciones para 2030."
+        },
+        {
+          "title": "Medición de Impacto",
+          "description": "Medimos y reportamos regularmente nuestro desempeño ambiental con transparencia."
+        },
+        {
+          "title": "Responsabilidad Social",
+          "description": "Invertimos en comunidades y generamos oportunidades de desarrollo sostenible."
+        }
+      ]
+    },
+    "team": {
+      "badge": "Nuestro Equipo",
+      "title": "La Fuerza Detrás de Cada Proyecto",
+      "description1": "Nuestro equipo está compuesto por profesionales apasionados, altamente capacitados y comprometidos con la excelencia. Cada miembro aporta su experiencia única para contribuir a proyectos transformadores.",
+      "description2": "La integridad, la innovación y una mentalidad de 'nunca conformarse' están en el centro de todo lo que hacemos. Nuestro equipo está lleno de pensadores audaces y hábiles solucionadores de problemas que convierten los desafíos en oportunidades.",
+      "stats": [
+        {
+          "label": "Profesionales",
+          "value": "500+"
+        },
+        {
+          "label": "Ingenieros Certificados",
+          "value": "150+"
+        },
+        {
+          "label": "Años de Experiencia",
+          "value": "2,500+"
+        },
+        {
+          "label": "Compromiso",
+          "value": "Total"
+        }
+      ],
+      "culture": {
+        "title": "Nuestra Cultura",
+        "values": [
+          {
+            "title": "Pensadores Audaces",
+            "description": "Promovemos la creatividad y el pensamiento crítico para encontrar soluciones innovadoras."
+          },
+          {
+            "title": "Colaboración",
+            "description": "Trabajamos como un equipo unificado donde el éxito es compartido."
+          },
+          {
+            "title": "Desarrollo Continuo",
+            "description": "Invertimos en la capacitación y crecimiento profesional de nuestro equipo."
+          },
+          {
+            "title": "Seguridad Primero",
+            "description": "La seguridad de nuestro equipo es nuestra máxima prioridad en cada operación."
+          }
+        ]
+      },
+      "quote": "Juntos construimos no solo proyectos, sino el futuro que queremos ver"
+    },
+    "cta": {
+      "badge": "Únete a Nosotros",
+      "title1": "Construyamos el Futuro",
+      "title2": "Que Imaginamos",
+      "description": "El futuro de la infraestructura y la energía de Latinoamérica se construye hoy. Con más de 40 años de experiencia y un compromiso inquebrantable con la excelencia y la sostenibilidad, estamos listos para llevar tu proyecto al siguiente nivel.",
+      "cta1": "Conoce Nuestros Proyectos",
+      "cta2": "Contacta con Nosotros",
+      "stats": [
+        {
+          "label": "Años",
+          "value": "40+"
+        },
+        {
+          "label": "Proyectos",
+          "value": "500+"
+        },
+        {
+          "label": "Países",
+          "value": "5"
+        },
+        {
+          "label": "Instalados",
+          "value": "4,500+ MW"
+        }
+      ]
+    }
+  },
+  "ProjectsMegaMenu": {
+    "title": "Nuestros Proyectos",
+    "subtitle": "Explora nuestras áreas de especialización",
+    "tabMercados": "Mercados",
+    "tabRegiones": "Regiones",
+    "mercados": [
+      {
+        "key": "eolica",
+        "title": "Energía eólica",
+        "empresa": "Núcleo Energy"
+      },
+      {
+        "key": "fotovoltaica",
+        "title": "Energía fotovoltaica",
+        "empresa": "4C"
+      },
+      {
+        "key": "construccion",
+        "title": "Construcción",
+        "empresa": "4C"
+      },
+      {
+        "key": "subestaciones",
+        "title": "Subestaciones Eléctricas",
+        "empresa": "IMBAR",
+        "badge": "400 KV"
+      },
+      {
+        "key": "transmision",
+        "title": "Líneas de Transmisión",
+        "empresa": "IMBAR & 4C"
+      },
+      {
+        "key": "fabricacion",
+        "title": "Fabricación de Estructuras",
+        "empresa": "IMBAR",
+        "badge": "700 Ton/mes"
+      },
+      {
+        "key": "mantenimiento",
+        "title": "Mantenimiento",
+        "empresa": "4C & IMBAR"
+      },
+      {
+        "key": "servicios",
+        "title": "Servicios Especializados",
+        "empresa": "4C"
+      }
+    ],
+    "regiones": [
+      {
+        "key": "mx",
+        "title": "México",
+        "proyectos": "50+"
+      },
+      {
+        "key": "pe",
+        "title": "Perú",
+        "proyectos": "10+"
+      },
+      {
+        "key": "latam",
+        "title": "Latinoamérica",
+        "proyectos": "60+"
+      }
+    ]
+  },
+  "EnfoqueMegaMenu": {
+    "title": "Nuestro Enfoque",
+    "description": "Más de 40 años construyendo el futuro con innovación, calidad y compromiso inquebrantable. Descubre los valores y principios que guían cada uno de nuestros proyectos.",
+    "ctaButton": "Conoce Más",
+    "missionTitle": "Misión",
+    "missionText": "Ser líderes en la industria implementando soluciones sustentables e innovadoras",
+    "visionTitle": "Visión",
+    "visionText": "Ser el referente líder en infraestructuras, energías renovables y servicios especializados",
+    "tabCultura": "Cultura y Valores",
+    "tabCapacidades": "Capacidades",
+    "valoresTitle": "Nuestros Valores",
+    "valores": [
+      {
+        "key": "innovacion",
+        "title": "Innovación"
+      },
+      {
+        "key": "sostenibilidad",
+        "title": "Sostenibilidad"
+      },
+      {
+        "key": "calidad",
+        "title": "Calidad"
+      },
+      {
+        "key": "responsabilidad",
+        "title": "Responsabilidad Social"
+      }
+    ],
+    "capacidadesTitle": "Nuestras Capacidades",
+    "capacidades": [
+      {
+        "key": "equipo",
+        "title": "Nuestro Equipo"
+      },
+      {
+        "key": "proceso",
+        "title": "Cómo Trabajamos"
+      },
+      {
+        "key": "sostenibilidad",
+        "title": "Compromiso Ambiental"
+      },
+      {
+        "key": "alianzas",
+        "title": "Alianzas Estratégicas"
+      }
+    ]
+  },
+  "EmpresasMegaMenu": {
+    "title": "Nuestras Empresas",
+    "subtitle": "Un grupo diverso de empresas líderes en sus sectores",
+    "footerText": "Cada empresa del grupo aporta su especialización única para ofrecer soluciones integrales",
+    "ctaText": "Conocer más",
+    "empresas": [
+      {
+        "key": "4c",
+        "name": "Constructora 4C",
+        "logo": "/4cSInfondoLogo.png",
+        "description": "Construcción civil, eléctrica y fotovoltaica",
+        "tagline": "20+ años de experiencia",
+        "href": "/empresas/4C",
+        "color": "#000C47",
+        "highlights": ["Obras Civiles", "Obras Eléctricas", "Proyectos Fotovoltaicos"]
+      },
+      {
+        "key": "nucleo",
+        "name": "Núcleo Energy",
+        "logo": "/LogoHorizontal@4x.png",
+        "description": "Energías renovables del futuro",
+        "tagline": "Empresa joven e innovadora",
+        "href": "/empresas/nucleo-energy",
+        "color": "#10B981",
+        "highlights": ["Energía Eólica", "Energía Solar", "Almacenamiento (SAE)"]
+      },
+      {
+        "key": "imbar",
+        "name": "IMBAR",
+        "logo": "/imbarlogo.jpeg",
+        "description": "Infraestructura eléctrica de alta tensión",
+        "tagline": "20 años especializados",
+        "href": "/empresas/imbar",
+        "color": "#1E40AF",
+        "highlights": ["Subestaciones 400 KV", "Fabricación 700 Ton/mes", "Certificación LAPEM"]
+      },
+      {
+        "key": "reccmaq",
+        "name": "RECCMAQ2",
+        "logo": "/reccmalogoxD.png",
+        "description": "Reconstrucción de maquinaria industrial",
+        "tagline": "18+ años de trayectoria",
+        "href": "/empresas/reccmaq2",
+        "color": "#DC2626",
+        "highlights": ["Reconstrucción", "Mantenimiento", "Cobertura Nacional"]
+      }
+    ]
+  },
+  "ProjectsTimeline": {
+    "pageTitle": "Nuestra Trayectoria",
+    "pageDescription": "Dos décadas construyendo el futuro energético de Latinoamérica. Cada año representa un paso más hacia la sostenibilidad y la innovación.",
+    "periods": [
+      {
+        "year": "2024-2025",
+        "category": "Energía Fotovoltaica",
+        "projects": [
+          {
+            "name": "Parque Fotovoltaico Cuervos Solar",
+            "location": "Lagos de Moreno, México",
+            "capacity": "200 MW"
+          },
+          {
+            "name": "PFV Calera",
+            "location": "Sonora, México",
+            "capacity": "90 MW"
+          }
+        ]
+      },
+      {
+        "year": "2023-2024",
+        "category": "Transmisión y Construcción",
+        "projects": [
+          {
+            "name": "Construcción de Cimentaciones Mayores",
+            "location": "Mexicali, B.C.",
+            "capacity": "400 kV"
+          },
+          {
+            "name": "Construcción de Edificaciones Eléctricas",
+            "location": "Sonora, México",
+            "capacity": "400 kV + MVAR"
+          }
+        ]
+      },
+      {
+        "year": "2020-2023",
+        "category": "Obras Civiles y Salud",
+        "projects": [
+          {
+            "name": "Secretaría de Marina",
+            "location": "Puerto Vallarta, Jalisco",
+            "capacity": "Hospital Naval"
+          },
+          {
+            "name": "Hospital Oaxaqueño de la Mujer",
+            "location": "Reyes Mantecón, Oaxaca",
+            "capacity": "3ª Etapa"
+          }
+        ]
+      },
+      {
+        "year": "2018-2020",
+        "category": "Proyectos Fotovoltaicos Comerciales",
+        "projects": [
+          {
+            "name": "Sistema Fotovoltaico Culiacán",
+            "location": "Culiacán, Sinaloa",
+            "capacity": "498.96 kW"
+          },
+          {
+            "name": "Proyecto Guamuchil",
+            "location": "Sinaloa, México",
+            "capacity": "150.12 kW"
+          }
+        ]
+      }
+    ]
+  },
+  "Projects": {
+    "hero": {
+      "title": "Construyendo el Futuro",
+      "subtitle": "Más de 40 años de experiencia en proyectos de infraestructura, energía renovable y construcción",
+      "button": "Ver Proyectos Destacados"
+    },
+    "intro": {
+      "badge": "Nuestra Experiencia",
+      "title": "Transformando Infraestructura en Latinoamérica",
+      "description1": "Nuestro portafolio comprende más de 500 proyectos exitosos que demuestran nuestra capacidad técnica y experiencia en infraestructura.",
+      "description2": "Desde subestaciones eléctricas de 400 KV hasta plantas solares de gran escala, hemos dejado huella en la transformación energética de la región.",
+      "stats": [
+        {
+          "label": "Capacidad Solar Instalada",
+          "value": "1,200+",
+          "unit": "MW"
+        },
+        {
+          "label": "Transmisión de Alto Voltaje",
+          "value": "500+",
+          "unit": "km"
+        }
+      ],
+      "innovation": {
+        "title": "Innovación en Cada Proyecto",
+        "subtitle": "Tecnología de punta aplicada a soluciones reales"
+      }
+    },
+    "stats": {
+      "completed": "Proyectos Completados",
+      "experience": "Años de Experiencia",
+      "mw": "MW Instalados",
+      "countries": "Países"
+    },
+    "cta": {
+      "title": "Construyamos el Futuro Juntos",
+      "description": "¿Tienes un proyecto que requiere infraestructura o energía? Contáctanos hoy y conversemos sobre cómo podemos hacerlo realidad.",
+      "button1": "Solicitar Cotización",
+      "phone": "Llámanos",
+      "email": "Escríbenos",
+      "visit": "Visítanos"
+    },
+    "marina": {
+      "title": "Secreteria de la Marina",
+      "country": "Mexico",
+      "description": "Proyecto: Construcción y equipamiento del Hospital Naval en PTO. Vallarta, Jalisco."
+    },
+    "pedido8833": {
+      "title": "Pedido 8833 ABEN3T",
+      "country": "Mexico",
+      "description": "LT 230 KV A3T-SE: Limpieza de vía E aisladores. Revisión FO y herrajes. Anti aves. Termografía en empalmes.\nOS: Martpat-31000-LT-CFV-GSC-41"
+    },
+    "transmission": {
+      "title": "Lineas de transmision electrica",
+      "country": "Mexico",
+      "description": "Montaje: estructura metálica galvanizada para torres auto soportadas (400 KV) en LT Puerto Peñasco - Golfo de Santa Clara. "
+    },
+    "rehabilitation": {
+      "title": "Rehabilitación de subestación electrica",
+      "country": "Peru",
+      "description": "Modernización SE Lima y Cusco: Diseño y obras electro-mecánicas/civiles para luz del sur (subcontrato electro Sur Este). "
+    }
+  },
+  "ProjectsData": {
+    "pageTitle": "Proyectos Destacados",
+    "pageDescription": "Descubre algunos de nuestros proyectos más importantes",
+    "categories": ["Todos", "Energía Fotovoltaica", "Transmisión Eléctrica", "Obra Civil"],
+    "projects": [
+      {
+        "id": "1",
+        "title": "Parque Solar Puerto Peñasco",
+        "location": "Sonora, México",
+        "category": "Energía Fotovoltaica",
+        "description": "Mecánica eléctrica para parque solar de gran escala.",
+        "image": "/eolico2.jpg",
+        "capacity": "Gran escala"
+      },
+      {
+        "id": "2",
+        "title": "Hospital IMSS-Bienestar",
+        "location": "Oaxaca, México",
+        "category": "Obra Civil",
+        "description": "Instalación de sistema fotovoltaico en instalaciones hospitalarias.",
+        "image": "/Secretaria.jpg"
+      },
+      {
+        "id": "3",
+        "title": "Sistema Fotovoltaico Culiacán",
+        "location": "Culiacán, Sinaloa",
+        "category": "Energía Fotovoltaica",
+        "description": "Instalación industrial con capacidad de 498.96 kW.",
+        "image": "/fotovoltaic.jpg",
+        "capacity": "498.96 kW"
+      },
+      {
+        "id": "4",
+        "title": "Líneas de Transmisión 400 KV",
+        "location": "México",
+        "category": "Transmisión Eléctrica",
+        "description": "Montaje de estructura metálica galvanizada para torres.",
+        "image": "/LineasDeTransmisionElectrica.jpg"
+      },
+      {
+        "id": "5",
+        "title": "Parque Fotovoltaico Potrero",
+        "location": "Lagos de Moreno, México",
+        "category": "Energía Fotovoltaica",
+        "description": "Sistema de gran escala con capacidad de 296 MW DC.",
+        "image": "/paneles.jpg",
+        "capacity": "296 MW"
+      },
+      {
+        "id": "6",
+        "title": "Rehabilitación Subestaciones Perú",
+        "location": "Lima y Cusco, Perú",
+        "category": "Transmisión Eléctrica",
+        "description": "Modernización SE Lima y Cusco con obras electro-mecánicas.",
+        "image": "/RehabilatacionSubestacionesPeru.jpg"
+      },
+      {
+        "id": "7",
+        "title": "Secretaría de Marina",
+        "location": "Puerto Vallarta, Jalisco",
+        "category": "Obra Civil",
+        "description": "Construcción y equipamiento del Hospital Naval.",
+        "image": "/Secretaria.jpg"
+      },
+      {
+        "id": "8",
+        "title": "Infraestructura Solar Argentina",
+        "location": "Jujuy, Argentina",
+        "category": "Energía Fotovoltaica",
+        "description": "Construcción Parque Solar Cauchari (300 MW).",
+        "image": "/paneles.jpg",
+        "capacity": "300 MW"
+      },
+      {
+        "id": "imbar-lt-1",
+        "title": "LT 230 KV Cuetzalan CFE",
+        "location": "Cuetzalan, México",
+        "category": "Líneas de Transmisión",
+        "description": "Construcción, instalación y puesta en servicio de línea de transmisión de 115KV doble circuito con longitud de 20.308 km.",
+        "image": "/linea-transmision-cfeshtml.jpg",
+        "capacity": "115 KV - 20km"
+      },
+      {
+        "id": "imbar-jasso",
+        "title": "S.E. Jasso Hidalgo",
+        "location": "Hidalgo, México",
+        "category": "Transmisión Eléctrica",
+        "description": "Obra civil y electromecánica para subestación eléctrica CFE.",
+        "image": "/subestacion-jasso.jpg"
+      }
+    ]
+  },
+  "ProjectsShowcase": {
+    "sectionTitle": "Proyectos que Definen el Futuro",
+    "sectionDescription1": "Cada proyecto es una historia de innovación, dedicación y excelencia técnica.",
+    "sectionDescription2": "Descubre cómo estamos construyendo el mañana, un proyecto a la vez.",
+    "featured": [
+      {
+        "id": "1",
+        "title": "Parque Solar Puerto Peñasco",
+        "subtitle": "Mecánica Eléctrica para Parque Solar",
+        "location": "Sonora, México",
+        "client": "China Energy",
+        "category": "Energía Fotovoltaica",
+        "scope": "Gran Escala",
+        "image": "/paneles.jpg",
+        "description": "Proyecto integral de mecánica eléctrica para uno de los parques solares más importantes del noroeste de México. Implementación de tecnología de punta en generación fotovoltaica.",
+        "highlights": [
+          "Instalación de infraestructura eléctrica completa",
+          "Coordinación con equipos internacionales",
+          "Tecnología de última generación"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Hospital IMSS-Bienestar Tuxtepec",
+        "subtitle": "Sistema Fotovoltaico en Instalaciones Hospitalarias",
+        "location": "Oaxaca, México",
+        "client": "Secretaría de la Defensa Nacional",
+        "category": "Obra Civil + Energía",
+        "image": "/Secretaria.jpg",
+        "description": "Instalación de sistema fotovoltaico en instalaciones hospitalarias críticas, garantizando suministro eléctrico confiable y sostenible para servicios de salud.",
+        "highlights": [
+          "Integración con sistemas hospitalarios existentes",
+          "Respaldo energético continuo",
+          "Reducción de huella de carbono"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Líneas de Transmisión 400 KV",
+        "subtitle": "Infraestructura Eléctrica de Alto Voltaje",
+        "location": "Puerto Peñasco - Golfo de Santa Clara",
+        "client": "ASELEC, S.A. de C.V.",
+        "category": "Transmisión Eléctrica",
+        "scope": "400 KV",
+        "image": "/LineasDeTransmisionElectrica.jpg",
+        "description": "Montaje de estructura metálica galvanizada para torres autosoportadas en línea de transmisión crítica. Proyecto que conecta infraestructura energética regional.",
+        "highlights": [
+          "Torres autosoportadas de 400 KV",
+          "Estructura metálica galvanizada",
+          "Cumplimiento de normas internacionales"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Parque Fotovoltaico Potrero Solar",
+        "subtitle": "Instalación de Gran Escala",
+        "location": "Lagos de Moreno, Jalisco",
+        "category": "Energía Fotovoltaica",
+        "scope": "296 MW DC",
+        "image": "/muchospaneles.jpg",
+        "description": "Uno de los proyectos fotovoltaicos más grandes de México. Instalación completa de sistema con capacidad de 296 MW DC, contribuyendo significativamente a la matriz energética nacional.",
+        "highlights": [
+          "296 MW DC de capacidad instalada",
+          "Miles de paneles fotovoltaicos",
+          "Impacto ambiental positivo medible"
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Rehabilitación de Subestaciones en Perú",
+        "subtitle": "Modernización SE Lima y Cusco",
+        "location": "Lima y Cusco, Perú",
+        "client": "Luz del Sur",
+        "category": "Transmisión Eléctrica",
+        "image": "/RehabilatacionSubestacionesPeru.jpg",
+        "description": "Diseño y ejecución de obras electro-mecánicas y civiles para la modernización de subestaciones críticas en Perú. Proyecto subcontratado por Electro Sur Este.",
+        "highlights": [
+          "Modernización completa de subestaciones",
+          "Mejora en confiabilidad del sistema",
+          "Expansión internacional"
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Infraestructura Solar en Argentina",
+        "subtitle": "Parque Solar Cauchari",
+        "location": "Jujuy, Argentina",
+        "client": "Enel Green Power",
+        "category": "Energía Fotovoltaica",
+        "scope": "300 MW",
+        "image": "/img218.jpg",
+        "description": "Construcción de infraestructura solar en uno de los proyectos más ambiciosos de Sudamérica. Instalación de paneles, inversores y puesta en marcha completa.",
+        "highlights": [
+          "300 MW de capacidad",
+          "Proyecto internacional",
+          "Condiciones climáticas extremas"
+        ]
+      }
+    ]
+  },
+  "ProjectsCapabilities": {
+    "sectionBadge": "Nuestras Capacidades",
+    "sectionTitle": "Experiencia Integral en Infraestructura",
+    "sectionDescription": "Cuatro décadas de especialización nos permiten ofrecer soluciones completas en cada sector que atendemos",
+    "internationalTitle": "Presencia Internacional",
+    "internationalDescription": "Expandiendo horizontes más allá de las fronteras",
+    "certificationTitle1": "Calidad Certificada",
+    "certificationDesc1": "Cumplimiento de normas nacionales e internacionales",
+    "certificationTitle2": "Seguridad Primero",
+    "certificationDesc2": "Protocolos estrictos en cada proyecto ejecutado",
+    "certificationTitle3": "Sostenibilidad",
+    "certificationDesc3": "Compromiso ambiental en cada desarrollo",
+    "capabilities": [
+      {
+        "title": "Energía Fotovoltaica",
+        "stat": "+900 MW",
+        "description": "Instalación y puesta en marcha de parques solares a gran escala, desde 7 kW residenciales hasta 300 MW comerciales.",
+        "services": [
+          "Instalación de paneles y seguidores",
+          "Montaje y conexionado eléctrico",
+          "Pruebas OMICRON y puesta en marcha",
+          "Mantenimiento preventivo y correctivo"
+        ]
+      },
+      {
+        "title": "Transmisión Eléctrica",
+        "stat": "400 kV",
+        "description": "Diseño y construcción de líneas de transmisión y subestaciones eléctricas de alta, media y baja tensión.",
+        "services": [
+          "Líneas de transmisión 115-400 kV",
+          "Construcción de subestaciones",
+          "Montaje de torres y estructuras",
+          "Mantenimiento especializado"
+        ]
+      },
+      {
+        "title": "Obra Civil",
+        "stat": "26+ Proyectos",
+        "description": "Construcción y supervisión de infraestructura residencial, comercial, industrial y hospitalaria.",
+        "services": [
+          "Edificaciones y hospitales",
+          "Infraestructura industrial",
+          "Renovaciones y ampliaciones",
+          "Desarrollo urbano"
+        ]
+      },
+      {
+        "title": "Servicios Especializados",
+        "stat": "40+ Años",
+        "description": "Evaluación, supervisión y mantenimiento de proyectos eléctricos y electromecánicos.",
+        "services": [
+          "Inspección termográfica",
+          "Pruebas eléctricas especializadas",
+          "Supervisión de obra",
+          "Análisis y estudios técnicos"
+        ]
+      },
+      {
+        "title": "Fabricación de Estructuras",
+        "stat": "700 Ton/mes",
+        "description": "Planta especializada de 7,000 m² con maquinaria CNC para fabricación de estructuras metálicas galvanizadas para subestaciones y líneas de transmisión.",
+        "services": [
+          "Torres de transmisión hasta 400 KV",
+          "Estructuras para subestaciones",
+          "Torres de telecomunicaciones",
+          "Galvanizado por inmersión en caliente",
+          "Control de calidad LAPEM"
+        ]
+      }
+    ],
+    "regions": [
+      {
+        "country": "México",
+        "projects": "22+ Proyectos",
+        "description": "Presencia en múltiples estados incluyendo Sonora, Sinaloa, Jalisco, Oaxaca y CDMX"
+      },
+      {
+        "country": "Perú",
+        "projects": "2 Proyectos",
+        "description": "Modernización de subestaciones en Lima y Cusco"
+      },
+      {
+        "country": "Argentina",
+        "projects": "1+ Proyectos",
+        "description": "Construcción de parques solares en Jujuy"
+      },
+      {
+        "country": "Colombia",
+        "projects": "3+ Proyectos",
+        "description": "Infraestructura energética y proyectos solares"
+      }
+    ]
+  },
+  "Metadata": {
+    "defaultTitle": "Grupo Horizonte | Infraestructura y Energía Renovable en México",
+    "description": "Grupo Horizonte: Líderes en construcción de infraestructura, obras civiles, eléctricas y energías renovables con más de 40 años de experiencia en México y Latinoamérica.",
+    "category": "Construcción e Ingeniería"
+  },
+  "AriaLabels": {
+    "logoAlt": "Logo Grupo Horizonte",
+    "turbineAlt": "Turbina eolica con logos de 4c y Nucleo Energy"
+  }
+}

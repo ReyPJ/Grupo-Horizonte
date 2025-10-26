@@ -4,6 +4,7 @@ import Image from "next/image";
 import BigButton from "@/app/components/bigButton";
 import { GoArrowUpRight } from "react-icons/go";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
+import {useTranslations} from 'next-intl';
 
 interface Company {
     company: string;
@@ -19,6 +20,7 @@ interface Company {
 }
 
 export default function CompanySlider({ companies }: { companies: Company[] }) {
+    const t = useTranslations();
     const [current, setCurrent] = React.useState<number>(0);
     const [isTransitioning, setIsTransitioning] = React.useState<boolean>(false);
     const [isFading, setIsFading] = React.useState<boolean>(false);
@@ -194,7 +196,7 @@ export default function CompanySlider({ companies }: { companies: Company[] }) {
                         onClick={handlePrev}
                         disabled={isTransitioning}
                         className="arrow-button absolute left-0 top-[40%] -translate-y-1/2 z-10 w-8 h-8 rounded-full flex items-center justify-center border border-gray-200 disabled:opacity-50"
-                        aria-label="Empresa anterior"
+                        aria-label={t('Navigation.previousCompany')}
                     >
                         <IoChevronBack className="text-primaryBlue text-lg" />
                     </button>
@@ -203,7 +205,7 @@ export default function CompanySlider({ companies }: { companies: Company[] }) {
                         onClick={handleNext}
                         disabled={isTransitioning}
                         className="arrow-button absolute right-0 top-[40%] -translate-y-1/2 z-10 w-8 h-8 rounded-full flex items-center justify-center border border-gray-200 disabled:opacity-50"
-                        aria-label="Siguiente empresa"
+                        aria-label={t('Navigation.nextCompany')}
                     >
                         <IoChevronForward className="text-primaryBlue text-lg" />
                     </button>
@@ -257,7 +259,7 @@ export default function CompanySlider({ companies }: { companies: Company[] }) {
                             {/* Servicios compactos */}
                             <div>
                                 <p className="text-center text-sm font-bold text-primaryBlue mb-3">
-                                    Servicios Clave
+                                    {t('Companies.keyServices')}
                                 </p>
                                 <ul className="space-y-2">
                                     {companies[current].keyServices.slice(0, 4).map((service, index) => (
@@ -320,7 +322,7 @@ export default function CompanySlider({ companies }: { companies: Company[] }) {
                             <div className="flex flex-col items-center mt-8 mb-6">
                                 <div className="divider-line w-1/2 h-1 rounded-full"></div>
                                 <p className="mt-4 text-center text-h2 font-bold text-primaryBlue">
-                                    Servicios Clave
+                                    {t('Companies.keyServices')}
                                 </p>
                             </div>
 

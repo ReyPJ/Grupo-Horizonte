@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import React from "react";
+import {NextIntlClientProvider} from 'next-intl';
+import {getMessages} from 'next-intl/server';
+import {routing} from '@/i18n/routing';
+import {notFound} from 'next/navigation';
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://ghenergy.com.mx'),
@@ -69,15 +73,27 @@ export const metadata: Metadata = {
     },
 };
 
-export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
+export default async function RootLayout({
+    children,
+    params
+}: Readonly<{
     children: React.ReactNode;
+    params: Promise<{locale: string}>;
 }>) {
+    const {locale} = await params;
+
+    if (!routing.locales.includes(locale as any)) {
+        notFound();
+    }
+
+    const messages = await getMessages();
+
     return (
-        <html lang="es-MX">
+        <html lang={locale}>
         <body>
-        {children}
+            <NextIntlClientProvider messages={messages}>
+                {children}
+            </NextIntlClientProvider>
         </body>
         </html>
     );

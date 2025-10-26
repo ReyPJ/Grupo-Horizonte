@@ -1,4 +1,6 @@
 "use client";
+import { useTranslations } from 'next-intl';
+
 interface MVVData {
     mision: string;
     vision: string;
@@ -16,6 +18,8 @@ export default function CompanyMVVSection({
                                               primaryColor = "#000C47",
                                               secondaryColor = "#FFC107"
                                           }: CompanyMVVSectionProps) {
+    const t = useTranslations('Components.companyMVV');
+
     return (
         <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50">
             <div className="container mx-auto px-6">
@@ -33,10 +37,10 @@ export default function CompanyMVVSection({
                                 letterSpacing: '-0.02em'
                             }}
                         >
-                            Nuestra Esencia
+                            {t('title')}
                         </h2>
                         <p className="text-gray-500 text-lg mt-4 font-light">
-                            Los pilares que definen nuestra forma de trabajar
+                            {t('subtitle')}
                         </p>
                     </div>
 
@@ -75,7 +79,7 @@ export default function CompanyMVVSection({
                                             className="text-3xl font-bold mb-2"
                                             style={{color: primaryColor}}
                                         >
-                                            Misión
+                                            {t('mission')}
                                         </h3>
                                         <div
                                             className="h-0.5 w-12 rounded-full"
@@ -125,7 +129,7 @@ export default function CompanyMVVSection({
                                             className="text-3xl font-bold mb-2"
                                             style={{color: primaryColor}}
                                         >
-                                            Visión
+                                            {t('vision')}
                                         </h3>
                                         <div
                                             className="h-0.5 w-12 rounded-full"
@@ -151,7 +155,7 @@ export default function CompanyMVVSection({
                                     className="text-3xl font-bold mb-3"
                                     style={{color: primaryColor}}
                                 >
-                                    Valores Fundamentales
+                                    {t('values')}
                                 </h3>
                                 <div
                                     className="h-0.5 w-16 mx-auto rounded-full"

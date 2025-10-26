@@ -1,6 +1,8 @@
 import { FaPhone, FaWhatsapp } from "react-icons/fa";
+import { useTranslations } from 'next-intl';
 
 export default function ContactHero() {
+    const t = useTranslations('Contact');
     return (
         <>
             <style jsx>{`
@@ -70,40 +72,38 @@ export default function ContactHero() {
                             <div className="text-white space-y-8">
                                 <div className="hero-badge inline-block">
                                     <span className="bg-secundaryYellow text-primaryBlue px-6 py-2 rounded-full font-bold text-sm uppercase tracking-wider">
-                                        Contacto
+                                        {t('contactHero.badge')}
                                     </span>
                                 </div>
 
                                 <h1 className="text-h1 md:text-[58px] lg:text-[68px] font-bold leading-tight">
-                                    Transformemos<br />
-                                    Tus Ideas en<br />
-                                    <span className="text-secundaryYellow">Realidad</span>
+                                    {t('contactHero.title1')}<br />
+                                    {t('contactHero.title2')}<br />
+                                    <span className="text-secundaryYellow">{t('contactHero.title3')}</span>
                                 </h1>
 
                                 <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl">
-                                    Con más de 20 años de experiencia, Grupo Horizonte está listo
-                                    para llevar tu proyecto al siguiente nivel. Contáctanos y
-                                    descubre cómo podemos ayudarte.
+                                    {t('contactHero.description')}
                                 </p>
                             </div>
 
                             {/* Right Stats */}
                             <div className="grid grid-cols-2 gap-6">
                                 <div className="stats-badge rounded-2xl p-6 text-center">
-                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">40+</div>
-                                    <div className="text-white text-lg">Años de Experiencia</div>
+                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">{t('contactHero.stat1Value')}</div>
+                                    <div className="text-white text-lg">{t('contactHero.stat1Label')}</div>
                                 </div>
                                 <div className="stats-badge rounded-2xl p-6 text-center">
-                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">500+</div>
-                                    <div className="text-white text-lg">Proyectos Completados</div>
+                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">{t('contactHero.stat2Value')}</div>
+                                    <div className="text-white text-lg">{t('contactHero.stat2Label')}</div>
                                 </div>
                                 <div className="stats-badge rounded-2xl p-6 text-center">
-                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">15+</div>
-                                    <div className="text-white text-lg">Estados Atendidos</div>
+                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">{t('contactHero.stat3Value')}</div>
+                                    <div className="text-white text-lg">{t('contactHero.stat3Label')}</div>
                                 </div>
                                 <div className="stats-badge rounded-2xl p-6 text-center">
-                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">100%</div>
-                                    <div className="text-white text-lg">Compromiso</div>
+                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">{t('contactHero.stat4Value')}</div>
+                                    <div className="text-white text-lg">{t('contactHero.stat4Label')}</div>
                                 </div>
                             </div>
                         </div>

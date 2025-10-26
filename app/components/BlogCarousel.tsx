@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
 import { FaFacebook, FaLinkedin, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import { useTranslations } from 'next-intl';
 
 type BlogMockSlide = {
     id: number;
@@ -30,6 +31,7 @@ const MockSlides: BlogMockSlide[] = [
 ];
 
 export default function BlogCarousel() {
+    const t = useTranslations('Components.blog');
     const [current, setCurrent] = React.useState<number>(0);
     const [isTransitioning, setIsTransitioning] = React.useState<boolean>(false);
 
@@ -127,7 +129,7 @@ export default function BlogCarousel() {
                 <button
                     onClick={prevSlide}
                     className="carousel-arrow rounded-full p-2.5 bg-white/10 backdrop-blur-md cursor-pointer border border-white/20 hover:bg-white/20 hover:border-secundaryYellow/50"
-                    aria-label="Artículo anterior"
+                    aria-label={t('previousArticle')}
                 >
                     <ArrowLeft className="w-6 h-6 text-white" strokeWidth={2.5} />
                 </button>
@@ -165,7 +167,7 @@ export default function BlogCarousel() {
                                 {/* Read More Button */}
                                 <button
                                     className="read-more-btn flex-shrink-0"
-                                    aria-label="Leer más"
+                                    aria-label={t('readMore')}
                                 >
                                     <BsArrowUpRightCircleFill className="w-11 h-11 text-primaryBlue bg-secundaryYellow rounded-full" />
                                 </button>
@@ -212,7 +214,7 @@ export default function BlogCarousel() {
                 <button
                     onClick={nextSlide}
                     className="carousel-arrow rounded-full p-2.5 bg-white/10 backdrop-blur-md cursor-pointer border border-white/20 hover:bg-white/20 hover:border-secundaryYellow/50"
-                    aria-label="Siguiente artículo"
+                    aria-label={t('nextArticle')}
                 >
                     <ArrowRight className="w-6 h-6 text-white" strokeWidth={2.5} />
                 </button>

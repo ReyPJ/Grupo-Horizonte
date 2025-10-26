@@ -1,49 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
+
+interface Empresa {
+    key: string;
+    name: string;
+    logo: string;
+    description: string;
+    tagline: string;
+    href: string;
+    color: string;
+    highlights: string[];
+}
 
 export default function EmpresasMegaMenu() {
-    const empresas = [
-        {
-            key: '4c',
-            name: 'Constructora 4C',
-            logo: '/4cSInfondoLogo.png',
-            description: 'Construcción civil, eléctrica y fotovoltaica',
-            tagline: '20+ años de experiencia',
-            href: '/empresas/4C',
-            color: '#000C47',
-            highlights: ['Obras Civiles', 'Obras Eléctricas', 'Proyectos Fotovoltaicos']
-        },
-        {
-            key: 'nucleo',
-            name: 'Núcleo Energy',
-            logo: '/LogoHorizontal@4x.png',
-            description: 'Energías renovables del futuro',
-            tagline: 'Empresa joven e innovadora',
-            href: '/empresas/nucleo-energy',
-            color: '#10B981',
-            highlights: ['Energía Eólica', 'Energía Solar', 'Almacenamiento (SAE)']
-        },
-        {
-            key: 'imbar',
-            name: 'IMBAR',
-            logo: '/imbarlogo.jpeg',
-            description: 'Infraestructura eléctrica de alta tensión',
-            tagline: '20 años especializados',
-            href: '/empresas/imbar',
-            color: '#1E40AF',
-            highlights: ['Subestaciones 400 KV', 'Fabricación 700 Ton/mes', 'Certificación LAPEM']
-        },
-        {
-            key: 'reccmaq',
-            name: 'RECCMAQ2',
-            logo: '/reccmalogoxD.png',
-            description: 'Reconstrucción de maquinaria industrial',
-            tagline: '18+ años de trayectoria',
-            href: '/empresas/reccmaq2',
-            color: '#DC2626',
-            highlights: ['Reconstrucción', 'Mantenimiento', 'Cobertura Nacional']
-        }
-    ];
+    const t = useTranslations('EmpresasMegaMenu');
+    const empresas = t.raw('empresas') as Empresa[];
 
     return (
         <div className="w-full bg-white py-12">
@@ -52,10 +24,10 @@ export default function EmpresasMegaMenu() {
                     {/* Header */}
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-bold text-primaryBlue mb-3">
-                            Nuestras Empresas
+                            {t('title')}
                         </h2>
                         <p className="text-gray-600 text-lg font-light">
-                            Un grupo diverso de empresas líderes en sus sectores
+                            {t('subtitle')}
                         </p>
                         <div className="h-1 w-20 bg-secundaryYellow rounded-full mx-auto mt-4" />
                     </div>
@@ -123,7 +95,7 @@ export default function EmpresasMegaMenu() {
                                 {/* CTA */}
                                 <div className="flex items-center justify-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all">
                                     <span style={{ color: empresa.color }}>
-                                        Conocer más
+                                        {t('ctaText')}
                                     </span>
                                     <svg
                                         className="w-4 h-4 group-hover:translate-x-1 transition-transform"
@@ -150,7 +122,7 @@ export default function EmpresasMegaMenu() {
                     {/* Footer info */}
                     <div className="mt-12 text-center">
                         <p className="text-gray-500 text-sm font-light">
-                            Cada empresa del grupo aporta su especialización única para ofrecer soluciones integrales
+                            {t('footerText')}
                         </p>
                     </div>
                 </div>

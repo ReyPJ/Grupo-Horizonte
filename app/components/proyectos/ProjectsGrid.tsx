@@ -3,103 +3,27 @@ import * as React from "react";
 import Image from "next/image";
 import { GoArrowUpRight } from "react-icons/go";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import { useTranslations } from 'next-intl';
 
-const projects = [
-    {
-        id: "1",
-        title: "Parque Solar Puerto Peñasco",
-        location: "Sonora, México",
-        category: "Energía Fotovoltaica",
-        description: "Mecánica eléctrica para parque solar de gran escala.",
-        image: "/eolico2.jpg",
-        capacity: "Gran escala"
-    },
-    {
-        id: "2",
-        title: "Hospital IMSS-Bienestar",
-        location: "Oaxaca, México",
-        category: "Obra Civil",
-        description: "Instalación de sistema fotovoltaico en instalaciones hospitalarias.",
-        image: "/Secretaria.jpg"
-    },
-    {
-        id: "3",
-        title: "Sistema Fotovoltaico Culiacán",
-        location: "Culiacán, Sinaloa",
-        category: "Energía Fotovoltaica",
-        description: "Instalación industrial con capacidad de 498.96 kW.",
-        image: "/fotovoltaic.jpg",
-        capacity: "498.96 kW"
-    },
-    {
-        id: "4",
-        title: "Líneas de Transmisión 400 KV",
-        location: "México",
-        category: "Transmisión Eléctrica",
-        description: "Montaje de estructura metálica galvanizada para torres.",
-        image: "/LineasDeTransmisionElectrica.jpg"
-    },
-    {
-        id: "5",
-        title: "Parque Fotovoltaico Potrero",
-        location: "Lagos de Moreno, México",
-        category: "Energía Fotovoltaica",
-        description: "Sistema de gran escala con capacidad de 296 MW DC.",
-        image: "/paneles.jpg",
-        capacity: "296 MW"
-    },
-    {
-        id: "6",
-        title: "Rehabilitación Subestaciones Perú",
-        location: "Lima y Cusco, Perú",
-        category: "Transmisión Eléctrica",
-        description: "Modernización SE Lima y Cusco con obras electro-mecánicas.",
-        image: "/RehabilatacionSubestacionesPeru.jpg"
-    },
-    {
-        id: "7",
-        title: "Secretaría de Marina",
-        location: "Puerto Vallarta, Jalisco",
-        category: "Obra Civil",
-        description: "Construcción y equipamiento del Hospital Naval.",
-        image: "/Secretaria.jpg"
-    },
-    {
-        id: "8",
-        title: "Infraestructura Solar Argentina",
-        location: "Jujuy, Argentina",
-        category: "Energía Fotovoltaica",
-        description: "Construcción Parque Solar Cauchari (300 MW).",
-        image: "/paneles.jpg",
-        capacity: "300 MW"
-    },
-    {
-        id: "imbar-lt-1",
-        title: "LT 230 KV Cuetzalan CFE",
-        location: "Cuetzalan, México",
-        category: "Líneas de Transmisión",
-        description: "Construcción, instalación y puesta en servicio de línea de transmisión de 115KV doble circuito con longitud de 20.308 km.",
-        image: "/linea-transmision-cfeshtml.jpg",
-        capacity: "115 KV - 20km"
-    },
-    {
-        id: "imbar-jasso",
-        title: "S.E. Jasso Hidalgo",
-        location: "Hidalgo, México",
-        category: "Transmisión Eléctrica",
-        description: "Obra civil y electromecánica para subestación eléctrica CFE.",
-        image: "/subestacion-jasso.jpg"
-    },
-];
-
-const categories = ["Todos", "Energía Fotovoltaica", "Transmisión Eléctrica", "Obra Civil"];
+interface Project {
+    id: string;
+    title: string;
+    location: string;
+    category: string;
+    description: string;
+    image: string;
+    capacity?: string;
+}
 
 export default function ProjectsGrid() {
+    const t = useTranslations('ProjectsData');
+    const projects = t.raw('projects') as Project[];
+    const categories = t.raw('categories') as string[];
     const [selectedCategory, setSelectedCategory] = React.useState("Todos");
 
     const filteredProjects = selectedCategory === "Todos"
         ? projects
-        : projects.filter(p => p.category === selectedCategory);
+        : projects.filter((p: Project) => p.category === selectedCategory);
 
     return (
         <>
@@ -164,9 +88,9 @@ export default function ProjectsGrid() {
 
             <div className="px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64 py-20 bg-bgMain">
                 <div className="max-w-4xl mx-auto text-center mb-16">
-                    <h2 className="text-h1 text-primaryBlue mb-6">Proyectos Destacados</h2>
+                    <h2 className="text-h1 text-primaryBlue mb-6">{t('pageTitle')}</h2>
                     <p className="text-p text-gray-700 leading-relaxed">
-                        Descubre algunos de nuestros proyectos más importantes
+                        {t('pageDescription')}
                     </p>
                     <div className="w-1/3 mx-auto bg-secundaryYellow h-1 rounded-full mt-6"></div>
                 </div>

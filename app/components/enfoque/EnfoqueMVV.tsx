@@ -1,6 +1,11 @@
+'use client';
 import { FaRocket, FaEye, FaHeart, FaLeaf, FaStar, FaUsers } from "react-icons/fa";
+import { useTranslations } from 'next-intl';
 
 export default function EnfoqueMVV() {
+    const t = useTranslations('Enfoque');
+    const values = t.raw('mvv.values');
+
     return (
         <>
             <style jsx>{`
@@ -46,10 +51,10 @@ export default function EnfoqueMVV() {
                     {/* Header */}
                     <div className="text-center max-w-4xl mx-auto mb-16">
                         <h2 id={"ADN"} className="text-h1 text-primaryBlue mb-6">
-                            Nuestro ADN Corporativo
+                            {t('mvv.title')}
                         </h2>
                         <p className="text-p text-gray-700 leading-relaxed">
-                            Los principios que guían cada decisión, cada proyecto, cada día
+                            {t('mvv.subtitle')}
                         </p>
                         <div className="w-24 h-1 bg-secundaryYellow mx-auto mt-6 rounded-full"></div>
                     </div>
@@ -62,17 +67,10 @@ export default function EnfoqueMVV() {
                                 <div className="w-16 h-16 bg-gradient-to-br from-primaryBlue to-thirdGreen rounded-2xl flex items-center justify-center">
                                     <FaRocket className="w-8 h-8 text-white" />
                                 </div>
-                                <h3 className="text-3xl font-bold text-primaryBlue">Misión</h3>
+                                <h3 className="text-3xl font-bold text-primaryBlue">{t('mvv.mission.label')}</h3>
                             </div>
                             <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                                Ser líderes en la industria implementando soluciones sustentables
-                                e innovadoras.
-                            </p>
-                            <p className="text-gray-600 leading-relaxed">
-                                Nos comprometemos a transformar la infraestructura y energía de
-                                Latinoamérica a través de proyectos que combinan tecnología de punta
-                                con prácticas sostenibles, generando valor para nuestros clientes y
-                                las comunidades donde operamos.
+                                {t('mvv.mission.content')}
                             </p>
                         </div>
 
@@ -82,17 +80,10 @@ export default function EnfoqueMVV() {
                                 <div className="w-16 h-16 bg-gradient-to-br from-thirdGreen to-secundaryYellow rounded-2xl flex items-center justify-center">
                                     <FaEye className="w-8 h-8 text-white" />
                                 </div>
-                                <h3 className="text-3xl font-bold text-primaryBlue">Visión</h3>
+                                <h3 className="text-3xl font-bold text-primaryBlue">{t('mvv.vision.label')}</h3>
                             </div>
                             <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                                Ser el referente líder en infraestructuras, energías renovables
-                                y servicios especializados a nivel nacional e internacional.
-                            </p>
-                            <p className="text-gray-600 leading-relaxed">
-                                Aspiramos a ser reconocidos como la empresa más confiable y
-                                visionaria del sector, expandiendo nuestra presencia internacional
-                                y estableciendo nuevos estándares de excelencia en cada mercado
-                                que servimos.
+                                {t('mvv.vision.content')}
                             </p>
                         </div>
                     </div>
@@ -100,9 +91,9 @@ export default function EnfoqueMVV() {
                     {/* Valores */}
                     <div className="bg-white rounded-3xl p-10 lg:p-16">
                         <div className="text-center mb-12">
-                            <h3 className="text-h2 text-primaryBlue mb-4">Nuestros Valores</h3>
+                            <h3 className="text-h2 text-primaryBlue mb-4">{t('mvv.valuesTitle')}</h3>
                             <p className="text-gray-700">
-                                Los pilares que sostienen nuestra cultura organizacional
+                                {t('mvv.valuesDescription')}
                             </p>
                         </div>
 
@@ -110,41 +101,36 @@ export default function EnfoqueMVV() {
                             {[
                                 {
                                     icon: FaLeaf,
-                                    title: "Innovación",
-                                    description: "Constantemente buscamos nuevas formas de mejorar y evolucionar",
                                     color: "from-primaryBlue to-thirdGreen"
                                 },
                                 {
                                     icon: FaStar,
-                                    title: "Sostenibilidad",
-                                    description: "Comprometidos con el medio ambiente en cada proyecto",
                                     color: "from-thirdGreen to-secundaryYellow"
                                 },
                                 {
                                     icon: FaHeart,
-                                    title: "Calidad",
-                                    description: "Excelencia sin compromisos en cada entrega",
                                     color: "from-secundaryYellow to-primaryBlue"
                                 },
                                 {
                                     icon: FaUsers,
-                                    title: "Responsabilidad Social",
-                                    description: "Impacto positivo en las comunidades que servimos",
                                     color: "from-primaryBlue to-secundaryYellow"
                                 }
-                            ].map((value, index) => (
-                                <div key={index} className="value-card text-center">
-                                    <div className={`w-20 h-20 bg-gradient-to-br ${value.color} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}>
-                                        <value.icon className="w-10 h-10 text-white" />
+                            ].map((valueIcon, index) => {
+                                const value = values[index];
+                                return (
+                                    <div key={index} className="value-card text-center">
+                                        <div className={`w-20 h-20 bg-gradient-to-br ${valueIcon.color} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}>
+                                            <valueIcon.icon className="w-10 h-10 text-white" />
+                                        </div>
+                                        <h4 className="text-xl font-bold text-primaryBlue mb-3">
+                                            {value.title}
+                                        </h4>
+                                        <p className="text-gray-600 text-sm leading-relaxed">
+                                            {value.description}
+                                        </p>
                                     </div>
-                                    <h4 className="text-xl font-bold text-primaryBlue mb-3">
-                                        {value.title}
-                                    </h4>
-                                    <p className="text-gray-600 text-sm leading-relaxed">
-                                        {value.description}
-                                    </p>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
                 </div>

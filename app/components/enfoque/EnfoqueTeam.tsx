@@ -1,7 +1,13 @@
+'use client';
 import Image from "next/image";
 import { FaUsers, FaGraduationCap, FaAward, FaHandshake } from "react-icons/fa";
+import { useTranslations } from 'next-intl';
 
 export default function EnfoqueTeam() {
+    const t = useTranslations('Enfoque');
+    const stats = t.raw('team.stats');
+    const cultureValues = t.raw('team.culture.values');
+
     return (
         <>
             <style jsx>{`
@@ -35,22 +41,17 @@ export default function EnfoqueTeam() {
                             <div className="order-1 lg:order-2">
                                 <div className="inline-block px-4 py-2 bg-primaryBlue/10 rounded-full mb-6">
                                     <span className="text-primaryBlue font-bold text-sm uppercase tracking-wider">
-                                        Nuestro Equipo
+                                        {t('team.badge')}
                                     </span>
                                 </div>
                                 <h2 className="text-h1 text-primaryBlue mb-6 leading-tight">
-                                    La Fuerza Detrás de Cada Proyecto
+                                    {t('team.title')}
                                 </h2>
                                 <p className="text-p text-gray-700 mb-6 leading-relaxed">
-                                    Nuestro equipo aporta su excelencia técnica, ingenio, empuje, creatividad
-                                    y experiencia para ayudar a nuestros clientes a lograr sus visiones audaces.
-                                    Tenemos éxito a través de la asociación y el deseo compartido de marcar
-                                    la diferencia.
+                                    {t('team.description1')}
                                 </p>
                                 <p className="text-p text-gray-700 leading-relaxed">
-                                    Motivados por los desafíos en el horizonte, superamos todos los límites
-                                    posibles. La integridad, innovación y una mentalidad de nunca conformarse
-                                    están en el centro de todo lo que hacemos.
+                                    {t('team.description2')}
                                 </p>
                             </div>
                         </div>
@@ -58,73 +59,49 @@ export default function EnfoqueTeam() {
                         {/* Team Stats */}
                         <div className="grid md:grid-cols-4 gap-6 mb-16">
                             {[
-                                { icon: FaUsers, number: "500+", label: "Profesionales" },
-                                { icon: FaGraduationCap, number: "50+", label: "Ingenieros Certificados" },
-                                { icon: FaAward, number: "20+", label: "Años de Experiencia" },
-                                { icon: FaHandshake, number: "100%", label: "Compromiso" }
-                            ].map((stat, index) => (
-                                <div key={index} className="team-stat rounded-2xl p-6 text-center">
-                                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primaryBlue to-thirdGreen rounded-full mb-4">
-                                        <stat.icon className="w-8 h-8 text-white" />
+                                { icon: FaUsers },
+                                { icon: FaGraduationCap },
+                                { icon: FaAward },
+                                { icon: FaHandshake }
+                            ].map((statIcon, index) => {
+                                const stat = stats[index];
+                                return (
+                                    <div key={index} className="team-stat rounded-2xl p-6 text-center">
+                                        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primaryBlue to-thirdGreen rounded-full mb-4">
+                                            <statIcon.icon className="w-8 h-8 text-white" />
+                                        </div>
+                                        <div className="text-3xl font-bold text-primaryBlue mb-2">
+                                            {stat.value}
+                                        </div>
+                                        <div className="text-sm text-gray-600 uppercase tracking-wide">
+                                            {stat.label}
+                                        </div>
                                     </div>
-                                    <div className="text-3xl font-bold text-primaryBlue mb-2">
-                                        {stat.number}
-                                    </div>
-                                    <div className="text-sm text-gray-600 uppercase tracking-wide">
-                                        {stat.label}
-                                    </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
 
                         {/* Culture & Values */}
                         <div className="bg-gradient-to-br from-primaryBlue to-thirdGreen rounded-3xl p-10 lg:p-16 text-white">
                             <div className="max-w-4xl mx-auto">
-                                <h3 className="text-h2 mb-8 text-center">Nuestra Cultura</h3>
+                                <h3 className="text-h2 mb-8 text-center">{t('team.culture.title')}</h3>
 
                                 <div className="grid md:grid-cols-2 gap-8 mb-12">
-                                    <div>
-                                        <h4 className="text-xl font-bold mb-4 text-secundaryYellow">
-                                            Pensadores Audaces
-                                        </h4>
-                                        <p className="text-white/90 leading-relaxed">
-                                            Nuestro equipo está lleno de pensadores audaces y hábiles
-                                            solucionadores de problemas que convierten los desafíos en
-                                            oportunidades para lograr lo extraordinario.
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <h4 className="text-xl font-bold mb-4 text-secundaryYellow">
-                                            Colaboración
-                                        </h4>
-                                        <p className="text-white/90 leading-relaxed">
-                                            Trabajamos en equipo, compartiendo conocimientos y experiencias
-                                            para superar cualquier obstáculo y entregar resultados excepcionales.
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <h4 className="text-xl font-bold mb-4 text-secundaryYellow">
-                                            Desarrollo Continuo
-                                        </h4>
-                                        <p className="text-white/90 leading-relaxed">
-                                            Invertimos en el crecimiento profesional de nuestro equipo,
-                                            manteniéndonos a la vanguardia de la industria.
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <h4 className="text-xl font-bold mb-4 text-secundaryYellow">
-                                            Seguridad Primero
-                                        </h4>
-                                        <p className="text-white/90 leading-relaxed">
-                                            La seguridad de nuestro equipo es nuestra máxima prioridad en
-                                            cada proyecto que emprendemos.
-                                        </p>
-                                    </div>
+                                    {cultureValues.map((value: { title: string; description: string }, index: number) => (
+                                        <div key={index}>
+                                            <h4 className="text-xl font-bold mb-4 text-secundaryYellow">
+                                                {value.title}
+                                            </h4>
+                                            <p className="text-white/90 leading-relaxed">
+                                                {value.description}
+                                            </p>
+                                        </div>
+                                    ))}
                                 </div>
 
                                 <div className="text-center">
                                     <p className="text-xl text-white/95 italic">
-                                        "Juntos construimos no solo proyectos, sino el futuro que queremos ver"
+                                        {t('team.quote')}
                                     </p>
                                 </div>
                             </div>

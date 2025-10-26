@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from 'next-intl';
 import { FaPaperPlane, FaCheckCircle, FaShieldAlt, FaClock } from "react-icons/fa";
 
 interface FormData {
@@ -21,6 +22,7 @@ interface FormErrors {
 }
 
 export default function ContactForm() {
+    const t = useTranslations('Contact');
     const [formData, setFormData] = useState<FormData>({
         name: "",
         email: "",
@@ -38,27 +40,27 @@ export default function ContactForm() {
         const newErrors: FormErrors = {};
 
         if (!formData.name.trim()) {
-            newErrors.name = "El nombre es requerido";
+            newErrors.name = t('validationNameRequired');
         }
 
         if (!formData.email.trim()) {
-            newErrors.email = "El email es requerido";
+            newErrors.email = t('validationEmailRequired');
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-            newErrors.email = "Email inválido";
+            newErrors.email = t('validationEmailInvalid');
         }
 
         if (!formData.phone.trim()) {
-            newErrors.phone = "El teléfono es requerido";
+            newErrors.phone = t('validationPhoneRequired');
         }
 
         if (!formData.service) {
-            newErrors.service = "Selecciona un servicio";
+            newErrors.service = t('validationServiceRequired');
         }
 
         if (!formData.message.trim()) {
-            newErrors.message = "El mensaje es requerido";
+            newErrors.message = t('validationMessageRequired');
         } else if (formData.message.trim().length < 20) {
-            newErrors.message = "El mensaje debe tener al menos 20 caracteres";
+            newErrors.message = t('validationMessageMinLength');
         }
 
         setErrors(newErrors);
@@ -231,11 +233,10 @@ export default function ContactForm() {
                             <div className="form-section">
                                 <div className="mb-10">
                                     <h2 className="text-h2 text-primaryBlue mb-4">
-                                        Cuéntanos sobre tu Proyecto
+                                        {t('formTitle')}
                                     </h2>
                                     <p className="text-xl text-gray-600">
-                                        Completa el formulario y nos pondremos en contacto contigo
-                                        en menos de 24 horas.
+                                        {t('formSubtitle')}
                                     </p>
                                 </div>
 
@@ -245,10 +246,10 @@ export default function ContactForm() {
                                             <FaCheckCircle className="text-green-500 text-3xl flex-shrink-0" />
                                             <div>
                                                 <h3 className="text-xl font-bold text-green-800 mb-1">
-                                                    Mensaje Enviado
+                                                    {t('successTitle')}
                                                 </h3>
                                                 <p className="text-green-700">
-                                                    Gracias por contactarnos. Te responderemos pronto.
+                                                    {t('successMessage')}
                                                 </p>
                                             </div>
                                         </div>
@@ -261,10 +262,10 @@ export default function ContactForm() {
                                             <span className="text-red-500 text-3xl flex-shrink-0">⚠</span>
                                             <div>
                                                 <h3 className="text-xl font-bold text-red-800 mb-1">
-                                                    Error al Enviar
+                                                    {t('errorTitle')}
                                                 </h3>
                                                 <p className="text-red-700">
-                                                    Intenta de nuevo o contáctanos directamente.
+                                                    {t('errorMessage')}
                                                 </p>
                                             </div>
                                         </div>
@@ -274,7 +275,7 @@ export default function ContactForm() {
                                 <form onSubmit={handleSubmit} className="space-y-6">
                                     <div>
                                         <label htmlFor="name" className="block text-lg font-semibold text-primaryBlue mb-2">
-                                            Nombre Completo *
+                                            {t('nameLabel')}
                                         </label>
                                         <input
                                             type="text"
@@ -283,7 +284,7 @@ export default function ContactForm() {
                                             value={formData.name}
                                             onChange={handleChange}
                                             className={`form-input w-full px-5 py-4 rounded-xl text-lg ${errors.name ? 'error' : ''}`}
-                                            placeholder="Juan Pérez"
+                                            placeholder={t('namePlaceholder')}
                                         />
                                         {errors.name && (
                                             <p className="text-red-500 text-sm mt-2">{errors.name}</p>
@@ -293,7 +294,7 @@ export default function ContactForm() {
                                     <div className="grid sm:grid-cols-2 gap-6">
                                         <div>
                                             <label htmlFor="email" className="block text-lg font-semibold text-primaryBlue mb-2">
-                                                Email *
+                                                {t('emailLabel')}
                                             </label>
                                             <input
                                                 type="email"
@@ -302,7 +303,7 @@ export default function ContactForm() {
                                                 value={formData.email}
                                                 onChange={handleChange}
                                                 className={`form-input w-full px-5 py-4 rounded-xl text-lg ${errors.email ? 'error' : ''}`}
-                                                placeholder="tu@email.com"
+                                                placeholder={t('emailPlaceholder')}
                                             />
                                             {errors.email && (
                                                 <p className="text-red-500 text-sm mt-2">{errors.email}</p>
@@ -310,7 +311,7 @@ export default function ContactForm() {
                                         </div>
                                         <div>
                                             <label htmlFor="phone" className="block text-lg font-semibold text-primaryBlue mb-2">
-                                                Teléfono *
+                                                {t('phoneLabel')}
                                             </label>
                                             <input
                                                 type="tel"
@@ -319,7 +320,7 @@ export default function ContactForm() {
                                                 value={formData.phone}
                                                 onChange={handleChange}
                                                 className={`form-input w-full px-5 py-4 rounded-xl text-lg ${errors.phone ? 'error' : ''}`}
-                                                placeholder="+52 55 1234 5678"
+                                                placeholder={t('phonePlaceholder')}
                                             />
                                             {errors.phone && (
                                                 <p className="text-red-500 text-sm mt-2">{errors.phone}</p>
@@ -329,7 +330,7 @@ export default function ContactForm() {
 
                                     <div>
                                         <label htmlFor="company" className="block text-lg font-semibold text-primaryBlue mb-2">
-                                            Empresa / Organización
+                                            {t('companyLabel')}
                                         </label>
                                         <input
                                             type="text"
@@ -338,13 +339,13 @@ export default function ContactForm() {
                                             value={formData.company}
                                             onChange={handleChange}
                                             className="form-input w-full px-5 py-4 rounded-xl text-lg"
-                                            placeholder="Tu empresa"
+                                            placeholder={t('companyPlaceholder')}
                                         />
                                     </div>
 
                                     <div>
                                         <label htmlFor="service" className="block text-lg font-semibold text-primaryBlue mb-2">
-                                            Servicio de Interés *
+                                            {t('serviceLabel')}
                                         </label>
                                         <select
                                             id="service"
@@ -353,7 +354,7 @@ export default function ContactForm() {
                                             onChange={handleChange}
                                             className={`form-input w-full px-5 py-4 rounded-xl text-lg bg-white ${errors.service ? 'error' : ''}`}
                                         >
-                                            <option value="">Selecciona un servicio</option>
+                                            <option value="">{t('serviceDefaultOption')}</option>
                                             <option value="obras-civiles">Obras Civiles</option>
                                             <option value="obras-electricas">Obras Eléctricas</option>
                                             <option value="proyectos-fotovoltaicos">Proyectos Fotovoltaicos</option>
@@ -372,7 +373,7 @@ export default function ContactForm() {
 
                                     <div>
                                         <label htmlFor="message" className="block text-lg font-semibold text-primaryBlue mb-2">
-                                            Mensaje *
+                                            {t('messageLabelFormField')}
                                         </label>
                                         <textarea
                                             id="message"
@@ -381,7 +382,7 @@ export default function ContactForm() {
                                             value={formData.message}
                                             onChange={handleChange}
                                             className={`form-input w-full px-5 py-4 rounded-xl text-lg resize-none ${errors.message ? 'error' : ''}`}
-                                            placeholder="Cuéntanos sobre tu proyecto, necesidades, presupuesto estimado, timeline..."
+                                            placeholder={t('messagePlaceholder')}
                                         />
                                         {errors.message && (
                                             <p className="text-red-500 text-sm mt-2">{errors.message}</p>
@@ -394,7 +395,7 @@ export default function ContactForm() {
                                         className="submit-button w-full bg-primaryBlue text-white py-5 rounded-full font-bold text-xl flex items-center justify-center gap-3 shadow-xl relative z-10"
                                     >
                                         <span className="relative z-10">
-                                            {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
+                                            {isSubmitting ? t('sendingButton') : t('sendButton')}
                                         </span>
                                         <FaPaperPlane className="text-2xl relative z-10" />
                                     </button>
@@ -405,11 +406,10 @@ export default function ContactForm() {
                             <div className="form-section space-y-8">
                                 <div>
                                     <h3 className="text-h3 text-primaryBlue mb-6">
-                                        ¿Por qué trabajar con nosotros?
+                                        {t('whyChooseUs')}
                                     </h3>
                                     <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                                        Con más de 40 años de experiencia en infraestructura y energía,
-                                        somos tu socio estratégico para proyectos de cualquier escala.
+                                        {t('whyChooseDescription')}
                                     </p>
                                 </div>
 
@@ -420,11 +420,10 @@ export default function ContactForm() {
                                         </div>
                                         <div>
                                             <h4 className="text-xl font-bold text-primaryBlue mb-2">
-                                                Experiencia Comprobada
+                                                {t('provenExperienceTitle')}
                                             </h4>
                                             <p className="text-gray-600">
-                                                Más de 500 proyectos exitosos en toda la República Mexicana
-                                                y Latinoamérica.
+                                                {t('provenExperienceDesc')}
                                             </p>
                                         </div>
                                     </div>
@@ -435,11 +434,10 @@ export default function ContactForm() {
                                         </div>
                                         <div>
                                             <h4 className="text-xl font-bold text-primaryBlue mb-2">
-                                                Respuesta Rápida
+                                                {t('fastResponseTitle')}
                                             </h4>
                                             <p className="text-gray-600">
-                                                Te contactamos en menos de 24 horas con una propuesta
-                                                inicial personalizada.
+                                                {t('fastResponseDesc')}
                                             </p>
                                         </div>
                                     </div>
@@ -450,11 +448,10 @@ export default function ContactForm() {
                                         </div>
                                         <div>
                                             <h4 className="text-xl font-bold text-primaryBlue mb-2">
-                                                Compromiso Total
+                                                {t('totalCommitmentTitle')}
                                             </h4>
                                             <p className="text-gray-600">
-                                                Calidad certificada, cumplimiento de tiempos y
-                                                transparencia en cada etapa.
+                                                {t('totalCommitmentDesc')}
                                             </p>
                                         </div>
                                     </div>
@@ -462,11 +459,10 @@ export default function ContactForm() {
 
                                 <div className="bg-primaryBlue rounded-3xl p-8 text-white mt-8">
                                     <p className="text-2xl italic mb-4">
-                                        "Nuestro compromiso es abrir camino hacia un futuro mejor,
-                                        donde la calidad y la eficiencia sean la base de cada construcción."
+                                        "{t('quote')}"
                                     </p>
                                     <p className="text-secundaryYellow font-bold text-lg">
-                                        - Grupo Horizonte Energy
+                                        {t('quoteAuthor')}
                                     </p>
                                 </div>
                             </div>

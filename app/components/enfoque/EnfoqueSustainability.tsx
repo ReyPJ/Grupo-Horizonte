@@ -1,7 +1,13 @@
+'use client';
 import Image from "next/image";
 import {FaSolarPanel, FaRecycle, FaTint, FaLeaf, FaChartLine, FaHandHoldingHeart} from "react-icons/fa";
+import { useTranslations } from 'next-intl';
 
 export default function EnfoqueSustainability() {
+    const t = useTranslations('Enfoque');
+    const pillars = t.raw('sustainability.pillars');
+    const commitments = t.raw('sustainability.commitments');
+
     return (
         <div className="bg-bgMain py-20 overflow-hidden">
             <div className="px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64">
@@ -12,22 +18,17 @@ export default function EnfoqueSustainability() {
                             <div
                                 className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-thirdGreen/20 to-thirdGreen/10 rounded-full mb-6 backdrop-blur-sm">
                                 <span className="text-thirdGreen font-bold text-sm uppercase tracking-wider">
-                                    Sostenibilidad
+                                    {t('sustainability.badge')}
                                 </span>
                             </div>
                             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primaryBlue mb-6 leading-tight">
-                                Compromiso con el Medio Ambiente
+                                {t('sustainability.title')}
                             </h2>
                             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                                La sostenibilidad no es solo una palabra para nosotros, es el núcleo
-                                de cada decisión que tomamos. Desde la selección de materiales hasta
-                                la ejecución final, cada proyecto refleja nuestro compromiso inquebrantable
-                                con el planeta.
+                                {t('sustainability.intro')}
                             </p>
                             <p className="text-lg text-gray-700 leading-relaxed">
-                                Implementamos las mejores prácticas internacionales en gestión ambiental,
-                                asegurando que nuestros proyectos no solo cumplan con las regulaciones,
-                                sino que las superen, estableciendo nuevos estándares en la industria.
+                                {t('sustainability.international')}
                             </p>
                         </div>
 
@@ -60,26 +61,19 @@ export default function EnfoqueSustainability() {
                         {[
                             {
                                 icon: FaSolarPanel,
-                                title: "Energía Renovable",
-                                description: "Implementación de sistemas de energía renovable en todos nuestros proyectos",
-                                stat: "+900 MW instalados",
                                 gradient: "from-thirdGreen to-thirdGreen/80"
                             },
                             {
                                 icon: FaRecycle,
-                                title: "Gestión de Residuos",
-                                description: "Gestión adecuada de residuos en todas nuestras operaciones",
-                                stat: "100% cumplimiento",
                                 gradient: "from-secundaryYellow to-secundaryYellow/80"
                             },
                             {
                                 icon: FaTint,
-                                title: "Optimización de Recursos",
-                                description: "Optimización de recursos para minimizar el impacto ambiental",
-                                stat: "Reducción continua",
                                 gradient: "from-primaryBlue to-primaryBlue/80"
                             }
-                        ].map((pillar, index) => (
+                        ].map((pillarIcon, index) => {
+                            const pillar = pillars[index];
+                            return (
                             <div
                                 key={index}
                                 className="group relative bg-white rounded-2xl p-6 lg:p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
@@ -89,8 +83,8 @@ export default function EnfoqueSustainability() {
                                     className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-thirdGreen to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-2xl"></div>
 
                                 <div
-                                    className={`w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br ${pillar.gradient} rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-shadow duration-300`}>
-                                    <pillar.icon className="w-7 h-7 lg:w-8 lg:h-8 text-white" />
+                                    className={`w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br ${pillarIcon.gradient} rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-shadow duration-300`}>
+                                    <pillarIcon.icon className="w-7 h-7 lg:w-8 lg:h-8 text-white" />
                                 </div>
                                 <h3 className="text-xl font-bold text-primaryBlue mb-3">
                                     {pillar.title}
@@ -102,11 +96,12 @@ export default function EnfoqueSustainability() {
                                     <div
                                         className="h-1 w-12 bg-gradient-to-r from-secundaryYellow to-transparent rounded-full"></div>
                                     <div className="text-secundaryYellow font-bold text-sm">
-                                        {pillar.stat}
+                                        {pillar.number}
                                     </div>
                                 </div>
                             </div>
-                        ))}
+                            );
+                        })}
                     </div>
 
                     {/* Additional Commitments */}
@@ -119,10 +114,10 @@ export default function EnfoqueSustainability() {
 
                         <div className="text-center mb-12">
                             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primaryBlue mb-4">
-                                Nuestros Compromisos Ambientales
+                                {t('sustainability.commitmentsTitle')}
                             </h3>
                             <p className="text-gray-700 text-lg max-w-2xl mx-auto">
-                                Acciones concretas que tomamos cada día para proteger nuestro planeta
+                                {t('sustainability.commitmentsSubtitle')}
                             </p>
                         </div>
 
@@ -130,40 +125,37 @@ export default function EnfoqueSustainability() {
                             {[
                                 {
                                     icon: FaLeaf,
-                                    title: "Carbono Neutral",
-                                    description: "Trabajando hacia la neutralidad de carbono en todas nuestras operaciones",
                                     color: "text-thirdGreen"
                                 },
                                 {
                                     icon: FaChartLine,
-                                    title: "Medición de Impacto",
-                                    description: "Monitoreo constante del impacto ambiental de cada proyecto",
                                     color: "text-primaryBlue"
                                 },
                                 {
                                     icon: FaHandHoldingHeart,
-                                    title: "Responsabilidad Social",
-                                    description: "Programas de educación ambiental en las comunidades donde operamos",
                                     color: "text-secundaryYellow"
                                 }
-                            ].map((commitment, index) => (
-                                <div key={index} className="text-center group">
-                                    <div
-                                        className="relative inline-flex items-center justify-center w-20 h-20 lg:w-24 lg:h-24 bg-gradient-to-br from-bgMain to-gray-50 rounded-full mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
-                                        <commitment.icon
-                                            className={`w-9 h-9 lg:w-10 lg:h-10 ${commitment.color} transition-transform duration-300 group-hover:scale-110`} />
-                                        {/* Pulse effect on hover */}
+                            ].map((commitmentIcon, index) => {
+                                const commitment = commitments[index];
+                                return (
+                                    <div key={index} className="text-center group">
                                         <div
-                                            className="absolute inset-0 rounded-full bg-gradient-to-br from-thirdGreen/20 to-transparent opacity-0 group-hover:opacity-100 animate-pulse"></div>
+                                            className="relative inline-flex items-center justify-center w-20 h-20 lg:w-24 lg:h-24 bg-gradient-to-br from-bgMain to-gray-50 rounded-full mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                                            <commitmentIcon.icon
+                                                className={`w-9 h-9 lg:w-10 lg:h-10 ${commitmentIcon.color} transition-transform duration-300 group-hover:scale-110`} />
+                                            {/* Pulse effect on hover */}
+                                            <div
+                                                className="absolute inset-0 rounded-full bg-gradient-to-br from-thirdGreen/20 to-transparent opacity-0 group-hover:opacity-100 animate-pulse"></div>
+                                        </div>
+                                        <h4 className="text-lg lg:text-xl font-bold text-primaryBlue mb-3 group-hover:text-thirdGreen transition-colors duration-300">
+                                            {commitment.title}
+                                        </h4>
+                                        <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
+                                            {commitment.description}
+                                        </p>
                                     </div>
-                                    <h4 className="text-lg lg:text-xl font-bold text-primaryBlue mb-3 group-hover:text-thirdGreen transition-colors duration-300">
-                                        {commitment.title}
-                                    </h4>
-                                    <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
-                                        {commitment.description}
-                                    </p>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
                 </div>

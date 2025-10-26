@@ -1,9 +1,12 @@
+"use client";
 import { GoArrowUpRight } from "react-icons/go";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import * as React from "react";
 import Image from "next/image";
+import {useTranslations} from 'next-intl';
 
 export default function Footer() {
+    const t = useTranslations();
     return (
         <footer className="bg-gradient-to-b from-black to-[#000818] text-white relative overflow-hidden">
             <style jsx>{`
@@ -150,30 +153,30 @@ export default function Footer() {
                     {/* Links compactos - 2 columnas */}
                     <div className="grid grid-cols-2 gap-6 text-center">
                         <div className="space-y-3">
-                            <h3 className="text-sm font-bold text-secundaryYellow mb-2">Empresas</h3>
+                            <h3 className="text-sm font-bold text-secundaryYellow mb-2">{t('Footer.companiesTitle')}</h3>
                             <div className="space-y-1.5 text-xs">
-                                <a href="/empresas/4C" className="block text-white/80 hover:text-white">4C</a>
-                                <a href="/empresas/nucleo-energy" className="block text-white/80 hover:text-white">Nucleo Energy</a>
-                                <a href="/empresas/imbar" className="block text-white/80 hover:text-white">IMBAR</a>
-                                <a href="/empresas/reccmaq2" className="block text-white/80 hover:text-white">RECCMAQ2</a>
+                                <a href="/empresas/4C" className="block text-white/80 hover:text-white">{t('CompanyData.fourC.name')}</a>
+                                <a href="/empresas/nucleo-energy" className="block text-white/80 hover:text-white">{t('CompanyData.nucleoEnergy.name')}</a>
+                                <a href="/empresas/imbar" className="block text-white/80 hover:text-white">{t('CompanyData.imbar.name')}</a>
+                                <a href="/empresas/reccmaq2" className="block text-white/80 hover:text-white">{t('CompanyData.reccmaq2.name')}</a>
                             </div>
                         </div>
 
                         <div className="space-y-3">
-                            <h3 className="text-sm font-bold text-secundaryYellow mb-2">Enfoque</h3>
+                            <h3 className="text-sm font-bold text-secundaryYellow mb-2">{t('Footer.focusTitle')}</h3>
                             <div className="space-y-1.5 text-xs">
-                                <a href="/enfoque#ADN" className="block text-white/80 hover:text-white">Misión y Visión</a>
-                                <a href="/enfoque#team" className="block text-white/80 hover:text-white">Equipo</a>
-                                <a href="/enfoque#sustainability" className="block text-white/80 hover:text-white">Sostenibilidad</a>
+                                <a href="/enfoque#ADN" className="block text-white/80 hover:text-white">{t('Footer.visionMissionValues')}</a>
+                                <a href="/enfoque#team" className="block text-white/80 hover:text-white">{t('Footer.ourTeam')}</a>
+                                <a href="/enfoque#sustainability" className="block text-white/80 hover:text-white">{t('Footer.sustainability')}</a>
                             </div>
                         </div>
                     </div>
 
                     {/* Proyectos */}
                     <div className="text-center space-y-2">
-                        <h3 className="text-sm font-bold text-secundaryYellow">Proyectos</h3>
+                        <h3 className="text-sm font-bold text-secundaryYellow">{t('Footer.projectsTitle')}</h3>
                         <a href="/proyectos" className="block text-xs text-white/80 hover:text-white">
-                            Ver Todos los Proyectos
+                            {t('Footer.allProjects')}
                         </a>
                     </div>
 
@@ -182,11 +185,11 @@ export default function Footer() {
 
                     {/* Contacto */}
                     <div className="text-center space-y-2 text-xs">
-                        <a href="tel:+525515572791" className="block text-white/80 hover:text-secundaryYellow">
-                            +52 55 1557 2791
+                        <a href={`tel:${t('Contact.phone').replace(/\s/g, '')}`} className="block text-white/80 hover:text-secundaryYellow">
+                            {t('Contact.phone')}
                         </a>
-                        <a href="mailto:ghorizonte@hh.com" className="block text-white/80 hover:text-secundaryYellow">
-                            ghorizonte@hh.com
+                        <a href={`mailto:${t('Contact.email')}`} className="block text-white/80 hover:text-secundaryYellow">
+                            {t('Contact.email')}
                         </a>
                     </div>
 
@@ -209,11 +212,11 @@ export default function Footer() {
                     {/* Copyright y políticas */}
                     <div className="text-center space-y-2 text-xs text-white/60">
                         <div className="flex justify-center gap-3">
-                            <a href="/privacidad" className="hover:text-secundaryYellow">Privacidad</a>
+                            <a href="/privacidad" className="hover:text-secundaryYellow">{t('Footer.privacy')}</a>
                             <span>•</span>
-                            <a href="/terminos" className="hover:text-secundaryYellow">Términos</a>
+                            <a href="/terminos" className="hover:text-secundaryYellow">{t('Footer.terms')}</a>
                         </div>
-                        <p>© 2025 Grupo Horizonte</p>
+                        <p>{t('Footer.copyright')}</p>
                     </div>
                 </div>
             </div>
@@ -224,40 +227,40 @@ export default function Footer() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
                         {/* Proyectos */}
                         <div>
-                            <h3 className="footer-section-title text-h2 mb-8 pb-2">Proyectos</h3>
+                            <h3 className="footer-section-title text-h2 mb-8 pb-2">{t('Footer.projectsTitle')}</h3>
                             <ul className="space-y-2">
-                                <FooterItem label="Todos los Proyectos" href="/proyectos" />
+                                <FooterItem label={t('Footer.allProjects')} href="/proyectos" />
                             </ul>
                         </div>
 
                         {/* Nosotros */}
                         <div>
-                            <h3 className="footer-section-title text-h2 mb-8 pb-2">Nosotros</h3>
+                            <h3 className="footer-section-title text-h2 mb-8 pb-2">{t('Footer.aboutTitle')}</h3>
                             <ul className="space-y-2">
-                                <FooterItem label="Visión, Misión, Valores" href="/enfoque#ADN" multiline />
-                                <FooterItem label="Nuestro Equipo" href="/enfoque#team" />
-                                <FooterItem label="Sostenibilidad" href="/enfoque#sustainability" />
+                                <FooterItem label={t('Footer.visionMissionValues')} href="/enfoque#ADN" multiline />
+                                <FooterItem label={t('Footer.ourTeam')} href="/enfoque#team" />
+                                <FooterItem label={t('Footer.sustainability')} href="/enfoque#sustainability" />
                             </ul>
                         </div>
 
                         {/* Empresas */}
                         <div>
-                            <h3 className="footer-section-title text-h2 mb-8 pb-2">Empresas</h3>
+                            <h3 className="footer-section-title text-h2 mb-8 pb-2">{t('Footer.companiesTitle')}</h3>
                             <ul className="space-y-2">
-                                <FooterItem label="4C" href="/empresas/4C" />
-                                <FooterItem label="Nucleo Energy" href="/empresas/nucleo-energy" />
-                                <FooterItem label="IMBAR" href="/empresas/imbar" />
-                                <FooterItem label="RECCMAQ2" href="/empresas/reccmaq2" />
+                                <FooterItem label={t('CompanyData.fourC.name')} href="/empresas/4C" />
+                                <FooterItem label={t('CompanyData.nucleoEnergy.name')} href="/empresas/nucleo-energy" />
+                                <FooterItem label={t('CompanyData.imbar.name')} href="/empresas/imbar" />
+                                <FooterItem label={t('CompanyData.reccmaq2.name')} href="/empresas/reccmaq2" />
                             </ul>
                         </div>
 
                         {/* Enfoque */}
                         <div>
-                            <h3 className="footer-section-title text-h2 mb-8 pb-2">Enfoque</h3>
+                            <h3 className="footer-section-title text-h2 mb-8 pb-2">{t('Footer.focusTitle')}</h3>
                             <ul className="space-y-2">
-                                <FooterItem label="Seguridad" href="/enfoque#safety" />
-                                <FooterItem label="Innovación" href="/enfoque#innovation" />
-                                <FooterItem label="Contacto" href="/contacto" />
+                                <FooterItem label={t('Footer.safety')} href="/enfoque#safety" />
+                                <FooterItem label={t('Footer.innovation')} href="/enfoque#innovation" />
+                                <FooterItem label={t('Footer.contact')} href="/contacto" />
                             </ul>
                         </div>
                     </div>
@@ -285,13 +288,13 @@ export default function Footer() {
 
                         <div className="flex-1 text-center lg:text-left space-y-2">
                             <p className="text-p">
-                                <a href="tel:+525515572791" className="contact-link">
-                                    +52 55 1557 2791
+                                <a href={`tel:${t('Contact.phone').replace(/\s/g, '')}`} className="contact-link">
+                                    {t('Contact.phone')}
                                 </a>
                             </p>
                             <p className="text-p">
-                                <a href="mailto:ghorizonte@hh.com" className="contact-link">
-                                    ghorizonte@hh.com
+                                <a href={`mailto:${t('Contact.email')}`} className="contact-link">
+                                    {t('Contact.email')}
                                 </a>
                             </p>
                         </div>
@@ -299,12 +302,12 @@ export default function Footer() {
                         <div className="flex-1 text-center lg:text-left space-y-2">
                             <p className="text-p">
                                 <a href="/privacidad" className="policy-link">
-                                    Política de Privacidad
+                                    {t('Footer.privacyPolicy')}
                                 </a>
                             </p>
                             <p className="text-p">
                                 <a href="/terminos" className="policy-link">
-                                    Términos de uso
+                                    {t('Footer.termsOfUse')}
                                 </a>
                             </p>
                         </div>
@@ -325,7 +328,7 @@ export default function Footer() {
                                 </SocialIcon>
                             </div>
                             <p className="text-sm text-white/60 tracking-wide">
-                                © 2025 Grupo Horizonte
+                                {t('Footer.copyright')}
                             </p>
                         </div>
                     </div>

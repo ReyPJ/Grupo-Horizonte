@@ -1,7 +1,9 @@
 import { GoArrowUpRight } from "react-icons/go";
 import { FaPhone, FaEnvelope, FaWhatsapp, FaMapMarkerAlt } from "react-icons/fa";
+import { useTranslations } from 'next-intl';
 
 export default function ContactCTA() {
+    const t = useTranslations('Contact');
     return (
         <>
             <style jsx>{`
@@ -86,25 +88,24 @@ export default function ContactCTA() {
                         {/* Main CTA */}
                         <div className="text-center mb-16">
                             <h2 className="text-h2 md:text-[48px] text-white mb-6">
-                                ¿Listo para Iniciar tu Proyecto?
+                                {t('contactCTA.title')}
                             </h2>
                             <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
-                                Con más de 20 años de experiencia, Grupo Horizonte es tu aliado
-                                estratégico para construir el futuro de la infraestructura y energía en México.
+                                {t('contactCTA.description')}
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a
                                     href="/proyectos"
                                     className="cta-button bg-secundaryYellow text-primaryBlue px-10 py-5 rounded-full font-bold text-xl inline-flex items-center justify-center gap-3 shadow-2xl"
                                 >
-                                    Ver Proyectos
+                                    {t('contactCTA.button1')}
                                     <GoArrowUpRight className="text-3xl" />
                                 </a>
                                 <a
                                     href="/#EMPRESAS"
                                     className="cta-button bg-white/10 backdrop-blur-sm text-white px-10 py-5 rounded-full font-bold text-xl inline-flex items-center justify-center gap-3 border-2 border-white/30 hover:bg-white hover:text-primaryBlue"
                                 >
-                                    Nuestras Empresas
+                                    {t('contactCTA.button2')}
                                     <GoArrowUpRight className="text-3xl" />
                                 </a>
                             </div>
@@ -114,22 +115,22 @@ export default function ContactCTA() {
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
                             <div className="info-card-cta rounded-2xl p-6 text-center">
                                 <FaPhone className="text-secundaryYellow text-4xl mx-auto mb-3" />
-                                <div className="text-white font-bold text-lg mb-2">Teléfono</div>
+                                <div className="text-white font-bold text-lg mb-2">{t('contactCTA.phone')}</div>
                                 <a href="tel:+525530238337" className="text-white/90 hover:text-secundaryYellow transition-colors">
-                                    55 3023 8337
+                                    {t('phone1')}
                                 </a>
                             </div>
 
                             <div className="info-card-cta rounded-2xl p-6 text-center">
                                 <FaWhatsapp className="text-secundaryYellow text-4xl mx-auto mb-3" />
-                                <div className="text-white font-bold text-lg mb-2">WhatsApp</div>
+                                <div className="text-white font-bold text-lg mb-2">{t('contactCTA.whatsapp')}</div>
                                 <a href="https://wa.me/525530238337" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-secundaryYellow transition-colors">
-                                    55 3023 8337
+                                    {t('phone1')}
                                 </a>
                             </div>
                             <div className="info-card-cta rounded-2xl p-6 text-center">
                                 <FaMapMarkerAlt className="text-secundaryYellow text-4xl mx-auto mb-3" />
-                                <div className="text-white font-bold text-lg mb-2">Ubicación</div>
+                                <div className="text-white font-bold text-lg mb-2">{t('contactCTA.location')}</div>
                                 <div className="text-white/90">
                                     CDMX, México
                                 </div>
@@ -140,20 +141,20 @@ export default function ContactCTA() {
                         <div className="mt-16 pt-12 border-t border-white/20">
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                                 <div>
-                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">20+</div>
-                                    <div className="text-white/90">Años de Experiencia</div>
+                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">{t('contactCTA.stat1Value')}</div>
+                                    <div className="text-white/90">{t('contactCTA.stat1Label')}</div>
                                 </div>
                                 <div>
-                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">500+</div>
-                                    <div className="text-white/90">Proyectos Exitosos</div>
+                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">{t('contactCTA.stat2Value')}</div>
+                                    <div className="text-white/90">{t('contactCTA.stat2Label')}</div>
                                 </div>
                                 <div>
-                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">15+</div>
-                                    <div className="text-white/90">Estados Cubiertos</div>
+                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">{t('contactCTA.stat3Value')}</div>
+                                    <div className="text-white/90">{t('contactCTA.stat3Label')}</div>
                                 </div>
                                 <div>
-                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">100%</div>
-                                    <div className="text-white/90">Satisfacción</div>
+                                    <div className="text-5xl font-bold text-secundaryYellow mb-2">{t('contactCTA.stat4Value')}</div>
+                                    <div className="text-white/90">{t('contactCTA.stat4Label')}</div>
                                 </div>
                             </div>
                         </div>

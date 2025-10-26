@@ -9,9 +9,11 @@ import ProjectsMegaMenu from "@/app/components/ProjectsMegaMenu";
 import EnfoqueMegaMenu from "@/app/components/EnfoqueMegaMenu";
 import Link from "next/link";
 import { MdLocationOn, MdVerifiedUser, MdSupport } from "react-icons/md";
+import { useTranslations } from 'next-intl';
 import React from "react";
 
 export default function EmpresaRECCMAQ2Page() {
+    const t = useTranslations();
     const [projectsOpen, setProjectsOpen] = React.useState(false);
     const [enfoqueOpen, setEnfoqueOpen] = React.useState(false);
     const [isClosingProjects, setIsClosingProjects] = React.useState(false);
@@ -59,61 +61,26 @@ export default function EmpresaRECCMAQ2Page() {
 
     const services = [
         {
-            title: "Reconstrucción de Maquinaria Pesada",
-            description: "Servicio especializado en reconstrucción completa de maquinaria pesada industrial. Recuperamos equipos con altos estándares de calidad garantizando su óptimo funcionamiento.",
+            title: t('CompanyData.reccmaq2.services.reconstruction'),
+            description: t('CompanyData.reccmaq2.services.reconstructionDesc'),
             image: "/img143.jpg"
         },
         {
-            title: "Mantenimiento Preventivo",
-            description: "Programas de mantenimiento preventivo diseñados para maximizar la vida útil de tu maquinaria y evitar paros no programados en tus operaciones."
+            title: t('CompanyData.reccmaq2.services.maintenance'),
+            description: t('CompanyData.reccmaq2.services.maintenanceDesc')
         },
         {
-            title: "Reparación de Equipos",
-            description: "Reparación especializada de maquinaria y equipo pesado. Contamos con personal técnico certificado y refacciones de calidad."
+            title: t('CompanyData.reccmaq2.services.repair'),
+            description: t('CompanyData.reccmaq2.services.repairDesc')
         },
         {
-            title: "Servicio en Sitio",
-            description: "Llevamos nuestro servicio directamente a tu ubicación. Cobertura nacional con técnicos especializados disponibles."
+            title: t('CompanyData.reccmaq2.services.siteService'),
+            description: t('CompanyData.reccmaq2.services.siteServiceDesc')
         }
     ];
 
-    const clients = [
-        {
-            name: "AFLEX",
-            location: "Fernando Montes de Oca, Altamira, Tamaulipas",
-            period: "Febrero 2018 - Actualidad",
-            description: "Servicio continuo de mantenimiento y reparación"
-        },
-        {
-            name: "McDermott",
-            location: "Boulevard Golfo de México N. 380, Altamira, Tamaulipas",
-            period: "Octubre 2017 - Enero 2022",
-            description: "Reconstrucción y mantenimiento de equipos"
-        },
-        {
-            name: "ALPASA",
-            location: "Parque Pequeña y Mediana Industria, Altamira, Tamaulipas",
-            period: "Enero 2007 - Actualidad",
-            description: "Más de 18 años de servicio continuo"
-        },
-        {
-            name: "GS Autotransportes",
-            location: "Boulevard de los Ríos 3800, Altamira, Tamaulipas",
-            period: "Enero 2016 - Actualidad",
-            description: "Mantenimiento de flota vehicular"
-        },
-        {
-            name: "Anuar Renaud Torres García",
-            location: "Boulevard de los Ríos 3800, Altamira, Tamaulipas",
-            period: "Marzo 2012 - Actualidad",
-            description: "Servicios especializados continuos"
-        }
-    ];
-
-    const coverageLocations = [
-        "Altamira", "Monterrey", "Ciudad de México", "Manzanillo",
-        "Mérida", "Mexicali", "Oaxaca", "Hermosillo"
-    ];
+    const clients = t.raw('CompanyData.reccmaq2.clients');
+    const coverageLocations = t.raw('CompanyData.reccmaq2.coverage');
 
     return (
         <div className="w-full min-h-dvh bg-bgMain">
@@ -146,10 +113,10 @@ export default function EmpresaRECCMAQ2Page() {
 
             <main>
                 <CompanyHeroSection
-                    company="RECCMAQ2"
+                    company={t('CompanyData.reccmaq2.name')}
                     logoUrl="/reccmalogoxD.png"
-                    tagline="Reconstruimos tu Maquinaria, Impulsamos tu Productividad"
-                    description="Reconstructora de Maquinaria de la Torre. Especialistas en reconstrucción, mantenimiento y reparación de maquinaria pesada con presencia nacional en los sectores más exigentes de la industria."
+                    tagline={t('CompanyData.reccmaq2.tagline')}
+                    description={t('CompanyData.reccmaq2.heroDescription')}
                     backgroundImage="/maquinaria-reccmaq.jpg"
                     primaryColor="#DC2626"
                 />
@@ -161,10 +128,10 @@ export default function EmpresaRECCMAQ2Page() {
                             <div className="text-center mb-20">
                                 <div className="inline-block h-0.5 w-16 rounded-full mb-6 bg-[#EF4444]" />
                                 <h2 className="text-5xl md:text-6xl font-bold text-[#DC2626] mb-4">
-                                    Nuestra Propuesta
+                                    {t('CompanyData.reccmaq2.sections.ourProposal')}
                                 </h2>
                                 <p className="text-gray-500 text-lg font-light">
-                                    Expertos en dar nueva vida a tu maquinaria industrial
+                                    {t('CompanyData.reccmaq2.sections.expertsMachinery')}
                                 </p>
                             </div>
 
@@ -180,14 +147,14 @@ export default function EmpresaRECCMAQ2Page() {
                                             </div>
                                             <div>
                                                 <h3 className="text-3xl font-bold text-[#DC2626] mb-2">
-                                                    Especialización
+                                                    {t('CompanyData.reccmaq2.sections.specialization')}
                                                 </h3>
                                                 <div className="h-0.5 w-12 rounded-full bg-[#EF4444]" />
                                             </div>
                                         </div>
 
                                         <p className="text-gray-700 leading-relaxed text-base font-light">
-                                            Más de 18 años de experiencia en reconstrucción y mantenimiento de maquinaria pesada. Personal técnico altamente calificado y certificado para garantizar trabajos de la más alta calidad.
+                                            {t('CompanyData.reccmaq2.sections.specializationDesc')}
                                         </p>
                                     </div>
                                 </div>
@@ -203,14 +170,14 @@ export default function EmpresaRECCMAQ2Page() {
                                             </div>
                                             <div>
                                                 <h3 className="text-3xl font-bold text-[#DC2626] mb-2">
-                                                    Compromiso
+                                                    {t('CompanyData.reccmaq2.sections.commitment')}
                                                 </h3>
                                                 <div className="h-0.5 w-12 rounded-full bg-[#EF4444]" />
                                             </div>
                                         </div>
 
                                         <p className="text-gray-700 leading-relaxed text-base font-light">
-                                            Brindamos servicio en sitio con cobertura nacional, llevando soluciones directamente a tu ubicación. Minimizamos tiempos de paro y maximizamos la productividad de tu operación.
+                                            {t('CompanyData.reccmaq2.sections.commitmentDesc')}
                                         </p>
                                     </div>
                                 </div>
@@ -222,13 +189,13 @@ export default function EmpresaRECCMAQ2Page() {
                                 <div className="relative bg-white rounded-3xl p-10 shadow-sm border border-gray-100">
                                     <div className="text-center mb-8">
                                         <h3 className="text-3xl font-bold text-[#DC2626] mb-3">
-                                            Nuestros Valores
+                                            {t('CompanyData.reccmaq2.sections.ourValues')}
                                         </h3>
                                         <div className="h-0.5 w-16 mx-auto rounded-full bg-[#EF4444]" />
                                     </div>
 
                                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
-                                        {["Calidad", "Confiabilidad", "Profesionalismo", "Servicio"].map((valor, index) => (
+                                        {t.raw('CompanyData.reccmaq2.sections.values').map((valor: string, index: number) => (
                                             <div
                                                 key={index}
                                                 className="group relative text-center p-6 rounded-2xl hover:bg-gray-50 transition-all duration-300"
@@ -256,16 +223,16 @@ export default function EmpresaRECCMAQ2Page() {
                             <div className="text-center mb-16">
                                 <div className="inline-block h-0.5 w-16 rounded-full mb-6 bg-[#EF4444]" />
                                 <h2 className="text-5xl font-bold text-[#DC2626] mb-4">
-                                    Cobertura Nacional
+                                    {t('CompanyData.reccmaq2.sections.nationalCoverage')}
                                 </h2>
                                 <p className="text-gray-500 text-lg font-light">
-                                    Llevamos nuestros servicios a donde nos necesites
+                                    {t('CompanyData.reccmaq2.sections.bringingServices')}
                                 </p>
                             </div>
 
                             <div className="bg-gradient-to-br from-red-50 to-white rounded-3xl p-10 border border-red-100 shadow-sm">
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                                    {coverageLocations.map((location, idx) => (
+                                    {coverageLocations.map((location: string, idx: number) => (
                                         <div
                                             key={idx}
                                             className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all group"
@@ -287,13 +254,13 @@ export default function EmpresaRECCMAQ2Page() {
                 <CompanyServicesSection
                     services={services}
                     primaryColor="#DC2626"
-                    title="Servicios Especializados"
+                    title={t('CompanyData.reccmaq2.sections.servicesTitle')}
                 />
 
                 <CompanyClientsSection
                     clients={clients}
                     primaryColor="#DC2626"
-                    title="Clientes que Confían en Nosotros"
+                    title={t('CompanyData.reccmaq2.sections.clientsTitle')}
                 />
 
                 {/* Por qué elegirnos */}
@@ -303,26 +270,26 @@ export default function EmpresaRECCMAQ2Page() {
                             <div className="text-center mb-16">
                                 <div className="inline-block h-0.5 w-16 rounded-full mb-6 bg-[#EF4444]" />
                                 <h2 className="text-5xl font-bold text-[#DC2626] mb-4">
-                                    Por Qué Elegirnos
+                                    {t('CompanyData.reccmaq2.sections.whyChooseUs')}
                                 </h2>
                             </div>
 
                             <div className="grid md:grid-cols-3 gap-8">
                                 {[
                                     {
-                                        title: "18+ Años",
-                                        subtitle: "De Experiencia",
-                                        desc: "Trayectoria comprobada en el sector industrial"
+                                        title: t('CompanyData.reccmaq2.sections.yearsExperience'),
+                                        subtitle: t('CompanyData.reccmaq2.sections.yearsSubtitle'),
+                                        desc: t('CompanyData.reccmaq2.sections.yearsDesc')
                                     },
                                     {
-                                        title: "8 Ciudades",
-                                        subtitle: "Cobertura Nacional",
-                                        desc: "Servicio en sitio donde lo necesites"
+                                        title: t('CompanyData.reccmaq2.sections.coverage8Cities'),
+                                        subtitle: t('CompanyData.reccmaq2.sections.coverageSubtitle'),
+                                        desc: t('CompanyData.reccmaq2.sections.coverageDesc')
                                     },
                                     {
-                                        title: "20+ Clientes",
-                                        subtitle: "Relaciones de Largo Plazo",
-                                        desc: "Confianza construida año tras año"
+                                        title: t('CompanyData.reccmaq2.sections.clientRelationships'),
+                                        subtitle: t('CompanyData.reccmaq2.sections.relationshipsSubtitle'),
+                                        desc: t('CompanyData.reccmaq2.sections.relationshipsDesc')
                                     }
                                 ].map((stat, idx) => (
                                     <div
@@ -358,11 +325,11 @@ export default function EmpresaRECCMAQ2Page() {
                             <div className="h-0.5 w-16 mx-auto rounded-full mb-8 bg-[#EF4444]" />
 
                             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                                Optimiza tu Operación con Nuestro Servicio
+                                {t('CompanyData.reccmaq2.sections.ctaTitle')}
                             </h2>
 
                             <p className="text-xl text-red-50 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
-                                Reconstrucción y mantenimiento especializado para mantener tu maquinaria en óptimas condiciones
+                                {t('CompanyData.reccmaq2.sections.ctaSubtitle')}
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -370,13 +337,13 @@ export default function EmpresaRECCMAQ2Page() {
                                     href="/contacto"
                                     className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white text-[#DC2626] font-bold text-lg hover:bg-red-50 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1"
                                 >
-                                    Solicitar Servicio
+                                    {t('CompanyData.reccmaq2.sections.requestService')}
                                 </Link>
                                 <Link
                                     href="/contacto"
                                     className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white/10 backdrop-blur-sm text-white font-bold text-lg hover:bg-white/20 transition-all duration-300 border border-white/30"
                                 >
-                                    Más Información
+                                    {t('CompanyData.reccmaq2.sections.moreInfo')}
                                 </Link>
                             </div>
                         </div>

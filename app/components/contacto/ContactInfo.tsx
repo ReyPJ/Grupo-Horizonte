@@ -1,6 +1,8 @@
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaClock, FaGlobe } from "react-icons/fa";
+import { useTranslations } from 'next-intl';
 
 export default function ContactInfo() {
+    const t = useTranslations('Contact');
     return (
         <>
             <style jsx>{`
@@ -60,12 +62,11 @@ export default function ContactInfo() {
                         {/* Header */}
                         <div className="text-center mb-16">
                             <h2 className="text-h2 text-primaryBlue mb-4">
-                                Múltiples Formas de Conectar
+                                {t('multipleFormsTitle')}
                             </h2>
                             <div className="decorative-line w-24 mx-auto mb-6"></div>
                             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                                Estamos disponibles para atenderte por el medio que prefieras.
-                                Tu proyecto es nuestra prioridad.
+                                {t('multipleFormsSubtitle')}
                             </p>
                         </div>
 
@@ -77,11 +78,11 @@ export default function ContactInfo() {
                                     <FaPhone className="text-primaryBlue text-2xl" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-primaryBlue mb-4">
-                                    Teléfonos
+                                    {t('phonesSection')}
                                 </h3>
                                 <div className="flex flex-col space-y-3">
                                     <a href="tel:+525530238337" className="info-link text-lg text-gray-700 block font-semibold">
-                                        55 3023 8337
+                                        {t('phone1')}
                                     </a>
                                 </div>
                             </div>
@@ -92,14 +93,14 @@ export default function ContactInfo() {
                                     <FaWhatsapp className="text-primaryBlue text-2xl" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-primaryBlue mb-4">
-                                    WhatsApp
+                                    {t('whatsappSection')}
                                 </h3>
                                 <div className="space-y-3">
                                     <a href="https://wa.me/525530238337" target="_blank" rel="noopener noreferrer" className="info-link text-lg text-gray-700 block font-semibold">
-                                        55 3023 8337
+                                        {t('phone1')}
                                     </a>
                                     <p className="text-sm text-gray-500">
-                                        Respuesta inmediata
+                                        {t('whatsappImmediateResponse')}
                                     </p>
                                 </div>
                             </div>
@@ -110,7 +111,7 @@ export default function ContactInfo() {
                                     <FaEnvelope className="text-primaryBlue text-2xl" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-primaryBlue mb-4">
-                                    Correos
+                                    {t('emailsSection')}
                                 </h3>
                                 <div className="flex flex-col space-y-3">
                                     <a href="mailto:ccc@4ccc.com.mx" className="info-link text-lg text-gray-700 block font-semibold break-words">
@@ -125,13 +126,13 @@ export default function ContactInfo() {
                                     <FaMapMarkerAlt className="text-primaryBlue text-2xl" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-primaryBlue mb-4">
-                                    Dirección
+                                    {t('addressSection')}
                                 </h3>
                                 <p className="text-lg text-gray-700 leading-relaxed">
-                                    RET 1 Cecilio Robelo No. 66,<br />
-                                    Jardín Balbuena,<br />
-                                    Venustiano Carranza,<br />
-                                    CDMX, CP 15900
+                                    {t('addressLine1')}<br />
+                                    {t('addressLine2')}<br />
+                                    {t('addressLine3')}<br />
+                                    {t('addressLine4')}
                                 </p>
                             </div>
 
@@ -141,20 +142,20 @@ export default function ContactInfo() {
                                     <FaClock className="text-primaryBlue text-2xl" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-primaryBlue mb-4">
-                                    Horario
+                                    {t('hoursSection')}
                                 </h3>
                                 <div className="space-y-2 text-lg text-gray-700">
                                     <div className="flex justify-between">
-                                        <span>Lun - Vie</span>
-                                        <span className="font-bold text-secundaryYellow">9:00 - 18:00</span>
+                                        <span>{t('hoursMondayFriday')}</span>
+                                        <span className="font-bold text-secundaryYellow">{t('hoursTime1')}</span>
                                     </div>
                                     <div className="flex justify-between">
-                                        <span>Sábado</span>
-                                        <span className="font-bold text-secundaryYellow">9:00 - 14:00</span>
+                                        <span>{t('hoursSaturday')}</span>
+                                        <span className="font-bold text-secundaryYellow">{t('hoursTime2')}</span>
                                     </div>
                                     <div className="flex justify-between">
-                                        <span>Domingo</span>
-                                        <span className="text-gray-400">Cerrado</span>
+                                        <span>{t('hoursSunday')}</span>
+                                        <span className="text-gray-400">{t('hoursClosed')}</span>
                                     </div>
                                 </div>
                             </div>
@@ -165,12 +166,10 @@ export default function ContactInfo() {
                                     <FaGlobe className="text-primaryBlue text-2xl" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-primaryBlue mb-4">
-                                    Cobertura
+                                    {t('coverageSection')}
                                 </h3>
                                 <p className="text-lg text-gray-700 leading-relaxed">
-                                    Atendemos proyectos en<br />
-                                    todo México y<br />
-                                    Latinoamérica
+                                    {t('coverageText')}
                                 </p>
                             </div>
                         </div>

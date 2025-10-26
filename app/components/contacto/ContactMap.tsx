@@ -1,4 +1,7 @@
+import { useTranslations } from 'next-intl';
+
 export default function ContactMap() {
+    const t = useTranslations('Contact');
     return (
         <>
             <style jsx>{`
@@ -66,12 +69,10 @@ export default function ContactMap() {
                 {/* Location Badge */}
                 <div className="map-badge absolute bottom-8 left-4 sm:left-8 lg:left-16 bg-white/95 rounded-2xl p-6 shadow-2xl max-w-md z-10">
                     <h3 className="text-2xl font-bold text-primaryBlue mb-3">
-                        Nuestras Oficinas
+                        {t('contactMap.title')}
                     </h3>
                     <p className="text-lg text-gray-700 leading-relaxed">
-                        <strong>RET 1 Cecilio Robelo No. 66</strong><br />
-                        Jardín Balbuena, Venustiano Carranza<br />
-                        Ciudad de México, CP 15900
+                        {t('contactMap.address')}
                     </p>
                     <a
                         href="https://maps.google.com/?q=Jardín+Balbuena+Venustiano+Carranza+15900+CDMX"
@@ -79,7 +80,7 @@ export default function ContactMap() {
                         rel="noopener noreferrer"
                         className="inline-block mt-4 bg-primaryBlue text-white px-6 py-3 rounded-full font-semibold hover:bg-secundaryYellow hover:text-primaryBlue transition-all duration-300"
                     >
-                        Abrir en Maps
+                        {t('contactMap.button')}
                     </a>
                 </div>
             </div>

@@ -9,8 +9,10 @@ import EnfoqueMegaMenu from "@/app/components/EnfoqueMegaMenu";
 import ProjectsMegaMenu from "@/app/components/ProjectsMegaMenu";
 import PartnerLogosSection from "@/app/components/PartnerLogoSection";
 import * as React from "react";
+import {useTranslations} from 'next-intl';
 
 export default function Home() {
+    const t = useTranslations();
 
     const [projectsOpen, setProjectsOpen] = React.useState(false);
     const [enfoqueOpen, setEnfoqueOpen] = React.useState(false);
@@ -72,48 +74,68 @@ export default function Home() {
 
     const companies = [
         {
-            company: "IMBAR",
+            company: t('CompanyData.imbar.name'),
             logoUrl: "/imbarlogo.jpeg",
-            smallHistoryText: "40 años construyendo infraestructura eléctrica para CFE e industria privada.",
-            smallHistoryText2: "Especialistas en subestaciones, líneas de transmisión y fabricación de estructuras metálicas hasta 400 KV.",
-            buttonText: "Conoce a IMBAR",
-            keyServices: ["Subestaciones Eléctricas", "Líneas de Transmisión", "Obra Civil Eléctrica", "Fabricación de Estructuras"],
+            smallHistoryText: t('CompanyData.imbar.shortHistory'),
+            smallHistoryText2: t('CompanyData.imbar.shortHistory2'),
+            buttonText: t('CompanyData.imbar.buttonText'),
+            keyServices: [
+                t('CompanyData.imbar.services.substations'),
+                t('CompanyData.imbar.services.transmission'),
+                t('CompanyData.imbar.services.civilWorks'),
+                t('CompanyData.imbar.services.manufacturing')
+            ],
             image: "/LineasDeTransmisionElectrica.jpg",
             buttonMinWidth: "180px",
             buttonMaxWidth: "220px",
             bigButtonLinkTo: "/empresas/imbar"
         },
         {
-            company: "Constructora 4C",
+            company: t('CompanyData.fourC.name'),
             logoUrl: "/4cSInfondoLogo.png",
-            smallHistoryText: "Una empresa con más de 40 años guiando a nuestros clientes hacia el futuro.",
-            smallHistoryText2: "Con experiencia en obras civiles, obras eléctricas, servicios especializados y proyectos fotovoltaicos.",
-            buttonText: "Conoce a 4C",
-            keyServices: ["Obras Civiles", "Obras Eléctricas", "Servicios Especializados", "Proyectos Fotovoltaicos"],
+            smallHistoryText: t('CompanyData.fourC.shortHistory'),
+            smallHistoryText2: t('CompanyData.fourC.shortHistory2'),
+            buttonText: t('CompanyData.fourC.buttonText'),
+            keyServices: [
+                t('CompanyData.fourC.services.civilWorks'),
+                t('CompanyData.fourC.services.electricalWorks'),
+                t('CompanyData.fourC.services.specializedServices'),
+                t('CompanyData.fourC.services.photovoltaic')
+            ],
             image: "/Grua1.jpg",
             buttonMinWidth: "150px",
             buttonMaxWidth: "180px",
             bigButtonLinkTo: "/empresas/4C"
         },
         {
-            company: "Nucleo Energy",
+            company: t('CompanyData.nucleoEnergy.name'),
             logoUrl: "/LogoHorizontal@4x.png",
-            smallHistoryText: "Núcleo Energy es una empresa joven dedicada a energias renovables.",
-            smallHistoryText2: "Impulsando proyectos eólicos, solares y de almacenamiento, fabrica y suministra equipos para el sector y desarrolla infraestructura eléctrica",
-            buttonText: "Conoce a Nucleo",
-            keyServices: ["Energía Eólica y Fotovoltaica", 'Sistemas de Almacenamiento De Energía', "Manufactura y Suministro", "Infraestructura de Transmisión y Distribución"],
+            smallHistoryText: t('CompanyData.nucleoEnergy.shortHistory'),
+            smallHistoryText2: t('CompanyData.nucleoEnergy.shortHistory2'),
+            buttonText: t('CompanyData.nucleoEnergy.buttonText'),
+            keyServices: [
+                t('CompanyData.nucleoEnergy.services.windSolar'),
+                t('CompanyData.nucleoEnergy.services.storage'),
+                t('CompanyData.nucleoEnergy.services.manufacturing'),
+                t('CompanyData.nucleoEnergy.services.infrastructure')
+            ],
             image: "/2.jpg",
             buttonMinWidth: "180px",
             buttonMaxWidth: "220px",
             bigButtonLinkTo: "/empresas/nucleo-energy"
         },
         {
-            company: "RECCMAQ2",
+            company: t('CompanyData.reccmaq2.name'),
             logoUrl: "/reccmalogoxD.png",
-            smallHistoryText: "Reconstructora de maquinaria con presencia nacional en el sector industrial.",
-            smallHistoryText2: "Servicio especializado de reconstrucción, mantenimiento y reparación de maquinaria pesada para industrias clave.",
-            buttonText: "Conoce a RECCMAQ2",
-            keyServices: ["Reconstrucción de Maquinaria", "Mantenimiento Industrial", "Reparación de Equipos", "Servicio a Nivel Nacional"],
+            smallHistoryText: t('CompanyData.reccmaq2.shortHistory'),
+            smallHistoryText2: t('CompanyData.reccmaq2.shortHistory2'),
+            buttonText: t('CompanyData.reccmaq2.buttonText'),
+            keyServices: [
+                t('CompanyData.reccmaq2.services.reconstruction'),
+                t('CompanyData.reccmaq2.services.maintenance'),
+                t('CompanyData.reccmaq2.services.repair'),
+                t('CompanyData.reccmaq2.services.national')
+            ],
             image: "/img143.jpg",
             buttonMinWidth: "200px",
             buttonMaxWidth: "240px",
@@ -123,29 +145,28 @@ export default function Home() {
 
     const projects = [
         {
-            title: "Secreteria de la Marina",
-            country: "Mexico",
+            title: t('Projects.marina.title'),
+            country: t('Projects.marina.country'),
             backgroundImageUrl: "/Secretaria.jpg",
-            description: "Proyecto: Construcción y equipamiento del Hospital Naval en PTO. Vallarta, Jalisco."
+            description: t('Projects.marina.description')
         },
         {
-            title: "Pedido 8833 ABEN3T",
-            country: "Mexico",
+            title: t('Projects.pedido8833.title'),
+            country: t('Projects.pedido8833.country'),
             backgroundImageUrl: "/pedido8833Aben3t.jpg",
-            description: "LT 230 KV A3T-SE: Limpieza de vía E aisladores. Revisión FO y herrajes. Anti aves. Termografía en empalmes.\n" +
-                "OS: Martpat-31000-LT-CFV-GSC-41"
+            description: t('Projects.pedido8833.description')
         },
         {
-            title: "Lineas de transmision electrica",
-            country: "Mexico",
+            title: t('Projects.transmission.title'),
+            country: t('Projects.transmission.country'),
             backgroundImageUrl: "/LineasDeTransmisionElectrica.jpg",
-            description: "Montaje: estructura metálica galvanizada para torres auto soportadas (400 KV) en LT Puerto Peñasco - Golfo de Santa Clara. "
+            description: t('Projects.transmission.description')
         },
         {
-            title: "Rehabilitación de subestación electrica",
-            country: "Peru",
+            title: t('Projects.rehabilitation.title'),
+            country: t('Projects.rehabilitation.country'),
             backgroundImageUrl: "/RehabilatacionSubestacionesPeru.jpg",
-            description: "Modernización SE Lima y Cusco: Diseño y obras electro-mecánicas/civiles para luz del sur (subcontrato electro Sur Este). "
+            description: t('Projects.rehabilitation.description')
         },
     ]
 
@@ -388,20 +409,20 @@ export default function Home() {
                     <div className="flex flex-col items-center justify-center w-full max-w-md space-y-4">
                         {/* Título mobile - compacto */}
                         <h1 className="text-2xl sm:text-3xl text-center text-white text-shadow-strong animate-fade-in-up font-bold leading-snug">
-                            Impulsando el futuro para lo que viene en el horizonte
+                            {t('Hero.mainTitle')}
                         </h1>
 
                         {/* Subtítulo mobile - más pequeño */}
                         <p className="text-xs sm:text-sm text-white text-center text-shadow-soft animate-fade-in-up leading-relaxed opacity-90"
                            style={{animationDelay: '0.2s'}}>
-                            Nuestro compromiso es abrir camino hacia un futuro mejor, para que estemos listos para el futuro que cada vez está más cerca.
+                            {t('Hero.subtitle')}
                         </p>
 
                         {/* CTA Button mobile - más compacto */}
                         <div className="animate-fade-in-up mt-3" style={{animationDelay: '0.4s'}}>
                             <a href="#EMPRESAS">
                                 <button className="bg-white text-primaryBlue px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
-                                    Conoce Nuestras Empresas
+                                    {t('Hero.cta')}
                                 </button>
                             </a>
                         </div>
@@ -413,16 +434,15 @@ export default function Home() {
                     <div className="flex flex-col items-center justify-center w-full space-y-6 lg:space-y-8">
                         {/* Desktop: Con line break (igual que antes) */}
                         <h1 className="text-6xl lg:text-7xl text-center text-white text-shadow-strong animate-fade-in-up font-bold leading-tight max-w-4xl">
-                            Impulsando el futuro.{' '}
+                            {t('Hero.mainTitleDesktop1')}{' '}
                             <span className="block mt-2 lg:mt-1">
-                    Para lo que viene en el horizonte.
+                    {t('Hero.mainTitleDesktop2')}
                 </span>
                         </h1>
 
                         <h3 className="text-lg sm:text-xl lg:text-2xl text-white text-center text-shadow-soft max-w-2xl animate-fade-in-up leading-relaxed px-2"
                             style={{animationDelay: '0.2s'}}>
-                            Nuestro compromiso es abrir camino hacia un futuro mejor, para que estemos listos para el
-                            futuro que cada vez está más cerca.
+                            {t('Hero.subtitle')}
                         </h3>
                     </div>
                 </div>
@@ -457,45 +477,45 @@ export default function Home() {
                         {/* Header compacto */}
                         <div className="text-center space-y-3">
                             <h2 className="text-2xl sm:text-3xl text-white text-shadow-strong font-bold leading-tight">
-                                Infraestructura Eléctrica de Alto Voltaje
+                                {t('IMBAR.title')}
                             </h2>
                             <div className="decorative-line w-20 h-0.5 mx-auto rounded-full"></div>
                             <p className="text-xs sm:text-sm text-white text-shadow-soft leading-relaxed opacity-90">
-                                40 años de experiencia construyendo la red eléctrica que impulsa a México
+                                {t('IMBAR.subtitle')}
                             </p>
                         </div>
 
                         {/* Stats - más compactos en mobile */}
                         <div className="grid grid-cols-3 gap-3">
                             <div className="stat-card content-card rounded-xl p-3 text-center">
-                                <div className="text-2xl sm:text-3xl font-bold text-primaryBlue mb-1">400KV</div>
-                                <div className="text-gray-700 text-[10px] sm:text-xs font-medium leading-tight">Líneas de Transmisión</div>
+                                <div className="text-2xl sm:text-3xl font-bold text-primaryBlue mb-1">{t('IMBAR.stat1Value')}</div>
+                                <div className="text-gray-700 text-[10px] sm:text-xs font-medium leading-tight">{t('IMBAR.stat1Label')}</div>
                             </div>
 
                             <div className="stat-card content-card rounded-xl p-3 text-center">
-                                <div className="text-2xl sm:text-3xl font-bold text-thirdGreen mb-1">CFE</div>
-                                <div className="text-gray-700 text-[10px] sm:text-xs font-medium leading-tight">Proveedor Certificado</div>
+                                <div className="text-2xl sm:text-3xl font-bold text-thirdGreen mb-1">{t('IMBAR.stat2Value')}</div>
+                                <div className="text-gray-700 text-[10px] sm:text-xs font-medium leading-tight">{t('IMBAR.stat2Label')}</div>
                             </div>
 
                             <div className="stat-card content-card rounded-xl p-3 text-center">
-                                <div className="text-2xl sm:text-3xl font-bold text-primaryBlue mb-1">40+</div>
-                                <div className="text-gray-700 text-[10px] sm:text-xs font-medium leading-tight">Años Experiencia</div>
+                                <div className="text-2xl sm:text-3xl font-bold text-primaryBlue mb-1">{t('IMBAR.stat3Value')}</div>
+                                <div className="text-gray-700 text-[10px] sm:text-xs font-medium leading-tight">{t('IMBAR.stat3Label')}</div>
                             </div>
                         </div>
 
                         {/* Servicios - lista compacta */}
                         <div className="content-card rounded-2xl p-4 space-y-3">
                             <div className="space-y-2">
-                                <h3 className="text-sm font-bold text-primaryBlue">Subestaciones Eléctricas</h3>
+                                <h3 className="text-sm font-bold text-primaryBlue">{t('IMBAR.service1Title')}</h3>
                                 <p className="text-xs text-gray-700 leading-relaxed">
-                                    Diseño, construcción y modernización de subestaciones de alta tensión con soluciones integrales.
+                                    {t('IMBAR.service1Description')}
                                 </p>
                             </div>
                             <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
                             <div className="space-y-2">
-                                <h3 className="text-sm font-bold text-thirdGreen">Fabricación Especializada</h3>
+                                <h3 className="text-sm font-bold text-thirdGreen">{t('IMBAR.service2Title')}</h3>
                                 <p className="text-xs text-gray-700 leading-relaxed">
-                                    Estructuras metálicas galvanizadas para torres autosoportadas con certificaciones internacionales.
+                                    {t('IMBAR.service2Description')}
                                 </p>
                             </div>
                         </div>
@@ -504,7 +524,7 @@ export default function Home() {
                         <div className="text-center pt-2">
                             <a href="/empresas/imbar">
                                 <button className="bg-white text-primaryBlue px-5 py-2 rounded-full font-bold text-xs sm:text-sm hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:scale-105">
-                                    Descubre IMBAR
+                                    {t('IMBAR.cta')}
                                 </button>
                             </a>
                         </div>
@@ -516,50 +536,47 @@ export default function Home() {
                     <div className="max-w-6xl w-full space-y-12">
                         <div className="text-center space-y-6">
                             <h2 className="text-5xl sm:text-6xl lg:text-7xl text-white text-shadow-strong font-bold leading-tight">
-                                Infraestructura Eléctrica
-                                <span className="block mt-2">de Alto Voltaje</span>
+                                {t('IMBAR.title')}
                             </h2>
 
                             <div className="decorative-line w-1/3 h-1 mx-auto rounded-full"></div>
                             <p className="text-lg sm:text-xl lg:text-2xl text-white text-shadow-soft max-w-3xl mx-auto leading-relaxed px-4">
-                                40 años de experiencia construyendo la red eléctrica que impulsa a México
+                                {t('IMBAR.subtitle')}
                             </p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
                             <div className="stat-card content-card rounded-2xl p-8 text-center transform transition-all duration-300 hover:scale-105">
-                                <div className="text-5xl font-bold text-primaryBlue mb-3">400 KV</div>
-                                <div className="text-gray-700 text-lg font-medium">Líneas de Transmisión</div>
-                                <div className="text-gray-600 text-sm mt-2">Capacidad máxima certificada</div>
+                                <div className="text-5xl font-bold text-primaryBlue mb-3">{t('IMBAR.stat1Value')}</div>
+                                <div className="text-gray-700 text-lg font-medium">{t('IMBAR.stat1Label')}</div>
+                                <div className="text-gray-600 text-sm mt-2">{t('IMBAR.stat1Description')}</div>
                             </div>
 
                             <div className="stat-card content-card rounded-2xl p-8 text-center transform transition-all duration-300 hover:scale-105">
-                                <div className="text-5xl font-bold text-thirdGreen mb-3">CFE</div>
-                                <div className="text-gray-700 text-lg font-medium">Proveedor Certificado</div>
-                                <div className="text-gray-600 text-sm mt-2">Comisión Federal de Electricidad</div>
+                                <div className="text-5xl font-bold text-thirdGreen mb-3">{t('IMBAR.stat2Value')}</div>
+                                <div className="text-gray-700 text-lg font-medium">{t('IMBAR.stat2Label')}</div>
+                                <div className="text-gray-600 text-sm mt-2">{t('IMBAR.stat2Description')}</div>
                             </div>
 
                             <div className="stat-card content-card rounded-2xl p-8 text-center transform transition-all duration-300 hover:scale-105">
-                                <div className="text-5xl font-bold text-primaryBlue mb-3">40+</div>
-                                <div className="text-gray-700 text-lg font-medium">Años de Experiencia</div>
-                                <div className="text-gray-600 text-sm mt-2">Liderando el sector eléctrico</div>
+                                <div className="text-5xl font-bold text-primaryBlue mb-3">{t('IMBAR.stat3Value')}</div>
+                                <div className="text-gray-700 text-lg font-medium">{t('IMBAR.stat3LabelDesktop')}</div>
+                                <div className="text-gray-600 text-sm mt-2">{t('IMBAR.stat3Description')}</div>
                             </div>
                         </div>
 
                         <div className="content-card rounded-3xl p-8 lg:p-12 mt-12">
                             <div className="grid md:grid-cols-2 gap-8">
                                 <div>
-                                    <h3 className="text-2xl font-bold text-primaryBlue mb-4">Subestaciones Eléctricas</h3>
+                                    <h3 className="text-2xl font-bold text-primaryBlue mb-4">{t('IMBAR.service1Title')}</h3>
                                     <p className="text-gray-700 leading-relaxed">
-                                        Diseño, construcción y modernización de subestaciones de alta tensión.
-                                        Soluciones integrales desde la ingeniería hasta la puesta en marcha.
+                                        {t('IMBAR.service1DescriptionDesktop')}
                                     </p>
                                 </div>
                                 <div>
-                                    <h3 className="text-2xl font-bold text-thirdGreen mb-4">Fabricación Especializada</h3>
+                                    <h3 className="text-2xl font-bold text-thirdGreen mb-4">{t('IMBAR.service2Title')}</h3>
                                     <p className="text-gray-700 leading-relaxed">
-                                        Estructuras metálicas galvanizadas para torres autosoportadas.
-                                        Manufactura de alta precisión con certificaciones internacionales.
+                                        {t('IMBAR.service2DescriptionDesktop')}
                                     </p>
                                 </div>
                             </div>
@@ -568,8 +585,8 @@ export default function Home() {
                         <div className="text-center mt-8">
                             <a href="/empresas/imbar">
                                 <BigButton
-                                    textAfter="Descubre IMBAR"
-                                    textBefore="Descubre IMBAR"
+                                    textAfter={t('IMBAR.cta')}
+                                    textBefore={t('IMBAR.cta')}
                                     textColor="white"
                                     minWidth="200px"
                                     maxWidth="240px"
@@ -612,45 +629,45 @@ export default function Home() {
                         {/* Header compacto */}
                         <div className="text-center space-y-3">
                             <h2 className="text-2xl sm:text-3xl text-white text-shadow-strong font-bold leading-tight">
-                                Construcción Civil e Industrial
+                                {t('FourC.title')}
                             </h2>
                             <div className="decorative-line w-20 h-0.5 mx-auto rounded-full"></div>
                             <p className="text-xs sm:text-sm text-white text-shadow-soft leading-relaxed opacity-90">
-                                Más de 40 años construyendo el futuro con obras de ingeniería de excelencia
+                                {t('FourC.subtitle')}
                             </p>
                         </div>
 
                         {/* Stats - grid 3 columnas compacto */}
                         <div className="grid grid-cols-3 gap-3">
                             <div className="stat-card content-card rounded-xl p-3 text-center">
-                                <div className="text-2xl sm:text-3xl font-bold text-primaryBlue mb-1">40+</div>
-                                <div className="text-gray-700 text-[10px] sm:text-xs font-medium leading-tight">Años Trayectoria</div>
+                                <div className="text-2xl sm:text-3xl font-bold text-primaryBlue mb-1">{t('FourC.stat1Value')}</div>
+                                <div className="text-gray-700 text-[10px] sm:text-xs font-medium leading-tight">{t('FourC.stat1Label')}</div>
                             </div>
 
                             <div className="stat-card content-card rounded-xl p-3 text-center">
-                                <div className="text-2xl sm:text-3xl font-bold text-secondYellow mb-1">100+</div>
-                                <div className="text-gray-700 text-[10px] sm:text-xs font-medium leading-tight">Proyectos</div>
+                                <div className="text-2xl sm:text-3xl font-bold text-secondYellow mb-1">{t('FourC.stat2Value')}</div>
+                                <div className="text-gray-700 text-[10px] sm:text-xs font-medium leading-tight">{t('FourC.stat2Label')}</div>
                             </div>
 
                             <div className="stat-card content-card rounded-xl p-3 text-center">
-                                <div className="text-xl sm:text-2xl font-bold text-thirdGreen mb-1">Solar</div>
-                                <div className="text-gray-700 text-[10px] sm:text-xs font-medium leading-tight">Energía Fotovoltaica</div>
+                                <div className="text-xl sm:text-2xl font-bold text-thirdGreen mb-1">{t('FourC.stat3Value')}</div>
+                                <div className="text-gray-700 text-[10px] sm:text-xs font-medium leading-tight">{t('FourC.stat3Label')}</div>
                             </div>
                         </div>
 
                         {/* Servicios - lista compacta */}
                         <div className="content-card rounded-2xl p-4 space-y-3">
                             <div className="space-y-2">
-                                <h3 className="text-sm font-bold text-primaryBlue">Obras Civiles</h3>
+                                <h3 className="text-sm font-bold text-primaryBlue">{t('FourC.service1Title')}</h3>
                                 <p className="text-xs text-gray-700 leading-relaxed">
-                                    Edificaciones residenciales, comerciales e industriales con los más altos estándares de calidad.
+                                    {t('FourC.service1Description')}
                                 </p>
                             </div>
                             <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
                             <div className="space-y-2">
-                                <h3 className="text-sm font-bold text-secondYellow">Obras Eléctricas</h3>
+                                <h3 className="text-sm font-bold text-secondYellow">{t('FourC.service2Title')}</h3>
                                 <p className="text-xs text-gray-700 leading-relaxed">
-                                    Instalaciones eléctricas e integración de sistemas fotovoltaicos para uso industrial y comercial.
+                                    {t('FourC.service2Description')}
                                 </p>
                             </div>
                         </div>
@@ -659,7 +676,7 @@ export default function Home() {
                         <div className="text-center pt-2">
                             <a href="/empresas/4C">
                                 <button className="bg-white text-primaryBlue px-5 py-2 rounded-full font-bold text-xs sm:text-sm hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:scale-105">
-                                    Descubre 4C
+                                    {t('FourC.cta')}
                                 </button>
                             </a>
                         </div>
@@ -671,50 +688,47 @@ export default function Home() {
                     <div className="max-w-6xl w-full space-y-12">
                         <div className="text-center space-y-6">
                             <h2 className="text-5xl sm:text-6xl lg:text-7xl text-white text-shadow-strong font-bold leading-tight">
-                                Construcción Civil
-                                <span className="block mt-2">e Industrial</span>
+                                {t('FourC.title')}
                             </h2>
 
                             <div className="decorative-line w-1/3 h-1 mx-auto rounded-full"></div>
                             <p className="text-lg sm:text-xl lg:text-2xl text-white text-shadow-soft max-w-3xl mx-auto leading-relaxed px-4">
-                                Más de 40 años construyendo el futuro con obras de ingeniería de excelencia
+                                {t('FourC.subtitle')}
                             </p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
                             <div className="stat-card content-card rounded-2xl p-8 text-center transform transition-all duration-300 hover:scale-105">
-                                <div className="text-5xl font-bold text-primaryBlue mb-3">40+</div>
-                                <div className="text-gray-700 text-lg font-medium">Años de Trayectoria</div>
-                                <div className="text-gray-600 text-sm mt-2">Construyendo infraestructura</div>
+                                <div className="text-5xl font-bold text-primaryBlue mb-3">{t('FourC.stat1Value')}</div>
+                                <div className="text-gray-700 text-lg font-medium">{t('FourC.stat1LabelDesktop')}</div>
+                                <div className="text-gray-600 text-sm mt-2">{t('FourC.stat1Description')}</div>
                             </div>
 
                             <div className="stat-card content-card rounded-2xl p-8 text-center transform transition-all duration-300 hover:scale-105">
-                                <div className="text-5xl font-bold text-secondYellow mb-3">100+</div>
-                                <div className="text-gray-700 text-lg font-medium">Proyectos Realizados</div>
-                                <div className="text-gray-600 text-sm mt-2">Obras civiles y eléctricas</div>
+                                <div className="text-5xl font-bold text-secondYellow mb-3">{t('FourC.stat2Value')}</div>
+                                <div className="text-gray-700 text-lg font-medium">{t('FourC.stat2LabelDesktop')}</div>
+                                <div className="text-gray-600 text-sm mt-2">{t('FourC.stat2Description')}</div>
                             </div>
 
                             <div className="stat-card content-card rounded-2xl p-8 text-center transform transition-all duration-300 hover:scale-105">
-                                <div className="text-5xl font-bold text-thirdGreen mb-3">Solar</div>
-                                <div className="text-gray-700 text-lg font-medium">Energía Fotovoltaica</div>
-                                <div className="text-gray-600 text-sm mt-2">Proyectos sustentables</div>
+                                <div className="text-5xl font-bold text-thirdGreen mb-3">{t('FourC.stat3Value')}</div>
+                                <div className="text-gray-700 text-lg font-medium">{t('FourC.stat3Label')}</div>
+                                <div className="text-gray-600 text-sm mt-2">{t('FourC.stat3Description')}</div>
                             </div>
                         </div>
 
                         <div className="content-card rounded-3xl p-8 lg:p-12 mt-12">
                             <div className="grid md:grid-cols-2 gap-8">
                                 <div>
-                                    <h3 className="text-2xl font-bold text-primaryBlue mb-4">Obras Civiles</h3>
+                                    <h3 className="text-2xl font-bold text-primaryBlue mb-4">{t('FourC.service1Title')}</h3>
                                     <p className="text-gray-700 leading-relaxed">
-                                        Construcción de edificaciones residenciales, comerciales e industriales.
-                                        Infraestructura urbana con los más altos estándares de calidad y seguridad.
+                                        {t('FourC.service1DescriptionDesktop')}
                                     </p>
                                 </div>
                                 <div>
-                                    <h3 className="text-2xl font-bold text-secondYellow mb-4">Obras Eléctricas</h3>
+                                    <h3 className="text-2xl font-bold text-secondYellow mb-4">{t('FourC.service2Title')}</h3>
                                     <p className="text-gray-700 leading-relaxed">
-                                        Instalaciones eléctricas de baja y media tensión.
-                                        Integración de sistemas fotovoltaicos para autoconsumo industrial y comercial.
+                                        {t('FourC.service2DescriptionDesktop')}
                                     </p>
                                 </div>
                             </div>
@@ -723,8 +737,8 @@ export default function Home() {
                         <div className="text-center mt-8">
                             <a href="/empresas/4C">
                                 <BigButton
-                                    textAfter="Descubre 4C"
-                                    textBefore="Descubre 4C"
+                                    textAfter={t('FourC.cta')}
+                                    textBefore={t('FourC.cta')}
                                     textColor="white"
                                     minWidth="180px"
                                     maxWidth="220px"
@@ -742,7 +756,7 @@ export default function Home() {
                     <div className="max-w-lg mx-auto space-y-6">
                         {/* Título compacto */}
                         <h3 className="text-2xl sm:text-3xl leading-tight text-primaryBlue font-bold text-center">
-                            Equipos extraordinarios construyendo proyectos que impulsan hacia el futuro
+                            {t('ExtraordinaryTeams.title')}
                         </h3>
 
                         {/* Imagen compacta */}
@@ -751,7 +765,7 @@ export default function Home() {
                                 src="/Heroafter.jpeg"
                                 width={1200}
                                 height={800}
-                                alt="Turbina eolica con logos de 4c y Nucleo Energy"
+                                alt={t('AriaLabels.turbineAlt')}
                                 className="w-full h-[240px] sm:h-[280px] object-cover rounded-2xl shadow-xl ring-1 ring-black/5"
                             />
                         </div>
@@ -759,11 +773,11 @@ export default function Home() {
                         {/* Texto resumido y compacto */}
                         <div className="space-y-3">
                             <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-center">
-                                Ofrecemos proyectos únicos que mejoran la calidad de vida con soluciones integrales. Más de 40 años de experiencia combinada en infraestructura eléctrica, construcción civil e industrial, y energías renovables.
+                                {t('ExtraordinaryTeams.paragraph1')}
                             </p>
 
                             <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-center">
-                                Desarrollamos subestaciones eléctricas, líneas de transmisión de 400 KV, obras civiles, proyectos eólicos, plantas solares y sistemas de autoconsumo.
+                                {t('ExtraordinaryTeams.paragraph2')}
                             </p>
                         </div>
 
@@ -771,7 +785,7 @@ export default function Home() {
                         <div className="flex justify-center pt-2">
                             <a href="/enfoque#ADN">
                                 <button className="bg-primaryBlue text-white px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:scale-105">
-                                    Misión, Visión y Valores
+                                    {t('ExtraordinaryTeams.cta')}
                                 </button>
                             </a>
                         </div>
@@ -782,35 +796,28 @@ export default function Home() {
                 <div className="hidden lg:flex flex-col lg:flex-row px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64 py-16 lg:py-24 gap-10 lg:gap-20 justify-center items-center">
                     <div className="flex flex-col w-full lg:w-1/2 gap-6">
                         <h3 className="text-3xl sm:text-4xl lg:text-5xl leading-tight text-primaryBlue font-bold">
-                            <span className="block">Equipos extraordinarios</span>
-                            <span className="block">Construyendo proyectos</span>
-                            <span className="block">Que impulsan hacia el futuro</span>
+                            <span className="block">{t('ExtraordinaryTeams.titleDesktop1')}</span>
+                            <span className="block">{t('ExtraordinaryTeams.titleDesktop2')}</span>
+                            <span className="block">{t('ExtraordinaryTeams.titleDesktop3')}</span>
                         </h3>
 
                         <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                            Ofrecemos proyectos únicos que mejoran la calidad de vida, fomentamos la innovación
-                            y el desarrollo con soluciones integrales. Con empresas especializadas que suman más
-                            de 40 años de experiencia combinada: desde infraestructura eléctrica de alta tensión
-                            con IMBAR, construcción civil e industrial con 4C, hasta energías renovables con Núcleo
-                            Energy.
+                            {t('ExtraordinaryTeams.paragraph1Desktop')}
                         </p>
 
                         <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                            Desarrollamos subestaciones eléctricas, líneas de transmisión de 400 KV, obras civiles,
-                            ingeniería mecánica y fotovoltaica, proyectos eólicos, plantas solares y sistemas de
-                            autoconsumo para uso industrial, comercial y residencial.
+                            {t('ExtraordinaryTeams.paragraph2Desktop')}
                         </p>
 
                         <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                            Desarrollamos infraestructura y energía de alta calidad, con gran compromiso con la
-                            eficiencia, innovación y seguridad.
+                            {t('ExtraordinaryTeams.paragraph3Desktop')}
                         </p>
 
                         <div className="mt-4">
                             <a href="/enfoque#ADN">
                                 <BigButton
-                                    textAfter="Misión, Visión y Valores"
-                                    textBefore="Misión, Visión y Valores"
+                                    textAfter={t('ExtraordinaryTeams.cta')}
+                                    textBefore={t('ExtraordinaryTeams.cta')}
                                     textColor="black"
                                     minWidth="200px"
                                     maxWidth="280px"
@@ -863,16 +870,13 @@ export default function Home() {
                     <div className="max-w-lg w-full space-y-5">
                         {/* Título compacto */}
                         <h2 className="text-2xl sm:text-3xl text-center text-white text-shadow-strong font-bold leading-tight">
-                            Definidos por la calidad de nuestro gran equipo
+                            {t('TeamQuality.title')}
                         </h2>
 
                         {/* Card con texto - más compacta */}
                         <div className="content-card rounded-2xl p-5">
                             <p className="text-xs sm:text-sm text-gray-800 text-center leading-relaxed">
-                                Nuestro equipo aporta su excelencia técnica, ingenio, empuje, creatividad y experiencia
-                                para ayudar a nuestros clientes a lograr sus visiones audaces. Tenemos éxito a través de
-                                la asociación y el deseo compartido de marcar la diferencia. Motivados por los desafíos
-                                en el horizonte superamos todos los límites posibles.
+                                {t('TeamQuality.description')}
                             </p>
                         </div>
 
@@ -880,7 +884,7 @@ export default function Home() {
                         <div className="flex justify-center pt-2">
                             <a href="#EMPRESAS">
                                 <button className="bg-white text-primaryBlue px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:scale-105">
-                                    Nuestras Empresas
+                                    {t('TeamQuality.cta')}
                                 </button>
                             </a>
                         </div>
@@ -892,12 +896,12 @@ export default function Home() {
 
                     <div className="flex flex-col items-center justify-center w-full lg:w-1/2 space-y-8">
                         <h2 className="text-3xl sm:text-4xl lg:text-6xl text-center text-white text-shadow-strong font-bold leading-tight max-w-3xl px-4">
-                            Definidos por la calidad de nuestro gran equipo.
+                            {t('TeamQuality.title')}
                         </h2>
                         <a href="#EMPRESAS">
                             <BigButton
-                                textAfter="Nuestras empresas"
-                                textBefore="Nuestras empresas"
+                                textAfter={t('TeamQuality.cta')}
+                                textBefore={t('TeamQuality.cta')}
                                 textColor="white"
                                 minWidth="230px"
                                 maxWidth="260px"
@@ -908,10 +912,7 @@ export default function Home() {
                     <div className="w-full lg:w-1/2 flex justify-center px-2">
                         <div className="content-card rounded-3xl p-6 sm:p-8 max-w-xl">
                             <p className="text-base sm:text-lg text-gray-800 text-center lg:text-left leading-relaxed">
-                                Nuestro equipo aporta su excelencia técnica, ingenio, empuje, creatividad y experiencia
-                                para ayudar a nuestros clientes a lograr sus visiones audaces. Tenemos éxito a través de
-                                la asociación y el deseo compartido de marcar la diferencia. Motivados por los desafíos
-                                en el horizonte superamos todos los límites posibles.
+                                {t('TeamQuality.description')}
                             </p>
                         </div>
                     </div>
@@ -925,7 +926,7 @@ export default function Home() {
                     <div className="lg:hidden flex flex-col items-center gap-3">
                         <div className="decorative-line w-16 h-0.5 rounded-full"></div>
                         <h3 id="EMPRESAS" className="text-2xl sm:text-3xl text-center font-bold text-primaryBlue">
-                            Nuestras Empresas
+                            {t('Companies.sectionTitle')}
                         </h3>
                     </div>
 
@@ -933,7 +934,7 @@ export default function Home() {
                     <div className="hidden lg:flex flex-col items-center">
                         <div className="decorative-line w-1/3 h-1 mt-2 mb-6 rounded-full"></div>
                         <h3 className="section-title text-primaryBlue text-4xl sm:text-5xl lg:text-6xl text-center font-bold pb-4">
-                            Nuestras Empresas
+                            {t('Companies.sectionTitle')}
                         </h3>
                     </div>
                 </div>
@@ -956,13 +957,13 @@ export default function Home() {
                     <div className="max-w-md w-full space-y-4">
                         {/* Título compacto */}
                         <h2 className="text-xl sm:text-2xl text-center text-white text-shadow-strong font-bold leading-tight">
-                            Definidos por la calidad de nuestro gran equipo
+                            {t('TeamQuality.title')}
                         </h2>
 
                         {/* Card muy compacta */}
                         <div className="content-card rounded-xl p-4 backdrop-blur-md">
                             <p className="text-xs text-gray-800 text-center leading-relaxed">
-                                La integridad, innovación y una mentalidad de nunca conformarse están en el centro de todo lo que hacemos. Nuestro equipo convierte los desafíos en oportunidades para lograr lo extraordinario.
+                                {t('TeamQuality.descriptionMobile')}
                             </p>
                         </div>
                     </div>
@@ -981,17 +982,14 @@ export default function Home() {
 
                     <div className="flex flex-col items-center justify-center w-full lg:w-1/2 space-y-8">
                         <h2 className="text-3xl sm:text-4xl lg:text-6xl text-center text-white text-shadow-strong font-bold leading-tight max-w-3xl px-4">
-                            Definidos por la calidad de nuestro gran equipo.
+                            {t('TeamQuality.title')}
                         </h2>
                     </div>
 
                     <div className="w-full lg:w-1/2 flex justify-center px-2">
                         <div className="content-card rounded-3xl p-6 sm:p-8 max-w-xl">
                             <p className="text-base sm:text-lg text-gray-800 text-center lg:text-left leading-relaxed">
-                                La integridad, innovación y una mentalidad de "nunca conformarse" están en el centro de
-                                todo lo que hacemos. Nuestro equipo está lleno de pensadores audaces y hábiles
-                                solucionadores de problemas que convierten los desafíos en oportunidades para lograr lo
-                                extraordinario.
+                                {t('TeamQuality.descriptionDesktop')}
                             </p>
                         </div>
                     </div>
@@ -1005,23 +1003,23 @@ export default function Home() {
                     <div className="max-w-lg mx-auto space-y-6">
                         {/* Título compacto */}
                         <h2 className="text-2xl sm:text-3xl text-primaryBlue font-bold leading-tight text-center">
-                            Nosotros Construimos Historia
+                            {t('History.title')}
                         </h2>
 
                         {/* Texto resumido */}
                         <p className="text-xs sm:text-sm text-gray-700 text-center leading-relaxed">
-                            La historia de este siglo estará determinada por la capacidad del mundo para trabajar rápido en infraestructura, energía, manufactura avanzada y protección ambiental.
+                            {t('History.paragraph1')}
                         </p>
 
                         <p className="text-xs sm:text-sm text-gray-700 text-center leading-relaxed">
-                            Durante muchos años hemos estado a la altura de las circunstancias con la experiencia y conocimientos para afrontar estos desafíos.
+                            {t('History.paragraph2')}
                         </p>
 
                         {/* Botón compacto */}
                         <div className="flex justify-center pt-2">
                             <a href="/proyectos">
                                 <button className="bg-primaryBlue text-white px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:scale-105">
-                                    Todos los Proyectos
+                                    {t('History.cta')}
                                 </button>
                             </a>
                         </div>
@@ -1032,12 +1030,12 @@ export default function Home() {
                 <div className="hidden lg:flex flex-col lg:flex-row px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64 pt-16 md:pt-24 lg:pt-32 justify-center items-center gap-10 lg:gap-16">
                     <div className="flex flex-col w-full lg:w-1/2 items-center lg:items-start text-center lg:text-left space-y-6">
                         <h2 className="text-4xl sm:text-5xl lg:text-6xl text-primaryBlue font-bold leading-tight">
-                            Nosotros Construimos Historia
+                            {t('History.title')}
                         </h2>
                         <a href="/proyectos">
                             <BigButton
-                                textAfter="Todos los Proyectos"
-                                textBefore="Todos los Proyectos"
+                                textAfter={t('History.cta')}
+                                textBefore={t('History.cta')}
                                 textColor="black"
                                 minWidth="200px"
                                 maxWidth="240px"
@@ -1047,14 +1045,9 @@ export default function Home() {
 
                     <div className="w-full lg:w-1/2 flex justify-center">
                         <p className="text-base sm:text-lg text-gray-700 text-center lg:text-left leading-relaxed max-w-2xl">
-                            La historia desde inicios del siglo y para los siguientes siglos estará determinada por la
-                            capacidad del mundo para trabajar rápido y en gran escala para satisfacer necesidades en una
-                            pronta evolución de infraestructura, energía, manufactura avanzada, recursos críticos,
-                            protección ambiental y seguridad nacional.
+                            {t('History.paragraph1Desktop')}
                             <br /><br />
-                            Durante muchos años hemos estado siempre a la altura de las circunstancias. Tenemos la
-                            experiencia y los conocimientos, y estamos diseñados específicamente para afrontar todos
-                            estos desafíos que se asoman desde el horizonte.
+                            {t('History.paragraph2Desktop')}
                         </p>
                     </div>
                 </div>
@@ -1064,14 +1057,14 @@ export default function Home() {
                     {/* Mobile: título más pequeño */}
                     <div className="lg:hidden flex flex-col w-full px-4">
                         <h2 className="text-2xl sm:text-3xl font-bold text-primaryBlue text-center">
-                            Proyectos Destacados
+                            {t('History.featuredProjects')}
                         </h2>
                     </div>
 
                     {/* Desktop: título original */}
                     <div className="hidden lg:flex flex-col w-full px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-64">
                         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primaryBlue">
-                            Proyectos Destacados
+                            {t('History.featuredProjects')}
                         </h2>
                     </div>
 

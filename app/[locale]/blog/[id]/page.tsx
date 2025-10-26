@@ -6,6 +6,7 @@ import {MdArrowForwardIos} from "react-icons/md";
 import {GoClock} from "react-icons/go";
 import {LiaShareSquareSolid} from "react-icons/lia";
 import {FaFacebook, FaLinkedin, FaWhatsapp, FaInstagram} from "react-icons/fa";
+import { useTranslations } from 'next-intl';
 import HeaderNav from "@/app/components/HeaderNav";
 import Footer from "@/app/components/footer";
 
@@ -49,6 +50,7 @@ Morbi vulputate semper urna id gravida. Nam semper interdum est nec facilisis. N
 }
 
 export default function BlogPage({params}: { params: { id: string } }) {
+    const t = useTranslations('Contact');
     const [article] = React.useState<BlogArticle>(mockData);
 
     // Función para compartir en redes sociales
@@ -108,11 +110,11 @@ export default function BlogPage({params}: { params: { id: string } }) {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-4">
                     <nav className="flex items-center gap-2 text-sm text-gray-600 overflow-x-auto">
                         <Link href="/" className="hover:text-primaryBlue transition-colors whitespace-nowrap">
-                            Inicio
+                            {t('breadcrumbHome')}
                         </Link>
                         <MdArrowForwardIos className="h-3 w-3 flex-shrink-0 text-gray-400" />
                         <Link href="/blog" className="hover:text-primaryBlue transition-colors whitespace-nowrap">
-                            Blog
+                            {t('breadcrumbBlog')}
                         </Link>
                         <MdArrowForwardIos className="h-3 w-3 flex-shrink-0 text-gray-400" />
                         <span className="text-gray-900 truncate max-w-xs sm:max-w-md">
@@ -158,7 +160,7 @@ export default function BlogPage({params}: { params: { id: string } }) {
                         <div className="flex items-center gap-2">
                             <LiaShareSquareSolid className="w-5 h-5 text-gray-500" />
                             <span className="text-xs sm:text-sm uppercase text-gray-600 font-semibold tracking-wide">
-                                Compartir
+                                {t('shareButton')}
                             </span>
                         </div>
                         <div className="flex gap-3">
@@ -223,8 +225,7 @@ export default function BlogPage({params}: { params: { id: string } }) {
                                     {article.author.title}
                                 </p>
                                 <p className="text-sm sm:text-base text-gray-500">
-                                    Líder visionario en el sector de energías renovables e infraestructura,
-                                    con más de 20 años de experiencia impulsando proyectos transformadores.
+                                    {t('authorBio')}
                                 </p>
                             </div>
                         </div>
@@ -237,7 +238,7 @@ export default function BlogPage({params}: { params: { id: string } }) {
                         <div className="flex items-center gap-3">
                             <LiaShareSquareSolid className="w-6 h-6 text-primaryBlue" />
                             <span className="text-sm uppercase text-gray-700 font-semibold tracking-wide">
-                                ¿Te gustó este artículo? Compártelo
+                                {t('shareSubtitle')}
                             </span>
                         </div>
                         <div className="flex gap-3">

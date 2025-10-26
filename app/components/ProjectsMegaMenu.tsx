@@ -1,70 +1,39 @@
 import * as React from "react";
 import BigButton from "@/app/components/bigButton";
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
 
 export default function ProjectsMegaMenu() {
+    const t = useTranslations('ProjectsMegaMenu');
     const [activeTab, setActiveTab] = React.useState<'mercado' | 'region'>('mercado');
 
-    const mercados = [
-        {
-            key: 'eolica',
-            title: 'Energía eólica',
-            img: '/eolico2.jpg',
-            empresa: 'Núcleo Energy'
-        },
-        {
-            key: 'fotovoltaica',
-            title: 'Energía fotovoltaica',
-            img: '/paneles.jpg',
-            empresa: '4C'
-        },
-        {
-            key: 'construccion',
-            title: 'Construcción',
-            img: '/Grua1.jpg',
-            empresa: '4C'
-        },
-        // ⚡ NUEVO - Subestaciones eléctricas (IMBAR)
-        {
-            key: 'subestaciones',
-            title: 'Subestaciones Eléctricas',
-            img: '/LineasDeTransmisionElectrica.jpg',
-            empresa: 'IMBAR',
-            badge: '400 KV'
-        },
-        {
-            key: 'transmision',
-            title: 'Líneas de Transmisión',
-            img: '/LineasDeTransmisionElectrica.jpg',
-            empresa: 'IMBAR & 4C'
-        },
-        // ⚡ NUEVO - Fabricación (IMBAR)
-        {
-            key: 'fabricacion',
-            title: 'Fabricación de Estructuras',
-            img: '/obras1.jpg',
-            empresa: 'IMBAR',
-            badge: '700 Ton/mes'
-        },
-        {
-            key: 'mantenimiento',
-            title: 'Mantenimiento',
-            img: '/RehabilatacionSubestacionesPeru.jpg',
-            empresa: '4C & IMBAR'
-        },
-        {
-            key: 'servicios',
-            title: 'Servicios Especializados',
-            img: '/turbinas_4c_nucleologo.jpg',
-            empresa: '4C'
-        },
-    ];
+    const mercados = (t.raw('mercados') as Array<{
+        key: string;
+        title: string;
+        empresa: string;
+        badge?: string;
+    }>).map(m => ({
+        ...m,
+        img: m.key === 'eolica' ? '/eolico2.jpg' :
+             m.key === 'fotovoltaica' ? '/paneles.jpg' :
+             m.key === 'construccion' ? '/Grua1.jpg' :
+             m.key === 'subestaciones' ? '/LineasDeTransmisionElectrica.jpg' :
+             m.key === 'transmision' ? '/LineasDeTransmisionElectrica.jpg' :
+             m.key === 'fabricacion' ? '/obras1.jpg' :
+             m.key === 'mantenimiento' ? '/RehabilatacionSubestacionesPeru.jpg' :
+             '/turbinas_4c_nucleologo.jpg'
+    }));
 
-    const regiones = [
-        {key: 'mx', title: 'México', img: '/Secretaria.jpg', proyectos: '50+'},
-        {key: 'pe', title: 'Perú', img: '/RehabilatacionSubestacionesPeru.jpg', proyectos: '10+'},
-        {key: 'latam', title: 'Latinoamérica', img: '/obras1.jpg', proyectos: '60+'},
-    ];
+    const regiones = (t.raw('regiones') as Array<{
+        key: string;
+        title: string;
+        proyectos: string;
+    }>).map(r => ({
+        ...r,
+        img: r.key === 'mx' ? '/Secretaria.jpg' :
+             r.key === 'pe' ? '/RehabilatacionSubestacionesPeru.jpg' :
+             '/obras1.jpg'
+    }));
 
     return (
         <div className={"w-full py-6 px-6 md:px-12 lg:px-20 bg-white"}>
@@ -98,156 +67,106 @@ export default function ProjectsMegaMenu() {
                 {/* Left column: intro + blog */}
                 <div className={"w-full lg:w-1/3 lg:pr-10 lg:border-r lg:border-gray-200"}>
                     <div className={"flex flex-col gap-6 lg:gap-10"}>
-                        <h3 className={"text-h3"}>Construyendo Historia</h3>
-                        <p className={"text-p"}>
-                            Escala. Complejidad. Impacto. Propósito. Ofrecemos proyectos<br
-                            className="hidden sm:block" />{" "}
-                            desafiantes que elevan los niveles de vida, impulsan la<br
-                            className="hidden sm:block" />{" "}
-                            prosperidad y apoyan el crecimiento sostenible en todo el mundo<br
-                            className="hidden sm:block" />{" "}-
-                            desde transporte limpio y eficiente hasta energía sostenible,<br
-                            className="hidden sm:block" />{" "}
-                            infraestructura eléctrica de alta tensión y mucho más.
-                        </p>
-                        <a href={"/proyectos"}>
-                            <BigButton textBefore={'Todos los proyectos'} textAfter={'Todos los proyectos'}
-                                       minWidth={"230px"}
-                                       maxWidth={"280px"}
-                            />
-                        </a>
+                        <div>
+                            <h3 className={"text-h3 text-primaryBlue mb-4"}>
+                                {t('title')}
+                            </h3>
+                            <p className={"text-p text-gray-600 mb-6"}>
+                                {t('subtitle')}
+                            </p>
+                            <a href={"/proyectos"}>
+                                <BigButton
+                                    textBefore={t('title')}
+                                    textAfter={t('title')}
+                                    minWidth={"180px"}
+                                    maxWidth={"220px"}
+                                />
+                            </a>
+                        </div>
                     </div>
-                    {/*<div className={"flex flex-col gap-3 mt-8"}>*/}
-                    {/*    <p className={"text-p uppercase pt-4 text-center lg:text-left"}>*/}
-                    {/*        Conoce más en nuestro blog*/}
-                    {/*    </p>*/}
-                    {/*    <div className={"w-full bg-gray-300 h-[2px] rounded-xl my-2"}></div>*/}
-                    {/*    <div className={"flex gap-3 w-full items-center"}>*/}
-                    {/*        <Image*/}
-                    {/*            src={"/eolico2.jpg"}*/}
-                    {/*            width={800}*/}
-                    {/*            height={800}*/}
-                    {/*            alt={"Parque eólico en las montañas en México"}*/}
-                    {/*            className={"hidden sm:block w-28 sm:w-36 h-20 sm:h-24 object-cover rounded-2xl flex-shrink-0"}*/}
-                    {/*        />*/}
-                    {/*        <div className={"space-y-0.5 flex-1 min-w-0"}>*/}
-                    {/*            <p className={"text-primaryBlue leading-tight break-words text-[16px] sm:text-[18px]"}>*/}
-                    {/*                El avance en la energía eólica*/}
-                    {/*            </p>*/}
-                    {/*            <p className={"text-gray-900 leading-snug break-words text-[13px] sm:text-[14px]"}>*/}
-                    {/*                Desde la planeación hasta la ejecución del proyecto*/}
-                    {/*            </p>*/}
-                    {/*        </div>*/}
-                    {/*    </div>*/}
-                    {/*    <div className={"flex gap-3 w-full items-center"}>*/}
-                    {/*        <Image*/}
-                    {/*            src={"/paneles.jpg"}*/}
-                    {/*            width={800}*/}
-                    {/*            height={800}*/}
-                    {/*            alt={"Paneles solares a cielo abierto"}*/}
-                    {/*            className={"hidden sm:block w-28 sm:w-36 h-20 sm:h-24 object-cover rounded-2xl flex-shrink-0"}*/}
-                    {/*        />*/}
-                    {/*        <div className={"space-y-0.5 flex-1 min-w-0"}>*/}
-                    {/*            <p className={"text-primaryBlue leading-tight break-words text-[16px] sm:text-[18px]"}>*/}
-                    {/*                Energía Fotovoltaica*/}
-                    {/*            </p>*/}
-                    {/*            <p className={"text-gray-900 leading-snug break-words text-[13px] sm:text-[14px]"}>*/}
-                    {/*                La importancia de migrar a este tipo de energía*/}
-                    {/*            </p>*/}
-                    {/*        </div>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
-
                 </div>
 
-                {/* Right column: tabs */}
+                {/* Right column: mercados / regiones */}
                 <div className={"w-full lg:w-2/3 lg:pl-10"}>
-                    <div className="flex items-center gap-8 border-b border-gray-200">
+                    <div className={"flex items-center gap-8 border-b border-gray-200 mb-6"}>
                         <button
-                            className={`${activeTab === 'mercado' ? 'text-primaryBlue border-primaryBlue' : 'text-gray-500 border-transparent'} uppercase tracking-widest text-[13px] py-4 border-b-2 transition-all duration-300`}
+                            className={`${activeTab === 'mercado' ? 'text-primaryBlue border-primaryBlue' : 'text-gray-500 border-transparent'} uppercase tracking-widest text-[13px] py-4 border-b-2 transition-colors duration-300`}
                             onClick={() => setActiveTab('mercado')}
                         >
-                            Explorar proyectos por mercado
+                            {t('tabMercados')}
                         </button>
                         <button
-                            className={`${activeTab === 'region' ? 'text-primaryBlue border-primaryBlue' : 'text-gray-500 border-transparent'} uppercase tracking-widest text-[13px] py-4 border-b-2 transition-all duration-300`}
+                            className={`${activeTab === 'region' ? 'text-primaryBlue border-primaryBlue' : 'text-gray-500 border-transparent'} uppercase tracking-widest text-[13px] py-4 border-b-2 transition-colors duration-300`}
                             onClick={() => setActiveTab('region')}
                         >
-                            Explorar proyectos por región
+                            {t('tabRegiones')}
                         </button>
                     </div>
 
-                    <div className="pt-6">
-                        {activeTab === 'mercado' && (
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {mercados.map((m) => (
-                                    <div key={m.key}
-                                         className="group cursor-pointer flex flex-col items-start text-left">
-                                        <div className="relative w-full">
-                                            <Image
-                                                src={m.img}
-                                                width={800}
-                                                height={800}
-                                                alt={m.title}
-                                                className="hidden sm:block w-full h-28 sm:h-32 md:h-40 object-cover rounded-2xl shadow-sm ring-1 ring-black/5 group-hover:ring-primaryBlue/40 transition-all duration-300 group-hover:scale-[1.02]"
-                                            />
-                                            {/* Badge de empresa */}
-                                            {m.empresa && (
-                                                <div className="absolute top-2 right-2">
-                                                    <span
-                                                        className={`empresa-badge ${m.empresa === 'IMBAR' || m.empresa.includes('IMBAR') ? 'imbar-badge' : ''}`}>
-                                                        {m.empresa}
-                                                    </span>
-                                                </div>
-                                            )}
-                                            {/* Badge de capacidad/voltaje */}
-                                            {m.badge && (
-                                                <div className="absolute bottom-2 left-2">
-                                                    <span className="capacity-badge">
-                                                        {m.badge}
-                                                    </span>
-                                                </div>
-                                            )}
-                                        </div>
-                                        <p className="mt-0 sm:mt-3 text-[15px] font-semibold text-gray-900 group-hover:text-primaryBlue transition-colors">
-                                            {m.title}
-                                        </p>
+                    {activeTab === 'mercado' && (
+                        <div className={"grid grid-cols-2 md:grid-cols-4 gap-4"}>
+                            {mercados.map((mercado) => (
+                                <div
+                                    key={mercado.key}
+                                    className={"group relative rounded-xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"}
+                                >
+                                    <div className={"relative h-40"}>
+                                        <Image
+                                            src={mercado.img}
+                                            alt={mercado.title}
+                                            fill
+                                            className={"object-cover group-hover:scale-110 transition-transform duration-500"}
+                                        />
+                                        <div className={"absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"}></div>
+                                        {mercado.badge && (
+                                            <div className={"absolute top-3 right-3 capacity-badge"}>
+                                                {mercado.badge}
+                                            </div>
+                                        )}
                                     </div>
-                                ))}
-                            </div>
-                        )}
+                                    <div className={"absolute bottom-0 left-0 right-0 p-3"}>
+                                        <h4 className={"text-white font-bold text-xs mb-1"}>
+                                            {mercado.title}
+                                        </h4>
+                                        <span className={"empresa-badge"}>
+                                            {mercado.empresa}
+                                        </span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
 
-                        {activeTab === 'region' && (
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {regiones.map((r) => (
-                                    <div key={r.key}
-                                         className="group cursor-pointer flex flex-col items-start text-left">
-                                        <div className="relative w-full">
-                                            <Image
-                                                src={r.img}
-                                                width={800}
-                                                height={800}
-                                                alt={r.title}
-                                                className="hidden sm:block w-full h-28 sm:h-32 md:h-40 object-cover rounded-2xl shadow-sm ring-1 ring-black/5 group-hover:ring-primaryBlue/40 transition-all duration-300 group-hover:scale-[1.02]"
-                                            />
-                                            {r.proyectos && (
-                                                <div className="absolute bottom-2 right-2">
-                                                    <span className="capacity-badge">
-                                                        {r.proyectos} proyectos
-                                                    </span>
-                                                </div>
-                                            )}
-                                        </div>
-                                        <p className="mt-0 sm:mt-3 text-[15px] font-semibold text-gray-900 group-hover:text-primaryBlue transition-colors">
-                                            {r.title}
+                    {activeTab === 'region' && (
+                        <div className={"grid grid-cols-1 md:grid-cols-3 gap-4"}>
+                            {regiones.map((region) => (
+                                <div
+                                    key={region.key}
+                                    className={"group relative rounded-xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"}
+                                >
+                                    <div className={"relative h-52"}>
+                                        <Image
+                                            src={region.img}
+                                            alt={region.title}
+                                            fill
+                                            className={"object-cover group-hover:scale-110 transition-transform duration-500"}
+                                        />
+                                        <div className={"absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"}></div>
+                                    </div>
+                                    <div className={"absolute bottom-0 left-0 right-0 p-4"}>
+                                        <h4 className={"text-white font-bold text-lg mb-2"}>
+                                            {region.title}
+                                        </h4>
+                                        <p className={"text-secundaryYellow text-sm font-semibold"}>
+                                            {region.proyectos}
                                         </p>
                                     </div>
-                                ))}
-                            </div>
-                        )}
-                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
-    )
+    );
 }

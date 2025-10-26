@@ -1,5 +1,6 @@
 "use client";
 import { MdLocationOn, MdCalendarToday, MdCheckCircle } from "react-icons/md";
+import { useTranslations } from 'next-intl';
 
 interface Client {
     name: string;
@@ -17,8 +18,11 @@ interface CompanyClientsSectionProps {
 export default function CompanyClientsSection({
                                                   clients,
                                                   primaryColor = "#000C47",
-                                                  title = "Nuestros Clientes"
+                                                  title
                                               }: CompanyClientsSectionProps) {
+    const t = useTranslations('Components.companyClients');
+    const displayTitle = title || t('defaultTitle');
+
     return (
         <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50">
             <div className="container mx-auto px-6">
@@ -36,10 +40,10 @@ export default function CompanyClientsSection({
                                 letterSpacing: '-0.02em'
                             }}
                         >
-                            {title}
+                            {displayTitle}
                         </h2>
                         <p className="text-gray-500 text-lg font-light max-w-2xl mx-auto">
-                            La confianza de grandes empresas respalda nuestra trayectoria
+                            {t('subtitle')}
                         </p>
                     </div>
 
