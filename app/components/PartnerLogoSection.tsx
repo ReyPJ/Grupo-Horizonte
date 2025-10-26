@@ -16,6 +16,11 @@ export default function PartnerLogosSection() {
             href: "/empresas/imbar"
         },
         {
+            name: "GERD",
+            logo: "/gerdlogo.png",
+            href: "/empresas/gerd"
+        },
+        {
             name: "Núcleo Energy",
             logo: "/LogoHorizontal@4x.png",
             href: "/empresas/nucleo-energy"

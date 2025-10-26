@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import * as React from "react";
-import {useTranslations} from 'next-intl';
+import {useTranslations, useLocale} from 'next-intl';
+import {usePathname, useRouter} from '@/i18n/routing';
 
 type HeaderNavProps = {
     setProjectsOpen?: (open: boolean) => void;
@@ -17,15 +18,30 @@ export default function HeaderNav({
                                       enfoqueOpen
                                   }: HeaderNavProps) {
     const t = useTranslations();
+    const locale = useLocale();
+    const router = useRouter();
+    const pathname = usePathname();
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [empresasDropdownOpen, setEmpresasDropdownOpen] = React.useState(false);
+    const [languageDropdownOpen, setLanguageDropdownOpen] = React.useState(false);
 
     const empresas = [
         {name: t('CompanyData.fourC.name'), href: "/empresas/4C"},
-        {name: t('CompanyData.nucleoEnergy.name'), href: "/empresas/nucleo-energy"},
         {name: t('CompanyData.imbar.name'), href: "/empresas/imbar"},
+        {name: t('CompanyData.gerd.name'), href: "/empresas/gerd"},
+        {name: t('CompanyData.nucleoEnergy.name'), href: "/empresas/nucleo-energy"},
         {name: t('CompanyData.reccmaq2.name'), href: "/empresas/reccmaq2"}
     ];
+
+    const languages = [
+        {code: 'es', name: 'Español', flag: '🇲🇽'},
+        {code: 'cn', name: '中文', flag: '🇨🇳'}
+    ];
+
+    const changeLanguage = (newLocale: string) => {
+        router.replace(pathname, {locale: newLocale});
+        setLanguageDropdownOpen(false);
+    };
 
     const toggleProjects = () => {
         if (setProjectsOpen) {
@@ -166,6 +182,31 @@ export default function HeaderNav({
                             >
                                 {t('Navigation.contact')}
                             </a>
+
+                            {/* Language Selector - Mobile */}
+                            <div className="bg-gray-50 rounded-xl p-3 mt-2">
+                                <p className="text-sm font-bold text-primaryBlue mb-2 px-2">Idioma / 语言</p>
+                                <div className="space-y-1">
+                                    {languages.map((lang) => (
+                                        <button
+                                            key={lang.code}
+                                            onClick={() => {
+                                                changeLanguage(lang.code);
+                                                setMobileOpen(false);
+                                            }}
+                                            className={`w-full flex items-center gap-3 py-2 px-3 text-sm rounded-lg transition-colors ${locale === lang.code ? 'bg-primaryBlue text-white font-semibold' : 'text-gray-700 hover:bg-white hover:text-primaryBlue'}`}
+                                        >
+                                            <span className="text-lg">{lang.flag}</span>
+                                            <span>{lang.name}</span>
+                                            {locale === lang.code && (
+                                                <svg className="w-4 h-4 ml-auto" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                                </svg>
+                                            )}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
                         </nav>
 
                         {/* Footer del menu */}
@@ -263,6 +304,44 @@ export default function HeaderNav({
                                 {t('Navigation.contact')}
                             </a>
                         </p>
+
+                        {/* Language Selector */}
+                        <div
+                            className="relative"
+                            onMouseEnter={() => setLanguageDropdownOpen(true)}
+                            onMouseLeave={() => setLanguageDropdownOpen(false)}
+                        >
+                            <button
+                                type="button"
+                                className={`flex items-center gap-2 text-h4 cursor-pointer transition delay-100 py-2 px-4 rounded-3xl ${languageDropdownOpen ? 'bg-primaryBlue text-white' : 'hover:bg-primaryBlue hover:text-white'}`}
+                            >
+                                <span className="text-xl">{languages.find(l => l.code === locale)?.flag}</span>
+                                <span className="hidden lg:inline">{languages.find(l => l.code === locale)?.name}</span>
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+
+                            <div
+                                className={`absolute top-full right-0 mt-2 w-48 bg-white rounded-2xl shadow-xl border border-gray-200 py-2 transition-all duration-200 ${languageDropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
+                            >
+                                {languages.map((lang) => (
+                                    <button
+                                        key={lang.code}
+                                        onClick={() => changeLanguage(lang.code)}
+                                        className={`w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-gray-50 transition-colors ${locale === lang.code ? 'bg-blue-50 text-primaryBlue font-semibold' : 'text-gray-700'}`}
+                                    >
+                                        <span className="text-xl">{lang.flag}</span>
+                                        <span className="text-base">{lang.name}</span>
+                                        {locale === lang.code && (
+                                            <svg className="w-4 h-4 ml-auto" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                            </svg>
+                                        )}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -74,6 +74,23 @@ export default function Home() {
 
     const companies = [
         {
+            company: t('CompanyData.fourC.name'),
+            logoUrl: "/4cSInfondoLogo.png",
+            smallHistoryText: t('CompanyData.fourC.shortHistory'),
+            smallHistoryText2: t('CompanyData.fourC.shortHistory2'),
+            buttonText: t('CompanyData.fourC.buttonText'),
+            keyServices: [
+                t('CompanyData.fourC.services.civilWorks'),
+                t('CompanyData.fourC.services.electricalWorks'),
+                t('CompanyData.fourC.services.specializedServices'),
+                t('CompanyData.fourC.services.photovoltaic')
+            ],
+            image: "/Grua1.jpg",
+            buttonMinWidth: "150px",
+            buttonMaxWidth: "180px",
+            bigButtonLinkTo: "/empresas/4C"
+        },
+        {
             company: t('CompanyData.imbar.name'),
             logoUrl: "/imbarlogo.jpeg",
             smallHistoryText: t('CompanyData.imbar.shortHistory'),
@@ -91,21 +108,21 @@ export default function Home() {
             bigButtonLinkTo: "/empresas/imbar"
         },
         {
-            company: t('CompanyData.fourC.name'),
-            logoUrl: "/4cSInfondoLogo.png",
-            smallHistoryText: t('CompanyData.fourC.shortHistory'),
-            smallHistoryText2: t('CompanyData.fourC.shortHistory2'),
-            buttonText: t('CompanyData.fourC.buttonText'),
+            company: t('CompanyData.gerd.name'),
+            logoUrl: "/gerdlogo.png",
+            smallHistoryText: t('CompanyData.gerd.shortHistory'),
+            smallHistoryText2: t('CompanyData.gerd.shortHistory2'),
+            buttonText: t('CompanyData.gerd.buttonText'),
             keyServices: [
-                t('CompanyData.fourC.services.civilWorks'),
-                t('CompanyData.fourC.services.electricalWorks'),
-                t('CompanyData.fourC.services.specializedServices'),
-                t('CompanyData.fourC.services.photovoltaic')
+                t('CompanyData.gerd.services.industrial'),
+                t('CompanyData.gerd.services.construction'),
+                t('CompanyData.gerd.services.infrastructure'),
+                t('CompanyData.gerd.services.telecommunications')
             ],
-            image: "/Grua1.jpg",
+            image: "/img143.jpg",
             buttonMinWidth: "150px",
             buttonMaxWidth: "180px",
-            bigButtonLinkTo: "/empresas/4C"
+            bigButtonLinkTo: "/empresas/gerd"
         },
         {
             company: t('CompanyData.nucleoEnergy.name'),
