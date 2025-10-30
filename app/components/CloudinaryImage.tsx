@@ -59,6 +59,12 @@ interface CloudinaryImageProps {
      * Formato de entrega deseado (auto, webp, avif, etc.)
      */
     format?: 'auto' | 'webp' | 'avif' | 'jpg' | 'png';
+
+    /**
+     * Sizes para responsive images (solo con fill)
+     * Ej: "(max-width: 768px) 100vw, 520px"
+     */
+    sizes?: string;
 }
 
 export default function CloudinaryImage({
@@ -72,7 +78,8 @@ export default function CloudinaryImage({
     quality = 'auto',
     gravity,
     useLocal = false,
-    format = 'auto'
+    format = 'auto',
+    sizes
 }: CloudinaryImageProps) {
     // Si useLocal es true, usa el componente Image estándar de Next.js
     // Útil para mantener imágenes locales durante la migración
@@ -103,7 +110,7 @@ export default function CloudinaryImage({
                 quality={quality}
                 gravity={gravity || 'auto'}
                 format={format}
-                sizes="100vw"
+                sizes={sizes || "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
                 crop="fill"
             />
         );
