@@ -86,7 +86,7 @@ export default function Home() {
         t('CompanyData.fourC.services.specializedServices'),
         t('CompanyData.fourC.services.photovoltaic')
       ],
-      image: "/Grua1.jpg",
+      image: "4C_bnwapt",
       buttonMinWidth: "150px",
       buttonMaxWidth: "180px",
       bigButtonLinkTo: "/empresas/4C"
@@ -120,7 +120,7 @@ export default function Home() {
         t('CompanyData.gerd.services.infrastructure'),
         t('CompanyData.gerd.services.telecommunications')
       ],
-      image: "/img143.jpg",
+      image: "https://res.cloudinary.com/dluzxwzba/image/upload/v1761798515/gerd1_ryp1pj.jpg",
       buttonMinWidth: "150px",
       buttonMaxWidth: "180px",
       bigButtonLinkTo: "/empresas/gerd"
@@ -778,14 +778,12 @@ export default function Home() {
             </h3>
 
             {/* Imagen compacta */}
-            <div className="relative w-full">
+            <div className="relative w-full h-[240px] sm:h-[280px]">
               <CloudinaryImage
-                src="https://res.cloudinary.com/dluzxwzba/image/upload/v1761789231/4C3_egxodf.jpg"
-                width={1200}
-                height={800}
+                src="4C3_egxodf"
                 alt={t('AriaLabels.turbineAlt')}
-                className="w-full h-[240px] sm:h-[280px] object-cover rounded-2xl shadow-xl ring-1 ring-black/5"
-                fill
+                className=" object-cover rounded-2xl shadow-xl ring-1 ring-black/5"
+                fill={true}
               />
             </div>
 
@@ -847,14 +845,14 @@ export default function Home() {
 
           <div className="flex flex-col w-full lg:w-1/2 items-center">
             <div className="relative group w-full max-w-[540px]">
-              <CloudinaryImage
-                src="https://res.cloudinary.com/dluzxwzba/image/upload/v1761789229/4CPrinicipal_lixtmy.jpg"
-                width={1200}
-                height={1200}
-                alt="Turbina eolica con logos de 4c y Nucleo Energy"
-                className="w-full h-[350px] sm:h-[460px] lg:h-[700px] object-cover rounded-3xl shadow-2xl ring-1 ring-black/5 transition-transform duration-500 group-hover:scale-[1.02]"
-                fill
-              />
+              <div className="w-full h-[350px] sm:h-[460px] lg:h-[700px] ">
+                <CloudinaryImage
+                  src="4CPrinicipal_lixtmy"
+                  alt="Turbina eolica con logos de 4c y Nucleo Energy"
+                  className="object-cover rounded-3xl shadow-2xl ring-1 ring-black/5 transition-transform duration-500 group-hover:scale-[1.02]"
+                  fill={true}
+                />
+              </div>
             </div>
           </div>
         </div>
