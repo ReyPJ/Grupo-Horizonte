@@ -1,0 +1,28 @@
+{
+  "name": "Grupo Horizonte | Infraestructura y Energía Renovable",
+  "short_name": "Grupo Horizonte",
+  "description": "Líderes en construcción de infraestructura, obras civiles, eléctricas y energías renovables en México",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000C47",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/LogoCompleto@4x.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/LogoCompleto@4x.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "construction", "energy"],
+  "lang": "es-MX",
+  "dir": "ltr",
+  "scope": "/",
+  "screenshots": []
+}
