@@ -70,7 +70,7 @@ export default function CloudinaryImage({
     className = '',
     priority = false,
     quality = 'auto',
-    gravity = 'auto',
+    gravity,
     useLocal = false,
     format = 'auto'
 }: CloudinaryImageProps) {
@@ -91,7 +91,7 @@ export default function CloudinaryImage({
         );
     }
 
-    // Para imágenes de Cloudinary
+    // Para imágenes de Cloudinary con fill (gravity solo funciona con fill/crop modes)
     if (fill) {
         return (
             <CldImage
@@ -101,13 +101,15 @@ export default function CloudinaryImage({
                 className={className}
                 priority={priority}
                 quality={quality}
-                gravity={gravity}
+                gravity={gravity || 'auto'}
                 format={format}
                 sizes="100vw"
+                crop="fill"
             />
         );
     }
 
+    // Para imágenes con dimensiones fijas (sin gravity)
     return (
         <CldImage
             src={src}
@@ -117,7 +119,6 @@ export default function CloudinaryImage({
             className={className}
             priority={priority}
             quality={quality}
-            gravity={gravity}
             format={format}
         />
     );
