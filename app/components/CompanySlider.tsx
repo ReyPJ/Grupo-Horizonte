@@ -346,7 +346,7 @@ export default function CompanySlider({ companies }: { companies: Company[] }) {
           </div>
 
           <div className="flex-shrink-0 flex justify-center">
-            <div className="company-image rounded-4xl overflow-hidden shadow-2xl ring-1 ring-black/5 relative w-full max-w-[520px] h-[700px]">
+            <div className="company-image rounded-4xl overflow-hidden shadow-2xl ring-1 ring-black/5 relative w-[520px] h-[700px]">
               <CloudinaryImage
                 src={companies[current].image}
                 alt={companies[current].company}

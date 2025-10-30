@@ -120,7 +120,7 @@ export default function Home() {
         t('CompanyData.gerd.services.infrastructure'),
         t('CompanyData.gerd.services.telecommunications')
       ],
-      image: "https://res.cloudinary.com/dluzxwzba/image/upload/v1761798515/gerd1_ryp1pj.jpg",
+      image: "gerd1_ryp1pj",
       buttonMinWidth: "150px",
       buttonMaxWidth: "180px",
       bigButtonLinkTo: "/empresas/gerd"
